@@ -12,6 +12,36 @@
   <style>
     .reveal { font-family: Montserrat, "Segoe UI", sans-serif; font-size: 15px; }
     .reveal .slides { text-align: left; }
+    /* Narrow reading column — full slide canvas stays centered, text block is capped */
+    .reveal .slides > section {
+      position: relative;
+      max-width: 30em;
+      width: 100%;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+      padding-bottom: 4.5rem;
+      box-sizing: border-box;
+    }
+    /* Vote QR: sits on slide bottom, no bar/panel */
+    .slide-qr-host {
+      position: absolute;
+      left: 50%;
+      bottom: 0.15rem;
+      transform: translateX(-50%);
+      line-height: 0;
+      opacity: 0.9;
+      background: none;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      pointer-events: none;
+    }
+    .slide-qr-host img,
+    .slide-qr-host canvas {
+      display: block;
+    }
     .reveal h1 { font-size: 1.35em; margin-bottom: 0.35em; }
     .reveal h1, .reveal h2, .reveal h3 {
       color: #5a5a5a;
@@ -39,7 +69,7 @@
       overflow-y: auto;
       white-space: pre-wrap;
     }
-    .bars-wrap { width: 94%; margin: 0.45rem auto; text-align: left; }
+    .bars-wrap { width: 100%; margin: 0.45rem 0; text-align: left; }
     .bar-row {
       display: flex;
       align-items: center;
@@ -82,6 +112,7 @@
   <div class="reveal">
     <div class="slides" id="slides-root"></div>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
   <script>
     function esc(s) {
@@ -193,6 +224,7 @@
       html += '<p class="slide-meta">Audience joins at:</p>';
       html += '<p class="intro-links" id="url-line-wrap"><a id="url-line" href="#" target="_blank" rel="noopener"></a></p>';
       html += '<p class="vote-hint">Navigate: <strong>← →</strong> · click left/right edge of slide · <strong>F</strong> fullscreen</p>';
+      html += '<div class="slide-qr-host" aria-hidden="true"></div>';
       html += '</section>';
 
       qs.forEach(q => {
@@ -206,7 +238,8 @@
         letters.forEach(L => {
           html += '<div><span class="L">' + esc(L) + '.</span>' + esc(q.options[L] || '') + '</div>';
         });
-        html += '</div></section>';
+        html += '</div>';
+        html += '<div class="slide-qr-host" aria-hidden="true"></div></section>';
 
         html += '<section data-poll-id="' + esc(pid) + '" data-phase="results" data-answer="' + esc(q.answer) + '">';
         html += '<h2>Poll results — Q' + q.number + '</h2>';
@@ -217,15 +250,34 @@
           html += '<span class="lab">' + esc(L) + '</span><div class="track"><div class="fill"></div></div>';
           html += '<span class="num">0 (0%)</span></div>';
         });
-        html += '</div></section>';
+        html += '</div>';
+        html += '<div class="slide-qr-host" aria-hidden="true"></div></section>';
 
         html += '<section data-poll-id="' + esc(pid) + '" data-phase="critique">';
         html += '<h2>Critique — Q' + q.number + '</h2>';
         html += '<p class="critique">' + esc(q.critique) + '</p>';
-        html += '</section>';
+        html += '<div class="slide-qr-host" aria-hidden="true"></div></section>';
       });
 
       root.innerHTML = html;
+    }
+
+    var QR_SIZE = 72;
+
+    function fillSlideQrs(voteUrl) {
+      if (typeof QRCode === 'undefined') return;
+      var level = QRCode.CorrectLevel ? QRCode.CorrectLevel.L : undefined;
+      document.querySelectorAll('.slide-qr-host').forEach(function (el) {
+        el.innerHTML = '';
+        try {
+          new QRCode(el, {
+            text: voteUrl,
+            width: QR_SIZE,
+            height: QR_SIZE,
+            correctLevel: level,
+          });
+        } catch (e) {}
+      });
     }
 
     function setupVoteLink() {
@@ -236,6 +288,7 @@
           linkIntro.href = voteUrl;
           linkIntro.textContent = voteUrl;
         }
+        fillSlideQrs(voteUrl);
       }
       fetch('/api/state')
         .then(function (r) { return r.json(); })
@@ -255,7 +308,7 @@
         if (e.button !== 0) return;
         if (e.target.closest('a, button, input, textarea, select')) return;
         if (e.target.closest('.reveal .controls, .reveal .progress')) return;
-        if (e.target.closest('.stem, .critique, .opts, .bars-wrap')) return;
+        if (e.target.closest('.stem, .critique, .opts, .bars-wrap, .slide-qr-host')) return;
         var r = deck.getBoundingClientRect();
         var x = e.clientX - r.left;
         var frac = x / Math.max(r.width, 1);
@@ -273,7 +326,8 @@
         Reveal.initialize({
           hash: true,
           slideNumber: 'c/t',
-          transition: 'slide',
+          transition: 'fade',
+          backgroundTransition: 'fade',
           width: 784,
           height: 441,
           margin: 0.03,
