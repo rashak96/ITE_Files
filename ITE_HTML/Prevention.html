@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prevention - ITE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/simple.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .reveal .slides { text-align: left; font-family: 'Segoe UI', sans-serif; }
+        .reveal h1, .reveal h2, .reveal h3 { font-family: 'Montserrat', sans-serif; }
+        .grey-label { color:#767676; font-size:0.75rem; text-transform:uppercase; margin-bottom:0.3em; }
+        .q-meta { color:#767676; font-size:0.9rem; margin-bottom:0.5em; }
+        .poll-stem { font-size:1.1rem; margin:0.8em 0; line-height:1.5; }
+        .poll-options { display:flex; flex-direction:column; gap:0.4em; }
+        .poll-opt {
+            padding:0.5em 0.8em; text-align:left; font-size:0.95rem;
+            background:#f5f5f5; border:2px solid #ddd; border-radius:6px;
+            cursor:pointer; transition:all 0.2s;
+            font-family: inherit;
+        }
+        .poll-opt:hover { background:#eaeaea; border-color:#999; }
+        .poll-opt.voted { background:#d4edda; border-color:#28a745; }
+        .poll-results { margin-top:1em; min-height:120px; }
+        .poll-reset { margin-top:0.5em; padding:0.3em 0.8em; font-size:0.85rem; cursor:pointer; }
+        .critique-body { font-size:0.95rem; line-height:1.6; color:#555; }
+        .bar-chart { display:flex; flex-direction:column; gap:0.3em; }
+        .bar-row { display:flex; align-items:center; gap:0.5em; }
+        .bar-label { width:2em; }
+        .bar-fill { height:1.5em; background:#4a90d9; border-radius:4px; min-width:2em; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+    <section>
+        <h1 style="font-family:Montserrat,sans-serif;">Prevention</h1>
+        <p style="color:#767676;font-size:1.2rem;">ITE Questions — Interactive Polls</p>
+    </section>
+
+    <section>
+        <h2>Join the Poll</h2>
+        <p>Open this page on your phone:</p>
+        <p><strong id="join-url">Loading...</strong></p>
+        <p style="font-size:0.9rem;color:#767676;">Use ?audience to vote.</p>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_76_2022_0">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <p class="q-meta">Question 76 (2022)</p>
+        <div class="poll-stem">A 37-year-old male presents for a physical evaluation prior to starting a new job in a hospital. He recently immigrated from Uganda. An interferon-gamma release assay (IGRA, QuantiFERON-TB Gold) is positive. He is otherwise healthy. He has not had any cough, fever, unintended weight loss, or night sweats. Which one of the following is the most appropriate next step?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_76_2022_0" data-choice="A">A) Tuberculin skin testing</button><button class="poll-opt" data-poll="q_76_2022_0" data-choice="B">B) Inducing sputum for mycobacterial culture</button><button class="poll-opt" data-poll="q_76_2022_0" data-choice="C">C) Chest radiography</button><button class="poll-opt" data-poll="q_76_2022_0" data-choice="D">D) Proceeding with treatment for latent tuberculosis</button><button class="poll-opt" data-poll="q_76_2022_0" data-choice="E">E) Proceeding with treatment for active tuberculosis</button></div>
+        <button class="poll-reset" data-poll="q_76_2022_0" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Results — Question 76 (2022)</h3>
+        <div class="poll-results" id="results-q_76_2022_0">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Answer: C — Question 76 (2022)</h3>
+        <div class="critique-body">This patient’s tuberculosis (TB) screening test is positive, and the next step in the evaluation involves determining whether he has a latent infection or active disease. Diagnosis of latent TB requires ruling out active disease by assessing the patient clinically with a history, physical examination, and chest radiograph. If this evaluation does not suggest active disease, sputum studies are not needed. Interferon-gamma release assays (IGRA), which are blood tests used to screen for TB infection, are more accurate than tuberculin skin testing, so a tuberculin skin test is not needed. Treatment should not be started until a determination of latent versus active TB is made. Ref: Shah M, Dorman SE: Latent tuberculosis infection. N Engl J Med 2021;385(24):2271-2280.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_167_2022_1">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <p class="q-meta">Question 167 (2022)</p>
+        <div class="poll-stem">The results of a meta-analysis of lung cancer screening using low-dose CT were as follows: the pooled lung cancer–specific mortality rate in the control group was 2.12%, the estimated lung cancer–specific mortality rate in the screened population was 1.72%, and the absolute risk reduction for lung cancer mortality was 0.4% (2.12% minus 1.72%). What is the number needed to screen to prevent one death due to lung cancer?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_167_2022_1" data-choice="A">A) 5</button><button class="poll-opt" data-poll="q_167_2022_1" data-choice="B">B) 23</button><button class="poll-opt" data-poll="q_167_2022_1" data-choice="C">C) 47</button><button class="poll-opt" data-poll="q_167_2022_1" data-choice="D">D) 200</button><button class="poll-opt" data-poll="q_167_2022_1" data-choice="E">E) 250</button></div>
+        <button class="poll-reset" data-poll="q_167_2022_1" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Results — Question 167 (2022)</h3>
+        <div class="poll-results" id="results-q_167_2022_1">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Answer: E — Question 167 (2022)</h3>
+        <div class="critique-body">The absolute risk reduction (ARR) in this meta-analysis was 0.4%. The number needed to screen is the reciprocal of the ARR. The number needed to screen would equal 1 divided by the ARR (1/ARR), or 1/0.004, which equals 250. Based upon this meta-analysis, 250 individuals would need to be screened to prevent one lung cancer death. Ref: Rembold CM: Number needed to screen: Development of a statistic for disease screening. BMJ 1998;317(7154):307-312. 2) Ebell MH, Bentivegna M, Hulme C: Cancer-specific mortality, all-cause mortality, and overdiagnosis in lung cancer screening trials: A meta-analysis. Ann Fam Med 2020;18(6):545-552. 3) Loscalzo J, Fauci AS, Kasper DL, et al (eds): Harrison’s Principles of Internal Medicine, ed 21. McGraw Hill, 2022, p 29.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_179_2022_2">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <p class="q-meta">Question 179 (2022)</p>
+        <div class="poll-stem">A 53-year-old male undergoes colon cancer screening with multitarget stool DNA testing (Cologuard). The result is negative and you are composing a message to send to his online patient portal to discuss the results. Which one of the following would be the most appropriate screening strategy for this patient?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_179_2022_2" data-choice="A">A) Fecal immunochemical testing (FIT) now</button><button class="poll-opt" data-poll="q_179_2022_2" data-choice="B">B) FIT in 1 year</button><button class="poll-opt" data-poll="q_179_2022_2" data-choice="C">C) Colonoscopy now</button><button class="poll-opt" data-poll="q_179_2022_2" data-choice="D">D) Repeat multitarget stool DNA testing in 3 years</button><button class="poll-opt" data-poll="q_179_2022_2" data-choice="E">E) Repeat multitarget stool DNA testing in 5 years</button></div>
+        <button class="poll-reset" data-poll="q_179_2022_2" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Results — Question 179 (2022)</h3>
+        <div class="poll-results" id="results-q_179_2022_2">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Answer: D — Question 179 (2022)</h3>
+        <div class="critique-body">The recommended interval for colon cancer screening with multitarget stool DNA testing is 3 years at minimum, with the U.S. Preventive Services Task Force recommending an interval of 1–3 years. If the screening is positive, proceeding with a colonoscopy is recommended. Fecal immunochemical testing (FIT) has an annual screening interval if the test is negative, and colonoscopy is recommended if the FIT is positive. Colonoscopy for patients without risk factors should be performed every 10 years, or sooner if indicated by pathology results or risk factors. Ref: Shaukat A, Kahi CJ, Burke CA, et al: ACG clinical guidelines: Colorectal cancer screening 2021. Am J Gastroenterol 2021;116(3):458-479. 2) Final Recommendation Statement: Colorectal Cancer: Screening. US Preventive Services Task Force, 2021.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_23_2023_3">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <p class="q-meta">Question 23 (2023)</p>
+        <div class="poll-stem">Newborn screening for critical congenital heart disease with pulse oximetry is recommended for</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_23_2023_3" data-choice="A">A) all infants within the first 6 hours of life</button><button class="poll-opt" data-poll="q_23_2023_3" data-choice="B">B) all infants before 24 hours of life</button><button class="poll-opt" data-poll="q_23_2023_3" data-choice="C">C) all infants 24 hours or more after birth</button><button class="poll-opt" data-poll="q_23_2023_3" data-choice="D">D) only infants with clinical signs of hypoxemia</button><button class="poll-opt" data-poll="q_23_2023_3" data-choice="E">E) only infants with a heart murmur 8</button></div>
+        <button class="poll-reset" data-poll="q_23_2023_3" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Results — Question 23 (2023)</h3>
+        <div class="poll-results" id="results-q_23_2023_3">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Answer: C — Question 23 (2023)</h3>
+        <div class="critique-body">All infants, regardless of whether heart murmurs are present, should be screened for critical congenital heart disease using pulse oximetry in the right upper extremity and either of the lower extremities. The ideal time frame to conduct pulse oximetry is 24 hours or more after birth. False-positive results are more likely when testing is performed within the first 24 hours of life. All infants should be screened, not only those with clinical signs of hypoxemia. Ref: Ford B, LaraS, Park J. Heart murmurs in children: evaluation and management. Am Fam Physician. 2022;105(3):250-261.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_34_2024_4">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <p class="q-meta">Question 34 (2024)</p>
+        <div class="poll-stem">A 60-year-old transgender female comes to your office for a preventive care visit. You review her organ inventory and note that she has hormonally augmented breast tissue; a vulva and a vagina that were constructed via the penile inversion technique, including an orchiectomy; and a prostate. Her BMI is 23 kg/m2. She does not have any significant medical history other than the gender-affirming procedures and her only medication is a transdermal estradiol patch (Climara), 0.05 mg weekly. She is monogamous with her cisgender female partner and has never smoked. Based on U.S. Preventive Services T...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_34_2024_4" data-choice="A">A) A digital rectal examination</button><button class="poll-opt" data-poll="q_34_2024_4" data-choice="B">B) An anal Papanicolaou smear</button><button class="poll-opt" data-poll="q_34_2024_4" data-choice="C">C) Prostate-specific antigen testing</button><button class="poll-opt" data-poll="q_34_2024_4" data-choice="D">D) Mammography</button><button class="poll-opt" data-poll="q_34_2024_4" data-choice="E">E) Bone density screening</button></div>
+        <button class="poll-reset" data-poll="q_34_2024_4" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Results — Question 34 (2024)</h3>
+        <div class="poll-results" id="results-q_34_2024_4">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Answer: C — Question 34 (2024)</h3>
+        <div class="critique-body">Transgender women who have undergone vaginoplasty retain the prostate, located anterior to the vagina at the base of the bladder. The prostate is likely to be very small as a result of estradiol therapy and testosterone suppression, and palpation of the prostate through the anterior vaginal wall would be difficult. However, given the preservation of this gland, it is reasonable to offer PSA screening after discussing the sensitivity, specificity, risks, and benefits. Digital rectal examinations are not recommended for screening. Currently, there are no guidelines for anal Papanicolaou screening. The U.S. Preventive Services Task Force (USPSTF) recommends mammography for persons who were assigned female at birth. There is limited data to support mammography in transgender women with breast tissue because their breast cancer risk is likely similar to that of cisgender men. It would be reasonable to acknowledge the presence of this tissue and discuss the sensitivity, specificity, risks, and benefits of mammography with this patient, but the USPSTF does not have a stated recommendation for or against this screening. Bone density screening for cisgender women at normal risk is suggested at age 65, but there are no guidelines for such screening in transgender women, although this patient could be considered at additional risk because she is agonadal.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_39_2024_5">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <p class="q-meta">Question 39 (2024)</p>
+        <div class="poll-stem">A 32-year-old female sees you to request breast cancer screening after learning that her 45-year-old sister was diagnosed with breast cancer. She has no other known history of breast cancer. The patient does not have a family history of ovarian, tubal, or peritoneal cancers. Menarche occurred at 13 years of age and she has never been pregnant. On examination there is no nipple discharge or axillary lymphadenopathy and she has no palpable breast masses. Based on U.S. Preventive Services Task Force guidelines, which one of the following should you recommend as the next step in evaluation?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_39_2024_5" data-choice="A">A) Monthly breast self-examinations</button><button class="poll-opt" data-poll="q_39_2024_5" data-choice="B">B) Screening mammography</button><button class="poll-opt" data-poll="q_39_2024_5" data-choice="C">C) Screening breast ultrasonography</button><button class="poll-opt" data-poll="q_39_2024_5" data-choice="D">D) Genetic counseling</button></div>
+        <button class="poll-reset" data-poll="q_39_2024_5" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Results — Question 39 (2024)</h3>
+        <div class="poll-results" id="results-q_39_2024_5">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Answer: D — Question 39 (2024)</h3>
+        <div class="critique-body">According to the U.S. Preventive Services Task Force (USPSTF), primary care clinicians should evaluate women individually for their family history of breast, ovarian, tubal, and peritoneal cancers with a familial risk assessment tool. Patients with a positive risk score should be recommended for genetic counseling (B recommendation). The USPSTF recommends against teaching patients breast self-examination due to a lack of supporting evidence confirming a benefit of breast cancer detection. Neither screening mammography nor ultrasonography are recommended without anatomic abnormalities indicating further examination at this age.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_109_2024_6">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <p class="q-meta">Question 109 (2024)</p>
+        <div class="poll-stem">A 26-year-old nulliparous female presents for an evaluation after she discovered a breast mass while showering. An examination confirms a 4 × 3-cm nonpainful mass in the upper outer quadrant of the right breast. Which one of the following should you recommend?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_109_2024_6" data-choice="A">A) Screening mammography of the breast</button><button class="poll-opt" data-poll="q_109_2024_6" data-choice="B">B) Diagnostic mammography of the breast</button><button class="poll-opt" data-poll="q_109_2024_6" data-choice="C">C) Ultrasonography of the breast</button><button class="poll-opt" data-poll="q_109_2024_6" data-choice="D">D) MRI of the breast</button><button class="poll-opt" data-poll="q_109_2024_6" data-choice="E">E) Surgical referral for excision and biopsy</button></div>
+        <button class="poll-reset" data-poll="q_109_2024_6" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Results — Question 109 (2024)</h3>
+        <div class="poll-results" id="results-q_109_2024_6">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Answer: C — Question 109 (2024)</h3>
+        <div class="critique-body">Diagnostic mammography is typically the preferred imaging modality for a palpable breast mass. However, ultrasonography is more sensitive in women younger than 30 years of age and is preferred. Screening mammography should be performed biennially for asymptomatic women ages 40−74. MRI is not appropriate for this patient at this time. Surgical excision and biopsy would be necessary if abnormalities are found on imaging.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_145_2024_7">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <p class="q-meta">Question 145 (2024)</p>
+        <div class="poll-stem">A 62-year-old male who currently receives chemotherapy for colon cancer presents to the emergency department with a 1-week history of worsening nausea and vomiting. He has been vomiting all oral intake for the past day, and he has not had a bowel movement in the past week. He reports severe, diffuse, crampy, intermittent abdominal pain that improves after vomiting. He has not had any fevers or chills. The physical examination is significant for abdominal distention, minimal bowel sounds, and diffuse tenderness. Which one of the following studies would be the most appropriate next step in evalu...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_145_2024_7" data-choice="A">A) Ultrasonography of the right upper quadrant</button><button class="poll-opt" data-poll="q_145_2024_7" data-choice="B">B) CT of the abdomen and pelvis with contrast</button><button class="poll-opt" data-poll="q_145_2024_7" data-choice="C">C) A PET/CT scan</button><button class="poll-opt" data-poll="q_145_2024_7" data-choice="D">D) A HIDA scan</button><button class="poll-opt" data-poll="q_145_2024_7" data-choice="E">E) Magnetic resonance cholangiopancreatography (MRCP) of the abdomen</button></div>
+        <button class="poll-reset" data-poll="q_145_2024_7" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Results — Question 145 (2024)</h3>
+        <div class="poll-results" id="results-q_145_2024_7">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Answer: B — Question 145 (2024)</h3>
+        <div class="critique-body">This patient’s presentation is consistent with a malignant bowel obstruction, and CT of the abdomen and pelvis with contrast is useful for determining if any surgical interventions are warranted. Ultrasonography typically does not yield useful information due to the amount of bowel gas present during an obstruction. A PET/CT scan would not be indicated to evaluate for the etiology of a bowel obstruction in an acute situation. A HIDA scan or magnetic resonance cholangiopancreatography (MRCP) would be useful if biliary obstruction or gallbladder disease were suspected, but these are not helpful in the evaluation of a malignant bowel obstruction.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_194_2024_8">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <p class="q-meta">Question 194 (2024)</p>
+        <div class="poll-stem">Most elder abuse is perpetrated by</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_194_2024_8" data-choice="A">A) family members</button><button class="poll-opt" data-poll="q_194_2024_8" data-choice="B">B) friends</button><button class="poll-opt" data-poll="q_194_2024_8" data-choice="C">C) nurses</button><button class="poll-opt" data-poll="q_194_2024_8" data-choice="D">D) paid caregivers</button><button class="poll-opt" data-poll="q_194_2024_8" data-choice="E">E) physicians</button></div>
+        <button class="poll-reset" data-poll="q_194_2024_8" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Results — Question 194 (2024)</h3>
+        <div class="poll-results" id="results-q_194_2024_8">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Answer: A — Question 194 (2024)</h3>
+        <div class="critique-body">Most elder abuse occurs in the home and is perpetrated by family members (90% of all cases). A small proportion of older adults live in nursing homes, with only 4% of abuse perpetrated by paid caregivers. Risk factors for elder abuse include shared living arrangements, increased age, decreased physical health, cognitive impairment, disruptive behaviors, alcohol misuse, and social isolation. Caregiver characteristics associated with abuse include mental illness, substance abuse, and dependence on the victim (often financially). There are validated screening instruments available, notably the Elder Abuse Suspicion Index, but the U.S. Preventive Services Task Force has found insufficient evidence for screening older adults for abuse and neglect when there are no recognized signs and symptoms of abuse. Identification of elder abuse is a professional responsibility of family physicians. However, physicians report a very small number of elder abuse cases (1.4%). Family members, social service workers, friends, and law enforcement most commonly report abuse. Most states mandate reporting of elder abuse but there is a dearth of training for physicians in recognizing elder abuse. Signs are often subtle and physical findings are not always evident.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_168_2025_9">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <p class="q-meta">Question 168 (2025)</p>
+        <div class="poll-stem">A 19-year-old female presents for a wellness visit while home on college break. According to the U.S. Preventive Services Task Force, which one of the following screenings is indicated?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_168_2025_9" data-choice="A">A) Cavities or periodontal disease</button><button class="poll-opt" data-poll="q_168_2025_9" data-choice="B">B) Dyslipidemia</button><button class="poll-opt" data-poll="q_168_2025_9" data-choice="C">C) Skin cancer</button><button class="poll-opt" data-poll="q_168_2025_9" data-choice="D">D) Suicide risk</button><button class="poll-opt" data-poll="q_168_2025_9" data-choice="E">E) Unhealthy drug use</button></div>
+        <button class="poll-reset" data-poll="q_168_2025_9" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Results — Question 168 (2025)</h3>
+        <div class="poll-results" id="results-q_168_2025_9">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Answer: E — Question 168 (2025)</h3>
+        <div class="critique-body">The U.S. Preventive Services Task Force (USPSTF) recommends screening for unhealthy drug use in adults ≥18 years of age (B recommendation). Unhealthy drug use is defined as using psychoactive medications for purposes other than as prescribed or illegally obtaining drugs for personal use. For this patient's age group, the USPSTF has determined the evidence to be insufficient to recommend for or against screening for cavities or periodontal disease, dyslipidemia, skin cancer, or suicide risk (I recommendation).</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_175_2025_10">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <p class="q-meta">Question 175 (2025)</p>
+        <div class="poll-stem">According to the U.S. Preventive Services Task Force, which one of the following is the recommended next step for adults who screen positive for unhealthy alcohol use?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_175_2025_10" data-choice="A">A) Brief counseling interventions</button><button class="poll-opt" data-poll="q_175_2025_10" data-choice="B">B) Cognitive behavioral therapy</button><button class="poll-opt" data-poll="q_175_2025_10" data-choice="C">C) Mindfulness-based therapy</button><button class="poll-opt" data-poll="q_175_2025_10" data-choice="D">D) Interpersonal psychotherapy</button><button class="poll-opt" data-poll="q_175_2025_10" data-choice="E">E) Referral for alcohol use disorder treatment</button></div>
+        <button class="poll-reset" data-poll="q_175_2025_10" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Results — Question 175 (2025)</h3>
+        <div class="poll-results" id="results-q_175_2025_10">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Answer: A — Question 175 (2025)</h3>
+        <div class="critique-body">The U.S. Preventive Services Task Force recommends screening all adults for unhealthy alcohol use and implementing brief counseling interventions for those who screen positive (B recommendation). The screening, brief intervention, and referral to treatment (SBIRT) approach has been shown to decrease the number of patients with risky drinking after the intervention. Motivational interviewing is often used for brief counseling in primary care settings. Cognitive behavioral therapy, mindfulness-based therapy, and interpersonal psychotherapy are different psychotherapy approaches that are used as longer-term counseling methods and would not be appropriate for use as brief counseling interventions for adults with unhealthy alcohol use. Patients identified as having alcohol use disorder (AUD) by DSM-5 criteria should be referred for treatment.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_189_2025_11">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <p class="q-meta">Question 189 (2025)</p>
+        <div class="poll-stem">A 30-year-old female presents to your office for an annual wellness visit. She reports a family history of Lynch syndrome and recently tested positive herself. Which one of the following should you recommend regarding colon cancer screening in this patient?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_189_2025_11" data-choice="A">A) Fecal occult blood testing annually</button><button class="poll-opt" data-poll="q_189_2025_11" data-choice="B">B) Stool DNA testing (Cologuard) every 3 years</button><button class="poll-opt" data-poll="q_189_2025_11" data-choice="C">C) Colonoscopy starting this year</button><button class="poll-opt" data-poll="q_189_2025_11" data-choice="D">D) Colonoscopy starting at age 45</button><button class="poll-opt" data-poll="q_189_2025_11" data-choice="E">E) Sigmoidoscopy</button></div>
+        <button class="poll-reset" data-poll="q_189_2025_11" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Results — Question 189 (2025)</h3>
+        <div class="poll-results" id="results-q_189_2025_11">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Prevention | Cancer Screening</p>
+        <h3>Answer: C — Question 189 (2025)</h3>
+        <div class="critique-body">Hereditary nonpolyposis colorectal cancer (HNPCC), formerly called Lynch syndrome, is a hereditary cancer syndrome that increases the risk for several types of cancer, especially colon cancer. Guidelines recommend that patients with HNPCC should start colon cancer screening with colonoscopy between 20 and 25 years of age and repeat every 1–2 years. Patients at average risk for colon cancer should begin colon cancer screening at age 45. Fecal occult blood testing, stool DNA testing, and sigmoidoscopy are not adequate screening tests in this high-risk population. Lynch syndrome is associated with increased risk for several other cancers including endometrial, ovarian, stomach, small-bowel, and pancreatic.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_100_2023_0">
+        <p class="grey-label">Prevention | USPSTF</p>
+        <p class="q-meta">Question 100 (2023)</p>
+        <div class="poll-stem">Your office staff proposes a practice improvement project to create a transgender-friendly clinical environment. Which one of the following interventions would help promote this goal?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_100_2023_0" data-choice="A">A) Ensuring that intake forms and records use gender-neutral or inclusive language</button><button class="poll-opt" data-poll="q_100_2023_0" data-choice="B">B) Offering preventive services based on expressed gender only</button><button class="poll-opt" data-poll="q_100_2023_0" data-choice="C">C) Offering referral to a transgender clinic to all patients</button><button class="poll-opt" data-poll="q_100_2023_0" data-choice="D">D) Polling the staff to see if any of them are transgender</button></div>
+        <button class="poll-reset" data-poll="q_100_2023_0" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Prevention | USPSTF</p>
+        <h3>Results — Question 100 (2023)</h3>
+        <div class="poll-results" id="results-q_100_2023_0">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Prevention | USPSTF</p>
+        <h3>Answer: A — Question 100 (2023)</h3>
+        <div class="critique-body">Many transgender patients report negative experiences with health care providers, which can lead to avoidance of health care interactions. It is important to create a safe and welcoming environment to establish and maintain rapport. Ensuring that intake forms and records use gender-neutral or inclusive language is one way to signal this. Preventive services should be offered based on the patient’s current anatomy, not on expressed gender. Offering a referral to a transgender clinic to all patients is not necessary. Asking staff if they are transgender is invasive and unnecessary, and they may not be willing to disclose this information. Ref: Klein D, Paradise SL, Goodwin ET. Caring for transgender and gender-diverse persons: what clinicians should know. Am Fam Physician. 2018;98(11):645-653.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_121_2023_1">
+        <p class="grey-label">Prevention | USPSTF</p>
+        <p class="q-meta">Question 121 (2023)</p>
+        <div class="poll-stem">Which one of the following supplements has been associated with an increased risk of lung cancer in people who smoke?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_121_2023_1" data-choice="A">A) B-Carotene</button><button class="poll-opt" data-poll="q_121_2023_1" data-choice="B">B) Magnesium</button><button class="poll-opt" data-poll="q_121_2023_1" data-choice="C">C) Vitamin B,</button><button class="poll-opt" data-poll="q_121_2023_1" data-choice="D">D) Vitamin B,,</button><button class="poll-opt" data-poll="q_121_2023_1" data-choice="E">E) Vitamin C</button></div>
+        <button class="poll-reset" data-poll="q_121_2023_1" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Prevention | USPSTF</p>
+        <h3>Results — Question 121 (2023)</h3>
+        <div class="poll-results" id="results-q_121_2023_1">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Prevention | USPSTF</p>
+        <h3>Answer: A — Question 121 (2023)</h3>
+        <div class="critique-body">While many supplements are harmless, B-carotene has been shown to increase the risk of lung cancer in smokers and increase the risk of cardiovascular mortality. It can also cause reversible skin yellowing. The U.S. Preventive Services Task Force recommends against (D recommendation) B-carotene supplementation for the prevention of cardiovascular disease or cancer. There is insufficient evidence to draw conclusions on the use of magnesium, vitamin B,, or vitamin B,, for the prevention of cardiovascular disease or cancer. Vitamin C can increase the risk of nephrolithiasis. Ref: O'Connor EA, Evans CV, Ivlev I, et al. Vitamin, mineral, and multivitamin supplementation for the primary prevention of cardiovascular disease and cancer: a systematic evidence review for the US Preventive Services Task Force. Evidence Synthesis, No. 209. Agency for Healthcare Research and Quality. January 2021. 2) US Preventive Services Task Force. Final recommendation statement: vitamin, mineral, and multivitamin supplementation to prevent cardiovascular disease and cancer: preventive medication. Updated June 21, 2022. 47</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_90_2025_2">
+        <p class="grey-label">Prevention | USPSTF</p>
+        <p class="q-meta">Question 90 (2025)</p>
+        <div class="poll-stem">A 32-year-old male presents for advice on smoking cessation. He has smoked 10 cigarettes per day for the past 10 years. His grandmother was recently diagnosed with lung cancer, and he is motivated to quit. You advise him that smoking cessation is the most important action that he can take for his health, and you counsel him about effective behavioral interventions. Which one of the following behavioral changes would improve this patient's chances of smoking cessation?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_90_2025_2" data-choice="A">A) Creating a smoke-free home</button><button class="poll-opt" data-poll="q_90_2025_2" data-choice="B">B) Increasing his caffeine intake</button><button class="poll-opt" data-poll="q_90_2025_2" data-choice="C">C) Switching to menthol cigarettes</button><button class="poll-opt" data-poll="q_90_2025_2" data-choice="D">D) Undergoing hypnotherapy</button></div>
+        <button class="poll-reset" data-poll="q_90_2025_2" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Prevention | USPSTF</p>
+        <h3>Results — Question 90 (2025)</h3>
+        <div class="poll-results" id="results-q_90_2025_2">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Prevention | USPSTF</p>
+        <h3>Answer: A — Question 90 (2025)</h3>
+        <div class="critique-body">Behavioral interventions are effective treatments for smoking cessation. Advising a patient who wishes to stop smoking to create a smoke-free home and car environment is a highly effective behavioral intervention. This advice is an important aspect of a brief 3-step tobacco cessation intervention model (Ask, Advise, Assist/Connect). Caffeine intake does not play a role in smoking cessation. Switching to menthol cigarettes does not have a role in supporting smoking cessation. There is no high- or moderate-quality evidence to support hypnotherapy or acupuncture for smoking cessation. In addition to behavioral interventions, the U.S. Preventive Services Task Force also recommends providing FDA-approved pharmacotherapy such as nicotine replacement therapy, sustained-release bupropion hydrochloride, or varenicline. Combined interventions result in increased tobacco-cessation rates.</div>
+    </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({ hash: true, transition: 'slide' });
+        const wsUrl = (location.protocol === 'https:' ? 'wss:' : 'ws:') + '//' + location.host + '/ws';
+        let ws = null;
+        const pollResults = {};
+        let role = location.search.includes('audience') ? 'audience' : 'presenter';
+        document.getElementById('join-url').textContent = location.href.split('?')[0] + '?audience';
+        function connect() {
+            ws = new WebSocket(wsUrl);
+            ws.onopen = () => ws.send(JSON.stringify({ role, poll: null }));
+            ws.onmessage = (e) => {
+                const d = JSON.parse(e.data);
+                if (d.type === 'results') {
+                    pollResults[d.poll] = d.votes || {};
+                    showResults(d.poll, pollResults[d.poll]);
+                } else if (d.type === 'reset') {
+                    pollResults[d.poll] = {};
+                    const res = document.getElementById('results-' + d.poll);
+                    if (res) res.innerHTML = 'Votes appear here in real-time.';
+                }
+            };
+            ws.onclose = () => setTimeout(connect, 2000);
+        }
+        connect();
+
+        if (role === 'audience') {
+            document.querySelectorAll('.poll-reset').forEach(b => b.style.display = 'none');
+        } else {
+            document.querySelectorAll('.poll-reset').forEach(b => {
+                b.style.display = 'inline-block';
+                b.onclick = () => {
+                    const pid = b.dataset.poll;
+                    if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'reset', poll: pid }));
+                };
+            });
+        }
+
+        document.querySelectorAll('.poll-opt').forEach(btn => {
+            btn.onclick = () => {
+                if (role !== 'audience') return;
+                const pid = btn.dataset.poll;
+                const choice = btn.dataset.choice;
+                if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'vote', poll: pid, choice }));
+                btn.classList.add('voted');
+            };
+        });
+
+        function showResults(pollId, votes) {
+            const el = document.getElementById('results-' + pollId);
+            if (!el) return;
+            const max = Math.max(...Object.values(votes), 1);
+            el.innerHTML = '<div class="bar-chart">' + Object.entries(votes).sort((a,b)=>a[0].localeCompare(b[0])).map(([k,v]) =>
+                '<div class="bar-row"><span class="bar-label">'+k+')</span><div class="bar-fill" style="width:'+(v/max*100)+'%"></div><span>'+v+'</span></div>'
+            ).join('') + '</div>';
+        }
+
+        Reveal.on('slidechanged', e => {
+            const resDiv = e.currentSlide?.querySelector?.('.poll-results[id^="results-"]');
+            if (resDiv) {
+                const pollId = resDiv.id.replace('results-', '');
+                if (pollResults[pollId] && Object.keys(pollResults[pollId]).length) {
+                    showResults(pollId, pollResults[pollId]);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

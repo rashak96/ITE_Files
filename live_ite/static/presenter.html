@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ITE Live — Presenter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/white.css" />
+  <style>
+    .reveal { font-family: Montserrat, "Segoe UI", sans-serif; font-size: 22px; }
+    .reveal h1 { font-size: 1.45em; }
+    .reveal h1, .reveal h2, .reveal h3 {
+      color: #5a5a5a;
+      text-transform: none;
+      font-weight: 700;
+    }
+    .reveal h2 { font-size: 1.05em; border-bottom: 2px solid #5a5a5a; padding-bottom: 0.2em; }
+    .slide-meta { font-size: 0.65em; color: #666; margin-bottom: 0.5em; }
+    .stem {
+      text-align: left;
+      font-size: 0.58em;
+      line-height: 1.4;
+      max-height: 52vh;
+      overflow-y: auto;
+      padding: 0.35rem 0;
+    }
+    .opts { text-align: left; font-size: 0.55em; margin-top: 0.5rem; }
+    .opts div { margin: 0.28rem 0; padding-left: 0.2rem; }
+    .opts .L { font-weight: 700; color: #5a5a5a; margin-right: 0.35rem; }
+    .critique {
+      text-align: left;
+      font-size: 0.5em;
+      line-height: 1.42;
+      max-height: 62vh;
+      overflow-y: auto;
+      white-space: pre-wrap;
+    }
+    .bars-wrap { width: 92%; margin: 0.65rem auto; text-align: left; }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      margin: 0.38rem 0;
+      font-size: 0.52em;
+    }
+    .bar-row .lab { width: 1.6rem; font-weight: 700; color: #5a5a5a; }
+    .bar-row .track {
+      flex: 1;
+      height: 20px;
+      background: #e8e8e8;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+    .bar-row .fill {
+      height: 100%;
+      background: #78909c;
+      width: 0%;
+      transition: width 0.35s ease;
+    }
+    .bar-row.correct .fill { background: #2e7d32; }
+    .bar-row .num { min-width: 2.5rem; text-align: right; margin-left: 0.4rem; color: #444; font-size: 0.95em; }
+    #qr-host { margin: 0.35rem auto; width: 160px; height: 160px; }
+    .intro-links {
+      text-align: center;
+      font-size: 0.42em;
+      color: #333;
+      margin-top: 0.35rem;
+      word-break: break-all;
+      line-height: 1.32;
+    }
+    .intro-links a { color: #1565c0; font-weight: 600; }
+    .vote-hint { font-size: 0.42em; color: #555; margin-top: 0.45rem; }
+    .reveal .controls { color: #333; }
+    .reveal .progress { height: 2px; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides" id="slides-root"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+  <script>
+    function esc(s) {
+      const d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }
+
+    function wsUrl() {
+      const p = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+      return p + '//' + window.location.host + '/ws';
+    }
+
+    let deckData = null;
+    let ws = null;
+    let voteCounts = {};
+
+    function lookupQuestion(pid) {
+      if (!deckData || !deckData.questions || !pid) return null;
+      return deckData.questions.find(function (q) { return q.poll_id === pid; }) || null;
+    }
+
+    function questionPayload(q) {
+      if (!q) return null;
+      var letters = q.option_letters || Object.keys(q.options || {}).sort();
+      return {
+        poll_id: q.poll_id,
+        stem: q.stem,
+        options: q.options,
+        option_letters: letters,
+        year: q.year,
+        number: q.number,
+      };
+    }
+
+    function sendActive(pollId, voting, question) {
+      if (ws && ws.readyState === WebSocket.OPEN) {
+        ws.send(
+          JSON.stringify({
+            type: 'active_poll',
+            poll_id: pollId,
+            voting: voting,
+            question: question || null,
+          })
+        );
+      }
+    }
+
+    function applyResults(pollId, votes) {
+      voteCounts[pollId] = votes || {};
+      const rows = document.querySelectorAll('.bars-wrap[data-poll-id="' + pollId + '"] .bar-row');
+      const v = voteCounts[pollId];
+      let total = 0;
+      Object.keys(v).forEach(k => { total += v[k]; });
+      if (total < 1) total = 1;
+      rows.forEach(row => {
+        const L = row.getAttribute('data-letter');
+        const n = v[L] || 0;
+        const pct = Math.round(100 * n / total);
+        const fill = row.querySelector('.fill');
+        const num = row.querySelector('.num');
+        if (fill) fill.style.width = pct + '%';
+        if (num) num.textContent = n + ' (' + pct + '%)';
+      });
+    }
+
+    function pushSlideStateToServer() {
+      const slide = Reveal.getCurrentSlide();
+      if (!slide) {
+        sendActive(null, false, null);
+        return;
+      }
+      const pid = slide.getAttribute('data-poll-id');
+      const phase = slide.getAttribute('data-phase');
+      if (!pid || !phase) {
+        sendActive(null, false, null);
+        return;
+      }
+      const q = lookupQuestion(pid);
+      if (phase === 'question') sendActive(pid, true, questionPayload(q));
+      else if (phase === 'results') sendActive(pid, false, null);
+      else sendActive(null, false, null);
+    }
+
+    function connectWs() {
+      ws = new WebSocket(wsUrl());
+      ws.onopen = function () {
+        pushSlideStateToServer();
+      };
+      ws.onmessage = (ev) => {
+        const msg = JSON.parse(ev.data);
+        if (msg.type === 'sync') {
+          Object.keys(msg.votes || {}).forEach(pid => applyResults(pid, msg.votes[pid]));
+        } else if (msg.type === 'results') {
+          applyResults(msg.poll_id, msg.votes);
+        } else if (msg.type === 'reset_poll') {
+          applyResults(msg.poll_id, {});
+        }
+      };
+      ws.onclose = () => setTimeout(connectWs, 1500);
+    }
+
+    function buildSlides(payload) {
+      const root = document.getElementById('slides-root');
+      const qs = payload.questions || [];
+      let html = '';
+      html += '<section class="intro">';
+      html += '<h1>' + esc(payload.title || 'ITE Live') + '</h1>';
+      html += '<p class="slide-meta">Scan the code <strong>or</strong> open the voting link below</p>';
+      html += '<div id="qr-host"></div>';
+      html += '<p class="intro-links" id="url-line-wrap">Join: <a id="url-line" href="#" target="_blank" rel="noopener"></a></p>';
+      html += '<p class="vote-hint">Navigate: <strong>← →</strong> keys · click <strong>right side</strong> of slide for next, <strong>left side</strong> for previous · <strong>F</strong> fullscreen</p>';
+      html += '</section>';
+
+      qs.forEach(q => {
+        const pid = q.poll_id;
+        const letters = q.option_letters || Object.keys(q.options || {}).sort();
+        html += '<section data-poll-id="' + esc(pid) + '" data-phase="question">';
+        html += '<h2>Question ' + q.number + ' (' + q.year + ')</h2>';
+        html += '<div class="slide-meta">' + esc(q.topic || '') + (q.subtopic ? ' · ' + esc(q.subtopic) : '') + '</div>';
+        html += '<div class="stem">' + esc(q.stem) + '</div>';
+        html += '<div class="opts">';
+        letters.forEach(L => {
+          html += '<div><span class="L">' + esc(L) + '.</span>' + esc(q.options[L] || '') + '</div>';
+        });
+        html += '</div></section>';
+
+        html += '<section data-poll-id="' + esc(pid) + '" data-phase="results" data-answer="' + esc(q.answer) + '">';
+        html += '<h2>Poll results — Q' + q.number + '</h2>';
+        html += '<div class="bars-wrap" data-poll-id="' + esc(pid) + '">';
+        letters.forEach(L => {
+          const cor = (L === q.answer) ? ' correct' : '';
+          html += '<div class="bar-row' + cor + '" data-letter="' + esc(L) + '">';
+          html += '<span class="lab">' + esc(L) + '</span><div class="track"><div class="fill"></div></div>';
+          html += '<span class="num">0 (0%)</span></div>';
+        });
+        html += '</div></section>';
+
+        html += '<section data-poll-id="' + esc(pid) + '" data-phase="critique">';
+        html += '<h2>Critique — Q' + q.number + '</h2>';
+        html += '<p class="critique">' + esc(q.critique) + '</p>';
+        html += '</section>';
+      });
+
+      root.innerHTML = html;
+    }
+
+    function makeQr(el, voteUrl, size) {
+      if (!el) return;
+      el.innerHTML = '';
+      if (typeof QRCode !== 'undefined') {
+        new QRCode(el, { text: voteUrl, width: size, height: size });
+      }
+    }
+
+    function setupQr() {
+      fetch('/api/state')
+        .then(function (r) { return r.json(); })
+        .then(function (st) {
+          var base = (st.public_url && st.public_url.replace(/\/$/, '')) || window.location.origin;
+          var voteUrl = base + '/vote';
+          var linkIntro = document.getElementById('url-line');
+          if (linkIntro) {
+            linkIntro.href = voteUrl;
+            linkIntro.textContent = voteUrl;
+          }
+          makeQr(document.getElementById('qr-host'), voteUrl, 160);
+        })
+        .catch(function () {
+          var voteUrl = window.location.origin + '/vote';
+          var linkIntro = document.getElementById('url-line');
+          if (linkIntro) {
+            linkIntro.href = voteUrl;
+            linkIntro.textContent = voteUrl;
+          }
+          makeQr(document.getElementById('qr-host'), voteUrl, 160);
+        });
+    }
+
+    function setupClickNav() {
+      var deck = document.querySelector('.reveal');
+      if (!deck) return;
+      deck.addEventListener('click', function (e) {
+        if (e.button !== 0) return;
+        if (e.target.closest('a, button, input, textarea, select')) return;
+        if (e.target.closest('.reveal .controls, .reveal .progress')) return;
+        if (e.target.closest('.stem, .critique, .opts, .bars-wrap')) return;
+        var r = deck.getBoundingClientRect();
+        var x = e.clientX - r.left;
+        var frac = x / Math.max(r.width, 1);
+        e.preventDefault();
+        if (frac < 0.22) Reveal.prev();
+        else Reveal.next();
+      });
+    }
+
+    fetch('/data.json')
+      .then(r => r.json())
+      .then(d => {
+        deckData = d;
+        buildSlides(d);
+        Reveal.initialize({
+          hash: true,
+          slideNumber: 'c/t',
+          transition: 'slide',
+          width: 960,
+          height: 540,
+          margin: 0.04,
+          keyboard: true,
+        });
+        setupQr();
+        setTimeout(setupQr, 3500);
+        setTimeout(setupQr, 9000);
+        setupClickNav();
+        connectWs();
+        Reveal.on('slidechanged', function () {
+          pushSlideStateToServer();
+        });
+        Reveal.on('ready', function () {
+          pushSlideStateToServer();
+        });
+      })
+      .catch(() => {
+        document.getElementById('slides-root').innerHTML =
+          '<section><h2>Missing data</h2><p>Run: python build_live.py</p></section>';
+        Reveal.initialize({});
+      });
+  </script>
+</body>
+</html>

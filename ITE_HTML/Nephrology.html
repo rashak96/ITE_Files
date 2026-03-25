@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nephrology - ITE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/simple.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .reveal .slides { text-align: left; font-family: 'Segoe UI', sans-serif; }
+        .reveal h1, .reveal h2, .reveal h3 { font-family: 'Montserrat', sans-serif; }
+        .grey-label { color:#767676; font-size:0.75rem; text-transform:uppercase; margin-bottom:0.3em; }
+        .q-meta { color:#767676; font-size:0.9rem; margin-bottom:0.5em; }
+        .poll-stem { font-size:1.1rem; margin:0.8em 0; line-height:1.5; }
+        .poll-options { display:flex; flex-direction:column; gap:0.4em; }
+        .poll-opt {
+            padding:0.5em 0.8em; text-align:left; font-size:0.95rem;
+            background:#f5f5f5; border:2px solid #ddd; border-radius:6px;
+            cursor:pointer; transition:all 0.2s;
+            font-family: inherit;
+        }
+        .poll-opt:hover { background:#eaeaea; border-color:#999; }
+        .poll-opt.voted { background:#d4edda; border-color:#28a745; }
+        .poll-results { margin-top:1em; min-height:120px; }
+        .poll-reset { margin-top:0.5em; padding:0.3em 0.8em; font-size:0.85rem; cursor:pointer; }
+        .critique-body { font-size:0.95rem; line-height:1.6; color:#555; }
+        .bar-chart { display:flex; flex-direction:column; gap:0.3em; }
+        .bar-row { display:flex; align-items:center; gap:0.5em; }
+        .bar-label { width:2em; }
+        .bar-fill { height:1.5em; background:#4a90d9; border-radius:4px; min-width:2em; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+    <section>
+        <h1 style="font-family:Montserrat,sans-serif;">Nephrology</h1>
+        <p style="color:#767676;font-size:1.2rem;">ITE Questions — Interactive Polls</p>
+    </section>
+
+    <section>
+        <h2>Join the Poll</h2>
+        <p>Open this page on your phone:</p>
+        <p><strong id="join-url">Loading...</strong></p>
+        <p style="font-size:0.9rem;color:#767676;">Use ?audience to vote.</p>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_40_2022_0">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 40 (2022)</p>
+        <div class="poll-stem">A recently divorced 47-year-old male comes to your office appearing disheveled, with the smell of alcohol on his breath. His Patient Health Questionnaire–9 (PHQ-9) score today is 20, and his last PHQ-9 score was 7. He has a history of depression and is currently taking citalopram (Celexa). The patient is tearful during the encounter and admits to thinking the world would be better without him in it. He does not have a weapon with him but keeps a gun in an unlocked drawer in his nightstand. Which one of the following would be most appropriate at this point?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_40_2022_0" data-choice="A">A) Avoiding direct inquiry about suicide</button><button class="poll-opt" data-poll="q_40_2022_0" data-choice="B">B) Calling 911</button><button class="poll-opt" data-poll="q_40_2022_0" data-choice="C">C) Crisis planning</button><button class="poll-opt" data-poll="q_40_2022_0" data-choice="D">D) Creating a suicide prevention contract</button><button class="poll-opt" data-poll="q_40_2022_0" data-choice="E">E) Withholding psychogenic medications 13</button></div>
+        <button class="poll-reset" data-poll="q_40_2022_0" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 40 (2022)</h3>
+        <div class="poll-results" id="results-q_40_2022_0">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: C — Question 40 (2022)</h3>
+        <div class="critique-body">Crisis planning is recommended for patients presenting with suicidal ideation (SOR B). By identifying social support, local resources, and counseling services, suicidal ideation and days spent in the hospital can be reduced. Direct inquiry about suicide is recommended to better evaluate and treat suicidal patients with more favorable outcomes (SOR B). Though calling 911 may be appropriate for transportation for inpatient therapy if involuntary treatment is recommended, further assessment is needed in this case. Suicide prevention contracts do not effectively prevent suicide (SOR B). Psychogenic medications should not be withheld when treating a patient with suicidal ideation. Evidence has shown that the combination of pharmacotherapy and psychotherapy is most effective (SOR C). Ref: Norris DR, Clark MS: The suicidal patient: Evaluation and management. Am Fam Physician 2021;103(7):417-421.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_93_2022_1">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 93 (2022)</p>
+        <div class="poll-stem">A 51-year-old patient asks about recommended lung cancer screenings. The U.S. Preventive Services Task Force recommends annual lung cancer screening with low-dose CT for individuals starting at age</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_93_2022_1" data-choice="A">A) 45 with a 15-pack-year smoking history</button><button class="poll-opt" data-poll="q_93_2022_1" data-choice="B">B) 50 with a 20-pack-year smoking history</button><button class="poll-opt" data-poll="q_93_2022_1" data-choice="C">C) 55 with a 30-pack-year smoking history</button><button class="poll-opt" data-poll="q_93_2022_1" data-choice="D">D) 60 with a 35-pack-year smoking history</button><button class="poll-opt" data-poll="q_93_2022_1" data-choice="E">E) 65 with a 40-pack-year smoking history</button></div>
+        <button class="poll-reset" data-poll="q_93_2022_1" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 93 (2022)</h3>
+        <div class="poll-results" id="results-q_93_2022_1">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: B — Question 93 (2022)</h3>
+        <div class="critique-body">Lung cancer is the second most common cancer in both women and men, after breast cancer for women and prostate cancer for men. It is the leading cause of cancer deaths in the United States, making it important for primary care providers to screen for this disease process. The primary risk factor for lung cancer is tobacco smoking, which accounts for 90% of all lung cancer cases. Lung cancer has a relatively poor prognosis, but early-stage lung cancer is more amenable to treatment and has a better prognosis. Low-dose CT has a reasonable specificity and high sensitivity for lung cancer in patients at high risk. The eligibility criteria were recently updated by the U.S. Preventive Services Task Force due to evidence of mortality benefit, with a recommendation for screening to begin at age 50 for patients with a 20-pack-year smoking history who are current smokers or have quit within the past 15 years. Ref: Marshall RC, Tiglao SM, Thiel D: Updated USPSTF screening guidelines may reduce lung cancer deaths. J Fam Pract 2021;70(7):347-349. 2) Henderson LM, Rivera MP, Basch E: Broadened eligibility for lung cancer screening: Challenges and uncertainty for implementation and equity. JAMA 2021;325(10):939-941. 3) Final Recommendation Statement: Lung Cancer: Screening. US Preventive Services Task Force, 2021. 37</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_96_2022_2">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 96 (2022)</p>
+        <div class="poll-stem">A 39-year-old gravida 3 para 3 comes to your office for a routine health maintenance visit. She reports gradual leaking of urine over the past year. It mostly occurs when she does strength training at the gym and has become so bothersome that she has limited her exercise. She also notices leaking when coughing, sneezing, and picking up her young children. Her BMI is 27 kg/m2. A pelvic examination is notable for a normal urethral body and thick, pink vulvar tissue. The vaginal vault is without prolapse. You ask her to cough with a full bladder and note leakage of urine. A urinalysis is normal. ...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_96_2022_2" data-choice="A">A) An oral antimuscarinic agent</button><button class="poll-opt" data-poll="q_96_2022_2" data-choice="B">B) Intravaginal estrogen</button><button class="poll-opt" data-poll="q_96_2022_2" data-choice="C">C) OnabotulinumtoxinA (Botox)</button><button class="poll-opt" data-poll="q_96_2022_2" data-choice="D">D) Pelvic floor muscle training</button><button class="poll-opt" data-poll="q_96_2022_2" data-choice="E">E) Urethropexy</button></div>
+        <button class="poll-reset" data-poll="q_96_2022_2" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 96 (2022)</h3>
+        <div class="poll-results" id="results-q_96_2022_2">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: D — Question 96 (2022)</h3>
+        <div class="critique-body">The cough stress test confirms that this patient is experiencing chronic stress urinary incontinence. In addition to other behavioral modifications such as appropriate fluid intake, timed voiding, the reduction of caffeinated and carbonated beverages, regular moderate physical activity, and weight loss, pelvic floor muscle training is a first-line treatment for stress urinary incontinence. There are no FDA-approved oral medications for the treatment of stress incontinence. Oral antimuscarinic agents and onabotulinumtoxinA are approved for use in urge incontinence. Intravaginal estrogen can be used to treat underlying vaginal and vulvar atrophy that can contribute to urinary incontinence, but it has not been approved by the FDA for the treatment of urinary incontinence. This patient does not have concurrent atrophic vaginitis so she would not be an appropriate candidate for intravaginal estrogen. Surgical intervention with urethropexy or sling procedures can be considered if conservative treatment with behavioral modification and pelvic floor muscle training fails. Ref: Hu JS, Pierre EF: Urinary incontinence in women: Evaluation and management. Am Fam Physician 2019;100(6):339-348.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_100_2022_3">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 100 (2022)</p>
+        <div class="poll-stem">A 35-year-old female presents to discuss her recent diagnosis of metastatic breast cancer. She has many questions about potential treatments and outcomes. You discuss palliative care with her. Which one of the following is true regarding patients who receive palliative care?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_100_2022_3" data-choice="A">A) Patients must have a life expectancy of 6 months or less to qualify</button><button class="poll-opt" data-poll="q_100_2022_3" data-choice="B">B) Care must be offered in person (outpatient or inpatient)</button><button class="poll-opt" data-poll="q_100_2022_3" data-choice="C">C) Patients may simultaneously undergo aggressive chemotherapy</button><button class="poll-opt" data-poll="q_100_2022_3" data-choice="D">D) Costs for palliative care are higher than for usual chronic disease care</button><button class="poll-opt" data-poll="q_100_2022_3" data-choice="E">E) Medicare and most commercial insurances provide bundled payments for palliative care 34</button></div>
+        <button class="poll-reset" data-poll="q_100_2022_3" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 100 (2022)</h3>
+        <div class="poll-results" id="results-q_100_2022_3">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: C — Question 100 (2022)</h3>
+        <div class="critique-body">Palliative care can be offered to patients of any age with serious illness. It can be provided at any stage of the illness and there are no life-expectancy criteria. Unlike hospice, patients receiving palliative care may simultaneously undergo aggressive therapy. Palliative care can be offered in any setting, including via telehealth. It has been shown that patients receiving palliative care incur fewer health care costs than patients receiving usual care. The Choosing Wisely campaign recommends early referral to palliative care, as it improves patient care, increases patient satisfaction, and reduces costs. While Medicare covers hospice care through bundled payments, there is no similar coverage for palliative care, which can limit access. Commercial coverage for palliative care is inconsistent. Ref: Beasley A, Bakitas MA, Edwards R, Kavalieratos D: Models of non-hospice palliative care: A review. Ann Palliat Med 2019;8(Suppl 1):S15-S21. 2) American Academy of Hospice and Palliative Medicine: Don't delay palliative care for a patient with serious illness who has physical, psychological, social or spiritual distress because they are pursuing disease-directed treatment. ABIM Foundation Choosing Wisely campaign, 2021. 40</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_113_2022_4">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 113 (2022)</p>
+        <div class="poll-stem">A 57-year-old female presents for follow-up 6 weeks after falling and breaking her wrist. The fracture has healed but she has developed burning pain in the area of the fracture, which she rates as 9 on a scale of 10. On examination you note moderate hyperalgesia in the area with some minimal localized swelling. You suspect complex regional pain syndrome (CRPS). CRPS is best diagnosed with which one of the following?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_113_2022_4" data-choice="A">A) The patient history and physical examination</button><button class="poll-opt" data-poll="q_113_2022_4" data-choice="B">B) Ultrasonography</button><button class="poll-opt" data-poll="q_113_2022_4" data-choice="C">C) MRI</button><button class="poll-opt" data-poll="q_113_2022_4" data-choice="D">D) Nerve conduction testing</button><button class="poll-opt" data-poll="q_113_2022_4" data-choice="E">E) A technetium 99m bone scan</button></div>
+        <button class="poll-reset" data-poll="q_113_2022_4" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 113 (2022)</h3>
+        <div class="poll-results" id="results-q_113_2022_4">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: A — Question 113 (2022)</h3>
+        <div class="critique-body">Complex regional pain syndrome (CRPS) usually develops after an injury, often a fracture, to a distal extremity, although it can present without prior injury. The diagnosis is made clinically using the history and physical examination. Its pathophysiology is poorly understood. Ultrasonography or MRI may be used to rule out other diagnoses but are not necessary for the diagnosis of CRPS. Nerve injury can be seen on nerve conduction testing with type 2 CRPS, also known as causalgia, but nerve injury is not always identified with type 1 CRPS, also known as reflex sympathetic dystrophy. Nerve conduction testing is not necessary for making the diagnosis, and both types of CRPS are treated with the same approach. A technetium 99m bone scan may reveal increased bone resorption at the site, but it is neither sensitive nor specific for CRPS. Ref: Lloyd ECO, Dempsey B, Romero L: Complex regional pain syndrome. Am Fam Physician 2021;104(1):49-55.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_118_2022_5">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 118 (2022)</p>
+        <div class="poll-stem">A 68-year-old patient sees you for treatment of depression. When considering potential adverse effects of antidepressants, which one of the following would be the most appropriate pharmacotherapy for this patient?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_118_2022_5" data-choice="A">A) Amitriptyline</button><button class="poll-opt" data-poll="q_118_2022_5" data-choice="B">B) Duloxetine (Cymbalta)</button><button class="poll-opt" data-poll="q_118_2022_5" data-choice="C">C) Nortriptyline (Pamelor)</button><button class="poll-opt" data-poll="q_118_2022_5" data-choice="D">D) Sertraline (Zoloft)</button><button class="poll-opt" data-poll="q_118_2022_5" data-choice="E">E) Venlafaxine (Effexor XR)</button></div>
+        <button class="poll-reset" data-poll="q_118_2022_5" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 118 (2022)</h3>
+        <div class="poll-results" id="results-q_118_2022_5">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: D — Question 118 (2022)</h3>
+        <div class="critique-body">A recent review from the Agency for Healthcare Research and Quality (AHRQ) found the frequency of adverse events in older adults taking SSRIs such as sertraline and escitalopram was similar to placebo (SOR B). SSRIs also have lower discontinuation rates than tricyclic antidepressants such as amitriptyline or nortriptyline during treatment of up to 12 weeks (SOR B). Evidence suggests that SNRIs including duloxetine and venlafaxine cause more adverse events and greater discontinuation of therapy during treatment of up to 12 weeks when compared to placebo (SOR B). A randomized, controlled trial involving duloxetine demonstrated an increased risk of treatment withdrawal due to adverse events and an increased risk of falls over 12–24 weeks. Venlafaxine was compared to no antidepressant use in a large cohort study that had a median treatment period of 364 days and was associated with an increased risk of falls, fractures, and mortality. Ref: Sobieraj DM, Baker WL, Martinez BK, et al: Adverse effects of pharmacologic treatments of major depression in older adults. Agency for Healthcare Research and Quality, 2019. 2) Salisbury-Afshar E: Adverse events of pharmacologic treatments of major depression in older adults. Am Fam Physician 2020;101(3):179-181. 47</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_153_2022_6">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 153 (2022)</p>
+        <div class="poll-stem">You are providing medical care during a national emergency crisis and are tasked with triaging and allocating limited critical care resources when demand is greater than supply. Which one of the following processes is consistent with ethically sound crisis standards of care?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_153_2022_6" data-choice="A">A) Making triage decisions based on social and community value</button><button class="poll-opt" data-poll="q_153_2022_6" data-choice="B">B) Explaining triage decision practices and providing a process for appealing decisions</button><button class="poll-opt" data-poll="q_153_2022_6" data-choice="C">C) Allocating limited resources on a first-come, first-served basis when unable to distinguish medical need among patients</button><button class="poll-opt" data-poll="q_153_2022_6" data-choice="D">D) Continuing a patient’s treatment without reassessment once resources have been allocated 53</button></div>
+        <button class="poll-reset" data-poll="q_153_2022_6" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 153 (2022)</h3>
+        <div class="poll-results" id="results-q_153_2022_6">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: B — Question 153 (2022)</h3>
+        <div class="critique-body">The American Medical Association Code of Medical Ethics offers helpful guidance for making difficult decisions, including triage and reassessment decisions, when health care resources are limited during crisis situations. Explaining triage decision policies and procedures and providing patients who are denied initial resources a process for appealing decisions is a recommended process and the most ethically sound option of those listed. It is also recommended to make triage decisions based on medical need rather than social worth, and to allocate limited resources first to prevent premature death and then to those with the greatest duration of benefit after recovery. When unable to distinguish need based on medical factors, a random process or lottery is recommended rather than a first-come, first-served process since patients with obstacles to care who cannot present first would be unfairly disadvantaged. Reassessment of whether continued treatment is likely to be beneficial should occur periodically. Providing palliative care when treatment has been withdrawn is a necessary ethical practice. Ref: Committee on Guidance for Establishing Crisis Standards of Care for Use in Disaster Situations; Institute of Medicine: Crisis Standards of Care: A Systems Framework for Catastrophic Disaster Response. National Academies Press, 2012. 2) Crisis standards of care: Guidance from the AMA Code of Medical Ethics. American Medical Association, 2020.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_176_2022_7">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 176 (2022)</p>
+        <div class="poll-stem">A 4-year-old male is brought to your office by his mother because of fevers, irritability, runny nose, and cough for the past week. On examination he is noted to have bilateral conjunctivitis; dry cracked lips; a maculopapular rash; edema and erythema of his palms and soles bilaterally; and a nontender, enlarged, right anterior cervical lymph node. Which one of the following should be included in the evaluation of this patient’s condition?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_176_2022_7" data-choice="A">A) Chest radiography</button><button class="poll-opt" data-poll="q_176_2022_7" data-choice="B">B) Neck ultrasonography</button><button class="poll-opt" data-poll="q_176_2022_7" data-choice="C">C) Echocardiography</button><button class="poll-opt" data-poll="q_176_2022_7" data-choice="D">D) Neck CT</button><button class="poll-opt" data-poll="q_176_2022_7" data-choice="E">E) Cardiac MRI</button></div>
+        <button class="poll-reset" data-poll="q_176_2022_7" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 176 (2022)</h3>
+        <div class="poll-results" id="results-q_176_2022_7">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: C — Question 176 (2022)</h3>
+        <div class="critique-body">This patient has the classic clinical manifestations of Kawasaki disease. All patients with Kawasaki disease should undergo echocardiography due to the high risk of coronary artery dilation and aneurysm associated with the disease. Chest radiography, neck ultrasonography, neck CT, and cardiac MRI are not recommended in the evaluation of a patient with Kawasaki disease and would only be recommended if another clinical indication for these studies were present. Ref: Darby JB, Jackson JM: Kawasaki disease and multisystem inflammatory syndrome in children: An overview and comparison. Am Fam Physician 2021;104(3):244-252.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_178_2022_8">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 178 (2022)</p>
+        <div class="poll-stem">A 90-year-old male with metastatic prostate cancer and osteoarthritis of the knees is brought to the hospital with acute kidney injury due to dehydration, along with generalized weakness and ambulatory dysfunction. Prior to his hospitalization he lived independently with part-time caregiver assistance. Over the next 2 days his renal function improves, although physical and occupational therapy evaluations reveal significant deficits in his activities of daily living. The decision is made to transfer him to a skilled nursing facility. In planning for his discharge, you discuss completion of a P...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_178_2022_8" data-choice="A">A) does not require a signature from a treating physician</button><button class="poll-opt" data-poll="q_178_2022_8" data-choice="B">B) is required for patients with a terminal illness in hospice care</button><button class="poll-opt" data-poll="q_178_2022_8" data-choice="C">C) provides specific orders for emergency medical services</button><button class="poll-opt" data-poll="q_178_2022_8" data-choice="D">D) should be completed for all patients during an annual Medicare wellness visit</button><button class="poll-opt" data-poll="q_178_2022_8" data-choice="E">E) supersedes the expressed wishes of a patient who can communicate</button></div>
+        <button class="poll-reset" data-poll="q_178_2022_8" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 178 (2022)</h3>
+        <div class="poll-results" id="results-q_178_2022_8">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: C — Question 178 (2022)</h3>
+        <div class="critique-body">An organization that is now known as National POLST began as an advisory panel and task force to improve consistency in honoring the wishes of patients with serious illness or frailty regarding end-of-life care. POLST, originally an acronym for Physician Orders for Life-Sustaining Treatment, varies in name at the state level, although at the national level POLST is defined as a portable medical order. POLST forms differ from other legal advanced care planning documents such as advance directives and living wills, although the processes can work together. 70 The primary purpose of a POLST form is to provide specific medical orders in the event that a patient is unable to communicate. Legal advanced care planning documents, in contrast, express general treatment wishes and identify a health care proxy for surrogate decision-making but do not provide specific orders for care. POLST forms are completed by a treating physician and signed by the patient or surrogate and the physician, unlike advance directive documents, which are completed by the individual and are often notarized. POLST forms are intended only for patients with serious illness and frailty, not for healthy persons, whereas advance directives can be completed by any competent adult. POLST completion is voluntary and is neither a requirement for entering hospice nor a routine part of the Medicare annual wellness visit. Neither document type is intended to supersede the expressed wishes of a patient who can communicat...</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_198_2022_9">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 198 (2022)</p>
+        <div class="poll-stem">You admit a 50-year-old female to the hospital with pneumonia secondary to COVID-19. Her medical history is significant for controlled major depressive disorder. Upon admission, she requires respiratory support with oxygen via a high-flow nasal cannula. You ask her wishes regarding emergency measures and she states that she does not wish to be resuscitated or intubated. She reports that she watched her mother die a “horrible death” from COVID-19 about 6 months earlier and does not want to put herself through that. She does not have an advance directive and her only living relative is her fathe...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_198_2022_9" data-choice="A">A) No further actions prior to writing the order</button><button class="poll-opt" data-poll="q_198_2022_9" data-choice="B">B) Administering a Patient Health Questionnaire–9 (PHQ-9) and writing the order if her score is &lt;10</button><button class="poll-opt" data-poll="q_198_2022_9" data-choice="C">C) Asking a second attending physician to verify her wishes</button><button class="poll-opt" data-poll="q_198_2022_9" data-choice="D">D) Consulting a psychiatrist for a formal assessment of mental capacity</button><button class="poll-opt" data-poll="q_198_2022_9" data-choice="E">E) Consulting the hospital ethics board</button></div>
+        <button class="poll-reset" data-poll="q_198_2022_9" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 198 (2022)</h3>
+        <div class="poll-results" id="results-q_198_2022_9">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: A — Question 198 (2022)</h3>
+        <div class="critique-body">Individuals are assumed to have the mental capacity to make their own medical decisions unless there are reasons to question a patient’s capacity, such as risk factors for impaired decision-making or abrupt changes in mental status. It is the responsibility of the care team to honor the reasonable wishes of each patient, including decisions regarding end-of-life care. DNR/DNI orders can be fluid and changed throughout a hospital stay as more information becomes available. Patients should be provided with the tools needed to make medical decisions and ensure that they have insight into the consequences of the decisions. A DNR/DNI order should be written at this patient’s request without administering a depression screen or consulting other professionals. Ref: Brody BD, Meltzer EC, Feldman D, et al: Assessing decision making capacity for do not resuscitate requests in depressed patients: How to apply the “communication” and “appreciation” criteria. HealthCare Ethics Committee Forum 2017;29(4):303-311. 2) Barstow C, Shahan B, Roberts M: Evaluating medical decision-making capacity in practice. Am Fam Physician 2018;98(1):40-46.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_20_2023_10">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 20 (2023)</p>
+        <div class="poll-stem">A 69-year-old male presents 30 hours after the onset of difficulty speaking, right-sided facial droop, and marked weakness in his right arm and leg, with the arm more affected than the leg. You diagnose an ischemic stroke of the left middle cerebral artery (MCA). Noncontrast CT of the head reveals hypodensity in the area of the brain supplied by that artery, and CT angiography reveals occlusion of the left proximal MCA. Which one of the following treatments would be indicated at this time?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_20_2023_10" data-choice="A">A) Aspirin daily</button><button class="poll-opt" data-poll="q_20_2023_10" data-choice="B">B) Clopidogrel (Plavix) plus aspirin</button><button class="poll-opt" data-poll="q_20_2023_10" data-choice="C">C) Intravenous alteplase (Activase)</button><button class="poll-opt" data-poll="q_20_2023_10" data-choice="D">D) Intravenous tenecteplase (TNKase)</button><button class="poll-opt" data-poll="q_20_2023_10" data-choice="E">E) Thrombectomy of the MCA</button></div>
+        <button class="poll-reset" data-poll="q_20_2023_10" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 20 (2023)</h3>
+        <div class="poll-results" id="results-q_20_2023_10">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: A — Question 20 (2023)</h3>
+        <div class="critique-body">The benefit of interventions for the treatment of acute ischemic stroke is time dependent. A 21-day course of clopidogrel plus aspirin, followed by clopidogrel alone is indicated for patients with mild, non-debilitating stroke who do not require other interventions. Intravenous alteplase is most beneficial if given within 4.5 hours after the onset of stroke symptoms. In some selected patients, this time window may extend up to 9 hours. Tenecteplase is still experimental. Thrombectomy should be performed within 6 hours if possible, although select patients may benefit from thrombectomy up to 24 hours after onset of symptoms. This patient meets none of the above criteria, so he should be started on daily aspirin. Ref: Powers WJ. Acute ischemic stroke. N Engl J Med. 2020;383(3):252-260. 2) Bhatia K, Jain V, Aggarwal D, et al. Dual antiplatelet therapy versus aspirin in patients with stroke or transient ischemic attack: meta-analysis of randomized controlled trials. Stroke. 2021;52(6):e217-e223. 3) Minhas JS, Chithiramohan T, Wang X, et al. Oral antiplatelet therapy for acute ischaemic stroke. Cochrane Database Syst Rev. 2022;1(1):CD000029.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_59_2023_11">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 59 (2023)</p>
+        <div class="poll-stem">You are concerned about the alcohol use of a 45-year-old family physician colleague in your community. One evening you smell alcohol on their breath when they are on-call making evening rounds at the hospital. When you try to talk with them about it, they deny having a problem and tell you to mind your own business. Which one of the following should be your next course of action?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_59_2023_11" data-choice="A">A) Do nothing further</button><button class="poll-opt" data-poll="q_59_2023_11" data-choice="B">B) Report your concern to your state medical board</button><button class="poll-opt" data-poll="q_59_2023_11" data-choice="C">C) Report your concern to the American Academy of Family Physicians</button><button class="poll-opt" data-poll="q_59_2023_11" data-choice="D">D) Report your concern to the American Board of Family Medicine</button><button class="poll-opt" data-poll="q_59_2023_11" data-choice="E">E) Report your concern to the American Medical Association</button></div>
+        <button class="poll-reset" data-poll="q_59_2023_11" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 59 (2023)</h3>
+        <div class="poll-results" id="results-q_59_2023_11">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: B — Question 59 (2023)</h3>
+        <div class="critique-body">There is an ethical and, in most states, legal obligation to report this physician for the safety of their patients. The state medical board is the appropriate agency to contact with such a concern. They will investigate the report and have the authority to intervene. The American Academy of Family Physicians and American Board of Family Medicine are not involved with licensing or intervention in the event of physician impairment. Ref: Weiss BD. Duty to report incompetent physicians. Am Fam Physician. 2022;106(4):450-452. 23</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_63_2023_12">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 63 (2023)</p>
+        <div class="poll-stem">A 55-year-old male presents with intermittent epigastric pain, early satiety, and bloating. His symptoms have been present for years with minimal change. You suspect a diagnosis of functional dyspepsia. Which one of the following additional findings would constitute an alarm symptom and warrant further workup?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_63_2023_12" data-choice="A">A) Epigastric tenderness</button><button class="poll-opt" data-poll="q_63_2023_12" data-choice="B">B) Increased abdominal pain when the abdominal wall muscles are tensed</button><button class="poll-opt" data-poll="q_63_2023_12" data-choice="C">C) Lymphadenopathy</button><button class="poll-opt" data-poll="q_63_2023_12" data-choice="D">D) Nausea</button><button class="poll-opt" data-poll="q_63_2023_12" data-choice="E">E) Weight gain 23</button></div>
+        <button class="poll-reset" data-poll="q_63_2023_12" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 63 (2023)</h3>
+        <div class="poll-results" id="results-q_63_2023_12">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: C — Question 63 (2023)</h3>
+        <div class="critique-body">In patients with epigastric pain, alarm symptoms include age &gt;60, persistent vomiting, unintended weight loss, dysphagia or odynophagia, gastrointestinal bleeding, a palpable mass, lymphadenopathy, night waking, symptoms that have a sudden/recent onset or are progressive in character, a family history of gastrointestinal cancer, and a poor response to empiric therapy. Epigastric tenderness is common in patients with functional dyspepsia and is not concerning unless accompanied by other alarm findings. Abdominal pain that increases when the abdominal wall muscles are tensed is called the Carnett sign. It is indicative of abdominal wall pain (musculoskeletal) and is not an alarm symptom for patients with dyspepsia. Chronic nausea is common and, unless accompanied by chronic vomiting, it is not an alarm symptom. Weight loss, not weight gain, is an alarm symptom. Ref: Chona DL, Tubb MR, Gilinsky NH. Dyspepsia: a stepwise approach to evaluation and management. J Fam Pract. 2021;70(7):320-325.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_76_2023_13">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 76 (2023)</p>
+        <div class="poll-stem">An 8-year-old female is brought to the emergency department by her parents because of an asthma exacerbation that started earlier today in the context of a new upper respiratory infection. This morning she doubled her usual fluticasone (Flovent) inhaler and took 44 wg, four puffs. She has also been taking albuterol (Proventil, Ventolin), 90 ug, two puffs every hour for the past 3 hours, with minimal relief of shortness of breath and wheezing. She has a temperature of 36.9°C (98.4°F), a respiratory rate of 28/min, a pulse rate of 128 beats/min, and an oxygen saturation of 96% on room air. On ex...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_76_2023_13" data-choice="A">A) Diphenhydramine</button><button class="poll-opt" data-poll="q_76_2023_13" data-choice="B">B) Epinephrine</button><button class="poll-opt" data-poll="q_76_2023_13" data-choice="C">C) Magnesium</button><button class="poll-opt" data-poll="q_76_2023_13" data-choice="D">D) Terbutaline</button><button class="poll-opt" data-poll="q_76_2023_13" data-choice="E">E) Theophylline</button></div>
+        <button class="poll-reset" data-poll="q_76_2023_13" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 76 (2023)</h3>
+        <div class="poll-results" id="results-q_76_2023_13">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: C — Question 76 (2023)</h3>
+        <div class="critique-body">This child’s persistent asthma symptoms despite frequent use of an inhaled short-acting B-agonist (SABA) indicate an acute asthma exacerbation. Her vital signs show significant tachypnea and tachycardia consistent with this clinical picture and inhaled ipratropium is a good next step. Given this patient’s persistent symptoms and abnormal vital signs, intravenous magnesium is an appropriate next-line intervention. Its bronchodilator effects are thought to be related to improvements in airway excitability and smooth muscle relaxation. Its use has been associated with reduced hospitalization in children and adults without a subsequent increase in return for emergency care. It has a low incidence of side effects and toxicity. Diphenhydramine would be indicated if there were concern for an allergic process, but that is not the case in this patient. Parenteral epinephrine is indicated in asthma only if it is associated with anaphylaxis. Terbutaline is a SABA that can be administered parenterally and does not improve symptoms in patients who are already receiving an inhaled SABA. Theophylline is no longer recommended due to concerns about side effects and toxicity. Ref: Griffiths B, Kew KM. Intravenous magnesium sulfate for treating children with acute asthma in the emergency department. Cochrane Database Syst Rev. 2016;4(4):CD011050. 2) Erumbala G, Anzar S, Tonbari A, Salem R, Powell C. Stating the obvious: intravenous magnesium sulphate should be the first parenteral bronchodilato...</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_89_2023_14">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 89 (2023)</p>
+        <div class="poll-stem">A 70-year-old male with a COPD exacerbation is found to have a sodium level of 127 mEq/L (N 135-145). He is alert and oriented although he is in mild respiratory distress. After an appropriate evaluation, you determine that he has euvolemic hyponatremia from the syndrome of inappropriate secretion of antidiuretic hormone (SIADH), due to his worsening lung disease. Aside from addressing his COPD, which one of the following is the most appropriate initial treatment for his hyponatremia?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_89_2023_14" data-choice="A">A) Fluid restriction</button><button class="poll-opt" data-poll="q_89_2023_14" data-choice="B">B) Salt restriction</button><button class="poll-opt" data-poll="q_89_2023_14" data-choice="C">C) Hypertonic saline</button><button class="poll-opt" data-poll="q_89_2023_14" data-choice="D">D) Furosemide (Lasix)</button><button class="poll-opt" data-poll="q_89_2023_14" data-choice="E">E) Tolvaptan (Samsca)</button></div>
+        <button class="poll-reset" data-poll="q_89_2023_14" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 89 (2023)</h3>
+        <div class="poll-results" id="results-q_89_2023_14">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: A — Question 89 (2023)</h3>
+        <div class="critique-body">The treatment for euvolemic hyponatremia involves correcting the underlying cause and restricting fluid intake. A fluid restriction of 500 mL less than the daily urine output is a reasonable goal, although adherence can be difficult. The intake of salt as well as protein should not be restricted. The use of hypertonic saline is restricted to cases of severe symptomatic hyponatremia. Diuretics such as furosemide factor into managing hypervolemic hyponatremia but not euvolemic hyponatremia. Vaptans such as tolvaptan are vasopressin receptor antagonists that may be considered for short-term use in addition to fluid restriction for select cases of severe asymptomatic hyponatremia, defined as a sodium level &lt; 125 mEq/L. 35 Ref: Braun MM, Barstow CH, Pyzocha NJ. Diagnosis and management of sodium disorders: hyponatremia and hypernatremia. Am Fam Physician. 2015;91(5):299-307. 2) Adrogué HJ, Tucker BM, Madias NE. Diagnosis and management of hyponatremia: a review. JAMA. 2022;328(3):280-291.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_134_2023_15">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 134 (2023)</p>
+        <div class="poll-stem">A 39-year-old male presents during influenza season with symptoms of nasal congestion and sore throat associated with a cough. He is most bothered by his severe laryngitis, and is concerned about a planned conference where he will be speaking next week. He would like the symptoms to resolve quickly, and is being proactive so it does not lead to pneumonia. His symptoms started 5 days ago and have been constant. He had a fever of 100°F for the first 3 days. On examination he has a fever, appears tired and mildly ill, and has a red pharynx and a very hoarse voice. The remainder of the examination...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_134_2023_15" data-choice="A">A) Reassurance and vocal rest</button><button class="poll-opt" data-poll="q_134_2023_15" data-choice="B">B) Inhaled fluticasone (Flovent)</button><button class="poll-opt" data-poll="q_134_2023_15" data-choice="C">C) Amoxicillin/clavulanate (Augmentin)</button><button class="poll-opt" data-poll="q_134_2023_15" data-choice="D">D) Levofloxacin</button><button class="poll-opt" data-poll="q_134_2023_15" data-choice="E">E) Oseltamivir (Tamiflu)</button></div>
+        <button class="poll-reset" data-poll="q_134_2023_15" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 134 (2023)</h3>
+        <div class="poll-results" id="results-q_134_2023_15">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: A — Question 134 (2023)</h3>
+        <div class="critique-body">Laryngitis and an accompanying hoarse voice are viral symptoms, and antibiotics will not help. Fluticasone is effective for the treatment of asthma, but has no value in acute laryngitis. Oseltamivir can be used during influenza season for empiric treatment for influenza-like illness, but is only effective if started within the first 3 days of illness. Ref: Reveiz L, Cardona AF. Antibiotics for acute laryngitis in adults. Cochrane Database Syst Rev. 2015;2015(5):CD004783. 2) Sur DKC, Plesa ML. Antibiotic use in acute upper respiratory tract infections. Am Fam Physician. 2022; 106(6):628-636.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_144_2023_16">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 144 (2023)</p>
+        <div class="poll-stem">You are preparing to inform a patient of a diagnosis of terminal metastatic cancer. When sharing bad news with a patient, which one of the following is the most appropriate next step?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_144_2023_16" data-choice="A">A) Selecting which information to share with the patient</button><button class="poll-opt" data-poll="q_144_2023_16" data-choice="B">B) Asking the family what the patient knows</button><button class="poll-opt" data-poll="q_144_2023_16" data-choice="C">C) Obtaining the patient’s permission to discuss the diagnosis</button><button class="poll-opt" data-poll="q_144_2023_16" data-choice="D">D) Explaining palliative care</button><button class="poll-opt" data-poll="q_144_2023_16" data-choice="E">E) Informing the patient about hospice</button></div>
+        <button class="poll-reset" data-poll="q_144_2023_16" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 144 (2023)</h3>
+        <div class="poll-results" id="results-q_144_2023_16">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: C — Question 144 (2023)</h3>
+        <div class="critique-body">As health care has moved to a patient-centered, decision-making model, there is a focus on communication skills and patient preferences. These apply when physicians share serious or bad news with patients. The Setting, Perception, Invitation, Knowledge, Emotions, and Strategy/Summary (SPIKES) protocol can be used for sharing bad news. It is during the invitation step of SPIKES that a physician determines how much information or detail a patient desires to hear. Patient preferences vary and are influenced by demographics including age, sex, education, and culture (SOR B). While most patients want to know their diagnosis, the amount of detail varies. It is important to recognize this before sharing serious or bad news. Asking permission to discuss the information enables the patient to control the conversation. The following questions are examples of how to ask for patient permission: Would it be okay if I give you those test results now? Are you someone who likes to know all of the details, or would you prefer that I focus on the most important results? If the patient declines, then offer to review the diagnosis again when they are ready or when a family member is present. Previously in the paternalistic patient care model, the physician would select the information to share to help steer the patient toward the best decision. While the family is important, SPIKES is directed toward the patient because it is the patient, not the family, who controls the amount of detail that is...</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_154_2023_17">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 154 (2023)</p>
+        <div class="poll-stem">A 36-year-old male presents to the urgent care clinic 2 days after he fell on his outstretched arm while snow skiing. He waited until his return home to seek evaluation and treatment. On presentation to your clinic he reports pain located in the deltoid region that is exacerbated when lifting the arms overhead. The pain is so severe that it awakens him at night. Examination of the shoulder demonstrates weakness with external rotation, internal rotation, and abduction. The empty can and drop arm tests are positive. Initial shoulder radiographs are negative. Based on the presentation and examina...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_154_2023_17" data-choice="A">A) Rest, ice, compression, elevation, and home exercises</button><button class="poll-opt" data-poll="q_154_2023_17" data-choice="B">B) NSAIDs and physical therapy</button><button class="poll-opt" data-poll="q_154_2023_17" data-choice="C">C) Corticosteroid injection</button><button class="poll-opt" data-poll="q_154_2023_17" data-choice="D">D) MRI 57</button></div>
+        <button class="poll-reset" data-poll="q_154_2023_17" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 154 (2023)</h3>
+        <div class="poll-results" id="results-q_154_2023_17">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: D — Question 154 (2023)</h3>
+        <div class="critique-body">Weakness and pain are common symptoms of rotator cuff tears. The empty can test has a sensitivity of 70% and a specificity of 81% for supraspinatus muscle tear. The drop arm test has a low sensitivity of 21% for supraspinatus muscle tear, but a very high specificity of 96%. MRI would allow evaluation of the size and degree of tear as the next step in evaluation. In large or full thickness rotator cuff tears, immediate surgical repair is recommended in otherwise young, healthy individuals. Delayed repair of such tears can result in tendon degeneration, retraction, and compromised surgical results. Surgical repair should be performed within 6 weeks of the injury. Rest, ice, compression, elevation, and home exercises; NSAIDs and physical therapy; and corticosteroid injection would not be the most appropriate options for the next step in the management of this patient’s injury. Ref: Lahteenmaki HE, Virolainen P, Hiltunen A, Heikkilé J, Nelimarkka OI. Results of early operative treatment of rotator cuff tears with acute symptoms. J Shoulder Elbow Surg. 2006;15(2):148-153. 2) Jain NB, Luz J, Higgins LD, et al. The diagnostic accuracy of special tests for rotator cuff tear: the ROW cohort study. Am J Phys Med Rehabil. 2017;96(3): 176-183.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_49_2024_18">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 49 (2024)</p>
+        <div class="poll-stem">A 4-month-old female is brought to your office for a well child check. She is here with her mother and 2 older brothers, who are also your patients. The family looks forward to swimming at the local outdoor community pool, going to the beach, and gardening this summer. Which one of the following should you recommend to reduce this family's risk for skin cancer related to sun exposure?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_49_2024_18" data-choice="A">A) Applying sunscreen with an SPF ≥15 to the infant before taking her outside</button><button class="poll-opt" data-poll="q_49_2024_18" data-choice="B">B) Avoiding going to the pool during the middle of the day, and encouraging them to take breaks in the shade</button><button class="poll-opt" data-poll="q_49_2024_18" data-choice="C">C) Going to the beach only on cloudy days when ultraviolet rays are absent</button><button class="poll-opt" data-poll="q_49_2024_18" data-choice="D">D) Wearing a baseball cap for sun protection when gardening</button></div>
+        <button class="poll-reset" data-poll="q_49_2024_18" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 49 (2024)</h3>
+        <div class="poll-results" id="results-q_49_2024_18">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: B — Question 49 (2024)</h3>
+        <div class="critique-body">Exposure to UV light is known to increase the risk for skin cancer. UV rays are strongest from 10:00 a.m. to 4:00 p.m., so going to the pool in the early morning will reduce exposure. The FDA does not recommend the use of sunscreen in infants under 6 months of age. Children under 6 months of age should be kept out of direct sunlight. UV rays still damage skin on cloudy days. Hats should shade the ears and the back of the neck as well as the face, so a baseball cap is not a good choice.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_59_2024_19">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 59 (2024)</p>
+        <div class="poll-stem">A 16-year-old female presents for a routine checkup. During the visit, she discloses that she is sexually active and wants to discuss contraceptive options. However, she is hesitant to inform her parents, fearing their disapproval. Which one of the following is the most ethical course of action?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_59_2024_19" data-choice="A">A) Providing the patient with contraception without informing her parents, and respecting her confidentiality by not noting...</button><button class="poll-opt" data-poll="q_59_2024_19" data-choice="B">B) Offering confidential counseling and contraceptive options while encouraging open communication with her parents</button><button class="poll-opt" data-poll="q_59_2024_19" data-choice="C">C) Insisting on parental involvement in the decision-making process, emphasizing the importance of open communication</button><button class="poll-opt" data-poll="q_59_2024_19" data-choice="D">D) Referring the patient to a mental health professional to address her concerns about parental disapproval before discussi...</button><button class="poll-opt" data-poll="q_59_2024_19" data-choice="E">E) Refusing to discuss contraception without parental consent, citing the patient’s age</button></div>
+        <button class="poll-reset" data-poll="q_59_2024_19" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 59 (2024)</h3>
+        <div class="poll-results" id="results-q_59_2024_19">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: B — Question 59 (2024)</h3>
+        <div class="critique-body">While respecting the patient’s autonomy and confidentiality is important, ethical obligations also extend to ensuring her well-being and safety, and accurately maintaining the medical record. Encouraging open communication with parents can foster trust and support, but forcing it might create a harmful environment. Offering counseling and contraceptive options while advocating for open communication allows the physician to foster patient autonomy as well as uphold responsible guidance. This approach aligns with ethical guidelines from the American Academy of Pediatrics that emphasize respect for minors’ confidentiality while considering parental involvement in sensitive situations.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_88_2024_20">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 88 (2024)</p>
+        <div class="poll-stem">A patient is considering hormonal contraception, and you counsel her regarding the potential for abnormal uterine bleeding. Which one of the following contraceptives is most associated with abnormal uterine bleeding that is less likely to improve with time?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_88_2024_20" data-choice="A">A) A combined oral contraceptive with continuous dosing</button><button class="poll-opt" data-poll="q_88_2024_20" data-choice="B">B) A combined oral contraceptive with cyclic dosing</button><button class="poll-opt" data-poll="q_88_2024_20" data-choice="C">C) Medroxyprogesterone acetate (Depo-Provera CI)</button><button class="poll-opt" data-poll="q_88_2024_20" data-choice="D">D) An etonogestrel implant (Nexplanon)</button><button class="poll-opt" data-poll="q_88_2024_20" data-choice="E">E) A levonorgestrel IUD (Mirena)</button></div>
+        <button class="poll-reset" data-poll="q_88_2024_20" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 88 (2024)</h3>
+        <div class="poll-results" id="results-q_88_2024_20">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: D — Question 88 (2024)</h3>
+        <div class="critique-body">Abnormal uterine bleeding is a common issue for patients taking hormonal contraception, and family physicians should engage in shared decision-making with patients regarding its potential duration. Frequent or prolonged bleeding can occur in up to 23% of patients using the etonogestrel implant, and this bleeding is less likely to improve over time. Patients on either continuous or cyclic combined oral contraceptives can be counseled to expect bleeding abnormalities during the first 3 months. The estrogen component helps with cycle control because it stabilizes the endometrium. Patients tend to have amenorrhea and lighter menses after 6–12 months of medroxyprogesterone acetate use (SOR B). While up to 35% of patients with the levonorgestrel IUD experience frequent or prolonged bleeding in the first 3 months of use, most have a reduction in uterine bleeding within 12 months (SOR B).</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_117_2024_21">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 117 (2024)</p>
+        <div class="poll-stem">A 55-year-old female who is hospitalized for acute pancreatitis and alcohol intoxication expresses a desire for discharge against medical advice on day 2 of her admission. Which one of the following additional factors would represent a CONTRAINDICATION to immediate discharge in this case?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_117_2024_21" data-choice="A">A) A current manifestation of mild alcohol withdrawal syndrome</button><button class="poll-opt" data-poll="q_117_2024_21" data-choice="B">B) A history of major depression with a past suicide attempt</button><button class="poll-opt" data-poll="q_117_2024_21" data-choice="C">C) An inability to demonstrate appreciation of her medical situation</button><button class="poll-opt" data-poll="q_117_2024_21" data-choice="D">D) A lack of health insurance</button><button class="poll-opt" data-poll="q_117_2024_21" data-choice="E">E) An unstable housing situation</button></div>
+        <button class="poll-reset" data-poll="q_117_2024_21" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 117 (2024)</h3>
+        <div class="poll-results" id="results-q_117_2024_21">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: C — Question 117 (2024)</h3>
+        <div class="critique-body">Discharges against medical advice comprise approximately 1%–2% of all hospital discharges and are challenging encounters to navigate. In such situations, communication, patient safety, and follow-up planning are of paramount importance. In assessing a patient who has requested discharge against medical advice, one of the primary tasks is to determine if the patient has the capacity to make this decision. Decision-making capacity evaluation involves 4 key components. The patient must be able to (1) understand the pertinent medical information, (2) appreciate the medical situation and potential consequences, (3) demonstrate logical reasoning of the various treatment options, and (4) communicate a choice. In this patient scenario, an inability to demonstrate appreciation of the medical situation and possible consequences of being discharged against the advice of the medical team would represent a contraindication to discharging the patient without further evaluation. For a patient who cannot demonstrate decision-making capacity, the next step is to consult an advance directive or surrogate decision-maker. If neither is available, the hospital ethics committee and medicolegal team should be contacted to provide further guidance. While moderate or severe alcohol withdrawal with associated mental status impairment likely would impair decision-making capacity, mild alcohol withdrawal syndrome alone would not contraindicate a discharge against medical advice. Active suicidal ideation...</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_120_2024_22">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 120 (2024)</p>
+        <div class="poll-stem">A fully vaccinated 4-year-old female is brought to your office in September because of a 10-day history of febrile upper respiratory illness. During that time, she tested negative for COVID-19, influenzas A and B, Streptococcus, and respiratory syncytial virus. She appeared to be slowly improving, but today she has begun to report pain in her right shoulder and thigh. This morning she refused to eat her breakfast and choked on her milk. She was unable to dress unassisted today. On examination she is afebrile with normal vital signs, appears tired, and is not speaking as clearly as usual. She h...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_120_2024_22" data-choice="A">A) Starting oral amoxicillin/clavulanate (Augmentin)</button><button class="poll-opt" data-poll="q_120_2024_22" data-choice="B">B) Starting oral prednisone</button><button class="poll-opt" data-poll="q_120_2024_22" data-choice="C">C) Checking IgG and IgM levels for Epstein-Barr virus and cytomegalovirus</button><button class="poll-opt" data-poll="q_120_2024_22" data-choice="D">D) Obtaining MRI of the right hip</button><button class="poll-opt" data-poll="q_120_2024_22" data-choice="E">E) Sending her to the emergency department for hospital admission</button></div>
+        <button class="poll-reset" data-poll="q_120_2024_22" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 120 (2024)</h3>
+        <div class="poll-results" id="results-q_120_2024_22">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: E — Question 120 (2024)</h3>
+        <div class="critique-body">This patient most likely has acute flaccid myelitis (AFM), a disease first named in 2014 to describe a rapid onset of flaccid limb weakness without a known cause. Most cases follow a viral febrile illness; the disease can progress rapidly to respiratory failure and dangerous autonomic instability. When AFM is suspected, patients should be immediately admitted to a hospital capable of intensive care support. Collecting samples for analysis is important but should not delay admission, nor should infectious disease consultation. Corticosteroids may also be administered once the patient is hospitalized, although human evidence is lacking in this condition. AFM cases have increased rapidly since the condition was first recognized. The disease occurs predominantly in younger children and causes a nondemyelinating injury to the central grey matter of the spinal cord. This is best discerned via MRI and helps to differentiate this disease from acute transverse myelitis, Guillain-Barré syndrome, or multiple sclerosis. Deficits are frequently proximal and do not follow an ascending pattern, and they may include cranial nerves. Family physicians should be aware of this condition and prepared to respond with the urgency required.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_164_2024_23">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 164 (2024)</p>
+        <div class="poll-stem">A 40-year-old female presents with symptoms of heartburn and regurgitation of sour-tasting fluid into her throat after meals. She experiences these symptoms at least twice per week and says that they have been significantly affecting her quality of life. She has tried lifestyle modifications, including elevating the head of her bed and avoiding trigger foods, without significant relief. Which one of the following would be the most appropriate initial management of this patient's condition?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_164_2024_23" data-choice="A">A) An antacid as needed</button><button class="poll-opt" data-poll="q_164_2024_23" data-choice="B">B) An H2-receptor antagonist as needed</button><button class="poll-opt" data-poll="q_164_2024_23" data-choice="C">C) A proton pump inhibitor (PPI) as needed</button><button class="poll-opt" data-poll="q_164_2024_23" data-choice="D">D) A PPI daily for 4–8 weeks</button><button class="poll-opt" data-poll="q_164_2024_23" data-choice="E">E) Esophageal pH monitoring</button></div>
+        <button class="poll-reset" data-poll="q_164_2024_23" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 164 (2024)</h3>
+        <div class="poll-results" id="results-q_164_2024_23">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: D — Question 164 (2024)</h3>
+        <div class="critique-body">This patient's symptoms of heartburn and regurgitation that occur at least twice per week and significantly affect her quality of life are suggestive of GERD. The most appropriate initial management for this patient would be a proton pump inhibitor (PPI) daily for 4–8 weeks. PPIs are more effective than antacids and H₂-receptor antagonists in providing sustained symptomatic relief and resolution of esophagitis. Antacids provide short-term relief of symptoms by neutralizing gastric acid but do not provide sustained relief or resolve esophagitis, making them inadequate as the initial management strategy for this patient. Similarly, H₂-receptor antagonists reduce the secretion of gastric acid but are less effective than PPIs in providing symptom relief and healing esophagitis. They are typically used as an alternative treatment or for milder cases of GERD. As-needed PPIs are not the preferred initial management strategy for this patient. Esophageal pH monitoring is indicated in cases in which there is diagnostic uncertainty or when evaluating the effectiveness of acid suppression therapy in refractory GERD, but it is not necessary for the initial management of uncomplicated GERD.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_167_2024_24">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 167 (2024)</p>
+        <div class="poll-stem">A 55-year-old male presents to your office with a 3-day history of pain, swelling, and tenderness in the right first metatarsophalangeal (MTP) joint. Four days ago he attended a celebration where he drank a large amount of beer and participated in a hot dog–eating contest. On examination he is afebrile and visibly in pain from his right toe. The right first MTP joint is warm, tender, and swollen. There is no streaking of the skin and no obvious abscess. Which one of the following laboratory tests would support the likely diagnosis?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_167_2024_24" data-choice="A">A) A C-reactive protein level</button><button class="poll-opt" data-poll="q_167_2024_24" data-choice="B">B) A CBC</button><button class="poll-opt" data-poll="q_167_2024_24" data-choice="C">C) A comprehensive metabolic panel</button><button class="poll-opt" data-poll="q_167_2024_24" data-choice="D">D) An erythrocyte sedimentation rate</button><button class="poll-opt" data-poll="q_167_2024_24" data-choice="E">E) A uric acid level</button></div>
+        <button class="poll-reset" data-poll="q_167_2024_24" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 167 (2024)</h3>
+        <div class="poll-results" id="results-q_167_2024_24">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: E — Question 167 (2024)</h3>
+        <div class="critique-body">This patient is most likely having a flare of gout. Gout is caused by the deposition of monosodium urate crystals in large joints, classically the first metatarsophalangeal joint. A patient with a gout flare typically has an elevated uric acid level. A C-reactive protein level and an erythrocyte sedimentation rate would likely be elevated in this patient, but elevations in those laboratory values are not specific for the likely diagnosis of gout. A CBC would potentially show elevated WBCs in this patient. However, leukocytosis is nonspecific and would not lead to the specific diagnosis of gout. A comprehensive metabolic panel likely would not provide insight into the likely diagnosis.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_186_2024_25">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 186 (2024)</p>
+        <div class="poll-stem">You are the attending physician at a nursing home and the charge nurse notifies you that 3 symptomatic patients in 1 unit have tested positive for influenza A. The facility is implementing enhanced contact and droplet precautions. To prevent additional cases, you should recommend chemoprophylaxis with oseltamivir (Tamiflu) for</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_186_2024_25" data-choice="A">A) no residents or staff</button><button class="poll-opt" data-poll="q_186_2024_25" data-choice="B">B) only residents of the affected unit who have not received influenza vaccine</button><button class="poll-opt" data-poll="q_186_2024_25" data-choice="C">C) only residents of the affected unit</button><button class="poll-opt" data-poll="q_186_2024_25" data-choice="D">D) only residents of the facility who have not received influenza vaccine</button><button class="poll-opt" data-poll="q_186_2024_25" data-choice="E">E) all residents of the facility</button></div>
+        <button class="poll-reset" data-poll="q_186_2024_25" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 186 (2024)</h3>
+        <div class="poll-results" id="results-q_186_2024_25">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: C — Question 186 (2024)</h3>
+        <div class="critique-body">In its 2018 clinical practice guideline, the Infectious Diseases Society of America summarized its recommendations on the diagnosis and management of seasonal influenza, including institutional outbreak management. These recommendations include active surveillance for additional cases any time a resident of a long-term care facility is diagnosed with laboratory-confirmed influenza. Influenza can spread rapidly in the long-term care setting and outbreak control measures should be implemented immediately. The risk for severe disease and complications from influenza are high in frail older adults, and those with cognitive impairment may be less able to describe their symptoms, making case-finding more difficult. When a resident develops any respiratory symptoms during an influenza outbreak, empiric antiviral treatment should be initiated as soon as possible without waiting for diagnostic testing results. Residents who have been exposed to those with influenza should receive chemoprophylaxis as soon as possible, regardless of their vaccination status. It is not necessary to initiate chemoprophylaxis for residents who are located on remote units.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_197_2024_26">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 197 (2024)</p>
+        <div class="poll-stem">A 15-year-old female is brought to your office in May with a 3-week history of nasal congestion, sneezing, and itchy eyes. She reports that these episodes occur every spring and last about 6 weeks. She has been taking oral cetirizine (Zyrtec) with no improvement. You initiate an intranasal corticosteroid. The patient returns for follow-up 4 weeks later and says that she has seen some improvement but is dissatisfied with her progress. The patient and her parent ask about further steps in diagnosis. Which one of the following would be the most appropriate next step in diagnosis?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_197_2024_26" data-choice="A">A) A CBC</button><button class="poll-opt" data-poll="q_197_2024_26" data-choice="B">B) Skin allergen testing</button><button class="poll-opt" data-poll="q_197_2024_26" data-choice="C">C) Serum allergy testing</button><button class="poll-opt" data-poll="q_197_2024_26" data-choice="D">D) Chest radiography</button><button class="poll-opt" data-poll="q_197_2024_26" data-choice="E">E) Sinus CT</button></div>
+        <button class="poll-reset" data-poll="q_197_2024_26" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 197 (2024)</h3>
+        <div class="poll-results" id="results-q_197_2024_26">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: B — Question 197 (2024)</h3>
+        <div class="critique-body">This patient most likely has seasonal allergic rhinitis that has not responded to empiric treatment. The most appropriate next step in diagnosis is skin allergen testing. Serum allergy testing is more expensive and less specific than skin allergen testing. It also does not provide the immediate results of skin allergen testing. A CBC will likely show eosinophilia, given the patient’s likely diagnosis of allergic rhinitis. However, this is a nonspecific finding. This patient likely does not have a true respiratory illness such as pneumonia, so a chest x-ray would not be appropriate. Sinus CT likely will not lead to actionable management. It is also expensive and carries the risk for radiation exposure, which needs to be weighed carefully in a pediatric patient.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_23_2025_27">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 23 (2025)</p>
+        <div class="poll-stem">A 35-year-old female presents because of a 4-week history of difficulty sleeping following the death of her partner of 2 years. She has difficulty initiating and maintaining sleep and reports daytime sleepiness. Her symptoms have not improved despite attending grief counseling sessions. She requests nonpharmacologic treatment for her insomnia. Which one of the following is a component of sleep hygiene education for cognitive behavioral therapy for insomnia?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_23_2025_27" data-choice="A">A) Decreasing time spent in bed</button><button class="poll-opt" data-poll="q_23_2025_27" data-choice="B">B) Increasing daytime napping</button><button class="poll-opt" data-poll="q_23_2025_27" data-choice="C">C) Waking up at the same time every day</button><button class="poll-opt" data-poll="q_23_2025_27" data-choice="D">D) Placing a digital clock next to the bed</button></div>
+        <button class="poll-reset" data-poll="q_23_2025_27" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 23 (2025)</h3>
+        <div class="poll-results" id="results-q_23_2025_27">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: C — Question 23 (2025)</h3>
+        <div class="critique-body">Acute insomnia is a sleep continuity disturbance, defined as difficulty initiating and/or maintaining sleep, that occurs ≥3 days per week with a duration of 1 week to 3 months. It is often associated with a precipitating factor such as life events or psychological distress. The first step in the management of acute insomnia is identifying and treating the underlying cause. Cognitive behavioral therapy for insomnia (CBT-I) is an effective treatment for insomnia and may be offered as first-line therapy, especially in patients who wish to avoid pharmacotherapy. CBT-I has 3 categories: sleep hygiene education, sleep restriction, and stimulus control. Waking up at the same time every day and not napping during the day are among the 8 components of sleep hygiene education. Stimulus control strategies include going to bed only when sleepy and reserving the bedroom for sleep and sex. Sleep restriction techniques involve reducing time spent in bed followed by gradually increasing it by 15 minutes each week once sleep efficiency reaches 90%.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_58_2025_28">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 58 (2025)</p>
+        <div class="poll-stem">A 4-year-old male presents with a 6-day history of fever, rash, and an enlarged lymph node. On examination, you note erythema of the lips, bilateral conjunctivitis, and a diffuse maculopapular rash on the trunk and extremities. The right anterior cervical lymph node is nontender and 2 cm in size. Which one of the following is the most serious complication of this patient's condition?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_58_2025_28" data-choice="A">A) Cardiac</button><button class="poll-opt" data-poll="q_58_2025_28" data-choice="B">B) Hematologic</button><button class="poll-opt" data-poll="q_58_2025_28" data-choice="C">C) Hepatic</button><button class="poll-opt" data-poll="q_58_2025_28" data-choice="D">D) Pulmonary</button><button class="poll-opt" data-poll="q_58_2025_28" data-choice="E">E) Renal</button></div>
+        <button class="poll-reset" data-poll="q_58_2025_28" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 58 (2025)</h3>
+        <div class="poll-results" id="results-q_58_2025_28">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: A — Question 58 (2025)</h3>
+        <div class="critique-body">This patient presents with Kawasaki disease, which commonly occurs in children &lt;5 years of age. Classic Kawasaki disease presents with 4 of the following features: oral mucous membrane changes, bilateral conjunctivitis, diffuse rash, hand and foot edema, and unilateral cervical adenopathy ≥1.5 cm. Inflammation occurs and can affect multiple organ systems. The most serious complication is cardiac. If untreated, 15%–25% of patients will develop cardiovascular abnormalities, including coronary artery dilation, aortic root dilation, cardiac aneurysms, tachycardia, hypotension, and shock. Echocardiography must be performed as soon as possible. Less serious complications of Kawasaki disease include anemia, elevated liver function test results, pyuria, and pulmonary edema.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_60_2025_29">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 60 (2025)</p>
+        <div class="poll-stem">You are seeing a patient at 12 weeks' gestation for prenatal care. She has a family history of neural tube defects and is taking 4 mg of high-dose folic acid supplementation daily. Her pregnancy is progressing normally, and she has no concerns. Which one of the following should you recommend for this patient regarding ongoing folic acid supplementation?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_60_2025_29" data-choice="A">A) Continuing with 4 mg daily for the remainder of the pregnancy</button><button class="poll-opt" data-poll="q_60_2025_29" data-choice="B">B) Decreasing the dosage to 1 mg daily for the remainder of the pregnancy</button><button class="poll-opt" data-poll="q_60_2025_29" data-choice="C">C) Decreasing the dosage to 0.4 mg daily for the remainder of the pregnancy</button><button class="poll-opt" data-poll="q_60_2025_29" data-choice="D">D) Discontinuing folic acid</button></div>
+        <button class="poll-reset" data-poll="q_60_2025_29" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 60 (2025)</h3>
+        <div class="poll-results" id="results-q_60_2025_29">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: C — Question 60 (2025)</h3>
+        <div class="critique-body">Supplementation with folic acid leading up to and during pregnancy can significantly reduce the risk of neural tube defects (NTDs). Ideally, supplementation should be started 1–3 months prior to conception. Those with pregnancies at higher risk of NTDs are candidates for high-dose folic acid supplementation, which is more effective at prevention. This patient is considered high risk as she has a family history of NTDs. The recommended dose of folic acid is 4 mg per day until 12 weeks after conception, and then 0.4 mg per day after 12 weeks. The rationale for decreasing the dose after 12 weeks is that organogenesis is largely complete by this stage and there is theoretical concern for fetal toxicity. Folic acid supplementation is recommended in addition to the usual dietary sources of folic acid.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_77_2025_30">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 77 (2025)</p>
+        <div class="poll-stem">A 5-day-old male is brought to your office by his mother for an initial well child visit. After an uncomplicated, full-term pregnancy, the mother gave birth 102 hours ago through vaginal delivery and was discharged 48 hours ago. She shares that this is her first child, and she is concerned that he is not getting enough milk despite exclusively breastfeeding 10–12 times per day. Which one of the following factors, if present, would indicate inadequate breastfeeding at this time?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_77_2025_30" data-choice="A">A) Four green stools per day</button><button class="poll-opt" data-poll="q_77_2025_30" data-choice="B">B) Four wet diapers per day</button><button class="poll-opt" data-poll="q_77_2025_30" data-choice="C">C) Infant weight loss of 5% from birth weight</button><button class="poll-opt" data-poll="q_77_2025_30" data-choice="D">D) Maternal breasts that appear small and not full</button><button class="poll-opt" data-poll="q_77_2025_30" data-choice="E">E) Maternal nipple pain during the first 15 seconds of each feed</button></div>
+        <button class="poll-reset" data-poll="q_77_2025_30" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 77 (2025)</h3>
+        <div class="poll-results" id="results-q_77_2025_30">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: B — Question 77 (2025)</h3>
+        <div class="critique-body">Recognition of adequate newborn feeding and parental lactation counseling is important in the care of mothers and infants. An infant who is feeding adequately should produce 6 or more wet diapers and 3 or more stools after 4 days of life. Infant weight loss is normal in the first 3 days of life, but a weight loss of more than 7% from birth weight or ongoing weight loss after 3 days of life should raise concern. Maternal breasts that appear smaller or less full do not necessarily indicate poor feeding; however, lack of any breast changes or leaking of milk by day 5 post partum may indicate a problem with milk supply. Maternal nipple pain is normal with breastfeeding, but pain that persists beyond the first 30–60 seconds should prompt evaluation and counseling. If supplementation with formula is deemed medically necessary, protocol from the Academy of Breastfeeding Medicine should be followed.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_130_2025_31">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <p class="q-meta">Question 130 (2025)</p>
+        <div class="poll-stem">A 37-year-old male comes to the primary care clinic with a several-month history of worsening paresthesia in his right foot. He says that he sometimes has numbness and a hot sensation in his feet and has difficulty using the pedals of his car. Sometimes, he has pain that wakes him up at night but eases when he walks around the room. He has no significant past medical history but did sustain a severe right ankle sprain about 1 year ago. His vital signs are unremarkable. Examination of the ankle reveals pain along the medial malleolus and a positive Tinel sign at the ankle. An x-ray of the ankle...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_130_2025_31" data-choice="A">A) Achilles tendinopathy</button><button class="poll-opt" data-poll="q_130_2025_31" data-choice="B">B) Haglund deformity</button><button class="poll-opt" data-poll="q_130_2025_31" data-choice="C">C) Heel pad syndrome</button><button class="poll-opt" data-poll="q_130_2025_31" data-choice="D">D) Plantar fasciitis</button><button class="poll-opt" data-poll="q_130_2025_31" data-choice="E">E) Tarsal tunnel syndrome</button></div>
+        <button class="poll-reset" data-poll="q_130_2025_31" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Results — Question 130 (2025)</h3>
+        <div class="poll-results" id="results-q_130_2025_31">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | AKI/Electrolytes</p>
+        <h3>Answer: E — Question 130 (2025)</h3>
+        <div class="critique-body">Tarsal tunnel syndrome is an entrapment neuropathy of the foot caused by compression of the tibial nerve or one of its branches in the fibro-osseous tunnel under the flexor retinaculum and within the abductor hallucis muscle of the foot. It may occur following an injury, such as a fracture or sprain of the ankle. Patients can present with paresthesias, local pain behind the medial malleolus, and loss of sensation in the sole. Paresis of the small muscle of the foot can lead to impaired abduction. There is no criterion standard for the diagnosis of tarsal tunnel syndrome. The most helpful clinical diagnostic sign is a positive Tinel sign at the ankle, and electrophysiologic studies can help in making the diagnosis. MRI can be useful in cases of compression due to a mass lesion. Patients can begin a trial of conservative management, but advanced cases are better treated surgically. Achilles tendinopathy causes posterior heel pain that is localized at the site of insertion of the Achilles tendon and worsens with increased activity or pressure on the area. Haglund deformity presents with pain in the upper part of the posterior calcaneus and is more common in middle-aged women who repeatedly wear ill-fitting shoes. X-rays demonstrate the deformity on the superior aspect of the posterior calcaneus. Patients with heel pad syndrome report a deep-seated pain that feels like a bruise in the middle of the heel. The pain can be reproduced by palpating the area. It is typically an inflamm...</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_29_2022_0">
+        <p class="grey-label">Nephrology | CKD</p>
+        <p class="q-meta">Question 29 (2022)</p>
+        <div class="poll-stem">An ill-appearing 50-year-old male presents with malaise, nausea, anorexia, and lethargy. He has a recent diagnosis of a high-grade lymphoma and is undergoing aggressive chemotherapy. His last chemotherapy session was 2 days ago. An examination is nonspecific. Initial laboratory studies reveal a creatinine level of 2.1 mg/dL (N 0.6–1.2). His baseline creatinine level is 1.0 mg/dL. Which one of the following laboratory findings would be expected in this patient?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_29_2022_0" data-choice="A">A) Hypercalcemia</button><button class="poll-opt" data-poll="q_29_2022_0" data-choice="B">B) Hyperuricemia</button><button class="poll-opt" data-poll="q_29_2022_0" data-choice="C">C) Hypokalemia</button><button class="poll-opt" data-poll="q_29_2022_0" data-choice="D">D) Hypophosphatemia</button><button class="poll-opt" data-poll="q_29_2022_0" data-choice="E">E) Low LDH</button></div>
+        <button class="poll-reset" data-poll="q_29_2022_0" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | CKD</p>
+        <h3>Results — Question 29 (2022)</h3>
+        <div class="poll-results" id="results-q_29_2022_0">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | CKD</p>
+        <h3>Answer: B — Question 29 (2022)</h3>
+        <div class="critique-body">Tumor lysis syndrome is considered the most common oncologic emergency. It is caused by the rapid release of intracellular material from lysis of the malignant cells. The breakdown of nucleic acids releases large amounts of uric acid and leads to acute kidney failure, which limits clearance of potassium, phosphorus, and uric acid. This leads to hyperuricemia, secondary hypocalcemia, hyperkalemia, and hyperphosphatemia. It can result in acute renal failure, arrhythmia, seizure, and sudden death. While tumor lysis syndrome has been reported with many cancer types, it is more common with acute leukemia and high-grade lymphomas. Patients with this condition generally present within 7 days of cancer treatment, including chemotherapy, radiation, or biologic therapies. It can also occur spontaneously. An LDH elevation related to a high cell turnover rate prior to cancer treatment may indicate an increased risk of tumor lysis syndrome. Hypercalcemia, hypokalemia, hypophosphatemia, and low LDH would not be expected laboratory findings in patients with tumor lysis syndrome. 11 Ref: Will A, Tholouli E: The clinical management of tumour lysis syndrome in haematological malignancies. Br J Haematol 2011;154(1):3-13. 2) Wilson FP, Berns JS: Tumor lysis syndrome: New challenges and recent advances. Adv Chronic Kidney Dis 2014;21(1):18-26. 3) Higdon ML, Atkinson CJ, Lawrence KV: Oncologic emergencies: Recognition and initial management. Am Fam Physician 2018;97(11):741-748.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_58_2023_1">
+        <p class="grey-label">Nephrology | CKD</p>
+        <p class="q-meta">Question 58 (2023)</p>
+        <div class="poll-stem">Ina patient with hyperuricemia with an elevated uric acid level but no prior episodes of acute gout, which one of the following is recommended?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_58_2023_1" data-choice="A">A) No urate-lowering medication</button><button class="poll-opt" data-poll="q_58_2023_1" data-choice="B">B) Allopurinol (Zyloprim), 100 mg daily</button><button class="poll-opt" data-poll="q_58_2023_1" data-choice="C">C) Febuxostat (Uloric), 40 mg daily</button><button class="poll-opt" data-poll="q_58_2023_1" data-choice="D">D) Naproxen, 250 mg three times daily</button><button class="poll-opt" data-poll="q_58_2023_1" data-choice="E">E) Probenecid, 100 mg twice daily</button></div>
+        <button class="poll-reset" data-poll="q_58_2023_1" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | CKD</p>
+        <h3>Results — Question 58 (2023)</h3>
+        <div class="poll-results" id="results-q_58_2023_1">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | CKD</p>
+        <h3>Answer: A — Question 58 (2023)</h3>
+        <div class="critique-body">Uric acid-lowering treatment is recommended for all patients with an elevated uric acid level who have had two or more gout flareups per year. Consider starting it in patients with a second flareup occurring more than 1 year later, those without an attack but who are at high risk, such as in those with kidney stones, patients with a uric acid level &gt;9.0 mg/dL, or patients with stage 3 or greater chronic kidney disease. There is no benefit for urate lowering in asymptomatic patients with an elevated uric acid level who have never had an acute episode of gout, thus allopurinol, febuxostat, and probenecid would not be appropriate. NSAIDs, colchicine, or corticosteroids are recommended for gout prophylaxis for the first 3-6 months after initiating urate-lowering therapy to prevent acute flares, but this patient has no history of acute gout. Additionally, vitamin C is not effective. Ref: Dakkak M, Lanney H. Management of gout: update from the American College of Rheumatology. Am Fam Physician. 2021; 104(2):209-210.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_133_2023_2">
+        <p class="grey-label">Nephrology | CKD</p>
+        <p class="q-meta">Question 133 (2023)</p>
+        <div class="poll-stem">An 82-year-old male requires a walker for ambulation. To be eligible for home health services, Medicare requires a patient to be homebound. The patient reports that leaving home is difficult and exhausting. Which one of the following conditions could disqualify a patient from being considered homebound?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_133_2023_2" data-choice="A">A) Attending a support group at an adult day care program two times per week</button><button class="poll-opt" data-poll="q_133_2023_2" data-choice="B">B) Going to the grocery store three times per week</button><button class="poll-opt" data-poll="q_133_2023_2" data-choice="C">C) Attending his church for Mass three times per week</button><button class="poll-opt" data-poll="q_133_2023_2" data-choice="D">D) Going to outpatient dialysis three times per week</button></div>
+        <button class="poll-reset" data-poll="q_133_2023_2" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | CKD</p>
+        <h3>Results — Question 133 (2023)</h3>
+        <div class="poll-results" id="results-q_133_2023_2">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | CKD</p>
+        <h3>Answer: B — Question 133 (2023)</h3>
+        <div class="critique-body">A Medicare beneficiary must meet certain criteria to be considered homebound and obtain home health services. The first criterion is that when leaving the home, the patient requires the assistance of another person, special transportation, or a support device such as a cane, walker, or wheelchair. Alternatively, a medical contraindication to leaving home could exist. If the first criterion is met, there must be a normal inability to leave home and leaving requires a considerable and taxing effort. It is stipulated that attending religious services, therapeutic or psychosocial treatment at a licensed adult day care program, or outpatient dialysis or cancer treatments should not disqualify a patient from being considered homebound. Visiting the grocery store is not stipulated as an exception. Ref: Rerucha CM, Salinas R Jr, Shook J, Duane M. House calls. Am Fam Physician. 2020; 102(4):211-220. 52</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_185_2023_3">
+        <p class="grey-label">Nephrology | CKD</p>
+        <p class="q-meta">Question 185 (2023)</p>
+        <div class="poll-stem">Which one of the following is an indication for urgent dialysis in a patient with an acute kidney injury?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_185_2023_3" data-choice="A">A) Encephalopathy</button><button class="poll-opt" data-poll="q_185_2023_3" data-choice="B">B) A potassium level of 5.5 mEq/L (N 3.44.5)</button><button class="poll-opt" data-poll="q_185_2023_3" data-choice="C">C) Pulmonary edema that is responsive to diuretics</button><button class="poll-opt" data-poll="q_185_2023_3" data-choice="D">D) Negligible urine output for 2 hours</button><button class="poll-opt" data-poll="q_185_2023_3" data-choice="E">E) A urine output of 500 mL over 24 hours 67</button></div>
+        <button class="poll-reset" data-poll="q_185_2023_3" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | CKD</p>
+        <h3>Results — Question 185 (2023)</h3>
+        <div class="poll-results" id="results-q_185_2023_3">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | CKD</p>
+        <h3>Answer: A — Question 185 (2023)</h3>
+        <div class="critique-body">Uremic complications such as encephalopathy, neuropathy, or pericarditis are indications for urgent dialysis in patients with acute kidney injury. Other indications include a potassium level &gt;6.5 mEq/L, pulmonary edema that is not responsive to diuretics, negligible urine output for &gt;6 hours, and a urine output of &lt;200 mL over 24 hours. Ref: Mercado MG, Smith DK, Guard EL. Acute kidney injury: diagnosis and management. Am Fam Physician. 2019; 100(11):687-694.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_75_2024_4">
+        <p class="grey-label">Nephrology | CKD</p>
+        <p class="q-meta">Question 75 (2024)</p>
+        <div class="poll-stem">Which one of the following is the best agent for controlling edema related to chronic kidney disease?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_75_2024_4" data-choice="A">A) Chlorthalidone</button><button class="poll-opt" data-poll="q_75_2024_4" data-choice="B">B) Furosemide (Lasix)</button><button class="poll-opt" data-poll="q_75_2024_4" data-choice="C">C) Hydrochlorothiazide</button><button class="poll-opt" data-poll="q_75_2024_4" data-choice="D">D) Mannitol (Osmitrol)</button><button class="poll-opt" data-poll="q_75_2024_4" data-choice="E">E) Spironolactone (Aldactone)</button></div>
+        <button class="poll-reset" data-poll="q_75_2024_4" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | CKD</p>
+        <h3>Results — Question 75 (2024)</h3>
+        <div class="poll-results" id="results-q_75_2024_4">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | CKD</p>
+        <h3>Answer: B — Question 75 (2024)</h3>
+        <div class="critique-body">Furosemide is the loop diuretic of choice for removing excess extracellular fluid volume in chronic kidney disease. It has a wide margin of safety and will achieve some degree of natriuresis in even the most severe renal failure. Other diuretics have relatively little effect.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_192_2025_5">
+        <p class="grey-label">Nephrology | CKD</p>
+        <p class="q-meta">Question 192 (2025)</p>
+        <div class="poll-stem">You are evaluating a patient with acute-on-chronic kidney disease and a serum potassium level of 6.5 mEq/L (N 3.3–5.0). In addition to peaked T waves, which one of the following additional electrocardiogram changes is most likely to be present?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_192_2025_5" data-choice="A">A) Delta waves</button><button class="poll-opt" data-poll="q_192_2025_5" data-choice="B">B) Prolonged QRS interval</button><button class="poll-opt" data-poll="q_192_2025_5" data-choice="C">C) Prolonged QT interval</button><button class="poll-opt" data-poll="q_192_2025_5" data-choice="D">D) ST segment depression</button><button class="poll-opt" data-poll="q_192_2025_5" data-choice="E">E) U waves</button></div>
+        <button class="poll-reset" data-poll="q_192_2025_5" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Nephrology | CKD</p>
+        <h3>Results — Question 192 (2025)</h3>
+        <div class="poll-results" id="results-q_192_2025_5">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Nephrology | CKD</p>
+        <h3>Answer: B — Question 192 (2025)</h3>
+        <div class="critique-body">Hyperkalemia (potassium level &gt;5.0 mEq/L) can occur with impaired renal excretion, transcellular shifts, and increased potassium intake. Management of severe hyperkalemia includes using diagnostic EKG to identify cardiac conditions requiring emergent treatment. EKG changes associated with hyperkalemia include peaked T waves, prolonged PR interval, loss of P waves, and prolonged QRS interval. Hyperkalemia resulting in prolonged QRS interval, bradycardia, and junctional rhythm is associated with adverse events, including ventricular fibrillation, cardiopulmonary resuscitation, and death within 6 hours of measurement. Findings associated with hypokalemia (potassium level &lt;3.5 mEq/L) include flattened T waves, prolonged QT interval, ST segment depression, U waves, and T- wave inversion. Delta waves are not associated with potassium disorders but are present in Wolff-Parkinson-White syndrome.</div>
+    </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({ hash: true, transition: 'slide' });
+        const wsUrl = (location.protocol === 'https:' ? 'wss:' : 'ws:') + '//' + location.host + '/ws';
+        let ws = null;
+        const pollResults = {};
+        let role = location.search.includes('audience') ? 'audience' : 'presenter';
+        document.getElementById('join-url').textContent = location.href.split('?')[0] + '?audience';
+        function connect() {
+            ws = new WebSocket(wsUrl);
+            ws.onopen = () => ws.send(JSON.stringify({ role, poll: null }));
+            ws.onmessage = (e) => {
+                const d = JSON.parse(e.data);
+                if (d.type === 'results') {
+                    pollResults[d.poll] = d.votes || {};
+                    showResults(d.poll, pollResults[d.poll]);
+                } else if (d.type === 'reset') {
+                    pollResults[d.poll] = {};
+                    const res = document.getElementById('results-' + d.poll);
+                    if (res) res.innerHTML = 'Votes appear here in real-time.';
+                }
+            };
+            ws.onclose = () => setTimeout(connect, 2000);
+        }
+        connect();
+
+        if (role === 'audience') {
+            document.querySelectorAll('.poll-reset').forEach(b => b.style.display = 'none');
+        } else {
+            document.querySelectorAll('.poll-reset').forEach(b => {
+                b.style.display = 'inline-block';
+                b.onclick = () => {
+                    const pid = b.dataset.poll;
+                    if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'reset', poll: pid }));
+                };
+            });
+        }
+
+        document.querySelectorAll('.poll-opt').forEach(btn => {
+            btn.onclick = () => {
+                if (role !== 'audience') return;
+                const pid = btn.dataset.poll;
+                const choice = btn.dataset.choice;
+                if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'vote', poll: pid, choice }));
+                btn.classList.add('voted');
+            };
+        });
+
+        function showResults(pollId, votes) {
+            const el = document.getElementById('results-' + pollId);
+            if (!el) return;
+            const max = Math.max(...Object.values(votes), 1);
+            el.innerHTML = '<div class="bar-chart">' + Object.entries(votes).sort((a,b)=>a[0].localeCompare(b[0])).map(([k,v]) =>
+                '<div class="bar-row"><span class="bar-label">'+k+')</span><div class="bar-fill" style="width:'+(v/max*100)+'%"></div><span>'+v+'</span></div>'
+            ).join('') + '</div>';
+        }
+
+        Reveal.on('slidechanged', e => {
+            const resDiv = e.currentSlide?.querySelector?.('.poll-results[id^="results-"]');
+            if (resDiv) {
+                const pollId = resDiv.id.replace('results-', '');
+                if (pollResults[pollId] && Object.keys(pollResults[pollId]).length) {
+                    showResults(pollId, pollResults[pollId]);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

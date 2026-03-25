@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gastroenterology - ITE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/simple.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .reveal .slides { text-align: left; font-family: 'Segoe UI', sans-serif; }
+        .reveal h1, .reveal h2, .reveal h3 { font-family: 'Montserrat', sans-serif; }
+        .grey-label { color:#767676; font-size:0.75rem; text-transform:uppercase; margin-bottom:0.3em; }
+        .q-meta { color:#767676; font-size:0.9rem; margin-bottom:0.5em; }
+        .poll-stem { font-size:1.1rem; margin:0.8em 0; line-height:1.5; }
+        .poll-options { display:flex; flex-direction:column; gap:0.4em; }
+        .poll-opt {
+            padding:0.5em 0.8em; text-align:left; font-size:0.95rem;
+            background:#f5f5f5; border:2px solid #ddd; border-radius:6px;
+            cursor:pointer; transition:all 0.2s;
+            font-family: inherit;
+        }
+        .poll-opt:hover { background:#eaeaea; border-color:#999; }
+        .poll-opt.voted { background:#d4edda; border-color:#28a745; }
+        .poll-results { margin-top:1em; min-height:120px; }
+        .poll-reset { margin-top:0.5em; padding:0.3em 0.8em; font-size:0.85rem; cursor:pointer; }
+        .critique-body { font-size:0.95rem; line-height:1.6; color:#555; }
+        .bar-chart { display:flex; flex-direction:column; gap:0.3em; }
+        .bar-row { display:flex; align-items:center; gap:0.5em; }
+        .bar-label { width:2em; }
+        .bar-fill { height:1.5em; background:#4a90d9; border-radius:4px; min-width:2em; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+    <section>
+        <h1 style="font-family:Montserrat,sans-serif;">Gastroenterology</h1>
+        <p style="color:#767676;font-size:1.2rem;">ITE Questions — Interactive Polls</p>
+    </section>
+
+    <section>
+        <h2>Join the Poll</h2>
+        <p>Open this page on your phone:</p>
+        <p><strong id="join-url">Loading...</strong></p>
+        <p style="font-size:0.9rem;color:#767676;">Use ?audience to vote.</p>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_71_2022_0">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 71 (2022)</p>
+        <div class="poll-stem">You see a 45-year-old male with fatigue, arthralgias, and mildly elevated liver function tests. You are considering hereditary hemochromatosis as a possible diagnosis. Which one of the following should you order first?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_71_2022_0" data-choice="A">A) A serum ferritin level and transferrin saturation</button><button class="poll-opt" data-poll="q_71_2022_0" data-choice="B">B) Genetic testing for HFE mutations</button><button class="poll-opt" data-poll="q_71_2022_0" data-choice="C">C) T2-weighted MRI for hepatic iron concentration</button><button class="poll-opt" data-poll="q_71_2022_0" data-choice="D">D) A liver biopsy</button></div>
+        <button class="poll-reset" data-poll="q_71_2022_0" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 71 (2022)</h3>
+        <div class="poll-results" id="results-q_71_2022_0">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: A — Question 71 (2022)</h3>
+        <div class="critique-body">The initial tests used in the workup for suspected hemochromatosis are a serum ferritin level and transferrin saturation. A transferrin saturation &gt;45% and a serum ferritin level &gt;300 ng/mL in men or &gt;200 ng/mL in women are indicative of iron overload and highly suggestive of hereditary hemochromatosis. A serum iron level is ordered as part of transferrin saturation testing, but an elevated iron level by itself is not as sensitive or specific as the other tests. Other etiologies of iron overload should be ruled out, including liver disease, alcohol abuse, and metabolic syndrome. If no secondary etiologies are found, genetic testing would be appropriate to identify HFE mutations indicating hereditary hemochromatosis. Genetic testing should not be performed in a patient without iron overload or a family history of hereditary hemochromatosis. MRI may help determine the risk of developing cirrhosis, and a liver biopsy is used to determine the amount of liver damage. Ref: Kane SF, Roberts C, Paulus R: Hereditary hemochromatosis: Rapid evidence review. Am Fam Physician 2021;104(3):263-270.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_80_2022_1">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 80 (2022)</p>
+        <div class="poll-stem">Which one of the following vaccines is CONTRAINDICATED during pregnancy?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_80_2022_1" data-choice="A">A) Hepatitis A</button><button class="poll-opt" data-poll="q_80_2022_1" data-choice="B">B) Hepatitis B</button><button class="poll-opt" data-poll="q_80_2022_1" data-choice="C">C) Rabies</button><button class="poll-opt" data-poll="q_80_2022_1" data-choice="D">D) Tdap</button><button class="poll-opt" data-poll="q_80_2022_1" data-choice="E">E) Varicella</button></div>
+        <button class="poll-reset" data-poll="q_80_2022_1" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 80 (2022)</h3>
+        <div class="poll-results" id="results-q_80_2022_1">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: E — Question 80 (2022)</h3>
+        <div class="critique-body">The varicella vaccine is a live virus vaccine that is contraindicated during pregnancy because of the potential for fetal infection. The indications for hepatitis A, hepatitis B, rabies, and Tdap vaccines are the same for pregnant patients and nonpregnant patients. Ref: Pregnancy and vaccination: Guidelines for vaccinating pregnant women. Centers for Disease Control and Prevention, updated 2016. 32</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_106_2022_2">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 106 (2022)</p>
+        <div class="poll-stem">A 45-year-old male presents for follow-up of a recent positive HIV test. He has not had any symptoms. An initial laboratory evaluation is significant for the following: HIV viral load 124,000 copies/mL CD4 lymphocyte count 289 cells/μL Hepatitis C antibody negative Anti-HBs positive Anti-HBc positive HBsAg negative Renal function is normal. He has an upcoming appointment with the comprehensive HIV clinic to initiate antiretroviral therapy. Whic...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_106_2022_2" data-choice="A">A) Prophylactic emtricitabine/tenofovir (Truvada)</button><button class="poll-opt" data-poll="q_106_2022_2" data-choice="B">B) Prophylactic sulfamethoxazole/trimethoprim (Bactrim)</button><button class="poll-opt" data-poll="q_106_2022_2" data-choice="C">C) Hepatitis B vaccine</button><button class="poll-opt" data-poll="q_106_2022_2" data-choice="D">D) Herpes zoster vaccine (Shingrix)</button><button class="poll-opt" data-poll="q_106_2022_2" data-choice="E">E) Meningococcal B (MenB) vaccine</button></div>
+        <button class="poll-reset" data-poll="q_106_2022_2" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 106 (2022)</h3>
+        <div class="poll-results" id="results-q_106_2022_2">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: D — Question 106 (2022)</h3>
+        <div class="critique-body">The CDC’s Advisory Committee on Immunization Practices updated its recommendations in 2022 to include a two-dose series of recombinant zoster vaccine for all adults age 19 and older with HIV. Vaccination against meningococcal bacteria A, C, W, and Y (MenACWY) is also recommended, and meningococcal B (MenB) vaccination is only recommended based on the presence of other risk factors, including asplenia, complement deficiency, treatment with complement inhibitors, or risk due to outbreaks. Prophylactic emtricitabine/tenofovir is approved for pre- and postexposure prophylaxis of HIV, but would not be used alone in the care of patients with established HIV. Pneumocystis jirovecii prophylaxis, most commonly with sulfamethoxazole/trimethoprim, is recommended in patients with CD4 lymphocyte counts &lt;200 cells/ L. Hepatitis B vaccine is recommended but would not be necessary for patients such as this one with natural immunity or confirmed immunity from vaccination. Ref: Immunization schedules: Adult immunization schedule: Recommendations for ages 19 years or older, United States, 2022. Centers for Disease Control and Prevention, reviewed 2022. 2) Spach DH (ed): National HIV Curriculum. University of Washington, 2022. 43</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_120_2022_3">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 120 (2022)</p>
+        <div class="poll-stem">A 4-month-old female is brought to your clinic for a routine well child visit. She has not been seen by a physician since 2 weeks of age due to parental concerns about seeking care during the COVID-19 pandemic. Her growth and development appear to be normal. Which one of the following vaccines is CONTRAINDICATED today?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_120_2022_3" data-choice="A">A) Haemophilus influenzae type b</button><button class="poll-opt" data-poll="q_120_2022_3" data-choice="B">B) Hepatitis B</button><button class="poll-opt" data-poll="q_120_2022_3" data-choice="C">C) Inactivated poliovirus</button><button class="poll-opt" data-poll="q_120_2022_3" data-choice="D">D) 13-valent pneumococcal conjugate (PCV13, Prevnar 13)</button><button class="poll-opt" data-poll="q_120_2022_3" data-choice="E">E) Rotavirus</button></div>
+        <button class="poll-reset" data-poll="q_120_2022_3" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 120 (2022)</h3>
+        <div class="poll-results" id="results-q_120_2022_3">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: E — Question 120 (2022)</h3>
+        <div class="critique-body">Vaccine delay and vaccine hesitancy are on the rise in the United States, so family physicians should be familiar with the nuances of vaccine catch-up schedules as well as contraindications. Rotavirus vaccine has age restrictions and should not be initiated after 14 weeks and 6 days of age. In addition, the rotavirus series must be complete by 8 months of age. These age restrictions are intended to ensure the vaccine is administered when it will be of maximal benefit to children given the slightly increased risk of intussusception after vaccine administration. Hepatitis B vaccine should be administered at routine intervals. Haemophilus influenzae type b, inactivated poliovirus, and pneumococcal conjugate can all be administered to this patient today. However, these vaccines have complex follow-up intervals based on the age at prior doses and age at catch-up. Therefore, the clinician should consult the CDC catch-up vaccine schedule to verify dosing intervals. Ref: Weintraub ES, Baggs J, Duffy J, et al: Risk of intussusception after monovalent rotavirus vaccination. N Engl J Med 2014;370(6):513-519. 2) Spencer JP, Trondsen Pawlowski RH, Thomas S: Vaccine adverse events: Separating myth from reality. Am Fam Physician 2017;95(12):786-794. 3) Immunization schedules: Catch-up immunization schedule. Centers for Disease Control and Prevention, reviewed 2021.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_135_2022_4">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 135 (2022)</p>
+        <div class="poll-stem">A 42-year-old male presents for a routine health maintenance visit and asks about hepatitis C virus (HCV) testing. He reports that he experimented with intravenous drugs in college but never developed a habit. He consumes 1–2 alcoholic drinks a week and is a nonsmoker. He is not married but is in a monogamous, heterosexual relationship. Which one of the following would confirm active hepatitis C infection?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_135_2022_4" data-choice="A">A) Anti-HCV antibody testing</button><button class="poll-opt" data-poll="q_135_2022_4" data-choice="B">B) AST and ALT levels</button><button class="poll-opt" data-poll="q_135_2022_4" data-choice="C">C) An AST/platelet ratio index</button><button class="poll-opt" data-poll="q_135_2022_4" data-choice="D">D) A CBC with differential and peripheral smear</button><button class="poll-opt" data-poll="q_135_2022_4" data-choice="E">E) HCV RNA polymerase chain reaction testing 47</button></div>
+        <button class="poll-reset" data-poll="q_135_2022_4" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 135 (2022)</h3>
+        <div class="poll-results" id="results-q_135_2022_4">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: E — Question 135 (2022)</h3>
+        <div class="critique-body">This patient is at risk for hepatitis C virus (HCV) infection due to his history of intravenous drug use. The initial screening test for HCV is anti-HCV antibody testing, and a positive result could indicate either a prior infection that cleared or an active infection. If the antibody test is positive, HCV RNA polymerase chain reaction testing is the next step to confirm an active infection. AST and ALT levels and a CBC should be obtained if the patient is diagnosed with an active HCV infection. The AST/platelet ratio index is a screening test for hepatic fibrosis and cirrhosis. Ref: Maness DL, Riley E, Studebaker G: Hepatitis C: Diagnosis and management. Am Fam Physician 2021;104(6):626-635.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_165_2022_5">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 165 (2022)</p>
+        <div class="poll-stem">A 40-year-old female presents to your office with jaundice and dark urine. Testing for acute hepatitis A is positive. Her 12-year-old twin boys, who are in good health, have not been vaccinated against hepatitis A or B and are currently asymptomatic. Which one of the following would be the most appropriate postexposure prophylaxis for these children?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_165_2022_5" data-choice="A">A) No prophylaxis</button><button class="poll-opt" data-poll="q_165_2022_5" data-choice="B">B) Hepatitis A vaccine only</button><button class="poll-opt" data-poll="q_165_2022_5" data-choice="C">C) Immune globulin only</button><button class="poll-opt" data-poll="q_165_2022_5" data-choice="D">D) Hepatitis A vaccine and immune globulin 58</button></div>
+        <button class="poll-reset" data-poll="q_165_2022_5" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 165 (2022)</h3>
+        <div class="poll-results" id="results-q_165_2022_5">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: B — Question 165 (2022)</h3>
+        <div class="critique-body">All unvaccinated household contacts and sexual contacts should receive postexposure prophylaxis following significant exposure to hepatitis A within the previous 2 weeks. Healthy individuals 12 months to 40 years of age should receive the hepatitis A vaccine as prophylaxis. Infants younger than 12 months of age should receive immune globulin as postexposure prophylaxis. Individuals &gt;40 years of age, as well as immunocompromised patients, should receive both hepatitis A vaccine and immune globulin. Ref: Langan RC, Goodbred AJ: Hepatitis A. Am Fam Physician 2021;104(4):368-374. 65</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_3_2023_6">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 3 (2023)</p>
+        <div class="poll-stem">Which one of the following is an indication for long-term, rather than short-term, proton pump inhibitor therapy?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_3_2023_6" data-choice="A">A) The eradication of Helicobacter pylori</button><button class="poll-opt" data-poll="q_3_2023_6" data-choice="B">B) Gastroprotection in users of high-dose NSAIDs at high risk for gastrointestinal bleeding</button><button class="poll-opt" data-poll="q_3_2023_6" data-choice="C">C) The prevention of rebleeding from a Mallory-Weiss tear</button><button class="poll-opt" data-poll="q_3_2023_6" data-choice="D">D) The prevention of ulcers after band ligation of esophageal varices</button><button class="poll-opt" data-poll="q_3_2023_6" data-choice="E">E) The treatment of an NSAID-related gastric ulcer</button></div>
+        <button class="poll-reset" data-poll="q_3_2023_6" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 3 (2023)</h3>
+        <div class="poll-results" id="results-q_3_2023_6">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: B — Question 3 (2023)</h3>
+        <div class="critique-body">Proton pump inhibitors (PPIs) are some of the most commonly used prescription or over-the-counter medications. However, many patients do not have a clear indication for their use, leading to situations in which the risks may outweigh the benefits. In 2022 the American Gastroenterological Association published 10 best practice statements to assist clinicians in addressing this issue. Key recommendations include regular review and documentation of the indication for any ongoing PPI use, and to consider discontinuing PPIs for any patient without a clear indication. Strategies for PPI discontinuation include tapering or abrupt discontinuation. Rebound acid hypersecretion can lead to a temporary increase in symptoms in either approach. If deprescribing is attempted but not tolerated, patients may reasonably be continued on the lowest effective dose. Possible risks, mostly reported in retrospective rather than prospective studies, include an increased incidence of chronic kidney disease, fractures, dementia, and respiratory infections, including COVID-19. 1 While many patients remain on long-term PPI therapy without a clear indication, in some situations the benefits of PPIs do clearly outweigh the risks. Such indications include Barrett esophagus, severe erosive esophagitis, eosinophilic esophagitis, and high risk for upper gastrointestinal (GI) bleeding. Risk factors for GI bleeding include prior ulcer, age &gt;65, high-dose NSAID therapy, or concurrent use of aspirin, corticosteroi...</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_55_2023_7">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 55 (2023)</p>
+        <div class="poll-stem">Which one of the following medications commonly causes hyponatremia in the elderly?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_55_2023_7" data-choice="A">A) Amlodipine (Norvasc)</button><button class="poll-opt" data-poll="q_55_2023_7" data-choice="B">B) Amoxicillin</button><button class="poll-opt" data-poll="q_55_2023_7" data-choice="C">C) Atorvastatin (Lipitor)</button><button class="poll-opt" data-poll="q_55_2023_7" data-choice="D">D) Escitalopram (Lexapro)</button><button class="poll-opt" data-poll="q_55_2023_7" data-choice="E">E) Spironolactone (Aldactone)</button></div>
+        <button class="poll-reset" data-poll="q_55_2023_7" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 55 (2023)</h3>
+        <div class="poll-results" id="results-q_55_2023_7">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: D — Question 55 (2023)</h3>
+        <div class="critique-body">A possible side effect of SSRIs is hyponatremia, which is more pronounced in the elderly. This fact is particularly pertinent in elderly patients with poorly controlled psychiatric illness who are more inclined to psychogenic polydipsia, which also leads to hyponatremia. Amlodipine is known to cause peripheral edema, dizziness, and medication-induced hepatitis. Amoxicillin causes eosinophilia and ALT and AST elevations. Atorvastatin causes elevations in ALT, AST, and creatine kinase levels. Spironolactone causes hyperkalemia and hyperuricemia, but it is not known to cause hyponatremia. Ref: Jacob S, Spinier SA. Hyponatremia associated with selective serotonin-reuptake inhibitors in older adults. Ann Pharmacother. 2006;40(9):1618-1622. 2) Lexapro. Highlights of prescribing information. US Food and Drug Administration; revised May 2023.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_104_2023_8">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 104 (2023)</p>
+        <div class="poll-stem">A 45-year-old male sees you for a routine health maintenance examination. You screen him for hepatitis C. A hepatitis IgG antibody is positive but on reflex testing there is no detectable viral RNA. When discussing the test results with him, he reports past use of injected opioids and intermittent use of cocaine. To his knowledge he has never been diagnosed with viral hepatitis. Regarding hepatitis C, the patient’s history and test results indicate</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_104_2023_8" data-choice="A">A) current infection with need for treatment</button><button class="poll-opt" data-poll="q_104_2023_8" data-choice="B">B) exposure less than 2 weeks prior to screening</button><button class="poll-opt" data-poll="q_104_2023_8" data-choice="C">C) a false-positive result</button><button class="poll-opt" data-poll="q_104_2023_8" data-choice="D">D) previous infection with immunity to future infection</button><button class="poll-opt" data-poll="q_104_2023_8" data-choice="E">E) previous infection with susceptibility to future infection</button></div>
+        <button class="poll-reset" data-poll="q_104_2023_8" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 104 (2023)</h3>
+        <div class="poll-results" id="results-q_104_2023_8">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: E — Question 104 (2023)</h3>
+        <div class="critique-body">Hepatitis C can be spontaneously cleared but patients with antibodies can still be reinfected. This patient has behaviors that put him at risk for exposure to hepatitis C. There is no viral RNA detected, so he does not have a current infection. Exposure to hepatitis C less than 2 weeks prior to screening would not explain a positive IgG antibody test. The patient’s test result is not likely to be a false positive, but rather indicates a previous hepatitis C infection given his history of intravenous drug use. Ref: Viral hepatitis: Q&amp;As for health professionals. Centers for Disease Control and Prevention. Reviewed August 7, 2020. 41</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_169_2023_9">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 169 (2023)</p>
+        <div class="poll-stem">Which one of the following tests should you obtain in a patient with lichen planus?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_169_2023_9" data-choice="A">A) Antihistone antibodies</button><button class="poll-opt" data-poll="q_169_2023_9" data-choice="B">B) Hepatitis C antibody</button><button class="poll-opt" data-poll="q_169_2023_9" data-choice="C">C) HIV antibody</button><button class="poll-opt" data-poll="q_169_2023_9" data-choice="D">D) Sjogren syndrome-related antigen A (Ro) and Sjégren syndrome-related antigen B (La) antibodies</button></div>
+        <button class="poll-reset" data-poll="q_169_2023_9" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 169 (2023)</h3>
+        <div class="poll-results" id="results-q_169_2023_9">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: B — Question 169 (2023)</h3>
+        <div class="critique-body">Lichen planus is a disorder of unknown etiology affecting the skin, genitals, oral cavity, scalp, nails, and esophagus. Patients with lichen planus have a higher (up to sixfold) incidence of hepatitis C virus infection. Hence, screening for hepatitis C should be performed in patients with lichen planus even though the cause-and-effect relationship between hepatitis C and lichen planus is unknown. 65 Antihistone antibodies are present in patients with medication-induced lupus erythematosus. HIV antibody is used in screening for HIV infection. Sjégren syndrome-related antigen A (Ro) and Sjogren syndrome-related antigen B (La) antibodies are present in patients with Sjogren syndrome. Ref: Randall DA, Wilson Westmark NL, Neville BW. Common oral lesions. Am Fam Physician. 2022;105(4):369-376.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_179_2023_10">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 179 (2023)</p>
+        <div class="poll-stem">A 62-year-old female with a history of compensated cirrhosis secondary to nonalcoholic steatohepatitis presents to establish care and has no acute issues. She has read that she may have an increased risk for liver cancer and asks if she should be screened. Which one of the following should you advise?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_179_2023_10" data-choice="A">A) No routine surveillance, but evaluation based on signs or symptoms</button><button class="poll-opt" data-poll="q_179_2023_10" data-choice="B">B) Ultrasonography every 6 months</button><button class="poll-opt" data-poll="q_179_2023_10" data-choice="C">C) Annual a-fetoprotein testing</button><button class="poll-opt" data-poll="q_179_2023_10" data-choice="D">D) Annual CT</button><button class="poll-opt" data-poll="q_179_2023_10" data-choice="E">E) Annual MRI 65</button></div>
+        <button class="poll-reset" data-poll="q_179_2023_10" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 179 (2023)</h3>
+        <div class="poll-results" id="results-q_179_2023_10">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: B — Question 179 (2023)</h3>
+        <div class="critique-body">Patients with cirrhosis are at higher risk for development of hepatocellular carcinoma (HCC). Surveillance leads to detection of HCC at earlier stages and improvements in survival rates. It is recommended that adults with cirrhosis undergo ultrasonography surveillance every 6 months with or without the addition of a-fetoprotein levels. Annual CT and annual MRI are not indicated for this patient. Ref: Heimbach JK, Kulik LM, Finn RS, et al. AASLD guidelines for the treatment of hepatocellular carcinoma. Hepatology. 2018;67(1):358-380. 2) Smith A, Baumgartner K, Bositis C. Cirrhosis: diagnosis and management. Am Fam Physician. 2019; 100(12):759-770.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_67_2024_11">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 67 (2024)</p>
+        <div class="poll-stem">A 32-year-old male is hospitalized with a 1-week history of an acute illness. His signs and symptoms include a fever of 38.9 °C (102.0 °F), axillary and inguinal lymphadenopathy, sore throat, arthralgias, myalgias, headache, and a skin rash. He has a history of intravenous drug use, but says his last use was 2 weeks ago. He does not have a history of travel outside the United States, tick bites, or occupational exposure. On examination you note pharyngeal edema and erythema without tonsillar enlargement. Shallow, sharply demarcated ulcers are noted on the oral mucosa. He has a generalized rash...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_67_2024_11" data-choice="A">A) Herpes simplex virus IgM testing</button><button class="poll-opt" data-poll="q_67_2024_11" data-choice="B">B) An HIV viral load</button><button class="poll-opt" data-poll="q_67_2024_11" data-choice="C">C) A Western blot for HIV</button><button class="poll-opt" data-poll="q_67_2024_11" data-choice="D">D) Prednisone</button><button class="poll-opt" data-poll="q_67_2024_11" data-choice="E">E) A skin lesion biopsy</button></div>
+        <button class="poll-reset" data-poll="q_67_2024_11" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 67 (2024)</h3>
+        <div class="poll-results" id="results-q_67_2024_11">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: B — Question 67 (2024)</h3>
+        <div class="critique-body">Diagnosing acute HIV infection has substantial implications for both the individual and for public health, as the infection will be easy to spread during this time. In a person who has a sudden onset of an ill-defined mononucleosis-like syndrome and/or aseptic meningitis, acute HIV infection should be in the differential diagnosis along with mononucleosis, cytomegalovirus, toxoplasmosis, rubella, viral hepatitis, disseminated gonococcal infection, and other viral illnesses. Mucocutaneous ulcer is unusual in most of these conditions and should arouse suspicion. Skin rash is uncommon in mononucleosis, visceral larva migrans, and toxoplasmosis, and tends to spare the palms and soles in rubella. The abrupt onset of symptoms, pharyngeal edema without tonsillar enlargement or exudates, and diarrhea all help to distinguish acute HIV from mononucleosis. A positive heterophile antibody test can occur in acute HIV infection, and atypical lymphocytes can be seen in both. Negative results of the rapid enzyme-linked immunosorbent assay (ELISA) or Western blot test early in the course of illness can be misleading, as the antibody response is not detected until 3–7 weeks after infection. Newer fourth-generation tests further reduce this period of false-negative serologic tests to 2−4 weeks. However, individuals such as this with acute HIV infection have a markedly elevated viral load easily detected by regular viral tests. The utility of serologic testing such as IgM for infection with herp...</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_99_2024_12">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 99 (2024)</p>
+        <div class="poll-stem">A previously healthy 67-year-old female presents with a 3-month history of new progressive low and middle back pain despite physical therapy and analgesics. She has also noted an onset of fatigue and weight loss. Results of a CBC and comprehensive metabolic panel are notable for normocytic anemia, hypercalcemia, and an elevated creatinine level. Which one of the following tests would help confirm the suspected diagnosis?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_99_2024_12" data-choice="A">A) Anti–cyclic citrullinated peptide (anti-CCP) antibody</button><button class="poll-opt" data-poll="q_99_2024_12" data-choice="B">B) Antimitochondrial antibody</button><button class="poll-opt" data-poll="q_99_2024_12" data-choice="C">C) Creatine phosphokinase</button><button class="poll-opt" data-poll="q_99_2024_12" data-choice="D">D) Erythrocyte sedimentation rate</button><button class="poll-opt" data-poll="q_99_2024_12" data-choice="E">E) Serum free light chains Item #98</button></div>
+        <button class="poll-reset" data-poll="q_99_2024_12" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 99 (2024)</h3>
+        <div class="poll-results" id="results-q_99_2024_12">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: E — Question 99 (2024)</h3>
+        <div class="critique-body">This patient’s case is highly consistent with multiple myeloma. In patients with suspected multiple myeloma, the measurement of serum free light chain levels as well as serum and urine protein electrophoresis can help confirm the diagnosis. Free light chains, including the subtypes kappa and lambda, are smaller components of immunoglobulins that are typically bound to heavy chains. In multiple myeloma, elevated levels of one of these unbound or &quot;free&quot; light chains can be found in the serum, or in the urine as the Bence Jones protein. A ratio of involved to uninvolved free light chains ≥100 and an involved free light chain concentration of ≥10 mg/dL is part of the diagnostic criteria for multiple myeloma. An anti–cyclic citrullinated peptide (anti-CCP) antibody test is used to confirm a diagnosis of rheumatoid arthritis. Testing for antimitochondrial antibodies is used to assess for primary biliary cirrhosis. A creatine phosphokinase test is used as a marker of muscle damage. An erythrocyte sedimentation rate is a nonspecific marker of inflammation.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_104_2024_13">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 104 (2024)</p>
+        <div class="poll-stem">A 25-year-old primigravida at 30 weeks’ gestation presents with a 2-week history of intense pruritus of the palms and soles. The pregnancy has otherwise been uncomplicated. There are no skin lesions on examination. A CBC is unremarkable, but a metabolic panel is notable for the following: ALT 85 U/L (N 7–55) AST 75 U/L (N 8–48) Alkaline phosphatase 140 U/L (N 45–114) Bilirubin 1.8 mg/dL (N 0.1–1.2) Which one of the following tests is most likely to confirm the diagnosis?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_104_2024_13" data-choice="A">A) An acute hepatitis profile</button><button class="poll-opt" data-poll="q_104_2024_13" data-choice="B">B) A bile acid level</button><button class="poll-opt" data-poll="q_104_2024_13" data-choice="C">C) A gamma-glutamyl transferase level</button><button class="poll-opt" data-poll="q_104_2024_13" data-choice="D">D) Ultrasonography of the liver</button><button class="poll-opt" data-poll="q_104_2024_13" data-choice="E">E) A punch biopsy of the skin</button></div>
+        <button class="poll-reset" data-poll="q_104_2024_13" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 104 (2024)</h3>
+        <div class="poll-results" id="results-q_104_2024_13">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: B — Question 104 (2024)</h3>
+        <div class="critique-body">Intrahepatic cholestasis of pregnancy can occur in up to 2% of pregnancies and is most frequent in the second or third trimester. The condition causes severe pruritus initially occurring on the palms and soles without skin lesions. The pruritus may become generalized, and excoriations are often noted due to scratching. Liver enzymes may be mildly elevated and up to 10% of patients develop jaundice. A diagnosis can be made clinically and by elevated serum bile acid levels. The maternal prognosis is good, but the elevated bile acids present a risk for the fetus, and fetal surveillance should be initiated at the time of diagnosis. Due to the risk for preterm labor and fetal demise, delivery at 36–37 weeks’ gestation is recommended. Antihistamines can be used to control pruritus, and ursodeoxycholic acid can be used to bind bile acids. Hepatitis is a reasonable consideration, but this clinical picture is more compatible with intrahepatic cholestasis of pregnancy. A serum gamma-glutamyl transferase level would test for liver inflammation but would not add any useful information. Liver ultrasonography should be performed if obstruction is suspected. A skin biopsy may reveal excoriations but would not be diagnostic.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_140_2024_14">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 140 (2024)</p>
+        <div class="poll-stem">A 40-year-old female presents to the urgent care clinic because of significant fatigue, malaise, nausea, and intermittent vomiting. She is also experiencing recurrent fever and abdominal pain and says that her symptoms started a couple of weeks ago while she was in South America. Now her urine is dark and her spouse has noted a yellow tinge to her skin and the white of her eyes, prompting today’s acute visit. Her vital signs are normal. A physical examination is unremarkable except for hepatomegaly and jaundice. Which one of the following test results would confirm the suspected diagnosis?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_140_2024_14" data-choice="A">A) Anti–hepatitis A IgG antibodies</button><button class="poll-opt" data-poll="q_140_2024_14" data-choice="B">B) Anti–hepatitis A IgM antibodies</button><button class="poll-opt" data-poll="q_140_2024_14" data-choice="C">C) Anti–hepatitis B surface antibodies</button><button class="poll-opt" data-poll="q_140_2024_14" data-choice="D">D) A serum creatinine level of 2.5 mg/dL (N 0.6–1.1)</button><button class="poll-opt" data-poll="q_140_2024_14" data-choice="E">E) Elevated serum transaminase levels</button></div>
+        <button class="poll-reset" data-poll="q_140_2024_14" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 140 (2024)</h3>
+        <div class="poll-results" id="results-q_140_2024_14">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: B — Question 140 (2024)</h3>
+        <div class="critique-body">Hepatitis A is a common cause of acute hepatic inflammation and jaundice. It was the most commonly reported type of hepatitis in the United States until 2004, when a combination of widespread vaccination and food safety practices decreased its incidence. Hepatitis A is caused by nonenveloped positive-strand RNA hepatitis A virus. Humans are the only natural host. Classified as a picornavirus, it is stable in many environments and is able to survive for multiple weeks on surfaces. It is transmitted through ingestion of infected stool particles. Consumption of contaminated water and food or close interpersonal or sexual contact with a person who is infected are common causes of infection, whereas drug use and blood transfusion are less common causes of infection. Incubation lasts approximately 30 days, followed by infectious symptoms, including nonspecific influenza-like symptoms, malaise, fever, nausea with vomiting, and abdominal pain. The classic findings are jaundice and dark urine. Most cases of acute hepatitis A are self-limited and there is no specific treatment. Supportive and symptomatic care should be utilized and hepatotoxins should be avoided. A liver transplant may be considered if fulminant hepatic failure develops. Serologic testing is required for the diagnosis of hepatitis A. Anti–hepatitis A IgM antibodies become detectable 5–10 days before the onset of symptoms, peak within a month, and can persist for &gt;6 months. However, anti–hepatitis A IgG antibodies appea...</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_161_2024_15">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 161 (2024)</p>
+        <div class="poll-stem">A 25-year-old farmworker from Central America who has been working in the United States for 3 years consults you regarding immunizations. He does not recall receiving any childhood vaccines. He is currently undergoing chemotherapy for non-Hodgkin lymphoma. His next chemotherapy session is in 2 weeks, and he would like to receive as many vaccinations as possible. Which one of the following vaccines would be CONTRAINDICATED in this patient at this time?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_161_2024_15" data-choice="A">A) COVID-19</button><button class="poll-opt" data-poll="q_161_2024_15" data-choice="B">B) Hepatitis B</button><button class="poll-opt" data-poll="q_161_2024_15" data-choice="C">C) MMR</button><button class="poll-opt" data-poll="q_161_2024_15" data-choice="D">D) Pneumococcal</button><button class="poll-opt" data-poll="q_161_2024_15" data-choice="E">E) Tdap</button></div>
+        <button class="poll-reset" data-poll="q_161_2024_15" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 161 (2024)</h3>
+        <div class="poll-results" id="results-q_161_2024_15">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: C — Question 161 (2024)</h3>
+        <div class="critique-body">Live virus vaccines such as MMR and varicella are contraindicated in immunocompromised persons, including those who are undergoing chemotherapy. However, COVID-19, hepatitis B, pneumococcal, and Tdap vaccines would all be indicated in this patient, especially considering his immunocompromised status.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_48_2025_16">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 48 (2025)</p>
+        <div class="poll-stem">A 53-year-old female with no significant past medical history presents to the emergency department with fatigue, pruritus, and right upper quadrant discomfort. A physical examination reveals mild hepatomegaly. Laboratory Findings Alkaline phosphatase 450 U/L (N 44–147) AST 70 U/L (N 10–40) Total bilirubin 1.5 mg/dL (N 0.1–1.2) Antimitochondrial antibodies positive Which one of the following is the most likely diagnosis?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_48_2025_16" data-choice="A">A) Autoimmune hepatitis</button><button class="poll-opt" data-poll="q_48_2025_16" data-choice="B">B) Drug-induced liver injury</button><button class="poll-opt" data-poll="q_48_2025_16" data-choice="C">C) Metabolic dysfunction–associated steatotic liver disease (MASLD) (nonalcoholic fatty liver disease)</button><button class="poll-opt" data-poll="q_48_2025_16" data-choice="D">D) Primary biliary cholangitis</button><button class="poll-opt" data-poll="q_48_2025_16" data-choice="E">E) Primary sclerosing cholangitis</button></div>
+        <button class="poll-reset" data-poll="q_48_2025_16" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 48 (2025)</h3>
+        <div class="poll-results" id="results-q_48_2025_16">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: D — Question 48 (2025)</h3>
+        <div class="critique-body">Primary biliary cholangitis is characterized by chronic cholestasis, positive antimitochondrial antibodies (AMA), and elevated alkaline phosphatase (ALP). The American Association for the Study of Liver Diseases (AASLD) guidelines state that the diagnosis of primary biliary cholangitis can be established with the presence of at least 2 of the following: biochemical evidence of cholestasis (elevated ALP), presence of AMA, and histopathologic evidence of nonsuppurative destructive cholangitis. Elevated AMA is particularly helpful as it is found in &gt;95% of cases of primary biliary cholangitis. Autoimmune hepatitis usually presents with elevated aminotransferases and positive autoantibodies such as antinuclear antibodies or anti–smooth muscle antibodies, rather than AMA. It is not primarily a cholestatic disease and elevated ALP is typically not the predominant finding. Depending on the instigating agent, drug-induced liver injury can present with a variety of liver enzyme abnormalities; however, the presence of positive AMA and the chronicity of symptoms make it less likely in this patient scenario. Metabolic dysfunction–associated steatotic liver disease (MASLD) (formerly known as nonalcoholic fatty liver disease) typically presents with elevated aminotransferases and is associated with metabolic syndrome. It is not characterized by cholestasis or positive AMA. Primary sclerosing cholangitis typically presents with cholestatic liver enzyme abnormalities and is often associated ...</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_68_2025_17">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 68 (2025)</p>
+        <div class="poll-stem">A 23-year-old female presents after a sexual assault that occurred the prior evening. She reports nonconsensual penetrative vaginal intercourse. The assailant was an acquaintance with unknown medical history. The patient takes no medications and is up to date on vaccinations, including tetanus, HPV, and hepatitis B, although her hepatitis B serology status is unknown. She elects to undergo a medical forensic examination, which is completed with the help of a certified Sexual Assault Nurse Examiner. A urine pregnancy test is negative, and sexually transmitted infection testing is performed. Whi...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_68_2025_17" data-choice="A">A) Emtricitabine/tenofovir alafenamide (Descovy)</button><button class="poll-opt" data-poll="q_68_2025_17" data-choice="B">B) Norgestimate/ethinyl estradiol (Sprintec)</button><button class="poll-opt" data-poll="q_68_2025_17" data-choice="C">C) Sofosbuvir/velpatasvir (Epclusa)</button><button class="poll-opt" data-poll="q_68_2025_17" data-choice="D">D) Azithromycin (Zithromax), ceftriaxone, and metronidazole (Flagyl)</button><button class="poll-opt" data-poll="q_68_2025_17" data-choice="E">E) The etonogestrel implant (Nexplanon)</button></div>
+        <button class="poll-reset" data-poll="q_68_2025_17" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 68 (2025)</h3>
+        <div class="poll-results" id="results-q_68_2025_17">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: D — Question 68 (2025)</h3>
+        <div class="critique-body">In addition to trauma-informed evaluation and counseling, women who experience sexual assault should be offered forensic examination, emergency contraception, and screening and prevention for sexually transmitted infections. Empiric treatment for Neisseria gonorrhoeae, Chlamydia trachomatis, and Trichomonas vaginalis is appropriate and should include ceftriaxone, azithromycin, and either metronidazole or tinidazole. Postexposure prophylaxis for HIV should be made available with triple therapy for 28 days, rather than the double therapy regimens used in pre-exposure prophylaxis. Sofosbuvir/velpatasvir is used to treat hepatitis C infection, but routine postexposure prophylaxis is not recommended. Long-term contraception may be offered, but patients should first be provided with effective emergency contraception, such as ulipristal, levonorgestrel, or the copper IUD.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_135_2025_18">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 135 (2025)</p>
+        <div class="poll-stem">A generally healthy 50-year-old nurse presents to your clinic 1 day after sustaining an accidental needlestick containing the blood of a person with active hepatitis B virus infection who has not yet begun treatment. Your patient completed the hepatitis B (HepB) vaccine series at age 30 before beginning his first nursing job. Hepatitis serologies drawn yesterday at his place of employment were positive for hepatitis B surface antibody (&gt;10 mIU/mL). Which one of the following would be recommended for this patient?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_135_2025_18" data-choice="A">A) No additional vaccination</button><button class="poll-opt" data-poll="q_135_2025_18" data-choice="B">B) Hepatitis B immune globulin (HBIG) only</button><button class="poll-opt" data-poll="q_135_2025_18" data-choice="C">C) Recombinant HepB vaccine only</button><button class="poll-opt" data-poll="q_135_2025_18" data-choice="D">D) Both HBIG and recombinant HepB vaccine</button></div>
+        <button class="poll-reset" data-poll="q_135_2025_18" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 135 (2025)</h3>
+        <div class="poll-results" id="results-q_135_2025_18">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: A — Question 135 (2025)</h3>
+        <div class="critique-body">Postexposure prophylaxis with hepatitis B immune globulin or hepatitis B vaccine is not recommended in those who have completed the hepatitis B vaccine series and have proven immunity to hepatitis B virus. The presence of hepatitis B surface antibody titers of &gt;10 mIU/mL are indicative of immunity either from previous vaccination or from previous infection with hepatitis B (both hepatitis B core and surface antibodies are reactive). Hepatitis B immune globulin would be recommended in a patient with negative hepatitis B serology testing.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_150_2025_19">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <p class="q-meta">Question 150 (2025)</p>
+        <div class="poll-stem">A 20-year-old female presents for a health maintenance examination. She has no significant past medical history and no concerns. Based on U.S. Preventive Services Task Force guidelines, screening for which one of the following would be most appropriate at this time?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_150_2025_19" data-choice="A">A) Hepatitis C</button><button class="poll-opt" data-poll="q_150_2025_19" data-choice="B">B) Hyperlipidemia</button><button class="poll-opt" data-poll="q_150_2025_19" data-choice="C">C) Cervical cancer</button><button class="poll-opt" data-poll="q_150_2025_19" data-choice="D">D) Skin cancer</button></div>
+        <button class="poll-reset" data-poll="q_150_2025_19" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Results — Question 150 (2025)</h3>
+        <div class="poll-results" id="results-q_150_2025_19">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | Cirrhosis/Liver</p>
+        <h3>Answer: A — Question 150 (2025)</h3>
+        <div class="critique-body">The U.S. Preventive Services Task Force gives a B recommendation for screening for hepatitis C in individuals 18–79 years of age. Cervical cancer screening is not recommended until at least age 21 (A recommendation). Evidence for screening for hyperlipidemia and skin cancer is uncertain. Current evidence is insufficient to assess the balance of the benefits and harms of visual skin examination to screen for skin cancer (I recommendation), but counseling for ultraviolet exposure is recommended for persons 6 months to 24 years of age with fair skin types (B recommendation).</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_46_2022_0">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <p class="q-meta">Question 46 (2022)</p>
+        <div class="poll-stem">Which one of the following is necessary to make the diagnosis of a functional gastrointestinal disorder?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_46_2022_0" data-choice="A">A) Symptom-based clinical criteria</button><button class="poll-opt" data-poll="q_46_2022_0" data-choice="B">B) Noninvasive testing for Helicobacter pylori infection</button><button class="poll-opt" data-poll="q_46_2022_0" data-choice="C">C) Celiac serology</button><button class="poll-opt" data-poll="q_46_2022_0" data-choice="D">D) Gastric emptying studies</button><button class="poll-opt" data-poll="q_46_2022_0" data-choice="E">E) Esophagogastroduodenoscopy</button></div>
+        <button class="poll-reset" data-poll="q_46_2022_0" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Results — Question 46 (2022)</h3>
+        <div class="poll-results" id="results-q_46_2022_0">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Answer: A — Question 46 (2022)</h3>
+        <div class="critique-body">In the absence of red-flag symptoms such as nocturnal defecation, weight loss, or gastrointestinal bleeding, functional gastrointestinal disorders can be diagnosed using symptom-based clinical criteria. Symptoms such as recurrent abdominal pain related to defecation, pain related to a change in the frequency of defecation, abdominal bloating and distension, and loose and watery or lumpy and hard stools are used to diagnose functional bowel disorders. Noninvasive testing for Helicobacter pylori, celiac serology, gastric emptying studies, and esophagogastroduodenoscopy are not required in order to make a diagnosis. Ref: Wilkinson JM, Cozine EW, Loftus CG: Gas, bloating, and belching: Approach to evaluation and management. Am Fam Physician 2019;99(5):301-309.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_63_2022_1">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <p class="q-meta">Question 63 (2022)</p>
+        <div class="poll-stem">A 32-year-old female comes to your office because of chronic diarrhea, abdominal cramping, and bloating. She has had these symptoms for many years but has never discussed them in depth with a physician. A thorough history and physical examination are most consistent with irritable bowel syndrome (IBS). You order IgA tissue transglutaminase (tTG) antibody and fecal calprotectin testing to rule out other conditions and both are negative. She has expressed an interest in nonpharmacologic measures as initial management of her IBS. Which one of the following should you recommend initially, given th...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_63_2022_1" data-choice="A">A) A gluten-free diet</button><button class="poll-opt" data-poll="q_63_2022_1" data-choice="B">B) A low-FODMAP diet</button><button class="poll-opt" data-poll="q_63_2022_1" data-choice="C">C) Soluble fiber</button><button class="poll-opt" data-poll="q_63_2022_1" data-choice="D">D) Prebiotics</button><button class="poll-opt" data-poll="q_63_2022_1" data-choice="E">E) Probiotics 21</button></div>
+        <button class="poll-reset" data-poll="q_63_2022_1" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Results — Question 63 (2022)</h3>
+        <div class="poll-results" id="results-q_63_2022_1">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Answer: C — Question 63 (2022)</h3>
+        <div class="critique-body">This patient has diarrhea-predominant irritable bowel syndrome (IBS-D) and may benefit from validation of her symptoms and a clear diagnosis that has several substantiated treatment options. A 2021 clinical guideline from the American College of Gastroenterology (ACG) is based on a systematic review performed by a committee of experts in this field. Based on this review, soluble fiber (but not insoluble fiber) has good evidence for the alleviation of global IBS symptoms and is recommended strongly as a first-line intervention. In contrast, a gluten-free diet has not been shown to be beneficial for IBS. A diet low in fermentable oligosaccharides, disaccharides, monosaccharides, and polyols (FODMAP) has low-quality evidence supporting its benefit but merits a trial in patients who do not have an adequate response to fiber supplementation. The ACG has not commented on prebiotics as a treatment for IBS. A 2018 systematic review concluded that while there are small individual studies suggesting benefit for prebiotics (and probiotics) there is inadequate long-term consistent evidence to support their routine use. Probiotics have mixed and low-quality evidence for benefit in IBS. Because of the inconsistent data the ACG recommends against their use. Ref: Ford AC, Harris LA, Lacy BE, et al: Systematic review with meta-analysis: The efficacy of prebiotics, probiotics, synbiotics and antibiotics in irritable bowel syndrome. Aliment Pharmacol Ther 2018;48(10):1044-1060. 2) Lacy BE, Pime...</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_16_2023_2">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <p class="q-meta">Question 16 (2023)</p>
+        <div class="poll-stem">Which one of the following tests has the highest negative predictive value to rule out celiac disease?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_16_2023_2" data-choice="A">A) An antigliadin antibody test</button><button class="poll-opt" data-poll="q_16_2023_2" data-choice="B">B) A C-reactive protein level</button><button class="poll-opt" data-poll="q_16_2023_2" data-choice="C">C) A fecal calprotectin level</button><button class="poll-opt" data-poll="q_16_2023_2" data-choice="D">D) Genetic testing for HLA-DQ2 and HLA-DQ8</button><button class="poll-opt" data-poll="q_16_2023_2" data-choice="E">E) An IgA tissue transglutaminase (tTG) antibody test</button></div>
+        <button class="poll-reset" data-poll="q_16_2023_2" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Results — Question 16 (2023)</h3>
+        <div class="poll-results" id="results-q_16_2023_2">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Answer: D — Question 16 (2023)</h3>
+        <div class="critique-body">Celiac disease occurs almost exclusively in people with HLA-DQ2 or HLA-DQ8&amp; genotypes. Though not routinely performed, a negative result has more than a 99% negative predictive value for the disease. A positive IgA tissue transglutaminase (tTG) antibody test is helpful in making a diagnosis if symptoms are present and has 95 % sensitivity and specificity for active disease, but a negative IgA tTG test does not rule out future risk. A negative antigliadin antibody test has lower sensitivity and specificity than IgA tTG, and is used to diagnose the disease in the presence of symptoms rather than to rule out future risk. Negative C-reactive protein and fecal calprotectin levels make active inflammatory bowel disease less likely. Ref: Pietzak MM, Schofield TC, McGinniss MJ, Nakamura RM. Stratifying risk for celiac disease in a large at-risk United States population by using HLA alleles. Clin Gastroenterol Hepatol. 2009;7(9):966-971. 2) Rubio-Tapia A, Hill ID, Kelly CP, Calderwood AH, Murray JA; American College of Gastroenterology. ACG clinical guidelines: diagnosis and management of celiac disease. Am J Gastroenterol. 2013; 108(5):656-677. 3) Williams PM, Harris LM DO, Odom MR. Celiac disease: common questions and answers. Am Fam Physician. 2022; 106(1):36-43.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_86_2023_3">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <p class="q-meta">Question 86 (2023)</p>
+        <div class="poll-stem">A parent brings their 2-month-old infant to your office for a routine well check. The infant, who was born at full term, is formula fed and the parent is concerned about vomiting that occurs after every feeding. After taking a history and examining the infant you diagnose uncomplicated reflux. The next appropriate intervention would be</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_86_2023_3" data-choice="A">A) prone positioning for sleep</button><button class="poll-opt" data-poll="q_86_2023_3" data-choice="B">B) celiac testing</button><button class="poll-opt" data-poll="q_86_2023_3" data-choice="C">C) atrial of thickened feeds</button><button class="poll-opt" data-poll="q_86_2023_3" data-choice="D">D) atrial of an acid suppressor</button><button class="poll-opt" data-poll="q_86_2023_3" data-choice="E">E) abdominal ultrasonography</button></div>
+        <button class="poll-reset" data-poll="q_86_2023_3" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Results — Question 86 (2023)</h3>
+        <div class="poll-results" id="results-q_86_2023_3">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Answer: C — Question 86 (2023)</h3>
+        <div class="critique-body">For uncomplicated reflux, a trial of thickened feeds and/or switching to a soy formula would be appropriate, as a milk protein allergy can present similarly. Prone positioning for sleep is not recommended for infants due to increased risk of sudden infant death syndrome (SIDS). Celiac testing may not be helpful in a formula-fed infant who has not been exposed to gluten-containing grains. A trial of an acid suppressor should take place if symptoms are not improved after omitting cow’s milk formula and thickening feeds. Abdominal ultrasonography would be indicated for bilious forceful vomiting, failure to thrive, or other clinical signs that would suggest pyloric stenosis. 34 Ref: Rosen R, Vandenplas Y, Singendonk M, et al. Pediatric gastroesophageal reflux clinical practice guidelines: joint recommendations of the North American Society for Pediatric Gastroenterology, Hepatology, and Nutrition and the European Society for Pediatric Gastroenterology, Hepatology, and Nutrition. J Pediatr Gastroenterol Nutr. 2018;66(3):516-554. 2) Finck A, Morris L. Thickened feedings for infants with gastroesophageal reflux. Am Fam Physician. 2019; 100(7):437.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_35_2024_4">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <p class="q-meta">Question 35 (2024)</p>
+        <div class="poll-stem">A 48-year-old female with a history of Crohn disease that has been poorly controlled for the past 4–6 months is admitted to the hospital. She has a BMI of 15 kg/m2 and has unintentionally lost more than 18% of her body weight in this same span of time. Her potassium level is 3.3 mEq/L (N 3.5–5.2) and her phosphorous level is 2.6 mg/dL (N 3.0–4.5). In addition to treating her Crohn disease, you should address her malnourished condition by initiating thiamine followed by refeeding and electrolytes using which one of the following strategies?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_35_2024_4" data-choice="A">A) Providing less than her expected calorie requirements and replenishing electrolytes immediately</button><button class="poll-opt" data-poll="q_35_2024_4" data-choice="B">B) Providing her full expected calorie requirements and replenishing electrolytes immediately</button><button class="poll-opt" data-poll="q_35_2024_4" data-choice="C">C) Providing her full expected calorie requirements and delaying replenishment of electrolytes for 6 hours</button><button class="poll-opt" data-poll="q_35_2024_4" data-choice="D">D) Providing more than her expected calorie requirements and replenishing electrolytes immediately</button><button class="poll-opt" data-poll="q_35_2024_4" data-choice="E">E) Providing more than her expected calorie requirements and delaying replenishment of electrolytes for 6 hours</button></div>
+        <button class="poll-reset" data-poll="q_35_2024_4" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Results — Question 35 (2024)</h3>
+        <div class="poll-results" id="results-q_35_2024_4">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Answer: A — Question 35 (2024)</h3>
+        <div class="critique-body">This patient meets the criteria for being at high risk of developing refeeding syndrome (RFS) with a BMI &lt;16 kg/m². In addition to her BMI she has had an unintentional weight loss of &gt;15% in the past 3–6 months, and low levels of potassium and phosphorus prior to therapy. Another major risk factor is little or no nutrition for &gt;10 days. Even patients who have lower risk for RFS than this patient should initially receive as little as 25%–50% of their estimated caloric requirements, and their nutrition gradually increased. Electrolytes, especially magnesium, potassium, and phosphate, should be replenished immediately and closely monitored as calorie initiation will drive these electrolytes intracellularly. Minor risk factors for RFS include a BMI &lt;18.5 kg/m², a weight loss of &gt;10% in the preceding 3–6 months, little or no nutrition for &gt;5 days, and a history of alcohol or drug abuse.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_43_2024_5">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <p class="q-meta">Question 43 (2024)</p>
+        <div class="poll-stem">You see an expectant mother for a prenatal visit. She has heard of sudden infant death syndrome and asks for advice on sleeping arrangements. You tell her that infants should sleep</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_43_2024_5" data-choice="A">A) in a crib and on their backs in the parents’ room</button><button class="poll-opt" data-poll="q_43_2024_5" data-choice="B">B) in a crib and on their stomachs in the parents’ room</button><button class="poll-opt" data-poll="q_43_2024_5" data-choice="C">C) in a crib and on their backs in their own room</button><button class="poll-opt" data-poll="q_43_2024_5" data-choice="D">D) in the parents’ bed and on their backs</button><button class="poll-opt" data-poll="q_43_2024_5" data-choice="E">E) in the parents’ bed and on their stomachs</button></div>
+        <button class="poll-reset" data-poll="q_43_2024_5" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Results — Question 43 (2024)</h3>
+        <div class="poll-results" id="results-q_43_2024_5">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Answer: A — Question 43 (2024)</h3>
+        <div class="critique-body">The infant mortality rate from accidental suffocation and strangling in bed has increased in recent decades and some of this increase may be due to sudden infant death syndrome. Physicians should counsel expectant parents that it is safest for infants to sleep on their backs in their own cribs on a mattress with a fitted sheet. An infant should sleep in the caregiver’s room until 6–12 months of age. Infant suffocation is more common with soft linen when sleeping in the caregiver’s bed.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_78_2024_6">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <p class="q-meta">Question 78 (2024)</p>
+        <div class="poll-stem">A 73-year-old female presents with chronic diarrhea. You suspect microscopic colitis and order colonoscopy. Based on the suspected diagnosis, you should expect which one of the following colonoscopy findings?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_78_2024_6" data-choice="A">A) Granulomas</button><button class="poll-opt" data-poll="q_78_2024_6" data-choice="B">B) Normal mucosa</button><button class="poll-opt" data-poll="q_78_2024_6" data-choice="C">C) Patchy ulcerations</button><button class="poll-opt" data-poll="q_78_2024_6" data-choice="D">D) Pseudomembranes</button></div>
+        <button class="poll-reset" data-poll="q_78_2024_6" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Results — Question 78 (2024)</h3>
+        <div class="poll-results" id="results-q_78_2024_6">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Answer: B — Question 78 (2024)</h3>
+        <div class="critique-body">In a patient with microscopic colitis, the most common finding on colonoscopy is normal mucosa. Because the mucosa appears normal, microscopic colitis needs to be diagnosed with biopsy. Granulomas may be found in patients with Crohn disease. Ulcerations are found in ulcerative colitis. Pseudomembranes are found in Clostridioides difficile infection. Granulomatous changes and pseudomembranes may also require biopsy for diagnosis.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_6_2025_7">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <p class="q-meta">Question 6 (2025)</p>
+        <div class="poll-stem">According to guidelines from the American Gastroenterological Association, which one of the following is recommended as the best pharmacologic treatment of typical symptoms in diarrhea-predominant irritable bowel syndrome?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_6_2025_7" data-choice="A">A) Amitriptyline</button><button class="poll-opt" data-poll="q_6_2025_7" data-choice="B">B) Dicyclomine</button><button class="poll-opt" data-poll="q_6_2025_7" data-choice="C">C) Linaclotide (Linzess)</button><button class="poll-opt" data-poll="q_6_2025_7" data-choice="D">D) Lubiprostone (Amitiza)</button><button class="poll-opt" data-poll="q_6_2025_7" data-choice="E">E) Rifaximin (Xifaxan)</button></div>
+        <button class="poll-reset" data-poll="q_6_2025_7" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Results — Question 6 (2025)</h3>
+        <div class="poll-results" id="results-q_6_2025_7">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Answer: E — Question 6 (2025)</h3>
+        <div class="critique-body">According to the 2022 American Gastroenterological Association guidelines for diarrhea- predominant irritable bowel syndrome (IBS-D), the nonabsorbable antibiotic rifaximin has the best evidence for controlling diarrhea, discomfort, bloating, and abdominal pain. It has a broad spectrum with activity against gram-positive, gram-negative (including Clostridioides difficile), and anaerobic bacteria. It is thought to work by reducing bacterial byproducts and altering the gut flora. It is prescribed as a 14-day course for acute and recurrent symptoms. Rifaximin does not have any significant adverse effects, but it is a high-cost medication. Low-dose amitriptyline and dicyclomine are often effective in reducing symptoms, but the evidence is not as strong as that of rifaximin. Linaclotide is used for constipation- predominant IBS (IBS-C), but its chief side effect of diarrhea results in many patients discontinuing the medication. Lubiprostone is another medication used for IBS-C and for opioid-induced constipation, not IBS-D.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_73_2025_8">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <p class="q-meta">Question 73 (2025)</p>
+        <div class="poll-stem">A 45-year-old male with a recent diagnosis of Crohn disease presents to your office for a health maintenance examination. His gastroenterologist advised that he ask you about vaccine updates. He has not seen a primary care physician in over 15 years. His current medications include methotrexate and azathioprine (Imuran). He received a Tdap vaccine 6 years ago at an urgent care clinic and recently received a seasonal influenza vaccine and an updated COVID-19 vaccine at his gastroenterologist’s office. He is confident that he received all of his childhood vaccines. Which one of the following vac...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_73_2025_8" data-choice="A">A) 20-valent pneumococcal conjugate vaccine (PCV20, Prevnar 20)</button><button class="poll-opt" data-poll="q_73_2025_8" data-choice="B">B) Meningococcal</button><button class="poll-opt" data-poll="q_73_2025_8" data-choice="C">C) MMR</button><button class="poll-opt" data-poll="q_73_2025_8" data-choice="D">D) Tdap</button><button class="poll-opt" data-poll="q_73_2025_8" data-choice="E">E) Zoster vaccine (Shingrix)</button></div>
+        <button class="poll-reset" data-poll="q_73_2025_8" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Results — Question 73 (2025)</h3>
+        <div class="poll-results" id="results-q_73_2025_8">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Gastroenterology | IBD/Functional</p>
+        <h3>Answer: A — Question 73 (2025)</h3>
+        <div class="critique-body">Adults with inflammatory bowel disease (IBD) should receive a pneumococcal vaccine. Meningococcal vaccine is currently recommended for adolescents with IBD. The MMR vaccine is contraindicated in patients already on immunosuppressive treatment. Because this patient's Tdap vaccine was administered &lt;10 years ago, he is not due for another dose. Similarly, his next dose of zoster vaccine will be due when he is 50 years of age, and there is no recommendation to administer the next vaccine before the age of 50 in patients with IBD.</div>
+    </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({ hash: true, transition: 'slide' });
+        const wsUrl = (location.protocol === 'https:' ? 'wss:' : 'ws:') + '//' + location.host + '/ws';
+        let ws = null;
+        const pollResults = {};
+        let role = location.search.includes('audience') ? 'audience' : 'presenter';
+        document.getElementById('join-url').textContent = location.href.split('?')[0] + '?audience';
+        function connect() {
+            ws = new WebSocket(wsUrl);
+            ws.onopen = () => ws.send(JSON.stringify({ role, poll: null }));
+            ws.onmessage = (e) => {
+                const d = JSON.parse(e.data);
+                if (d.type === 'results') {
+                    pollResults[d.poll] = d.votes || {};
+                    showResults(d.poll, pollResults[d.poll]);
+                } else if (d.type === 'reset') {
+                    pollResults[d.poll] = {};
+                    const res = document.getElementById('results-' + d.poll);
+                    if (res) res.innerHTML = 'Votes appear here in real-time.';
+                }
+            };
+            ws.onclose = () => setTimeout(connect, 2000);
+        }
+        connect();
+
+        if (role === 'audience') {
+            document.querySelectorAll('.poll-reset').forEach(b => b.style.display = 'none');
+        } else {
+            document.querySelectorAll('.poll-reset').forEach(b => {
+                b.style.display = 'inline-block';
+                b.onclick = () => {
+                    const pid = b.dataset.poll;
+                    if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'reset', poll: pid }));
+                };
+            });
+        }
+
+        document.querySelectorAll('.poll-opt').forEach(btn => {
+            btn.onclick = () => {
+                if (role !== 'audience') return;
+                const pid = btn.dataset.poll;
+                const choice = btn.dataset.choice;
+                if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'vote', poll: pid, choice }));
+                btn.classList.add('voted');
+            };
+        });
+
+        function showResults(pollId, votes) {
+            const el = document.getElementById('results-' + pollId);
+            if (!el) return;
+            const max = Math.max(...Object.values(votes), 1);
+            el.innerHTML = '<div class="bar-chart">' + Object.entries(votes).sort((a,b)=>a[0].localeCompare(b[0])).map(([k,v]) =>
+                '<div class="bar-row"><span class="bar-label">'+k+')</span><div class="bar-fill" style="width:'+(v/max*100)+'%"></div><span>'+v+'</span></div>'
+            ).join('') + '</div>';
+        }
+
+        Reveal.on('slidechanged', e => {
+            const resDiv = e.currentSlide?.querySelector?.('.poll-results[id^="results-"]');
+            if (resDiv) {
+                const pollId = resDiv.id.replace('results-', '');
+                if (pollResults[pollId] && Object.keys(pollResults[pollId]).length) {
+                    showResults(pollId, pollResults[pollId]);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

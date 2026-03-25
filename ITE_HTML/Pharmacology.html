@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pharmacology - ITE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/simple.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .reveal .slides { text-align: left; font-family: 'Segoe UI', sans-serif; }
+        .reveal h1, .reveal h2, .reveal h3 { font-family: 'Montserrat', sans-serif; }
+        .grey-label { color:#767676; font-size:0.75rem; text-transform:uppercase; margin-bottom:0.3em; }
+        .q-meta { color:#767676; font-size:0.9rem; margin-bottom:0.5em; }
+        .poll-stem { font-size:1.1rem; margin:0.8em 0; line-height:1.5; }
+        .poll-options { display:flex; flex-direction:column; gap:0.4em; }
+        .poll-opt {
+            padding:0.5em 0.8em; text-align:left; font-size:0.95rem;
+            background:#f5f5f5; border:2px solid #ddd; border-radius:6px;
+            cursor:pointer; transition:all 0.2s;
+            font-family: inherit;
+        }
+        .poll-opt:hover { background:#eaeaea; border-color:#999; }
+        .poll-opt.voted { background:#d4edda; border-color:#28a745; }
+        .poll-results { margin-top:1em; min-height:120px; }
+        .poll-reset { margin-top:0.5em; padding:0.3em 0.8em; font-size:0.85rem; cursor:pointer; }
+        .critique-body { font-size:0.95rem; line-height:1.6; color:#555; }
+        .bar-chart { display:flex; flex-direction:column; gap:0.3em; }
+        .bar-row { display:flex; align-items:center; gap:0.5em; }
+        .bar-label { width:2em; }
+        .bar-fill { height:1.5em; background:#4a90d9; border-radius:4px; min-width:2em; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+    <section>
+        <h1 style="font-family:Montserrat,sans-serif;">Pharmacology</h1>
+        <p style="color:#767676;font-size:1.2rem;">ITE Questions — Interactive Polls</p>
+    </section>
+
+    <section>
+        <h2>Join the Poll</h2>
+        <p>Open this page on your phone:</p>
+        <p><strong id="join-url">Loading...</strong></p>
+        <p style="font-size:0.9rem;color:#767676;">Use ?audience to vote.</p>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_59_2022_0">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <p class="q-meta">Question 59 (2022)</p>
+        <div class="poll-stem">A 48-year-old male with schizophrenia presents for a new patient visit after recently relocating to your area. He has been stable on clozapine (Clozaril) for the past 15 years and asks you to refill his prescription. He has been told the earliest available appointment with a local psychiatric provider is in 3 months. Under the Clozapine Risk Evaluation and Mitigation Strategy (REMS) program, which one of the following is required to prescribe clozapine to this patient?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_59_2022_0" data-choice="A">A) A signed patient consent form</button><button class="poll-opt" data-poll="q_59_2022_0" data-choice="B">B) Serum clozapine levels</button><button class="poll-opt" data-poll="q_59_2022_0" data-choice="C">C) Creatinine levels</button><button class="poll-opt" data-poll="q_59_2022_0" data-choice="D">D) Neutrophil counts</button><button class="poll-opt" data-poll="q_59_2022_0" data-choice="E">E) Specialty training in psychiatry 20</button></div>
+        <button class="poll-reset" data-poll="q_59_2022_0" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Results — Question 59 (2022)</h3>
+        <div class="poll-results" id="results-q_59_2022_0">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Answer: D — Question 59 (2022)</h3>
+        <div class="critique-body">Clozapine is a highly effective antipsychotic medication, but its use is limited due to its association with severe drug-induced neutropenia, also referred to as agranulocytosis. Patients must be enrolled in the national Clozapine Risk Evaluation and Mitigation Strategy (REMS) program to receive treatment, and all prescribers and pharmacies must be certified by this program in order to dispense clozapine. The patient’s absolute neutrophil count must be submitted at least every 30 days, or more frequently as determined by stability in treatment. A signed patient consent form should be obtained but is not a part of the Clozapine REMS monitoring system. Monitoring serum clozapine levels and creatinine levels may be appropriate but is not part of the Clozapine REMS program. Family physicians can prescribe clozapine if registered and certified in the Clozapine REMS program, which includes passing a brief knowledge assessment, but specialty training in psychiatry is not required. Ref: Clozaril drug label. US Food and Drug Administration, revised 2016. 2) Clozapine REMS Frequently Asked Questions. Clozapine REMS, 2021.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_127_2022_1">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <p class="q-meta">Question 127 (2022)</p>
+        <div class="poll-stem">A 63-year-old female presents with a 3-week history of vulvar itching and burning. The patient has not had any vaginal bleeding since her last period at age 51. An examination reveals thin, dry labia minora and sparse pubic hair. The vaginal mucosa is smooth and pale with a frothy yellow discharge. A point-of-care urinalysis shows moderate leukocytes and trace protein. Microscopy of vaginal secretions reveals motile flagellates. Which one of the following medications is most likely to resolve this patient’s symptoms?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_127_2022_1" data-choice="A">A) Estradiol vaginal cream, 2 g vaginally daily</button><button class="poll-opt" data-poll="q_127_2022_1" data-choice="B">B) Fluconazole (Diflucan), 150 mg as a single dose</button><button class="poll-opt" data-poll="q_127_2022_1" data-choice="C">C) Doxycycline, 100 mg twice daily for 7 days</button><button class="poll-opt" data-poll="q_127_2022_1" data-choice="D">D) Metronidazole, 500 mg twice daily for 7 days</button><button class="poll-opt" data-poll="q_127_2022_1" data-choice="E">E) Sulfamethoxazole/trimethoprim (Bactrim), 800/160 mg twice daily for 7 days</button></div>
+        <button class="poll-reset" data-poll="q_127_2022_1" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Results — Question 127 (2022)</h3>
+        <div class="poll-results" id="results-q_127_2022_1">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Answer: D — Question 127 (2022)</h3>
+        <div class="critique-body">This patient presents with symptoms suggestive of vaginitis, which can be caused by vaginal infections, atrophy, and irritation from pads, panty liners, soaps, and perfumes. Atrophic vaginitis due to lack of estrogen is common in postmenopausal females. The condition responds to estrogen therapy, but infectious causes must first be ruled out. The presence of motile flagellates confirms the diagnosis of Trichomonas vaginitis, which would be treated with oral metronidazole, either as a one-time 2-g dose or 500 mg twice daily for 7 days. Estradiol, fluconazole, doxycycline, and sulfamethoxazole/trimethoprim are not used for the treatment of Trichomonas. Ref: Paladine HL, Desai UA: Vaginitis: Diagnosis and treatment. Am Fam Physician 2018;97(5):321-329.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_115_2023_2">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <p class="q-meta">Question 115 (2023)</p>
+        <div class="poll-stem">A randomized, controlled study of 300 participants tested the effectiveness of a new medication to reduce breast cancer-related deaths. Within 2 years of treatment, 15 out of 150 participants with breast cancer in the treatment group died, while 60 out of the 150 participants in the control group died. Based on this study, what is the number needed to treat to prevent one breast cancer-related death?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_115_2023_2" data-choice="A">A) 2</button><button class="poll-opt" data-poll="q_115_2023_2" data-choice="B">B) 3</button><button class="poll-opt" data-poll="q_115_2023_2" data-choice="C">C) 5</button><button class="poll-opt" data-poll="q_115_2023_2" data-choice="D">D) 10</button><button class="poll-opt" data-poll="q_115_2023_2" data-choice="E">E) 15</button></div>
+        <button class="poll-reset" data-poll="q_115_2023_2" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Results — Question 115 (2023)</h3>
+        <div class="poll-results" id="results-q_115_2023_2">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Answer: B — Question 115 (2023)</h3>
+        <div class="critique-body">The number needed to treat (NNT) is the number of patients who need to be treated with a specific medication to prevent one negative outcome or to achieve one positive outcome. It is the inverse of the absolute risk reduction (ARR), which is the difference in risk between participants in the control group and the treatment group. The closer the NNT is to 1, the more effective the new treatment is versus the placebo. Event rate in the control group (CER) = 60/150 = 0.4 Event rate in the experimental group (EER) = 15/150 = 0.1 Absolute risk reduction (ARR) = CER - EER = 0.4- 0.1 = 0.3 NNT = 1/ARR = 3.33 Ref: EBM tools: number needed to treat. Oxford University’s Centre for Evidence-Based Medicine.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_89_2024_3">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <p class="q-meta">Question 89 (2024)</p>
+        <div class="poll-stem">A 55-year-old female presents with lateral hip pain. You suspect greater trochanteric pain syndrome and prescribe anti-inflammatory medications and physical therapy. If her pain does not respond to these measures, which one of the following alternative diagnoses is most likely?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_89_2024_3" data-choice="A">A) Femoroacetabular impingement</button><button class="poll-opt" data-poll="q_89_2024_3" data-choice="B">B) Gluteus medius tendon tear</button><button class="poll-opt" data-poll="q_89_2024_3" data-choice="C">C) Ischiofemoral impingement</button><button class="poll-opt" data-poll="q_89_2024_3" data-choice="D">D) Labral tear</button><button class="poll-opt" data-poll="q_89_2024_3" data-choice="E">E) Piriformis syndrome</button></div>
+        <button class="poll-reset" data-poll="q_89_2024_3" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Results — Question 89 (2024)</h3>
+        <div class="poll-results" id="results-q_89_2024_3">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Answer: B — Question 89 (2024)</h3>
+        <div class="critique-body">The most common cause of lateral hip pain is greater trochanteric pain syndrome (formerly referred to as greater trochanteric bursitis), which can be caused by gluteus medius tendinopathy or tearing, or iliotibial band friction. A gluteus medius tendon tear should be considered in patients with greater trochanteric pain syndrome that does not respond to anti-inflammatory medications and physical therapy. MRI and/or musculoskeletal ultrasonography can be used for further diagnosis if a gluteus medius tendon tear is suspected, and surgical intervention may improve outcomes in these patients. Femoroacetabular impingement is a cause of intra-articular hip pain that usually presents with anterior pain. It is caused by bony overgrowth of the femoral head and neck or by a pincer deformity of the acetabulum and is usually bothersome with activities that require hyperflexion or a wide range of motion at the hip joint. Ischiofemoral impingement is caused by impingement of the quadratus femoris muscle and nerve between the proximal femur at the level of the lesser trochanter and ischial tuberosity, resulting in deep buttock pain worsened by activities requiring a long stride. Labral tears are associated with anterior hip pain and may cause a popping, catching, or clicking sound with activities. Piriformis syndrome is caused by the piriformis entrapping the sciatic nerve, and causes hip and buttock pain as well as sciatica.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_172_2024_4">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <p class="q-meta">Question 172 (2024)</p>
+        <div class="poll-stem">An 89-year-old female with end-stage, widely metastatic lung cancer is receiving hospice care. Her symptoms, including pain, have been well controlled until recently. According to her caregiver, she is now experiencing excessive oropharyngeal secretions. Which one of the following medications would most effectively control this patient’s secretions?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_172_2024_4" data-choice="A">A) Chlorpheniramine/hydrocodone suspension</button><button class="poll-opt" data-poll="q_172_2024_4" data-choice="B">B) Glycopyrrolate</button><button class="poll-opt" data-poll="q_172_2024_4" data-choice="C">C) Haloperidol</button><button class="poll-opt" data-poll="q_172_2024_4" data-choice="D">D) Hydroxyzine</button><button class="poll-opt" data-poll="q_172_2024_4" data-choice="E">E) Morphine</button></div>
+        <button class="poll-reset" data-poll="q_172_2024_4" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Results — Question 172 (2024)</h3>
+        <div class="poll-results" id="results-q_172_2024_4">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Answer: B — Question 172 (2024)</h3>
+        <div class="critique-body">Symptom management at the end of life aims to provide comfort and dignity for patients and their families. One of the common symptoms at the end of life is excessive oropharyngeal secretions. This can cause increased noisy breathing in the last hours to days of life, often referred to as a death rattle. Terminal secretions do not result in airway obstruction or respiratory distress for the patient but can be distressing to family members who are concerned that the patient is “drowning” in secretions. Family members often request that suctioning be performed; however, this does not reduce the rattling noise and can cause further distress to the patient. Anticholinergic medications can be used to reduce the volume of secretions and noisy breathing, but there is little high-quality evidence to support this practice. Glycopyrrolate, hyoscyamine, and transdermal scopolamine may also be used. Neither chlorpheniramine/hydrocodone nor hydroxyzine has a role in typical end-of-life care. Haloperidol is effective for the treatment of delirium. Opioids such as morphine are used to treat dyspnea (SOR B) but have no effect on secretions.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_183_2024_5">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <p class="q-meta">Question 183 (2024)</p>
+        <div class="poll-stem">Which one of the following attention-deficit/hyperactivity disorder (ADHD) medications is considered safest to take while breastfeeding?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_183_2024_5" data-choice="A">A) Amphetamine (Evekeo)</button><button class="poll-opt" data-poll="q_183_2024_5" data-choice="B">B) Atomoxetine (Strattera)</button><button class="poll-opt" data-poll="q_183_2024_5" data-choice="C">C) Clonidine</button><button class="poll-opt" data-poll="q_183_2024_5" data-choice="D">D) Guanfacine</button><button class="poll-opt" data-poll="q_183_2024_5" data-choice="E">E) Methylphenidate (Ritalin)</button></div>
+        <button class="poll-reset" data-poll="q_183_2024_5" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Results — Question 183 (2024)</h3>
+        <div class="poll-results" id="results-q_183_2024_5">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Answer: E — Question 183 (2024)</h3>
+        <div class="critique-body">Racemic methylphenidate has been studied in breastfeeding mothers and drug levels in breast milk were found to be about 0.2% of the adult dose. Drug levels were undetectable in breastfed infants and the infants had no long-term growth or developmental issues. Methylphenidate can reduce serum prolactin levels, but this has not been shown to have any clinical impact on milk supply. Less is known about amphetamine in breastfeeding, but milk and infant serum levels are significantly higher than with methylphenidate. Atomoxetine and guanfacine have no reliable data in breastfeeding and should be avoided until more is known. Clonidine has been shown to be present in significant amounts in breast milk and serum from breastfed infants (up to 50% of the maternal serum levels). While no adverse effects have been shown, this high level of medication in the infant raises concerns, and experts recommend avoiding clonidine while breastfeeding.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_12_2025_6">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <p class="q-meta">Question 12 (2025)</p>
+        <div class="poll-stem">A 40-year-old male with a history of alcohol use disorder presents to your office for help abstaining from alcohol. Until recently, he has been drinking at least 6 beers per day and often more on weekend days. He has 2 prior arrests for DUI, and his wife plans to file for divorce if he does not change. Over the past 2 weeks, he has been able to wean himself off alcohol and has joined a sobriety group. He requests medication to help him maintain his sobriety. Which one of the following medications should you recommend for this patient?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_12_2025_6" data-choice="A">A) Acamprosate</button><button class="poll-opt" data-poll="q_12_2025_6" data-choice="B">B) Disulfiram</button><button class="poll-opt" data-poll="q_12_2025_6" data-choice="C">C) Gabapentin (Neurontin)</button><button class="poll-opt" data-poll="q_12_2025_6" data-choice="D">D) Topiramate (Topamax)</button></div>
+        <button class="poll-reset" data-poll="q_12_2025_6" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Results — Question 12 (2025)</h3>
+        <div class="poll-results" id="results-q_12_2025_6">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Answer: A — Question 12 (2025)</h3>
+        <div class="critique-body">This patient meets criteria for moderate alcohol use disorder (AUD). Although AUD is a leading cause of preventable death, less than 2% of patients with AUD are prescribed medications. Acamprosate is recommended for patients who have achieved abstinence and desire to maintain it (SOR A). Gabapentin is useful for the prevention of withdrawal and is safe for those who are still drinking (SOR A). Topiramate is useful in decreasing heavy drinking (SOR B). There is insufficient evidence to recommend disulfiram.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_63_2025_7">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <p class="q-meta">Question 63 (2025)</p>
+        <div class="poll-stem">A 23-year-old male presents on a spring day with a 2–3-day history of mild nasal congestion, sneezing, and slight watery discharge. He does not have a fever or other significant concerns. Which one of the following would be the most appropriate treatment?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_63_2025_7" data-choice="A">A) Intranasal antihistamines</button><button class="poll-opt" data-poll="q_63_2025_7" data-choice="B">B) Intranasal corticosteroids</button><button class="poll-opt" data-poll="q_63_2025_7" data-choice="C">C) Intranasal cromolyn</button><button class="poll-opt" data-poll="q_63_2025_7" data-choice="D">D) Oral antibiotics</button><button class="poll-opt" data-poll="q_63_2025_7" data-choice="E">E) Oral corticosteroids</button></div>
+        <button class="poll-reset" data-poll="q_63_2025_7" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Results — Question 63 (2025)</h3>
+        <div class="poll-results" id="results-q_63_2025_7">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Answer: B — Question 63 (2025)</h3>
+        <div class="critique-body">This patient has mild allergic rhinitis. Intranasal corticosteroids are considered first-line therapy. Intranasal or oral antihistamines may be considered given the patient's mild symptoms, but they are less effective. Intranasal cromolyn is less effective and requires multiple dosing. Since there is no apparent infection, oral antibiotics are not indicated. Oral corticosteroids are also not indicated at this time. Some experts recommend nasal saline irrigation to remove allergens from the nares, but this approach has limited evidence and would augment, not replace, pharmacotherapy.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_65_2025_8">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <p class="q-meta">Question 65 (2025)</p>
+        <div class="poll-stem">A generally healthy 36-year-old male presents to your clinic with a 36-hour history of dizziness and nausea. He says he feels as though the world is spinning and he tends to fall to the left when he tries to walk. The episodes of dizziness occur spontaneously and can last from minutes to hours. He does not have any recent illness, hearing loss, or tinnitus, and he does not take any medications. An HEENT examination is normal. On neurologic testing, he exhibits horizontal nystagmus with left lateral gaze. Head-impulse testing reveals a rapid movement of both eyes. Which one of the following wou...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_65_2025_8" data-choice="A">A) Home Epley maneuvers</button><button class="poll-opt" data-poll="q_65_2025_8" data-choice="B">B) Reassurance and antiemetics</button><button class="poll-opt" data-poll="q_65_2025_8" data-choice="C">C) Prednisone, 40 mg daily for 5 days</button><button class="poll-opt" data-poll="q_65_2025_8" data-choice="D">D) Valacyclovir (Valtrex), 1000 mg twice daily for 7 days</button><button class="poll-opt" data-poll="q_65_2025_8" data-choice="E">E) MRI of the brain</button></div>
+        <button class="poll-reset" data-poll="q_65_2025_8" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Results — Question 65 (2025)</h3>
+        <div class="poll-results" id="results-q_65_2025_8">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pharmacology | Medication Management</p>
+        <h3>Answer: B — Question 65 (2025)</h3>
+        <div class="critique-body">This patient's vertigo is caused by vestibular neuritis, as evidenced by its spontaneity, rotatory vertigo, nausea, and listing to the affected side with walking. In this scenario, head-impulse testing shows saccade, and the head-impulse, nystagmus, test of skew (HINTS) examination is significant for horizontal nystagmus to the affected side. Vestibular neuritis is most often found in patients 30–50 years of age and is thought to have a viral etiology. It involves prolonged, continuous vertigo, while benign paroxysmal positional vertigo (BPPV) is characterized by brief, episodic vertigo associated with head movements. Vestibular neuritis usually resolves on its own within a few days, although some patients have recurrent symptoms for months. The treatment for vestibular neuritis is reassurance. Antiemetics can be used for up to 3 days. Patients with symptoms that last longer should be referred for vestibular rehabilitation. Home Epley maneuvers are appropriate for vertigo caused by BPPV, but are neither indicated nor effective for vestibular neuritis (SOR A). Corticosteroids and antiviral medications have not been shown to be effective in treating vestibular neuritis. MRI of the brain is indicated for patients who exhibit signs of central vertigo or those with hearing loss (SOR C).</div>
+    </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({ hash: true, transition: 'slide' });
+        const wsUrl = (location.protocol === 'https:' ? 'wss:' : 'ws:') + '//' + location.host + '/ws';
+        let ws = null;
+        const pollResults = {};
+        let role = location.search.includes('audience') ? 'audience' : 'presenter';
+        document.getElementById('join-url').textContent = location.href.split('?')[0] + '?audience';
+        function connect() {
+            ws = new WebSocket(wsUrl);
+            ws.onopen = () => ws.send(JSON.stringify({ role, poll: null }));
+            ws.onmessage = (e) => {
+                const d = JSON.parse(e.data);
+                if (d.type === 'results') {
+                    pollResults[d.poll] = d.votes || {};
+                    showResults(d.poll, pollResults[d.poll]);
+                } else if (d.type === 'reset') {
+                    pollResults[d.poll] = {};
+                    const res = document.getElementById('results-' + d.poll);
+                    if (res) res.innerHTML = 'Votes appear here in real-time.';
+                }
+            };
+            ws.onclose = () => setTimeout(connect, 2000);
+        }
+        connect();
+
+        if (role === 'audience') {
+            document.querySelectorAll('.poll-reset').forEach(b => b.style.display = 'none');
+        } else {
+            document.querySelectorAll('.poll-reset').forEach(b => {
+                b.style.display = 'inline-block';
+                b.onclick = () => {
+                    const pid = b.dataset.poll;
+                    if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'reset', poll: pid }));
+                };
+            });
+        }
+
+        document.querySelectorAll('.poll-opt').forEach(btn => {
+            btn.onclick = () => {
+                if (role !== 'audience') return;
+                const pid = btn.dataset.poll;
+                const choice = btn.dataset.choice;
+                if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'vote', poll: pid, choice }));
+                btn.classList.add('voted');
+            };
+        });
+
+        function showResults(pollId, votes) {
+            const el = document.getElementById('results-' + pollId);
+            if (!el) return;
+            const max = Math.max(...Object.values(votes), 1);
+            el.innerHTML = '<div class="bar-chart">' + Object.entries(votes).sort((a,b)=>a[0].localeCompare(b[0])).map(([k,v]) =>
+                '<div class="bar-row"><span class="bar-label">'+k+')</span><div class="bar-fill" style="width:'+(v/max*100)+'%"></div><span>'+v+'</span></div>'
+            ).join('') + '</div>';
+        }
+
+        Reveal.on('slidechanged', e => {
+            const resDiv = e.currentSlide?.querySelector?.('.poll-results[id^="results-"]');
+            if (resDiv) {
+                const pollId = resDiv.id.replace('results-', '');
+                if (pollResults[pollId] && Object.keys(pollResults[pollId]).length) {
+                    showResults(pollId, pollResults[pollId]);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Psychiatry - ITE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/simple.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .reveal .slides { text-align: left; font-family: 'Segoe UI', sans-serif; }
+        .reveal h1, .reveal h2, .reveal h3 { font-family: 'Montserrat', sans-serif; }
+        .grey-label { color:#767676; font-size:0.75rem; text-transform:uppercase; margin-bottom:0.3em; }
+        .q-meta { color:#767676; font-size:0.9rem; margin-bottom:0.5em; }
+        .poll-stem { font-size:1.1rem; margin:0.8em 0; line-height:1.5; }
+        .poll-options { display:flex; flex-direction:column; gap:0.4em; }
+        .poll-opt {
+            padding:0.5em 0.8em; text-align:left; font-size:0.95rem;
+            background:#f5f5f5; border:2px solid #ddd; border-radius:6px;
+            cursor:pointer; transition:all 0.2s;
+            font-family: inherit;
+        }
+        .poll-opt:hover { background:#eaeaea; border-color:#999; }
+        .poll-opt.voted { background:#d4edda; border-color:#28a745; }
+        .poll-results { margin-top:1em; min-height:120px; }
+        .poll-reset { margin-top:0.5em; padding:0.3em 0.8em; font-size:0.85rem; cursor:pointer; }
+        .critique-body { font-size:0.95rem; line-height:1.6; color:#555; }
+        .bar-chart { display:flex; flex-direction:column; gap:0.3em; }
+        .bar-row { display:flex; align-items:center; gap:0.5em; }
+        .bar-label { width:2em; }
+        .bar-fill { height:1.5em; background:#4a90d9; border-radius:4px; min-width:2em; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+    <section>
+        <h1 style="font-family:Montserrat,sans-serif;">Psychiatry</h1>
+        <p style="color:#767676;font-size:1.2rem;">ITE Questions — Interactive Polls</p>
+    </section>
+
+    <section>
+        <h2>Join the Poll</h2>
+        <p>Open this page on your phone:</p>
+        <p><strong id="join-url">Loading...</strong></p>
+        <p style="font-size:0.9rem;color:#767676;">Use ?audience to vote.</p>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_38_2022_0">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <p class="q-meta">Question 38 (2022)</p>
+        <div class="poll-stem">The most effective therapy to improve quality of life in patients with tinnitus is</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_38_2022_0" data-choice="A">A) a benzodiazepine</button><button class="poll-opt" data-poll="q_38_2022_0" data-choice="B">B) an SSRI</button><button class="poll-opt" data-poll="q_38_2022_0" data-choice="C">C) transcutaneous electrical nerve stimulation (TENS)</button><button class="poll-opt" data-poll="q_38_2022_0" data-choice="D">D) acupuncture</button><button class="poll-opt" data-poll="q_38_2022_0" data-choice="E">E) cognitive behavioral therapy</button></div>
+        <button class="poll-reset" data-poll="q_38_2022_0" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Results — Question 38 (2022)</h3>
+        <div class="poll-results" id="results-q_38_2022_0">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Answer: E — Question 38 (2022)</h3>
+        <div class="critique-body">Tinnitus is the sensation of hearing an abnormal sound, such as a ringing, buzzing, or clicking, that is perceived in the ear or head in the absence of an internal or external source. Cognitive behavioral therapy is the only treatment that has been shown to improve quality of life in patients with tinnitus. Treatments that should be avoided include benzodiazepines, transcutaneous electrical nerve stimulation (TENS), and acupuncture. An SSRI could be considered for the management of tinnitus-associated anxiety, but is not considered the most effective therapy for tinnitus. Ref: Dalrymple SN, Lewis SH, Philman S: Tinnitus: Diagnosis and management. Am Fam Physician 2021;103(11):663-671.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_146_2022_1">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <p class="q-meta">Question 146 (2022)</p>
+        <div class="poll-stem">A 45-year-old male presents to your office accompanied by his sister. He tells you that 6 months ago he was laid off from a job where he had been employed for more than 20 years. He says that he declined a promotion 2 years ago because he was worried about working with a new team. He has been unable to secure a new job, stating that the interview process has been embarrassing and that he feels unfairly judged when his resume is critiqued. He reports feeling inadequate and says that he is more comfortable staying at home alone. His sister adds that he has been shy since he was a teenager, and n...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_146_2022_1" data-choice="A">A) Antisocial</button><button class="poll-opt" data-poll="q_146_2022_1" data-choice="B">B) Avoidant</button><button class="poll-opt" data-poll="q_146_2022_1" data-choice="C">C) Borderline</button><button class="poll-opt" data-poll="q_146_2022_1" data-choice="D">D) Dependent</button><button class="poll-opt" data-poll="q_146_2022_1" data-choice="E">E) Histrionic</button></div>
+        <button class="poll-reset" data-poll="q_146_2022_1" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Results — Question 146 (2022)</h3>
+        <div class="poll-results" id="results-q_146_2022_1">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Answer: B — Question 146 (2022)</h3>
+        <div class="critique-body">In order to make a diagnosis, personality disorders must meet specific criteria as outlined in the DSM-5. Other mental disorders, substance use or exposure, and medical conditions must also be excluded. This patient has avoidant personality disorder, which is characterized by social inhibition, fears of inadequacy, and hypersensitivity to criticism or rejection. It often presents in early adulthood. Persons with avoidant personality disorder may avoid new or unfamiliar situations, such as this patient who is unwilling to seek a new job. Persons with antisocial personality disorder exhibit a lack of respect for the rights of others, as well as deceitfulness, aggressiveness, and recklessness. Psychopathy and sociopathy are alternate terms. Borderline personality disorder is marked by instability in interpersonal relationships and self-image, impulsivity, reactivity of mood, and self-destructive behavior. Dependent personality disorder is described as an excessive need to be taken care of, intense fear of being alone, and extreme reliance on others for motivation and direction. Persons with histrionic personality disorder demonstrate excessive emotionality and attention-seeking behavior, often overestimating the closeness of interpersonal relationships and alienating others with hypersexual or hyperemotional reactions. Ref: American Psychiatric Association: Diagnostic and Statistical Manual of Mental Disorders, ed 5. American Psychiatric Association, 2013. 58</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_159_2022_2">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <p class="q-meta">Question 159 (2022)</p>
+        <div class="poll-stem">You see a previously healthy 8-year-old female for a well child check. She was born at full term and adopted at birth. She has a history of methamphetamine exposure in utero. She is up to date on vaccinations and is doing well academically. She says she has friends at school and her mother confirms that her teachers report that she interacts well with the other students. Her mother notes, however, that the patient has persistent difficulties with anger and irritability. This behavior has been present since preschool, and while her mother thinks there has been some improvement, she is concerned...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_159_2022_2" data-choice="A">A) Reassurance that the behavior should continue to improve with age</button><button class="poll-opt" data-poll="q_159_2022_2" data-choice="B">B) Education on positive reinforcement of desired behaviors</button><button class="poll-opt" data-poll="q_159_2022_2" data-choice="C">C) Obtaining further history to evaluate for additional mental health conditions</button><button class="poll-opt" data-poll="q_159_2022_2" data-choice="D">D) A trial of risperidone (Risperdal)</button><button class="poll-opt" data-poll="q_159_2022_2" data-choice="E">E) Referral for parent management therapy 55</button></div>
+        <button class="poll-reset" data-poll="q_159_2022_2" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Results — Question 159 (2022)</h3>
+        <div class="poll-results" id="results-q_159_2022_2">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Answer: C — Question 159 (2022)</h3>
+        <div class="critique-body">This child displays characteristics of oppositional defiant disorder (ODD). The DSM-5 criteria for a diagnosis of ODD include frequently losing one’s temper, being easily annoyed, antagonism toward authority figures, deliberately annoying others, placing blame on others, and being spiteful or vindictive. These symptoms must occur for at least 6 months, cause distress or negative impacts, and not occur exclusively with substance use or in the course of a psychotic, depressive, or bipolar disorder. Treatment of common comorbid mental health conditions can be associated with improvement in ODD, so it is important to evaluate for attention-deficit/hyperactivity disorder, depression, and anxiety disorders, as well as ODD. Given the persistence of symptoms and maternal concern in this patient, reassurance alone would not be appropriate. Patients with ODD have a high risk of developing other mental health conditions later, and early therapy is recommended. While positive reinforcement is an important parenting strategy for children with ODD, it would not be expected to be effective in isolation. Medication is rarely indicated for ODD, and not as monotherapy. Parent management therapy is an important part of ODD treatment, but therapy should generally include both child therapy and parent training. Ref: Riley M, Ahmed S, Locke A: Common questions about oppositional defiant disorder. Am Fam Physician 2016;93(7):586-591. 63</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_118_2023_3">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <p class="q-meta">Question 118 (2023)</p>
+        <div class="poll-stem">A 9-year-old male has persistent severe depression despite cognitive behavioral therapy. Which one of the following medications is approved by the FDA for the treatment of major depressive disorder in this age group?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_118_2023_3" data-choice="A">A) No antidepressant medications</button><button class="poll-opt" data-poll="q_118_2023_3" data-choice="B">B) Bupropion (Wellbutrin)</button><button class="poll-opt" data-poll="q_118_2023_3" data-choice="C">C) Escitalopram (Lexapro)</button><button class="poll-opt" data-poll="q_118_2023_3" data-choice="D">D) Fluoxetine (Prozac)</button><button class="poll-opt" data-poll="q_118_2023_3" data-choice="E">E) Sertraline (Zoloft)</button></div>
+        <button class="poll-reset" data-poll="q_118_2023_3" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Results — Question 118 (2023)</h3>
+        <div class="poll-results" id="results-q_118_2023_3">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Answer: D — Question 118 (2023)</h3>
+        <div class="critique-body">Only two medications, escitalopram and fluoxetine, are approved by the FDA for the treatment of major depressive disorder in children and adolescents. Fluoxetine is approved for treatment in children age &gt;8 while escitalopram is only approved for use in children age &gt;12. Bupropion and sertraline are not approved by the FDA for the treatment of major depressive disorder in children. Ref: Selph SS, McDonagh MS. Depression in children and adolescents: evaluation and treatment. Am Fam Physician. 2019; 100(10):609-617.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_129_2023_4">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <p class="q-meta">Question 129 (2023)</p>
+        <div class="poll-stem">A 48-year-old female with alcohol use disorder presents to your clinic 2 days after she has stopped drinking alcohol. She reports some mild anxiety, sweating, and insomnia. On examination her vital signs are stable and she does not have a tremor. She has no history of alcohol withdrawal-related seizures or delirium. Which one of the following medications is most appropriate for treating her alcohol withdrawal syndrome?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_129_2023_4" data-choice="A">A) Atenolol (Tenormin)</button><button class="poll-opt" data-poll="q_129_2023_4" data-choice="B">B) Chlordiazepoxide</button><button class="poll-opt" data-poll="q_129_2023_4" data-choice="C">C) Diazepam (Valium)</button><button class="poll-opt" data-poll="q_129_2023_4" data-choice="D">D) Gabapentin (Neurontin)</button><button class="poll-opt" data-poll="q_129_2023_4" data-choice="E">E) Valproate 48</button></div>
+        <button class="poll-reset" data-poll="q_129_2023_4" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Results — Question 129 (2023)</h3>
+        <div class="poll-results" id="results-q_129_2023_4">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Answer: D — Question 129 (2023)</h3>
+        <div class="critique-body">Patients at minimal risk of developing severe or complicated alcohol withdrawal who can safely be treated in an outpatient setting include those who are &lt;65 years of age and who have no history of alcohol withdrawal-related seizures or delirium, no multiple prior withdrawal episodes, no comorbid illness, and no marked autonomic hyperactivity on presentation. Mild symptoms of alcohol withdrawal syndrome include mild to moderate anxiety, sweating, and insomnia but no tremor. Moderate symptoms include moderate anxiety, sweating, and insomnia with mild tremor. Severe symptoms include severe anxiety and moderate to severe tremor but no confusion, hallucinations, or seizures that are indicative of complicated alcohol withdrawal symptoms. For patients with alcohol withdrawal syndrome who have mild symptoms and minimal risk of developing severe or complicated alcohol withdrawal, a nonbenzodiazepine anticonvulsant such as gabapentin or carbamazepine is recommended. Benzodiazepines are first-line treatment for moderate alcohol withdrawal syndrome, and B-blockers can be used as adjunctive therapy with benzodiazepines. Valproate should not be used as monotherapy for withdrawal. Ref: Tiglao SM, Meisenheimer ES, Oh RC. Alcohol withdrawal syndrome: outpatient management. Am Fam Physician. 2021; 104(3):253-262.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_183_2023_5">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <p class="q-meta">Question 183 (2023)</p>
+        <div class="poll-stem">Which one of the following is a predictor of a poor response to psychotherapy in adolescents with major depressive disorder?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_183_2023_5" data-choice="A">A) High global functioning on assessment</button><button class="poll-opt" data-poll="q_183_2023_5" data-choice="B">B) Hypersomnia</button><button class="poll-opt" data-poll="q_183_2023_5" data-choice="C">C) Inappropriate guilt</button><button class="poll-opt" data-poll="q_183_2023_5" data-choice="D">D) Presence of family conflict</button></div>
+        <button class="poll-reset" data-poll="q_183_2023_5" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Results — Question 183 (2023)</h3>
+        <div class="poll-results" id="results-q_183_2023_5">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Answer: D — Question 183 (2023)</h3>
+        <div class="critique-body">Predictors of a poor response to psychotherapy in adolescents with major depressive disorder include presence of family conflict, severe depression, low global functioning on assessment, high scores on suicidality measures, coexisting anxiety, distorted thought patterns, and feelings of hopelessness. High global functioning on assessment, hypersomnia, and inappropriate guilt are not predictors of a poor response to psychotherapy in adolescents with major depressive disorder. Ref: Miller L, Campo JV. Depression in adolescents. N Engl J Med. 2021;385(5):445-449.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_14_2024_6">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <p class="q-meta">Question 14 (2024)</p>
+        <div class="poll-stem">A 32-year-old female comes to your office with her husband after a recent weeklong episode of elevated mood and energy that meets the diagnostic criteria for a manic episode. They both say that she has never had any episodes of depression, low mood, or anhedonia. This patient’s presentation is most consistent with which one of the following disorders?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_14_2024_6" data-choice="A">A) Bipolar I</button><button class="poll-opt" data-poll="q_14_2024_6" data-choice="B">B) Bipolar II</button><button class="poll-opt" data-poll="q_14_2024_6" data-choice="C">C) Borderline personality</button><button class="poll-opt" data-poll="q_14_2024_6" data-choice="D">D) Cyclothymic</button><button class="poll-opt" data-poll="q_14_2024_6" data-choice="E">E) Disruptive mood dysregulation</button></div>
+        <button class="poll-reset" data-poll="q_14_2024_6" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Results — Question 14 (2024)</h3>
+        <div class="poll-results" id="results-q_14_2024_6">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Answer: A — Question 14 (2024)</h3>
+        <div class="critique-body">Bipolar I disorder does not require a history of a major depressive episode and may be diagnosed and treated based on just 1 manic episode. The diagnosis of bipolar II disorder requires at least 1 hypomanic and 1 major depressive episode. Borderline personality disorder may coexist with bipolar I disorder but the diagnosis is based on the presence of unstable personal relationships and severe impulsivity. Cyclothymic disorder presents with a history of both hypomanic and depressive symptoms that do not meet the full criteria for hypomanic or major depressive episodes. Disruptive mood dysregulation disorder is a condition diagnosed between the ages of 6 and 18, characterized by severe recurrent outbursts of temper.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_133_2024_7">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <p class="q-meta">Question 133 (2024)</p>
+        <div class="poll-stem">A 27-year-old comatose female is brought to the emergency department. There is no history of trauma. An overdose of which one of the following would most likely account for a decreased respiratory rate of 10/min?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_133_2024_7" data-choice="A">A) Anticonvulsants</button><button class="poll-opt" data-poll="q_133_2024_7" data-choice="B">B) Antipsychotics</button><button class="poll-opt" data-poll="q_133_2024_7" data-choice="C">C) Ethanol</button><button class="poll-opt" data-poll="q_133_2024_7" data-choice="D">D) Opioids</button><button class="poll-opt" data-poll="q_133_2024_7" data-choice="E">E) Sedative-hypnotics</button></div>
+        <button class="poll-reset" data-poll="q_133_2024_7" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Results — Question 133 (2024)</h3>
+        <div class="poll-results" id="results-q_133_2024_7">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Answer: D — Question 133 (2024)</h3>
+        <div class="critique-body">The classic toxidrome of apnea, stupor, and miosis is indicative of opioid overdose. Not all of these findings are always present. In a patient not physiologically sleeping, a respiratory rate ≤12/min is strongly suggestive of opioid toxicity. Respiratory depression is not usually found with overdose from anticonvulsants, antipsychotics, ethanol, or sedative-hypnotic agents.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_19_2025_8">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <p class="q-meta">Question 19 (2025)</p>
+        <div class="poll-stem">An otherwise healthy 52-year-old female with a past surgical history of hysterectomy for the treatment of uterine fibroids presents with increasing episodes of hot flashes lasting 3–5 minutes and occurring 5–10 times per day over the past 5 months. She finds the symptoms highly disruptive and is interested in options for medical therapy. Which one of the following would be the most effective therapy for this patient's symptoms?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_19_2025_8" data-choice="A">A) A transdermal estradiol patch (Climara)</button><button class="poll-opt" data-poll="q_19_2025_8" data-choice="B">B) Transdermal testosterone gel (AndroGel)</button><button class="poll-opt" data-poll="q_19_2025_8" data-choice="C">C) Vaginal estradiol cream (Estrace Vaginal)</button><button class="poll-opt" data-poll="q_19_2025_8" data-choice="D">D) Soy phytoestrogen supplementation</button><button class="poll-opt" data-poll="q_19_2025_8" data-choice="E">E) Paroxetine (Paxil)</button></div>
+        <button class="poll-reset" data-poll="q_19_2025_8" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Results — Question 19 (2025)</h3>
+        <div class="poll-results" id="results-q_19_2025_8">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Answer: A — Question 19 (2025)</h3>
+        <div class="critique-body">Oral or transdermal estrogen is the most effective treatment for vasomotor symptoms in menopausal women (SOR A). Antidepressants, including SSRIs and SNRIs, are effective alternatives to hormone therapy for the treatment of vasomotor symptoms in menopause (SOR A). The SSRI paroxetine is FDA approved for this indication. Testosterone therapy is not effective for vasomotor symptoms. Vaginal estrogen cream is recommended for women whose primary symptoms are vaginal rather than vasomotor. Phytoestrogen supplements such as soy have not been shown to consistently improve vasomotor symptoms associated with menopause (SOR B).</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_125_2025_9">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <p class="q-meta">Question 125 (2025)</p>
+        <div class="poll-stem">A 16-year-old female presents with her parents because she has been experiencing a loss of interest in her usual activities, trouble sleeping, difficulty concentrating, and low energy over the last month. After a discussion with the patient and her parents, you refer her for cognitive behavioral therapy and start an antidepressant. Which one of the following medications is approved by the FDA to treat depression in patients such as this?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_125_2025_9" data-choice="A">A) Esketamine nasal spray (Spravato)</button><button class="poll-opt" data-poll="q_125_2025_9" data-choice="B">B) Bupropion</button><button class="poll-opt" data-poll="q_125_2025_9" data-choice="C">C) Fluoxetine (Prozac)</button><button class="poll-opt" data-poll="q_125_2025_9" data-choice="D">D) Venlafaxine</button></div>
+        <button class="poll-reset" data-poll="q_125_2025_9" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Results — Question 125 (2025)</h3>
+        <div class="poll-results" id="results-q_125_2025_9">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Answer: C — Question 125 (2025)</h3>
+        <div class="critique-body">Two SSRIs, fluoxetine and escitalopram, have been approved by the FDA for the treatment of depression in adolescents. Other SSRIs such as sertraline, NDRIs such as bupropion, and SNRIs such as venlafaxine are often used off-label for this purpose but have not been approved by the FDA for use in adolescents. Esketamine is a ketamine nasal spray used in conjunction with an oral antidepressant for treatment-resistant depression in adults.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_139_2025_10">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <p class="q-meta">Question 139 (2025)</p>
+        <div class="poll-stem">How long after intranasal administration does naloxone (Narcan) reach peak plasma concentrations?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_139_2025_10" data-choice="A">A) Immediately</button><button class="poll-opt" data-poll="q_139_2025_10" data-choice="B">B) 30–60 seconds</button><button class="poll-opt" data-poll="q_139_2025_10" data-choice="C">C) 3–5 minutes</button><button class="poll-opt" data-poll="q_139_2025_10" data-choice="D">D) 15–30 minutes</button><button class="poll-opt" data-poll="q_139_2025_10" data-choice="E">E) 1–2 hours</button></div>
+        <button class="poll-reset" data-poll="q_139_2025_10" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Results — Question 139 (2025)</h3>
+        <div class="poll-results" id="results-q_139_2025_10">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Answer: D — Question 139 (2025)</h3>
+        <div class="critique-body">After intranasal administration of naloxone, peak plasma concentrations are attained within 15–30 minutes, although its effect on the patient may be seen sooner. Absorption may be affected by substances or conditions that impact the nasal mucosa function or its blood flow. The half-life of naloxone is 2 hours, which is shorter than many long-acting opioids. Ongoing monitoring is important even after reversal of opioid respiratory depression is achieved.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_149_2025_11">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <p class="q-meta">Question 149 (2025)</p>
+        <div class="poll-stem">A 49-year-old female with a past medical history of epilepsy presents to your office because of sadness, sleep disruption, generalized anhedonia, and a recent increase in appetite. Her Patient Health Questionnaire–9 (PHQ-9) score is elevated at 14. Which one of the following medications should be AVOIDED in this patient?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_149_2025_11" data-choice="A">A) Bupropion</button><button class="poll-opt" data-poll="q_149_2025_11" data-choice="B">B) Duloxetine (Cymbalta)</button><button class="poll-opt" data-poll="q_149_2025_11" data-choice="C">C) Fluoxetine (Prozac)</button><button class="poll-opt" data-poll="q_149_2025_11" data-choice="D">D) Mirtazapine (Remeron)</button><button class="poll-opt" data-poll="q_149_2025_11" data-choice="E">E) Sertraline (Zoloft)</button></div>
+        <button class="poll-reset" data-poll="q_149_2025_11" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Results — Question 149 (2025)</h3>
+        <div class="poll-results" id="results-q_149_2025_11">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Psychiatry | Depression/Anxiety</p>
+        <h3>Answer: A — Question 149 (2025)</h3>
+        <div class="critique-body">Antidepressants including bupropion, trazodone, and tricyclic antidepressants are associated with an increased risk of seizure and should be avoided in patients with epilepsy. In general, SSRIs or SNRIs are safer choices. Mirtazapine and vortioxetine would also be preferred choices.</div>
+    </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({ hash: true, transition: 'slide' });
+        const wsUrl = (location.protocol === 'https:' ? 'wss:' : 'ws:') + '//' + location.host + '/ws';
+        let ws = null;
+        const pollResults = {};
+        let role = location.search.includes('audience') ? 'audience' : 'presenter';
+        document.getElementById('join-url').textContent = location.href.split('?')[0] + '?audience';
+        function connect() {
+            ws = new WebSocket(wsUrl);
+            ws.onopen = () => ws.send(JSON.stringify({ role, poll: null }));
+            ws.onmessage = (e) => {
+                const d = JSON.parse(e.data);
+                if (d.type === 'results') {
+                    pollResults[d.poll] = d.votes || {};
+                    showResults(d.poll, pollResults[d.poll]);
+                } else if (d.type === 'reset') {
+                    pollResults[d.poll] = {};
+                    const res = document.getElementById('results-' + d.poll);
+                    if (res) res.innerHTML = 'Votes appear here in real-time.';
+                }
+            };
+            ws.onclose = () => setTimeout(connect, 2000);
+        }
+        connect();
+
+        if (role === 'audience') {
+            document.querySelectorAll('.poll-reset').forEach(b => b.style.display = 'none');
+        } else {
+            document.querySelectorAll('.poll-reset').forEach(b => {
+                b.style.display = 'inline-block';
+                b.onclick = () => {
+                    const pid = b.dataset.poll;
+                    if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'reset', poll: pid }));
+                };
+            });
+        }
+
+        document.querySelectorAll('.poll-opt').forEach(btn => {
+            btn.onclick = () => {
+                if (role !== 'audience') return;
+                const pid = btn.dataset.poll;
+                const choice = btn.dataset.choice;
+                if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'vote', poll: pid, choice }));
+                btn.classList.add('voted');
+            };
+        });
+
+        function showResults(pollId, votes) {
+            const el = document.getElementById('results-' + pollId);
+            if (!el) return;
+            const max = Math.max(...Object.values(votes), 1);
+            el.innerHTML = '<div class="bar-chart">' + Object.entries(votes).sort((a,b)=>a[0].localeCompare(b[0])).map(([k,v]) =>
+                '<div class="bar-row"><span class="bar-label">'+k+')</span><div class="bar-fill" style="width:'+(v/max*100)+'%"></div><span>'+v+'</span></div>'
+            ).join('') + '</div>';
+        }
+
+        Reveal.on('slidechanged', e => {
+            const resDiv = e.currentSlide?.querySelector?.('.poll-results[id^="results-"]');
+            if (resDiv) {
+                const pollId = resDiv.id.replace('results-', '');
+                if (pollResults[pollId] && Object.keys(pollResults[pollId]).length) {
+                    showResults(pollId, pollResults[pollId]);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

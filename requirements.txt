@@ -1,0 +1,7 @@
+pymupdf>=1.23.0
+python-pptx>=0.6.21
+# For scanned PDFs (e.g. 2023 ITE): also install Tesseract OCR, then:
+pytesseract>=0.3.10
+Pillow>=10.0.0
+fastapi>=0.100.0
+uvicorn>=0.22.0

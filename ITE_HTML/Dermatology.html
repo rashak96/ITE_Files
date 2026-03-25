@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dermatology - ITE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/simple.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .reveal .slides { text-align: left; font-family: 'Segoe UI', sans-serif; }
+        .reveal h1, .reveal h2, .reveal h3 { font-family: 'Montserrat', sans-serif; }
+        .grey-label { color:#767676; font-size:0.75rem; text-transform:uppercase; margin-bottom:0.3em; }
+        .q-meta { color:#767676; font-size:0.9rem; margin-bottom:0.5em; }
+        .poll-stem { font-size:1.1rem; margin:0.8em 0; line-height:1.5; }
+        .poll-options { display:flex; flex-direction:column; gap:0.4em; }
+        .poll-opt {
+            padding:0.5em 0.8em; text-align:left; font-size:0.95rem;
+            background:#f5f5f5; border:2px solid #ddd; border-radius:6px;
+            cursor:pointer; transition:all 0.2s;
+            font-family: inherit;
+        }
+        .poll-opt:hover { background:#eaeaea; border-color:#999; }
+        .poll-opt.voted { background:#d4edda; border-color:#28a745; }
+        .poll-results { margin-top:1em; min-height:120px; }
+        .poll-reset { margin-top:0.5em; padding:0.3em 0.8em; font-size:0.85rem; cursor:pointer; }
+        .critique-body { font-size:0.95rem; line-height:1.6; color:#555; }
+        .bar-chart { display:flex; flex-direction:column; gap:0.3em; }
+        .bar-row { display:flex; align-items:center; gap:0.5em; }
+        .bar-label { width:2em; }
+        .bar-fill { height:1.5em; background:#4a90d9; border-radius:4px; min-width:2em; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+    <section>
+        <h1 style="font-family:Montserrat,sans-serif;">Dermatology</h1>
+        <p style="color:#767676;font-size:1.2rem;">ITE Questions — Interactive Polls</p>
+    </section>
+
+    <section>
+        <h2>Join the Poll</h2>
+        <p>Open this page on your phone:</p>
+        <p><strong id="join-url">Loading...</strong></p>
+        <p style="font-size:0.9rem;color:#767676;">Use ?audience to vote.</p>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_10_2022_0">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <p class="q-meta">Question 10 (2022)</p>
+        <div class="poll-stem">A 42-year-old female presents with a 2-day history of a rash on her neck along her hairline (shown below). Which one of the following is the most likely diagnosis?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_10_2022_0" data-choice="A">A) Atopic dermatitis</button><button class="poll-opt" data-poll="q_10_2022_0" data-choice="B">B) Contact dermatitis</button><button class="poll-opt" data-poll="q_10_2022_0" data-choice="C">C) Psoriasis</button><button class="poll-opt" data-poll="q_10_2022_0" data-choice="D">D) Seborrheic dermatitis 3 Item #10 4</button></div>
+        <button class="poll-reset" data-poll="q_10_2022_0" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Results — Question 10 (2022)</h3>
+        <div class="poll-results" id="results-q_10_2022_0">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Answer: B — Question 10 (2022)</h3>
+        <div class="critique-body">Nickel allergy is a common form of contact dermatitis. In this case, the rash is being caused by earrings rubbing the patient’s neck. The inflammation of the earlobe is another clue to the diagnosis. While atopic dermatitis, psoriasis, and seborrheic dermatitis could affect the neck along the hairline, this patient’s rash is much less consistent with these conditions. Ref: Usatine RP, Riojas M: Diagnosis and management of contact dermatitis. Am Fam Physician 2010;82(3):249-255. 2) Habif TP, Dinulos JGH, Chapman MS, Zug KA: Skin Disease: Diagnosis and Treatment, ed 4. Elsevier, 2018, pp 45-50. 4</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_26_2022_1">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <p class="q-meta">Question 26 (2022)</p>
+        <div class="poll-stem">A 35-year-old female at 36 weeks gestation presents to your office. She reports that for the past few days she has had itching of her palms and soles that has been quite bothersome. She has tried moisturizer with no improvement. A physical examination is unremarkable with no rashes, erythema, or warmth of the palm and soles. The patient otherwise feels well. Which one of the following would be most appropriate at this time?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_26_2022_1" data-choice="A">A) A low-potency corticosteroid cream</button><button class="poll-opt" data-poll="q_26_2022_1" data-choice="B">B) Tacrolimus topical (Protopic)</button><button class="poll-opt" data-poll="q_26_2022_1" data-choice="C">C) Cetirizine (Zyrtec Allergy)</button><button class="poll-opt" data-poll="q_26_2022_1" data-choice="D">D) Bile acid levels</button><button class="poll-opt" data-poll="q_26_2022_1" data-choice="E">E) A BUN/creatinine ratio</button></div>
+        <button class="poll-reset" data-poll="q_26_2022_1" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Results — Question 26 (2022)</h3>
+        <div class="poll-results" id="results-q_26_2022_1">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Answer: D — Question 26 (2022)</h3>
+        <div class="critique-body">Intrahepatic cholestasis of pregnancy (ICP) presents with pruritus of the palms and soles with or without jaundice along with an elevation in serum bile acid concentrations. ICP, which is most common in the late second and/or third trimester, can cause significant risk to the fetus, including fetal death, and is therefore treated aggressively with ursodeoxycholic acid and often early delivery. Corticosteroid creams, tacrolimus, and cetirizine are not appropriate treatments for ICP. Kidney function tests such as a BUN/creatinine ratio would not be initially appropriate in this case. Ref: Williamson C, Geenes V: Intrahepatic cholestasis of pregnancy. Obstet Gynecol 2014;124(1):120-133. 2) Gregory DS, Wu V, Tuladhar P: The pregnant patient: Managing common acute medical problems. Am Fam Physician 2018;98(9):595-602. 3) Manzotti C, Casazza G, Stimac T, et al: Total serum bile acids or serum bile acid profile, or both, for the diagnosis of intrahepatic cholestasis of pregnancy. Cochrane Database Syst Rev 2019;7:CD012546. 10</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_162_2022_2">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <p class="q-meta">Question 162 (2022)</p>
+        <div class="poll-stem">A 23-year-old male presents with a skin rash on his chest and back. An examination reveals widespread, slightly pink macules on his chest and back. A KOH preparation is shown below. Which one of the following would be the most appropriate treatment?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_162_2022_2" data-choice="A">A) Topical nystatin cream</button><button class="poll-opt" data-poll="q_162_2022_2" data-choice="B">B) Topical selenium sulfide</button><button class="poll-opt" data-poll="q_162_2022_2" data-choice="C">C) Topical triamcinolone cream</button><button class="poll-opt" data-poll="q_162_2022_2" data-choice="D">D) Oral fluconazole (Diflucan)</button><button class="poll-opt" data-poll="q_162_2022_2" data-choice="E">E) Oral nystatin 56 Item #162 57</button></div>
+        <button class="poll-reset" data-poll="q_162_2022_2" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Results — Question 162 (2022)</h3>
+        <div class="poll-results" id="results-q_162_2022_2">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Answer: B — Question 162 (2022)</h3>
+        <div class="critique-body">This image shows typical hyphae of pityriasis versicolor, a superficial infection caused by yeasts in the genus Malassezia. Of the listed therapies, topical selenium sulfide would be the most appropriate first-line treatment. Topical antifungals such as terbinafine and miconazole are other first-line options. Oral fluconazole can be used, but oral therapy is usually reserved for when topical treatment is impractical or unsuccessful. Topical nystatin cream and oral nystatin are ineffective, and topical corticosteroids such as triamcinolone may temporarily suppress symptoms while exacerbating the infection. Ref: Hu SW, Bigby M: Pityriasis versicolor: A systematic review of interventions. Arch Dermatol 2010;146(10):1132-1140. 2) Plensdorf S, Livieratos M, Dada N: Pigmentation disorders: Diagnosis and management. Am Fam Physician 2017;96(12):797-804. 64</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_42_2023_3">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <p class="q-meta">Question 42 (2023)</p>
+        <div class="poll-stem">A 35-year-old female presents with a 4-month history of pain in her neck, chest, mid and lower back, hip, and right leg. She has difficulty falling asleep at night and does not feel refreshed upon awakening in the morning. She feels like she is not as mentally sharp as she used to be and feels mildly depressed at times. A physical examination is notable for multiple soft-tissue tender points without evidence of joint deformity, inflammation, or erythema. Which one of the following would be appropriate first-line pharmacologic therapy for this patient’s condition?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_42_2023_3" data-choice="A">A) Amitriptyline</button><button class="poll-opt" data-poll="q_42_2023_3" data-choice="B">B) Celecoxib (Celebrex)</button><button class="poll-opt" data-poll="q_42_2023_3" data-choice="C">C) Hydrocodone</button><button class="poll-opt" data-poll="q_42_2023_3" data-choice="D">D) Hydroxychloroquine (Plaquenil)</button><button class="poll-opt" data-poll="q_42_2023_3" data-choice="E">E) Naproxen 15</button></div>
+        <button class="poll-reset" data-poll="q_42_2023_3" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Results — Question 42 (2023)</h3>
+        <div class="poll-results" id="results-q_42_2023_3">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Answer: A — Question 42 (2023)</h3>
+        <div class="critique-body">This patient meets diagnostic criteria for fibromyalgia, which is characterized by diffuse, chronic pain without evidence of inflammation, erythema, or joint deformities. Pharmacologic treatments for fibromyalgia include tricyclic antidepressants such as amitriptyline, SNRIs such as duloxetine and milnacipran, and gabapentinoids such as pregabalin. Evidence does not show benefit from NSAIDs such as celecoxib or naproxen or opioids such as hydrocodone. Hydroxychloroquine is a disease-modifying antirheumatic agent used to treat rheumatoid arthritis and malaria and is not appropriate for the treatment of fibromyalgia. Ref: Winslow BT, Vandal C, Dang L. Fibromyalgia: diagnosis and management. Am Fam Physician. 2023; 107(2): 137-144. 16</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_110_2023_4">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <p class="q-meta">Question 110 (2023)</p>
+        <div class="poll-stem">A 35-year-old female presents to your office after a recent trip to Brazil. She tells you that she has developed an extremely pruritic rash that started on her face and has spread to her trunk and limbs. In addition, she reports a headache, arthralgias, and myalgias. On examination you note a diffuse scarlatiniform rash, conjunctivitis, and small petechiae on the palate. She is afebrile. Which one of the following is the most likely diagnosis?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_110_2023_4" data-choice="A">A) Chikungunya virus</button><button class="poll-opt" data-poll="q_110_2023_4" data-choice="B">B) Dengue virus</button><button class="poll-opt" data-poll="q_110_2023_4" data-choice="C">C) West Nile virus</button><button class="poll-opt" data-poll="q_110_2023_4" data-choice="D">D) Yellow fever</button><button class="poll-opt" data-poll="q_110_2023_4" data-choice="E">E) Zika virus</button></div>
+        <button class="poll-reset" data-poll="q_110_2023_4" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Results — Question 110 (2023)</h3>
+        <div class="poll-results" id="results-q_110_2023_4">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Answer: E — Question 110 (2023)</h3>
+        <div class="critique-body">Zika virus, an RNA virus belonging to the Flaviviridae family, is most frequently found in tropical regions and is spread by the female Aedes species mosquito. While Zika virus infection shares many of the same symptoms as the other viruses listed, it often has no fever and the rash is accompanied by severe pruritus and conjunctivitis. Zika virus infection typically develops 3-12 days following a bite by the Aedes species mosquito and the symptoms last between a few days to 1 week. The disease is typically self-limited and does not require hospitalization. Zika virus infection during pregnancy can cause infants to be born with microcephaly and other congenital malformations, known as congenital Zika syndrome. Infection with Zika virus is also associated with miscarriage and preterm birth. Diagnosis is usually based on clinical presentation but may be confirmed with serologic testing. Chikungunya virus, dengue virus, West Nile virus, and yellow fever are also spread by mosquitos but have slightly different clinical presentations. Chikungunya virus is an RNA virus in the Togaviridae family that is characterized by an abrupt onset of high fever, and is frequently accompanied by debilitating joint pain that usually lasts for a few days, but may prolong for weeks, months, or even years. Like Zika virus, dengue virus is an RNA virus belonging to the Flaviviridae family spread by the Aedes species mosquito. The incubation period varies from 4 to 10 days and common symptoms include a...</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_158_2024_5">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <p class="q-meta">Question 158 (2024)</p>
+        <div class="poll-stem">A 60-year-old male has an enlarging erythematous 1.0-cm papule with a central keratotic plug on the dorsum of his arm. Superficial biopsy shows keratoacanthoma. This type of lesion requires further diagnosis and treatment because it may be associated with which one of the following?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_158_2024_5" data-choice="A">A) Actinic keratosis</button><button class="poll-opt" data-poll="q_158_2024_5" data-choice="B">B) Basal cell carcinoma</button><button class="poll-opt" data-poll="q_158_2024_5" data-choice="C">C) Cutaneous squamous cell carcinoma</button><button class="poll-opt" data-poll="q_158_2024_5" data-choice="D">D) Malignant melanoma</button></div>
+        <button class="poll-reset" data-poll="q_158_2024_5" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Results — Question 158 (2024)</h3>
+        <div class="poll-results" id="results-q_158_2024_5">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Answer: C — Question 158 (2024)</h3>
+        <div class="critique-body">Keratoacanthoma is a rapidly growing lesion that may be difficult to distinguish from cutaneous squamous cell carcinoma (CSCC) and may contain CSCC in its base. Because of this, it should be considered a malignant lesion and requires adequate pathology and removal. Actinic keratosis is a precursor to CSCC. Basal cell carcinoma and malignant melanoma are not related to keratoacanthoma.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_26_2025_6">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <p class="q-meta">Question 26 (2025)</p>
+        <div class="poll-stem">A 45-year-old female presents with a 1-year history of central facial erythema, telangiectasias, and inflammatory pustules and papules. The symptoms are worsened by alcohol and excessive sun exposure. You diagnose rosacea. She has not had any previous success with moisturizers, aggressive sun protection, or mild facial soap. Which one of the following would be the most appropriate first step in the management of this condition?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_26_2025_6" data-choice="A">A) Topical brimonidine (Mirvaso)</button><button class="poll-opt" data-poll="q_26_2025_6" data-choice="B">B) Topical cyclosporine</button><button class="poll-opt" data-poll="q_26_2025_6" data-choice="C">C) Topical metronidazole</button><button class="poll-opt" data-poll="q_26_2025_6" data-choice="D">D) Oral doxycycline</button><button class="poll-opt" data-poll="q_26_2025_6" data-choice="E">E) Laser or light-based therapy</button></div>
+        <button class="poll-reset" data-poll="q_26_2025_6" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Results — Question 26 (2025)</h3>
+        <div class="poll-results" id="results-q_26_2025_6">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Answer: C — Question 26 (2025)</h3>
+        <div class="critique-body">Topical metronidazole is a first-line treatment for rosacea. The cost and side-effect profile of topical metronidazole make it most appropriate. Topical azelaic acid is also a first-line treatment for rosacea. Oral doxycycline is a reasonable next step if topical metronidazole is not successful in managing symptoms. The side-effect profile of doxycycline makes it less desirable than topical metronidazole. Additionally, increased sun sensitivity is a common side effect of doxycycline that is problematic for management because rosacea is generally clinically worse in the warmer months. Laser and light-based therapies are second-line treatments for rosacea. They are reasonable options for patients who have not had success with topical metronidazole or azelaic acid. Brimonidine is an α-2 agonist that is another reasonable option in a patient who has not had success with topical metronidazole or topical azelaic acid. However, due to its cost and tendency to exacerbate skin irritation, it is considered a second-line treatment option. Topical cyclosporine is another second-line treatment that has been recalcitrant to first-line options.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_47_2025_7">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <p class="q-meta">Question 47 (2025)</p>
+        <div class="poll-stem">A 31-year-old gravida 3 para 2 at 8 weeks' gestation presents to the urgent care clinic because of a 2-day history of headache and fever. This morning she removed an engorged tick from her leg. On examination she is ill appearing but alert and interactive. An HEENT examination is normal and there is no pain with neck flexion. A cardiopulmonary examination is normal. There is no rash. You suspect Rocky Mountain spotted fever. In addition to supportive care, which one of the following would be the most appropriate treatment?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_47_2025_7" data-choice="A">A) No additional treatment</button><button class="poll-opt" data-poll="q_47_2025_7" data-choice="B">B) Amoxicillin</button><button class="poll-opt" data-poll="q_47_2025_7" data-choice="C">C) Chloramphenicol</button><button class="poll-opt" data-poll="q_47_2025_7" data-choice="D">D) Doxycycline</button><button class="poll-opt" data-poll="q_47_2025_7" data-choice="E">E) Erythromycin</button></div>
+        <button class="poll-reset" data-poll="q_47_2025_7" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Results — Question 47 (2025)</h3>
+        <div class="poll-results" id="results-q_47_2025_7">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Answer: D — Question 47 (2025)</h3>
+        <div class="critique-body">Doxycycline is the recommended treatment for all individuals with presumed Rocky Mountain spotted fever (RMSF). RMSF can be fatal, so testing for the condition is not recommended because it would delay treatment. Short courses (5–10 days) of doxycycline have been shown to be safe in children and pregnant persons. Inpatient treatment with rapid desensitization is recommended for individuals with a true allergy to doxycycline. Chloramphenicol is another treatment option for RMSF, but it is associated with a higher risk for death than doxycycline. There is no role for amoxicillin or erythromycin in the treatment of RMSF.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_105_2025_8">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <p class="q-meta">Question 105 (2025)</p>
+        <div class="poll-stem">A 25-year-old male presents with a 5-day history of dysuria and mucopurulent penile discharge. On examination the urethral meatus is erythematous and a small amount of discharge is noted. A urine dipstick is positive for leukocyte esterase and a nucleic acid amplification test is negative for Neisseria gonorrhoeae and Chlamydia trachomatis. Which one of the following would be the most appropriate treatment?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_105_2025_8" data-choice="A">A) Azithromycin (Zithromax), 1 g orally once</button><button class="poll-opt" data-poll="q_105_2025_8" data-choice="B">B) Levofloxacin, 500 mg orally for 7 days</button><button class="poll-opt" data-poll="q_105_2025_8" data-choice="C">C) Ceftriaxone, 500 mg intramuscularly once</button><button class="poll-opt" data-poll="q_105_2025_8" data-choice="D">D) Gentamicin, 240 mg intramuscularly once, plus azithromycin, 2 g orally once</button><button class="poll-opt" data-poll="q_105_2025_8" data-choice="E">E) Metronidazole, 2 g orally once, plus doxycycline, 100 mg orally twice daily for 7 days</button></div>
+        <button class="poll-reset" data-poll="q_105_2025_8" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Results — Question 105 (2025)</h3>
+        <div class="poll-results" id="results-q_105_2025_8">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Dermatology | Rashes</p>
+        <h3>Answer: A — Question 105 (2025)</h3>
+        <div class="critique-body">This patient has nongonococcal urethritis, which should be treated with azithromycin. Symptoms of urethritis include dysuria, purulent or mucopurulent urethral discharge, and urethral discomfort and/or erythema. Diagnostic criteria include typical signs and symptoms or a history of exposure along with ≥10 WBCs/hpf on a first-void urinalysis, ≥2 WBCs/oil immersion field found on Gram stain of the discharge, or a positive leukocyte esterase with first-void urine. At least half of nongonococcal urethritis cases have no known etiologic agent. Of the cases with known etiologies, Mycoplasma genitalium is responsible for 15%–20%. Treatment options for M genitalium include azithromycin, 1 g orally; doxycycline, 100 mg twice daily for 1 week; or moxifloxacin, 400 mg orally for 7–14 days. If the results of nucleic acid amplification testing for gonorrhea and chlamydia are unavailable, then intramuscular ceftriaxone plus a 7-day course of oral doxycycline would be appropriate and can be used for empiric therapy while awaiting results. Intramuscular gentamicin plus oral azithromycin is used as an alternative treatment regimen for Neisseria gonorrhoeae. Metronidazole is used to treat Trichomonas, which represents 1%– 8% of cases in men and should be diagnosed using a molecular-based test. Levofloxacin is a treatment option for chlamydia and is not first line.</div>
+    </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({ hash: true, transition: 'slide' });
+        const wsUrl = (location.protocol === 'https:' ? 'wss:' : 'ws:') + '//' + location.host + '/ws';
+        let ws = null;
+        const pollResults = {};
+        let role = location.search.includes('audience') ? 'audience' : 'presenter';
+        document.getElementById('join-url').textContent = location.href.split('?')[0] + '?audience';
+        function connect() {
+            ws = new WebSocket(wsUrl);
+            ws.onopen = () => ws.send(JSON.stringify({ role, poll: null }));
+            ws.onmessage = (e) => {
+                const d = JSON.parse(e.data);
+                if (d.type === 'results') {
+                    pollResults[d.poll] = d.votes || {};
+                    showResults(d.poll, pollResults[d.poll]);
+                } else if (d.type === 'reset') {
+                    pollResults[d.poll] = {};
+                    const res = document.getElementById('results-' + d.poll);
+                    if (res) res.innerHTML = 'Votes appear here in real-time.';
+                }
+            };
+            ws.onclose = () => setTimeout(connect, 2000);
+        }
+        connect();
+
+        if (role === 'audience') {
+            document.querySelectorAll('.poll-reset').forEach(b => b.style.display = 'none');
+        } else {
+            document.querySelectorAll('.poll-reset').forEach(b => {
+                b.style.display = 'inline-block';
+                b.onclick = () => {
+                    const pid = b.dataset.poll;
+                    if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'reset', poll: pid }));
+                };
+            });
+        }
+
+        document.querySelectorAll('.poll-opt').forEach(btn => {
+            btn.onclick = () => {
+                if (role !== 'audience') return;
+                const pid = btn.dataset.poll;
+                const choice = btn.dataset.choice;
+                if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'vote', poll: pid, choice }));
+                btn.classList.add('voted');
+            };
+        });
+
+        function showResults(pollId, votes) {
+            const el = document.getElementById('results-' + pollId);
+            if (!el) return;
+            const max = Math.max(...Object.values(votes), 1);
+            el.innerHTML = '<div class="bar-chart">' + Object.entries(votes).sort((a,b)=>a[0].localeCompare(b[0])).map(([k,v]) =>
+                '<div class="bar-row"><span class="bar-label">'+k+')</span><div class="bar-fill" style="width:'+(v/max*100)+'%"></div><span>'+v+'</span></div>'
+            ).join('') + '</div>';
+        }
+
+        Reveal.on('slidechanged', e => {
+            const resDiv = e.currentSlide?.querySelector?.('.poll-results[id^="results-"]');
+            if (resDiv) {
+                const pollId = resDiv.id.replace('results-', '');
+                if (pollResults[pollId] && Object.keys(pollResults[pollId]).length) {
+                    showResults(pollId, pollResults[pollId]);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+# Python / local junk
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local-only (exam PDFs stay on your machine; ite_data.json is the portable extract)
+OldITE/*.pdf
+run_live_errors.txt
+
+# Do NOT add rules that ignore live_ite/ — Render needs that folder on GitHub.

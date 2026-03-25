@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OB/GYN - ITE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/simple.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .reveal .slides { text-align: left; font-family: 'Segoe UI', sans-serif; }
+        .reveal h1, .reveal h2, .reveal h3 { font-family: 'Montserrat', sans-serif; }
+        .grey-label { color:#767676; font-size:0.75rem; text-transform:uppercase; margin-bottom:0.3em; }
+        .q-meta { color:#767676; font-size:0.9rem; margin-bottom:0.5em; }
+        .poll-stem { font-size:1.1rem; margin:0.8em 0; line-height:1.5; }
+        .poll-options { display:flex; flex-direction:column; gap:0.4em; }
+        .poll-opt {
+            padding:0.5em 0.8em; text-align:left; font-size:0.95rem;
+            background:#f5f5f5; border:2px solid #ddd; border-radius:6px;
+            cursor:pointer; transition:all 0.2s;
+            font-family: inherit;
+        }
+        .poll-opt:hover { background:#eaeaea; border-color:#999; }
+        .poll-opt.voted { background:#d4edda; border-color:#28a745; }
+        .poll-results { margin-top:1em; min-height:120px; }
+        .poll-reset { margin-top:0.5em; padding:0.3em 0.8em; font-size:0.85rem; cursor:pointer; }
+        .critique-body { font-size:0.95rem; line-height:1.6; color:#555; }
+        .bar-chart { display:flex; flex-direction:column; gap:0.3em; }
+        .bar-row { display:flex; align-items:center; gap:0.5em; }
+        .bar-label { width:2em; }
+        .bar-fill { height:1.5em; background:#4a90d9; border-radius:4px; min-width:2em; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+    <section>
+        <h1 style="font-family:Montserrat,sans-serif;">OB/GYN</h1>
+        <p style="color:#767676;font-size:1.2rem;">ITE Questions — Interactive Polls</p>
+    </section>
+
+    <section>
+        <h2>Join the Poll</h2>
+        <p>Open this page on your phone:</p>
+        <p><strong id="join-url">Loading...</strong></p>
+        <p style="font-size:0.9rem;color:#767676;">Use ?audience to vote.</p>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_7_2022_0">
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <p class="q-meta">Question 7 (2022)</p>
+        <div class="poll-stem">An otherwise healthy 29-year-old gravida 2 para 1 at 28 weeks gestation presents to your office with a laceration sustained while doing yard work. After thoroughly cleaning the wound, you decide not to suture it because of the risk of infection. The patient received Tdap during her previous pregnancy 6 years ago and you confirm in her medical records that she completed her primary immunizations as a child. Which one of the following would be most appropriate regarding tetanus prophylaxis?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_7_2022_0" data-choice="A">A) No tetanus prophylaxis</button><button class="poll-opt" data-poll="q_7_2022_0" data-choice="B">B) Tetanus immune globulin now</button><button class="poll-opt" data-poll="q_7_2022_0" data-choice="C">C) Td now</button><button class="poll-opt" data-poll="q_7_2022_0" data-choice="D">D) Tdap now</button><button class="poll-opt" data-poll="q_7_2022_0" data-choice="E">E) Tdap at 38 weeks gestation</button></div>
+        <button class="poll-reset" data-poll="q_7_2022_0" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <h3>Results — Question 7 (2022)</h3>
+        <div class="poll-results" id="results-q_7_2022_0">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <h3>Answer: D — Question 7 (2022)</h3>
+        <div class="critique-body">This patient needs a tetanus toxoid–containing vaccine for the management of her wound. Since pregnant people should receive a dose of Tdap between 27 and 36 weeks gestation to protect against pertussis, Tdap is the best choice for this patient. Tetanus immune globulin would be appropriate if this patient had not previously completed the primary series or were showing signs of clinical tetanus. Td would be an appropriate option for tetanus prophylaxis in nonpregnant patients who have previously received Tdap. Because this patient requires some form of tetanus prophylaxis at this time, waiting until 38 weeks to administer Tdap is not appropriate. Ref: Committee Opinion No. 718 summary: Update on immunization and pregnancy: Tetanus, diphtheria, and pertussis vaccination. Obstet Gynecol 2017;130(3):668-669. 2) Epidemiology and prevention of vaccine-preventable diseases: Chapter 21: Tetanus. Centers for Disease Control and Prevention, 2021. 3</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_52_2022_1">
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <p class="q-meta">Question 52 (2022)</p>
+        <div class="poll-stem">Which one of the following is an individual risk factor for committing intimate partner violence?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_52_2022_1" data-choice="A">A) A belief in flexible gender roles</button><button class="poll-opt" data-poll="q_52_2022_1" data-choice="B">B) Having many friends</button><button class="poll-opt" data-poll="q_52_2022_1" data-choice="C">C) High income</button><button class="poll-opt" data-poll="q_52_2022_1" data-choice="D">D) Planned pregnancy</button><button class="poll-opt" data-poll="q_52_2022_1" data-choice="E">E) Young age</button></div>
+        <button class="poll-reset" data-poll="q_52_2022_1" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <h3>Results — Question 52 (2022)</h3>
+        <div class="poll-results" id="results-q_52_2022_1">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <h3>Answer: E — Question 52 (2022)</h3>
+        <div class="critique-body">Understanding individual, relational, societal, and community risk and protective factors associated with intimate partner violence (IPV) perpetration can help prevent it. Among the options listed, young age is an individual risk factor for committing IPV. IPV is most prevalent in adolescence and young adulthood and declines with age. A belief in strict gender roles, having few friends, low income, and unplanned pregnancy are also risk factors. Ref: Preventing intimate partner violence across the lifespan: A technical package of programs, policies, and practices. Division of Violence Prevention, National Center for Injury Prevention and Control, Centers for Disease Control and Prevention, 2017. 2) Violence prevention: Risk and protective factors for perpetration. Centers for Disease Control and Prevention, reviewed 2020. 20</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_148_2022_2">
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <p class="q-meta">Question 148 (2022)</p>
+        <div class="poll-stem">An 18-month-old male is brought to your office by his parents for a well child check. The child was born at 28 weeks gestation and had a month-long NICU stay but has remained healthy and out of the hospital since that time. He is up to date on vaccines and his growth and development are appropriate. He was on omeprazole (Prilosec) for GERD but the parents have recently stopped the medication and he is doing well. He received palivizumab (Synagis) monthly last year during respiratory syncytial virus (RSV) season and never developed a respiratory infection. His parents are hoping that he can rec...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_148_2022_2" data-choice="A">A) No chemoprophylaxis</button><button class="poll-opt" data-poll="q_148_2022_2" data-choice="B">B) A single dose of palivizumab only if RSV exposure is confirmed</button><button class="poll-opt" data-poll="q_148_2022_2" data-choice="C">C) A single dose of palivizumab prior to RSV season</button><button class="poll-opt" data-poll="q_148_2022_2" data-choice="D">D) Monthly administration of palivizumab during RSV season</button></div>
+        <button class="poll-reset" data-poll="q_148_2022_2" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <h3>Results — Question 148 (2022)</h3>
+        <div class="poll-results" id="results-q_148_2022_2">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <h3>Answer: A — Question 148 (2022)</h3>
+        <div class="critique-body">With the increasing shortage of pediatric providers, especially in rural areas, family physicians need to be comfortable managing the care of premature infants. Palivizumab is recommended for all infants born before 29 weeks gestational age who are less than 1 year of age at the beginning of respiratory syncytial virus season, or for those born at less than 32 weeks gestational age who develop chronic lung disease of prematurity. After 1 year of age, palivizumab is only recommended for infants with chronic lung disease of prematurity who continue to require medical intervention for their lung disease. Therefore, this child should not receive palivizumab. Ref: American Academy of Pediatrics Committee on Infectious Diseases; American Academy of Pediatrics Bronchiolitis Guidelines Committee: Updated guidance for palivizumab prophylaxis among infants and young children at increased risk of hospitalization for respiratory syncytial virus infection. Pediatrics 2014;134(2):415-420. 2) Smith DK, Seales S, Budzik C: Respiratory syncytial virus bronchiolitis in children. Am Fam Physician 2017;95(2):94-99.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_200_2022_3">
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <p class="q-meta">Question 200 (2022)</p>
+        <div class="poll-stem">A 30-year-old gravida 2 para 1 at 20 weeks gestation presents with a 1-day history of a fever, cough, headache, and myalgias. A nasal swab confirms influenza B. Which one of the following is the preferred antiviral treatment for this patient?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_200_2022_3" data-choice="A">A) No treatment because of her pregnancy</button><button class="poll-opt" data-poll="q_200_2022_3" data-choice="B">B) No treatment because antiviral medication is indicated for influenza A but not influenza B</button><button class="poll-opt" data-poll="q_200_2022_3" data-choice="C">C) Baloxavir marboxil (Xofluza)</button><button class="poll-opt" data-poll="q_200_2022_3" data-choice="D">D) Oseltamivir (Tamiflu)</button><button class="poll-opt" data-poll="q_200_2022_3" data-choice="E">E) Peramivir (Rapivab) 69 Item #199 70</button></div>
+        <button class="poll-reset" data-poll="q_200_2022_3" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <h3>Results — Question 200 (2022)</h3>
+        <div class="poll-results" id="results-q_200_2022_3">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <h3>Answer: D — Question 200 (2022)</h3>
+        <div class="critique-body">Antiviral medications are recommended for the treatment of influenza only within 48 hours of symptom onset (SOR A). However, in high-risk patient populations and in severe cases of disease, antiviral medications should be provided regardless of the duration of symptoms (SOR B). According to the CDC, oseltamivir remains the drug of choice for the treatment of influenza A and B during pregnancy because it has good safety data. Baloxavir marboxil is indicated for patients &gt;12 years of age but should be avoided during pregnancy. There is less safety data for peramivir and zanamivir. Ref: Gaitonde DY, Moore FC, Morgan MK: Influenza: Diagnosis and treatment. Am Fam Physician 2019;100(12):751-758. 79</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_46_2023_4">
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <p class="q-meta">Question 46 (2023)</p>
+        <div class="poll-stem">A55-year-old male sees you because of heartburn and dysphagia. Esophagogastroduodenoscopy shows moderately severe esophagitis. Which one of the following is the most appropriate long-term pharmacologic management for this condition?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_46_2023_4" data-choice="A">A) Famotidine (Pepcid), 10 mg daily</button><button class="poll-opt" data-poll="q_46_2023_4" data-choice="B">B) Metoclopramide (Reglan), 10 mg before meals</button><button class="poll-opt" data-poll="q_46_2023_4" data-choice="C">C) Omeprazole, 40 mg daily</button><button class="poll-opt" data-poll="q_46_2023_4" data-choice="D">D) Sucralfate (Carafate), 1 g twice daily</button></div>
+        <button class="poll-reset" data-poll="q_46_2023_4" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <h3>Results — Question 46 (2023)</h3>
+        <div class="poll-results" id="results-q_46_2023_4">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <h3>Answer: C — Question 46 (2023)</h3>
+        <div class="critique-body">Patients with moderately severe esophagitis require ongoing proton pump inhibitors (PPIs) to manage symptoms. There is a nearly 100% recurrence of symptoms at 6 months if a PPI is stopped. Lifelong omeprazole use would be the best choice for this patient. PPIs are recommended over H,-blockers such as famotidine for maintenance and healing of erosive esophagitis. Prokinetic agents such as metoclopramide are not recommended for GERD unless gastroparesis is also present. Sucralfate is not recommended for GERD except in the case of pregnancy. Ref: Katz PO, Dunbar KB, Schnoll-Sussman FH, Greer KB, Yadlapati R, Spechler SJ. ACG clinical guideline for the diagnosis and management of gastroesophageal reflux disease. Am J Gastroenterol. 2022;117(1):27-56.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_57_2023_5">
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <p class="q-meta">Question 57 (2023)</p>
+        <div class="poll-stem">A 28-year-old female comes to your office for follow-up after learning during an emergency department visit that she is pregnant. Ultrasonography reveals an estimated gestational age of 14 weeks and 4 days. She has been using increasing dosages of oxycodone (OxyContin) daily for the past 7 months and gets sick whenever she tries to stop. She reports using 90 mg daily without a prescription, and stealing when necessary to obtain the drug. She wishes to continue her pregnancy and is worried about the safety of her developing fetus. Which one of the following is most appropriate for this patient?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_57_2023_5" data-choice="A">A) A prescription for oxycodone, 90 mg daily</button><button class="poll-opt" data-poll="q_57_2023_5" data-choice="B">B) Buprenorphine/naloxone (Suboxone) therapy</button><button class="poll-opt" data-poll="q_57_2023_5" data-choice="C">C) Outpatient detoxification with a clonidine-based protocol</button><button class="poll-opt" data-poll="q_57_2023_5" data-choice="D">D) Inpatient detoxification with a clonidine-based protocol</button></div>
+        <button class="poll-reset" data-poll="q_57_2023_5" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <h3>Results — Question 57 (2023)</h3>
+        <div class="poll-results" id="results-q_57_2023_5">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <h3>Answer: B — Question 57 (2023)</h3>
+        <div class="critique-body">Treatment with buprenorphine/naloxone, along with counseling, is considered optimal care for all pregnant women with active opioid addiction. Benefits include the avoidance of cycles of withdrawal and intoxication and a decrease in high-risk behaviors associated with opioid dependence and associated medical complications. A prescription for oxycodone would not be appropriate for this patient. Medically supervised withdrawal is associated with dramatically higher rates of relapse, and should only be offered to women who refuse maintenance therapy or are unable to access such therapy. Ref: Jones HE, Finnegan LP, Kaltenbach K. Methadone and buprenorphine for the management of opioid dependence in pregnancy. Drugs. 2012;72(6):747-757. 2) Dooley J, Gerber-Finn L, Antone I, et al. Buprenorphine-naloxone use in pregnancy for treatment of opioid dependence. Can Fam Physician. 2016;62(4):e194-e200.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_193_2024_6">
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <p class="q-meta">Question 193 (2024)</p>
+        <div class="poll-stem">A 29-year-old female presents with low back pain that began after giving birth 3 months ago. She reports pain on her right side when climbing and descending stairs and when lying on her right side. On examination she has mild lumbar paraspinal muscle tightness on the left and moderate tenderness inferomedial to the posterior superior iliac spine on the right. Muscle strength testing and lower extremity reflexes are normal. Which one of the following conditions is the most likely cause of this patient’s pain?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_193_2024_6" data-choice="A">A) Lumbar strain</button><button class="poll-opt" data-poll="q_193_2024_6" data-choice="B">B) Piriformis syndrome</button><button class="poll-opt" data-poll="q_193_2024_6" data-choice="C">C) Pudendal nerve entrapment</button><button class="poll-opt" data-poll="q_193_2024_6" data-choice="D">D) Sacroiliac joint dysfunction</button><button class="poll-opt" data-poll="q_193_2024_6" data-choice="E">E) Spondyloarthropathy</button></div>
+        <button class="poll-reset" data-poll="q_193_2024_6" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <h3>Results — Question 193 (2024)</h3>
+        <div class="poll-results" id="results-q_193_2024_6">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <h3>Answer: D — Question 193 (2024)</h3>
+        <div class="critique-body">Sacroiliac joint dysfunction is commonly seen in primary care and is an important consideration in the evaluation of low back pain. It often occurs during pregnancy and post partum. Other inciting incidents include a motor vehicle accident or a mechanical fall onto the buttocks. It can be associated with ankylosing spondylitis and other spondyloarthropathies; however, the etiology in this case is more likely to be childbirth. Symptoms often include pain at the sacroiliac joint that worsens with climbing stairs, lying on the affected side, prolonged standing and sitting, and weight-bearing on the leg of the affected side. Examination findings include tenderness that is inferomedial to the posterior superior iliac spine. A number of provocation tests for sacroiliac joint dysfunction can help to confirm the diagnosis. NSAIDs, physical therapy, and joint manipulation are first-line treatments. Pelvic belts, corticosteroid injections, and sacroiliac joint fusion are used for refractory cases. Lumbar strain is in the differential diagnosis, but sacroiliac joint dysfunction is more likely given this patient’s history and the duration and location of tenderness. Piriformis syndrome is usually unilateral and causes sciatic-like symptoms. Pudendal nerve entrapment would cause perineal pain or labial numbness. Spondyloarthropathies are associated with sacroiliac joint inflammation but are not as likely in this postpartum patient.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_84_2025_7">
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <p class="q-meta">Question 84 (2025)</p>
+        <div class="poll-stem">Which one of the following puts a patient at the highest risk of developing breast cancer?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_84_2025_7" data-choice="A">A) A first pregnancy at &lt;30 years of age</button><button class="poll-opt" data-poll="q_84_2025_7" data-choice="B">B) Onset of menopause at &lt;50 years of age</button><button class="poll-opt" data-poll="q_84_2025_7" data-choice="C">C) Fatty breasts on mammography</button><button class="poll-opt" data-poll="q_84_2025_7" data-choice="D">D) A grandmother with a history of breast cancer</button><button class="poll-opt" data-poll="q_84_2025_7" data-choice="E">E) Chest radiation therapy as a child</button></div>
+        <button class="poll-reset" data-poll="q_84_2025_7" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <h3>Results — Question 84 (2025)</h3>
+        <div class="poll-results" id="results-q_84_2025_7">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">OB/GYN | Pregnancy</p>
+        <h3>Answer: E — Question 84 (2025)</h3>
+        <div class="critique-body">Women who received chest radiotherapy as children are at increased risk for breast cancer as adults, with those who received whole lung radiation at especially high risk. Other risk factors for breast cancer include the onset of menopause at &gt;55 years of age, a first pregnancy at &gt;35 years of age, and a first-degree relative with breast cancer. Patients with dense breasts have a higher amount of glandular and stromal tissue compared with adipose tissue on mammography and are at higher risk for breast cancer.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_54_2022_0">
+        <p class="grey-label">OB/GYN | Abnormal Uterine Bleeding</p>
+        <p class="q-meta">Question 54 (2022)</p>
+        <div class="poll-stem">A 15-year-old female presents for a well adolescent examination and reports painful, heavy periods. Menarche occurred at age 11, and by age 12 her menses were regular but quite painful. She misses at least 1 day of school each month due to the discomfort. She has tried acetaminophen/caffeine/pyrilamine (Midol Complete) and ibuprofen, 200 mg, without much relief. She is not sexually active. Her past medical history and surgical history are unremarkable. A urine pregnancy test is negative. Which one of the following would be the most appropriate next step for this patient?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_54_2022_0" data-choice="A">A) Empiric treatment with maximum-dose naproxen</button><button class="poll-opt" data-poll="q_54_2022_0" data-choice="B">B) Screening for sexually transmitted infections</button><button class="poll-opt" data-poll="q_54_2022_0" data-choice="C">C) A pelvic examination</button><button class="poll-opt" data-poll="q_54_2022_0" data-choice="D">D) Pelvic ultrasonography</button><button class="poll-opt" data-poll="q_54_2022_0" data-choice="E">E) Referral to a gynecologist</button></div>
+        <button class="poll-reset" data-poll="q_54_2022_0" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">OB/GYN | Abnormal Uterine Bleeding</p>
+        <h3>Results — Question 54 (2022)</h3>
+        <div class="poll-results" id="results-q_54_2022_0">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">OB/GYN | Abnormal Uterine Bleeding</p>
+        <h3>Answer: A — Question 54 (2022)</h3>
+        <div class="critique-body">Dysmenorrhea affects 50%–90% of females and the great majority of cases are primary dysmenorrhea, or pain that occurs in the absence of pelvic pathology. After a complete history confirming cyclic cramping pelvic pain beginning around the start of menses and a negative urine pregnancy test, empiric treatment should be offered (SOR C). First-line treatment is an NSAID at moderate to maximum dosing, such as naproxen, 500 mg every 12 hours. Any NSAID can be used and should be started 1–2 days before the onset of menses and continued through the first several days of bleeding. A secondary benefit to NSAID use is a reduction in heavy menstrual bleeding. Combined estrogen/progestin oral contraceptives may also be used as first-line therapy or in conjunction with NSAIDs. While screening for sexually transmitted infections is important for sexually active adolescents, it is not indicated in the evaluation of dysmenorrhea. Neither pelvic examination nor imaging is indicated when the history is consistent with primary dysmenorrhea. If there is evidence of secondary dysmenorrhea (due to pelvic pathology or a recognized medical condition), then an examination and imaging are indicated. Family physicians are able to manage the majority of cases of primary dysmenorrhea. If there is no improvement in treatment after 3 months, referral to a gynecologist may be indicated. Ref: McKenna KA, Fogleman CD: Dysmenorrhea. Am Fam Physician 2021;104(2):164-170. 21</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_112_2022_1">
+        <p class="grey-label">OB/GYN | Abnormal Uterine Bleeding</p>
+        <p class="q-meta">Question 112 (2022)</p>
+        <div class="poll-stem">A 24-year-old gravida 2 para 2 presents to your office for evaluation of breast pain. The patient reports that the pain affects both breasts, particularly during the week prior to her menses. She does not report any redness, nipple discharge, or fever. This is the first time the patient has presented for evaluation of this problem. In addition to conservative measures, which one of the following would be most appropriate to manage the patient’s pain without interfering with fertility?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_112_2022_1" data-choice="A">A) Diclofenac gel (Voltaren Arthritis Pain)</button><button class="poll-opt" data-poll="q_112_2022_1" data-choice="B">B) Danazol</button><button class="poll-opt" data-poll="q_112_2022_1" data-choice="C">C) Goserelin (Zoladex)</button><button class="poll-opt" data-poll="q_112_2022_1" data-choice="D">D) Tamoxifen (Soltamox)</button></div>
+        <button class="poll-reset" data-poll="q_112_2022_1" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">OB/GYN | Abnormal Uterine Bleeding</p>
+        <h3>Results — Question 112 (2022)</h3>
+        <div class="poll-results" id="results-q_112_2022_1">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">OB/GYN | Abnormal Uterine Bleeding</p>
+        <h3>Answer: A — Question 112 (2022)</h3>
+        <div class="critique-body">Mastalgia is a common symptom requiring evaluation in the primary care setting. Cyclic mastalgia accounts for about two-thirds of all breast pain and is thought to be caused by increased sensitivity of the breast tissues to hormonal stimulation during the luteal phase of the menstrual cycle. Topical NSAIDs such as diclofenac are the first-line pharmacologic treatment for mastalgia (SOR B). Danazol is the only drug that is approved by the FDA for treatment of mastalgia, but it is poorly tolerated due to menorrhagia, muscle cramps, weight gain, and other androgenic effects. Goserelin is only indicated for severe, refractory mastalgia. Tamoxifen is more effective and better tolerated than danazol, but is associated with hot flashes, vaginal discharge, venous thromboembolism, endometrial cancer, and teratogenicity. Ref: Salzman B, Collins E, Hersh L: Common breast problems. Am Fam Physician 2019;99(8):505-514. 45</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_88_2023_2">
+        <p class="grey-label">OB/GYN | Abnormal Uterine Bleeding</p>
+        <p class="q-meta">Question 88 (2023)</p>
+        <div class="poll-stem">A 28-year-old gravida 2 para 2 sees you for follow-up of heavy menstrual bleeding. She reports regular 30-day cycles with heavy bleeding that lasts for 5 days each month. She has tried ibuprofen and naproxen with minimal improvement. She and her husband desire more children but would prefer to wait a few years before trying again to conceive. Which one of the following treatments is likely to be most effective in reducing her menstrual bleeding, while preserving future fertility?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_88_2023_2" data-choice="A">A) An estrogen-progestin oral contraceptive</button><button class="poll-opt" data-poll="q_88_2023_2" data-choice="B">B) Tranexamic acid (Lysteda)</button><button class="poll-opt" data-poll="q_88_2023_2" data-choice="C">C) A levonorgestrel IUD (Mirena)</button><button class="poll-opt" data-poll="q_88_2023_2" data-choice="D">D) Uterine artery embolization</button><button class="poll-opt" data-poll="q_88_2023_2" data-choice="E">E) Endometrial ablation 33</button></div>
+        <button class="poll-reset" data-poll="q_88_2023_2" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">OB/GYN | Abnormal Uterine Bleeding</p>
+        <h3>Results — Question 88 (2023)</h3>
+        <div class="poll-results" id="results-q_88_2023_2">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">OB/GYN | Abnormal Uterine Bleeding</p>
+        <h3>Answer: C — Question 88 (2023)</h3>
+        <div class="critique-body">Of the available treatment options, the levonorgestrel IUD is the most effective for reducing heavy menstrual bleeding (SOR A), with a 71%-95% decrease in menstrual blood loss expected. Estrogen-progestin oral contraceptives are less effective, with expected reduction in blood loss of 35%-69%, although they provide an added benefit of regulating menstrual bleeding in patients with anovulatory cycles. Nonhormonal medication options include tranexamic acid and NSAIDs, with an expected blood loss reduction of 26%-54% and 10%-52%, respectively. Two effective procedural options that are lower risk and less invasive compared to hysterectomy include uterine artery embolization and endometrial ablation, although both would present significant risk of reducing future fertility and therefore would not be the preferred treatment for this patient. Ref: Matteson KA, Rahn DD, Wheeler TL 2nd, et al. Nonsurgical management of heavy menstrual bleeding: a systematic review. Obstet Gynecol. 2013;121(3):632-643. 2) Wouk N, Helton M. Abnormal uterine bleeding in premenopausal women. Am Fam Physician. 2019;99(7):435-443.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_175_2022_0">
+        <p class="grey-label">OB/GYN | Contraception</p>
+        <p class="q-meta">Question 175 (2022)</p>
+        <div class="poll-stem">Which one of the following is consistent with best practices for prescribing hormonal contraception?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_175_2022_0" data-choice="A">A) Delaying initiation until the patient’s next menstrual period to avoid incidental use in early pregnancy</button><button class="poll-opt" data-poll="q_175_2022_0" data-choice="B">B) Limiting prescription refills to 3 months at a time</button><button class="poll-opt" data-poll="q_175_2022_0" data-choice="C">C) Obtaining a thorough medical history to screen for contraindications</button><button class="poll-opt" data-poll="q_175_2022_0" data-choice="D">D) Requiring in-person visits rather than telehealth visits for contraceptive counseling due to the need for a gynecologic ...</button><button class="poll-opt" data-poll="q_175_2022_0" data-choice="E">E) Requiring patients to have an up-to-date Papanicolaou test and sexually transmitted infection screening</button></div>
+        <button class="poll-reset" data-poll="q_175_2022_0" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">OB/GYN | Contraception</p>
+        <h3>Results — Question 175 (2022)</h3>
+        <div class="poll-results" id="results-q_175_2022_0">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">OB/GYN | Contraception</p>
+        <h3>Answer: C — Question 175 (2022)</h3>
+        <div class="critique-body">There are many patient-related historical factors that may affect the safety and choice of hormonal contraception, but very few physical factors are likely to be found on examination that would not otherwise have been identified. Obtaining a thorough medical history is standard practice, but the Choosing Wisely campaign recommends against requiring a pelvic or other physical examination prior to prescribing oral contraceptives. It is unnecessary to wait to begin hormonal contraception until after the next menses, as inadvertent exposure to oral contraception will not harm an early pregnancy. Prescribing a 1-year supply of hormonal contraceptives improves adherence and lowers cost. There is broad consensus that sexually transmitted infection screening and Papanicolaou testing should not be required to prescribe contraception. Ref: Lesnewski R: Initiating hormonal contraception. Am Fam Physician 2021;103(5):291-300. 69</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_112_2023_1">
+        <p class="grey-label">OB/GYN | Contraception</p>
+        <p class="q-meta">Question 112 (2023)</p>
+        <div class="poll-stem">A 35-year-old female with previously regular menses presents with a 3-month history of amenorrhea, hot flashes, and increased irritability. A pregnancy test is negative, an estrogen level is low, and an FSH level is markedly elevated. There is no change in repeat testing 1 month later and you make a diagnosis of primary ovarian insufficiency. Further testing does not reveal a cause for her condition. She does not desire more children. Which one of the following should you recommend to this patient for hormone replacement therapy?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_112_2023_1" data-choice="A">A) No treatment</button><button class="poll-opt" data-poll="q_112_2023_1" data-choice="B">B) Transdermal estradiol without progestogen</button><button class="poll-opt" data-poll="q_112_2023_1" data-choice="C">C) Continuous oral estradiol without progestogen</button><button class="poll-opt" data-poll="q_112_2023_1" data-choice="D">D) Continuous oral estradiol and cyclic progestogen</button><button class="poll-opt" data-poll="q_112_2023_1" data-choice="E">E) Continuous oral estradiol and a levonorgestrel IUD (Mirena)</button></div>
+        <button class="poll-reset" data-poll="q_112_2023_1" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">OB/GYN | Contraception</p>
+        <h3>Results — Question 112 (2023)</h3>
+        <div class="poll-results" id="results-q_112_2023_1">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">OB/GYN | Contraception</p>
+        <h3>Answer: E — Question 112 (2023)</h3>
+        <div class="critique-body">Patients with primary ovarian insufficiency should be started on hormone replacement therapy (HRT) as soon as possible after diagnosis, preferably within a year. HRT treats symptoms and benefits bone health, cardiovascular health, and cognitive function. It should be continued until the age of expected natural menopause. In a patient with a uterus, protection against endometrial cancer with progesterone is required. A significant proportion of patients with this disorder occasionally ovulate or have spontaneous return of menses. HRT does not provide contraception. A levonorgestrel IUD provides both endometrial protection and contraception. Ref: Stuenkel CA, Gompel A. Primary ovarian insufficiency. N Engl J Med. 2023;388(2):154-163.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_175_2023_2">
+        <p class="grey-label">OB/GYN | Contraception</p>
+        <p class="q-meta">Question 175 (2023)</p>
+        <div class="poll-stem">A 35-year-old female presents for contraceptive counseling. Her last menstrual period was 3 weeks ago and she had unprotected sex 2 days ago. A pregnancy test is negative. Which one of the following would be the most effective emergency contraceptive agent for this patient?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_175_2023_2" data-choice="A">A) Oral levonorgestrel (Plan B One-Step)</button><button class="poll-opt" data-poll="q_175_2023_2" data-choice="B">B) Oral ulipristal (Ella)</button><button class="poll-opt" data-poll="q_175_2023_2" data-choice="C">C) Subcutaneous depot medroxyprogesterone acetate (Depo-Provera)</button><button class="poll-opt" data-poll="q_175_2023_2" data-choice="D">D) An etonogestrel subdermal implant (Nexplanon)</button><button class="poll-opt" data-poll="q_175_2023_2" data-choice="E">E) A copper IUD (Paragard)</button></div>
+        <button class="poll-reset" data-poll="q_175_2023_2" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">OB/GYN | Contraception</p>
+        <h3>Results — Question 175 (2023)</h3>
+        <div class="poll-results" id="results-q_175_2023_2">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">OB/GYN | Contraception</p>
+        <h3>Answer: E — Question 175 (2023)</h3>
+        <div class="critique-body">The copper IUD is the most effective form of emergency contraception with a pregnancy rate of 0.1%, followed by oral ulipristal with a pregnancy rate of 1.3%. Oral levonorgestrel is less effective than both with a pregnancy rate of 2.5%. Subcutaneous depot medroxyprogesterone acetate and the etonogestrel subdermal implant are not recommended as emergency contraceptives. Ref: Paradise SL, Landis CA, Klein DA. Evidence-based contraception: common questions and answers. Am Fam Physician. 2022; 106(3):251-259.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_147_2024_3">
+        <p class="grey-label">OB/GYN | Contraception</p>
+        <p class="q-meta">Question 147 (2024)</p>
+        <div class="poll-stem">A 46-year-old female with a BMI of 36 kg/m2 and a history of bilateral tubal ligation presents with intermenstrual bleeding. An endometrial biopsy reveals endometrial hyperplasia with atypia. Which one of the following should you recommend at this time?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_147_2024_3" data-choice="A">A) Oral progesterone</button><button class="poll-opt" data-poll="q_147_2024_3" data-choice="B">B) Combined oral contraceptives</button><button class="poll-opt" data-poll="q_147_2024_3" data-choice="C">C) A levonorgestrel IUD (Mirena)</button><button class="poll-opt" data-poll="q_147_2024_3" data-choice="D">D) Uterine MRI</button><button class="poll-opt" data-poll="q_147_2024_3" data-choice="E">E) Hysterectomy</button></div>
+        <button class="poll-reset" data-poll="q_147_2024_3" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">OB/GYN | Contraception</p>
+        <h3>Results — Question 147 (2024)</h3>
+        <div class="poll-results" id="results-q_147_2024_3">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">OB/GYN | Contraception</p>
+        <h3>Answer: E — Question 147 (2024)</h3>
+        <div class="critique-body">This patient’s age and elevated BMI put her at risk for endometrial cancer. Appropriate evaluation includes an endometrial biopsy. Patients who have endometrial hyperplasia with atypia should be referred for hysterectomy, as it is the treatment of choice. Oral progesterone may be offered to a patient who desires a future pregnancy. Endometrial hyperplasia without atypia may be treated with a levonorgestrel IUD or oral progesterone. Uterine MRI would not offer any additional information for diagnosis and would not change the need for hysterectomy.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_66_2025_4">
+        <p class="grey-label">OB/GYN | Contraception</p>
+        <p class="q-meta">Question 66 (2025)</p>
+        <div class="poll-stem">A 24-year-old gravida 2 para 2 presents to your office with melasma that has not resolved since she gave birth 6 months ago. She is eager to be treated. Which one of the following topical treatments would be the most effective for this patient's melasma?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_66_2025_4" data-choice="A">A) Azelaic acid</button><button class="poll-opt" data-poll="q_66_2025_4" data-choice="B">B) Hydroquinone</button><button class="poll-opt" data-poll="q_66_2025_4" data-choice="C">C) Imiquimod (Aldara, Zyclara)</button><button class="poll-opt" data-poll="q_66_2025_4" data-choice="D">D) Benzoyl peroxide plus a corticosteroid</button><button class="poll-opt" data-poll="q_66_2025_4" data-choice="E">E) A combination of fluocinolone, hydroquinone, and tretinoin</button></div>
+        <button class="poll-reset" data-poll="q_66_2025_4" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">OB/GYN | Contraception</p>
+        <h3>Results — Question 66 (2025)</h3>
+        <div class="poll-results" id="results-q_66_2025_4">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">OB/GYN | Contraception</p>
+        <h3>Answer: E — Question 66 (2025)</h3>
+        <div class="critique-body">Melasma is a common condition in pregnancy that occurs in up to 75% of patients. It is caused by increased levels of progesterone, estrogen, and melanocyte-stimulating hormone. While it resolves in 90% of cases during the postpartum period, it can persist and may recur in subsequent pregnancies or with the use of oral contraception. Topical tretinoin, hydroquinone, and a corticosteroid such as fluocinolone can all be used in the treatment of melasma, and a combination of the 3 is the most effective. These may be prescribed as a single formulation, which may be cost prohibitive, or as individual components. Azelaic acid and benzoyl peroxide are used to treat acne and are not effective for treating melasma. Imiquimod is an immunomodulator that is helpful in the treatment of condyloma acuminata but has no role in the treatment of melasma.</div>
+    </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({ hash: true, transition: 'slide' });
+        const wsUrl = (location.protocol === 'https:' ? 'wss:' : 'ws:') + '//' + location.host + '/ws';
+        let ws = null;
+        const pollResults = {};
+        let role = location.search.includes('audience') ? 'audience' : 'presenter';
+        document.getElementById('join-url').textContent = location.href.split('?')[0] + '?audience';
+        function connect() {
+            ws = new WebSocket(wsUrl);
+            ws.onopen = () => ws.send(JSON.stringify({ role, poll: null }));
+            ws.onmessage = (e) => {
+                const d = JSON.parse(e.data);
+                if (d.type === 'results') {
+                    pollResults[d.poll] = d.votes || {};
+                    showResults(d.poll, pollResults[d.poll]);
+                } else if (d.type === 'reset') {
+                    pollResults[d.poll] = {};
+                    const res = document.getElementById('results-' + d.poll);
+                    if (res) res.innerHTML = 'Votes appear here in real-time.';
+                }
+            };
+            ws.onclose = () => setTimeout(connect, 2000);
+        }
+        connect();
+
+        if (role === 'audience') {
+            document.querySelectorAll('.poll-reset').forEach(b => b.style.display = 'none');
+        } else {
+            document.querySelectorAll('.poll-reset').forEach(b => {
+                b.style.display = 'inline-block';
+                b.onclick = () => {
+                    const pid = b.dataset.poll;
+                    if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'reset', poll: pid }));
+                };
+            });
+        }
+
+        document.querySelectorAll('.poll-opt').forEach(btn => {
+            btn.onclick = () => {
+                if (role !== 'audience') return;
+                const pid = btn.dataset.poll;
+                const choice = btn.dataset.choice;
+                if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'vote', poll: pid, choice }));
+                btn.classList.add('voted');
+            };
+        });
+
+        function showResults(pollId, votes) {
+            const el = document.getElementById('results-' + pollId);
+            if (!el) return;
+            const max = Math.max(...Object.values(votes), 1);
+            el.innerHTML = '<div class="bar-chart">' + Object.entries(votes).sort((a,b)=>a[0].localeCompare(b[0])).map(([k,v]) =>
+                '<div class="bar-row"><span class="bar-label">'+k+')</span><div class="bar-fill" style="width:'+(v/max*100)+'%"></div><span>'+v+'</span></div>'
+            ).join('') + '</div>';
+        }
+
+        Reveal.on('slidechanged', e => {
+            const resDiv = e.currentSlide?.querySelector?.('.poll-results[id^="results-"]');
+            if (resDiv) {
+                const pollId = resDiv.id.replace('results-', '');
+                if (pollResults[pollId] && Object.keys(pollResults[pollId]).length) {
+                    showResults(pollId, pollResults[pollId]);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

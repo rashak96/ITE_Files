@@ -1,0 +1,26 @@
+If GitHub / Render is missing the live_ite folder, it was never committed or was ignored.
+
+From your project folder (where live_ite/ exists), run:
+
+  git status
+  git add live_ite/__init__.py live_ite/app.py
+  git add live_ite/static/presenter.html live_ite/static/vote.html
+  git add main.py render.yaml requirements_web.txt build_live.py ite_data.json
+  git status
+
+If git says "pathspec ... did not match", those files are not on disk — copy them from your PC.
+
+Then:
+
+  git commit -m "Add live_ite app for Render"
+  git push origin main
+
+Confirm on GitHub in the browser:
+
+  https://github.com/YOUR_USER/YOUR_REPO/tree/main/live_ite
+
+You must see app.py there.
+
+Notes:
+- Git does not upload empty folders; live_ite must contain at least app.py and __init__.py.
+- GitHub "upload files" in the web UI often skips nested folders — use git or GitHub Desktop instead.

@@ -1,0 +1,1 @@
+python create_ite_html.py --supabase-url https://fqqaanbpoqpuefxbbhjb.supabase.co --supabase-key sbp_c8760a3a3883caef8e830dd62db33440ab651d3a 

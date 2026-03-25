@@ -1,0 +1,15 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+# Requires: render.yaml at repo root on your default branch (often main)
+
+services:
+  - type: web
+    name: ite-live-quiz
+    runtime: python
+    plan: free
+    buildCommand: >-
+      pip install -r requirements_web.txt &&
+      python build_live.py &&
+      python -c "import live_ite.app; import main; print('import ok')"
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /
+    autoDeployTrigger: commit

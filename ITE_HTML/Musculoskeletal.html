@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Musculoskeletal - ITE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/simple.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .reveal .slides { text-align: left; font-family: 'Segoe UI', sans-serif; }
+        .reveal h1, .reveal h2, .reveal h3 { font-family: 'Montserrat', sans-serif; }
+        .grey-label { color:#767676; font-size:0.75rem; text-transform:uppercase; margin-bottom:0.3em; }
+        .q-meta { color:#767676; font-size:0.9rem; margin-bottom:0.5em; }
+        .poll-stem { font-size:1.1rem; margin:0.8em 0; line-height:1.5; }
+        .poll-options { display:flex; flex-direction:column; gap:0.4em; }
+        .poll-opt {
+            padding:0.5em 0.8em; text-align:left; font-size:0.95rem;
+            background:#f5f5f5; border:2px solid #ddd; border-radius:6px;
+            cursor:pointer; transition:all 0.2s;
+            font-family: inherit;
+        }
+        .poll-opt:hover { background:#eaeaea; border-color:#999; }
+        .poll-opt.voted { background:#d4edda; border-color:#28a745; }
+        .poll-results { margin-top:1em; min-height:120px; }
+        .poll-reset { margin-top:0.5em; padding:0.3em 0.8em; font-size:0.85rem; cursor:pointer; }
+        .critique-body { font-size:0.95rem; line-height:1.6; color:#555; }
+        .bar-chart { display:flex; flex-direction:column; gap:0.3em; }
+        .bar-row { display:flex; align-items:center; gap:0.5em; }
+        .bar-label { width:2em; }
+        .bar-fill { height:1.5em; background:#4a90d9; border-radius:4px; min-width:2em; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+    <section>
+        <h1 style="font-family:Montserrat,sans-serif;">Musculoskeletal</h1>
+        <p style="color:#767676;font-size:1.2rem;">ITE Questions — Interactive Polls</p>
+    </section>
+
+    <section>
+        <h2>Join the Poll</h2>
+        <p>Open this page on your phone:</p>
+        <p><strong id="join-url">Loading...</strong></p>
+        <p style="font-size:0.9rem;color:#767676;">Use ?audience to vote.</p>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_42_2022_0">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <p class="q-meta">Question 42 (2022)</p>
+        <div class="poll-stem">A 70-year-old female who is an established patient at your practice calls you late on a Saturday afternoon. Earlier in the day she misjudged the location of a bench at a neighbor’s house and sat down hard on the porch floor. She felt immediate pain in her back. She went home and took naproxen, 440 mg, and sustained-release acetaminophen, 1300 mg, 3 hours ago. She still describes her pain as unbearable, rating it as 10 on a scale of 10. You agree to meet her in the emergency department, where you confirm an acute T12 vertebral compression fracture. Of the following, the most appropriate treatme...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_42_2022_0" data-choice="A">A) prescription-strength NSAIDs</button><button class="poll-opt" data-poll="q_42_2022_0" data-choice="B">B) methadone</button><button class="poll-opt" data-poll="q_42_2022_0" data-choice="C">C) transdermal fentanyl</button><button class="poll-opt" data-poll="q_42_2022_0" data-choice="D">D) immediate-release oxycodone (Roxicodone)</button></div>
+        <button class="poll-reset" data-poll="q_42_2022_0" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Results — Question 42 (2022)</h3>
+        <div class="poll-results" id="results-q_42_2022_0">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Answer: D — Question 42 (2022)</h3>
+        <div class="critique-body">The most appropriate treatment for this patient’s acute pain following a T12 vertebral compression fracture is round-the-clock class II narcotics. Subcutaneous calcitonin can also be useful for relieving pain from vertebral fractures. NSAIDs and acetaminophen are usually insufficient during the acute phase of a vertebral compression fracture, and this patient has already tried these. Methadone or transdermal fentanyl can be used, but plasma levels of methadone may take 5–7 days to stabilize and fentanyl takes 24–48 hours to take effect. Ref: Eiff MP, Hatch R: Fracture Management for Primary Care, ed 3 updated. Elsevier Saunders, 2018, pp 201-203. 16</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_109_2022_1">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <p class="q-meta">Question 109 (2022)</p>
+        <div class="poll-stem">An otherwise healthy 37-year-old female presents to your office with elbow pain 1 day after falling while skiing. She has pain and tenderness along the lateral aspect of the affected elbow and limited range of motion of the elbow and forearm. Radiographs confirm a nondisplaced fracture of the radial head. Which one of the following would be most likely to produce satisfactory outcomes?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_109_2022_1" data-choice="A">A) Immobilization for 3 days followed by range-of-motion exercises</button><button class="poll-opt" data-poll="q_109_2022_1" data-choice="B">B) A long arm posterior splint for 6 weeks</button><button class="poll-opt" data-poll="q_109_2022_1" data-choice="C">C) A long arm cast for 6 weeks</button><button class="poll-opt" data-poll="q_109_2022_1" data-choice="D">D) Referral to an orthopedist for cast placement</button><button class="poll-opt" data-poll="q_109_2022_1" data-choice="E">E) Referral to an orthopedist for surgical repair</button></div>
+        <button class="poll-reset" data-poll="q_109_2022_1" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Results — Question 109 (2022)</h3>
+        <div class="poll-results" id="results-q_109_2022_1">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Answer: A — Question 109 (2022)</h3>
+        <div class="critique-body">This patient has a nondisplaced radial head fracture. Current evidence supports a brief period of immobilization followed by early range-of-motion exercises to avoid decreased range of motion. This results in good outcomes in 85%–95% of patients. Immobilization for 6 weeks using either a long arm posterior splint or a long arm cast is not necessary. More advanced or displaced fractures may require a referral to an orthopedist for cast placement or operative repair, but nondisplaced radial head fractures can be managed by primary care physicians. Ref: Paschos NK, Mitsionis GI, Vasiliadis HS, Georgoulis AD: Comparison of early mobilization protocols in radial head fractures. J Orthop Trauma 2013;27(3):134-139. 2) Patel DS, Statuta SM, Ahmed N: Common fractures of the radius and ulna. Am Fam Physician 2021;103(6):345-354. 44</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_143_2022_2">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <p class="q-meta">Question 143 (2022)</p>
+        <div class="poll-stem">A 29-year-old male presents to your office because of pain and paresthesia in his right fourth and fifth fingers for the last several weeks. He has had some generalized weakness in his hands, noting that it is more difficult for him to grasp and pick up small objects with his thumb and forefinger. There is no history of trauma. He is very physically active and lifts weights 5–6 days per week. On physical examination you note weakness of the pincer mechanism and decreased sensation over the hypothenar eminence and fourth and fifth fingers. These findings are associated with peripheral entrapmen...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_143_2022_2" data-choice="A">A) Axillary</button><button class="poll-opt" data-poll="q_143_2022_2" data-choice="B">B) Median</button><button class="poll-opt" data-poll="q_143_2022_2" data-choice="C">C) Radial</button><button class="poll-opt" data-poll="q_143_2022_2" data-choice="D">D) Suprascapular</button><button class="poll-opt" data-poll="q_143_2022_2" data-choice="E">E) Ulnar</button></div>
+        <button class="poll-reset" data-poll="q_143_2022_2" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Results — Question 143 (2022)</h3>
+        <div class="poll-results" id="results-q_143_2022_2">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Answer: E — Question 143 (2022)</h3>
+        <div class="critique-body">This patient has entrapment of the ulnar nerve at the wrist level. This is more common in activities that place pressure on the volar aspect of the wrist, including weightlifting and cycling. Classic symptoms include paresthesia of the fourth and fifth fingers and hypothenar eminence, weakness in finger adduction and abduction, and weakness of the pincer mechanism. Axillary nerve entrapment can result from shoulder dislocations, humeral neck fracture, and pressure from crutch use, and can cause decreased sensation or pain over the lateral shoulder as well as weakness with shoulder external rotation, abduction, and extension. Median nerve entrapment results in paresthesia of the first three fingers and can result in thenar muscle atrophy. The radial nerve can be entrapped or compressed at many different locations, most commonly due to sustained pressure over the radial groove. This will result in paresthesia and pain in the posterior forearm and dorsal hand as well as weakness in wrist and finger extensors, which can result in wrist and finger drop. Suprascapular nerve entrapment can present similarly to axillary nerve entrapment, with shoulder pain and abduction and forward flexion deficits. Ref: Silver S, Ledford CC, Vogel KJ, Arnold JJ: Peripheral nerve entrapment and injury in the upper extremity. Am Fam Physician 2021;103(5):275-285.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_197_2022_3">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <p class="q-meta">Question 197 (2022)</p>
+        <div class="poll-stem">According to the Ottawa knee rule, which one of the following factors may warrant radiography in a patient with an acute knee injury?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_197_2022_3" data-choice="A">A) Age &lt;30</button><button class="poll-opt" data-poll="q_197_2022_3" data-choice="B">B) Injury from a fall or blunt trauma</button><button class="poll-opt" data-poll="q_197_2022_3" data-choice="C">C) A twisting mechanism of injury</button><button class="poll-opt" data-poll="q_197_2022_3" data-choice="D">D) Inability to flex the knee to 90°</button><button class="poll-opt" data-poll="q_197_2022_3" data-choice="E">E) The presence of a joint effusion within 24 hours of the injury 68</button></div>
+        <button class="poll-reset" data-poll="q_197_2022_3" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Results — Question 197 (2022)</h3>
+        <div class="poll-results" id="results-q_197_2022_3">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Answer: D — Question 197 (2022)</h3>
+        <div class="critique-body">Knee injuries are an extremely common cause for primary care visits and knowing which injuries require radiography can ensure high-value care. The Ottawa knee rule has been repeatedly validated with a sensitivity of 98.5%–100% and can decrease unnecessary imaging. The major criteria of the Ottawa knee rule are age 55, the inability to bear weight for four steps both immediately after the injury and at the time of the examination, the inability to flex the knee to 90°, tenderness over the head of the fibula, and isolated tenderness to the patella without other bony tenderness. If a patient meets any of these criteria, radiography of the knee may be indicated. Ref: Bachmann LM, Haberzeth S, Steurer J, ter Riet G: The accuracy of the Ottawa knee rule to rule out knee fractures: A systematic review. Ann Intern Med 2004;140(2):121-124. 2) Grover M: Evaluating acutely injured patients for internal derangement of the knee. Am Fam Physician 2012;85(3):247-252.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_131_2023_4">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <p class="q-meta">Question 131 (2023)</p>
+        <div class="poll-stem">A 9-year-old child is brought to your office for evaluation of right wrist pain after a fall from a swing at recess this morning. On examination you note tenderness and swelling over the lateral aspect of the distal radius. Radiographs are shown below. Which one of the following would be most appropriate for this injury?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_131_2023_4" data-choice="A">A) A cock-up wrist splint</button><button class="poll-opt" data-poll="q_131_2023_4" data-choice="B">B) A double sugar-tong splint</button><button class="poll-opt" data-poll="q_131_2023_4" data-choice="C">C) A figure-of-8 sling</button><button class="poll-opt" data-poll="q_131_2023_4" data-choice="D">D) A short arm cast</button><button class="poll-opt" data-poll="q_131_2023_4" data-choice="E">E) A long arm cast</button></div>
+        <button class="poll-reset" data-poll="q_131_2023_4" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Results — Question 131 (2023)</h3>
+        <div class="poll-results" id="results-q_131_2023_4">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Answer: A — Question 131 (2023)</h3>
+        <div class="critique-body">This patient has a distal radius buckle fracture (or torus fracture) and a cock-up wrist splint is appropriate. Buckle fractures are stable because they only involve the bony cortex (outer layer), and the goal of treatment is the alleviation of pain and protecting the bone from further injury. A double sugar-tong splint more completely immobilizes the humerus, radius, and ulna and is not necessary for this type of fracture. A figure-of-8 sling is an option in the treatment of clavicle fractures and is not appropriate for radius fractures. A 2016 systematic review and meta-analysis found that patients treated with splint immobilization had better recovery of wrist motion, quicker return to normal activity, and less overall disability while also experiencing fewer complications than those immobilized with a cast. Patients and their families also preferred splint immobilization and stated they would choose splints over casts if needed in the future. 51 Ref: Jiang N, Cao ZH, Ma YF, Lin Z, Yu B. Management of pediatric forearm torus fractures: a systematic review and meta-analysis. Pediatr Emerg Care. 2016;32(11):773-778. 2) National Clinical Guideline Centre (UK): fractures (non-complex): assessment and management. National Institute for Health and Care Excellence, 2016. 3) Zwillenberg M, Kwak E. Splint vs. cast for forearm buckle fracture in children. Am Fam Physician. 2022;105(4):Online. 4) Distal radius and Galeazzi fractures. Pediatric Orthopaedic Society of North America.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_82_2024_5">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <p class="q-meta">Question 82 (2024)</p>
+        <div class="poll-stem">A physically active 25-year-old male presents with foot pain after an injury. X-rays are obtained. A proximal fracture at which one of the following metatarsals would be at the greatest risk for nonunion?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_82_2024_5" data-choice="A">A) First</button><button class="poll-opt" data-poll="q_82_2024_5" data-choice="B">B) Second</button><button class="poll-opt" data-poll="q_82_2024_5" data-choice="C">C) Third</button><button class="poll-opt" data-poll="q_82_2024_5" data-choice="D">D) Fourth</button><button class="poll-opt" data-poll="q_82_2024_5" data-choice="E">E) Fifth</button></div>
+        <button class="poll-reset" data-poll="q_82_2024_5" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Results — Question 82 (2024)</h3>
+        <div class="poll-results" id="results-q_82_2024_5">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Answer: E — Question 82 (2024)</h3>
+        <div class="critique-body">Proximal fifth metatarsal fractures are categorized by zones. Zone 2 is located at the metaphyseal-diaphyseal junction at the fourth and fifth metatarsal joint. Zone 3 fractures are located at the proximal 1.5 cm of the diaphysis. Because of poor blood supply, fractures in zone 2 or zone 3 of the fifth metatarsal have a risk for slow healing and nonunion. Surgical management of these fractures should be considered in active patients to decrease the risk for nonunion (SOR B).</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_96_2024_6">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <p class="q-meta">Question 96 (2024)</p>
+        <div class="poll-stem">Which one of the following studies should be obtained in all toddlers with suspected physical abuse?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_96_2024_6" data-choice="A">A) A funduscopic examination</button><button class="poll-opt" data-poll="q_96_2024_6" data-choice="B">B) Skeletal survey radiography</button><button class="poll-opt" data-poll="q_96_2024_6" data-choice="C">C) Head CT without contrast</button><button class="poll-opt" data-poll="q_96_2024_6" data-choice="D">D) Abdominal CT with contrast</button><button class="poll-opt" data-poll="q_96_2024_6" data-choice="E">E) A bone scan</button></div>
+        <button class="poll-reset" data-poll="q_96_2024_6" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Results — Question 96 (2024)</h3>
+        <div class="poll-results" id="results-q_96_2024_6">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Answer: B — Question 96 (2024)</h3>
+        <div class="critique-body">The American Academy of Pediatrics and the American College of Radiology guidelines recommend that all children with suspected physical abuse undergo a skeletal survey, particularly those who are ≤2 years of age. A funduscopic examination should be obtained if retinal hemorrhages are suspected in children &lt;2 years. Head CT without contrast is indicated if there is a concern for subdural, subarachnoid, or intraparenchymal injury. Abdominal CT with contrast is recommended if there is a concern for intra-abdominal injuries. A bone scan should be obtained if there is a concern for occult fractures up to 2 weeks after injury.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_98_2024_7">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <p class="q-meta">Question 98 (2024)</p>
+        <div class="poll-stem">A 72-year-old female presents with pain in her right foot after missing a step while descending a staircase. She was leading with her right foot when she stumbled. On examination she has tenderness in the right dorsal and plantar midfoot. Foot x-rays are normal. An image of the right plantar foot is shown below. Which one of the following would be most appropriate at this time?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_98_2024_7" data-choice="A">A) Non–weight bearing status, plus CT or MRI</button><button class="poll-opt" data-poll="q_98_2024_7" data-choice="B">B) Corticosteroid injection</button><button class="poll-opt" data-poll="q_98_2024_7" data-choice="C">C) Heel splints and physical therapy</button><button class="poll-opt" data-poll="q_98_2024_7" data-choice="D">D) Rigid ankle support and physical therapy</button><button class="poll-opt" data-poll="q_98_2024_7" data-choice="E">E) Rigid ankle support and referral to an orthopedic surgeon</button></div>
+        <button class="poll-reset" data-poll="q_98_2024_7" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Results — Question 98 (2024)</h3>
+        <div class="poll-results" id="results-q_98_2024_7">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Answer: A — Question 98 (2024)</h3>
+        <div class="critique-body">This patient has a Lisfranc injury of the right midfoot. Lisfranc injuries occur to the tarsometatarsal joint complex of the foot, which is stabilized by a complex ligamentous structure. Injuries can range from simple subluxations to complex fractures with dislocations. Falling forward on a plantar-flexed foot, such as when missing a stair step, is a common mechanism of injury. Forced dorsiflexion, which often occurs in sports or motor vehicle collisions, is another common mechanism. Missed Lisfranc injuries can lead to instability, deformity, and painful chronic osteoarthritis of the midfoot. X-rays are the first step in diagnosis but have a sensitivity of around 84%. Plantar bruising is a classic sign and should trigger a high index of suspicion for Lisfranc injury even with negative plain or weight-bearing x-rays, and CT or MRI should be ordered. If a Lisfranc injury is seen on imaging or is highly suspected, the patient should remain non–weight bearing. Depending on the severity of the injury, referral to an orthopedic surgeon may be warranted after definitive imaging. Corticosteroid injection, heel splints, rigid ankle support, and physical therapy are not appropriate at this time.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_123_2024_8">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <p class="q-meta">Question 123 (2024)</p>
+        <div class="poll-stem">A 35-year-old female presents with a swollen right index finger after accidentally slamming the car door on the finger yesterday. She has constant pain of the distal finger but no throbbing under her fingernail. On examination the end of the right index finger is swollen, and she has a small subungual hematoma. She is able to flex and extend the distal interphalangeal (DIP) joint with some pain, but has normal strength. An x-ray shows a transverse fracture across the distal phalanx that does not involve the joint. Which one of the following is the optimal treatment plan for this patient?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_123_2024_8" data-choice="A">A) Ice, NSAIDs, and DIP flexion as tolerated</button><button class="poll-opt" data-poll="q_123_2024_8" data-choice="B">B) Draining the subungual hematoma and bandaging the finger</button><button class="poll-opt" data-poll="q_123_2024_8" data-choice="C">C) Buddy taping the finger for 3–4 weeks</button><button class="poll-opt" data-poll="q_123_2024_8" data-choice="D">D) Splinting the DIP joint in full extension for 4–6 weeks</button><button class="poll-opt" data-poll="q_123_2024_8" data-choice="E">E) Referral to an orthopedic surgeon</button></div>
+        <button class="poll-reset" data-poll="q_123_2024_8" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Results — Question 123 (2024)</h3>
+        <div class="poll-results" id="results-q_123_2024_8">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Answer: D — Question 123 (2024)</h3>
+        <div class="critique-body">A distal phalanx fracture can occur after a crush injury or direct force to the end of the finger. The affected finger will have swelling, bruising, and often a subungual hematoma. Simple fractures can be managed with splinting in extension for 4–6 weeks with a finger guard or U-shaped aluminum splint. Hematomas that are more than 50% of the nail bed surface can be drained with a hot needle or instrument. Buddy taping is used for minimally angled middle or proximal phalanx fractures that do not involve the joints. A patient who is unable to flex or extend the distal interphalangeal (DIP) joint, has decreased sensation, or has a complex fracture extending into the joint should be referred to an orthopedic surgeon.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_136_2024_9">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <p class="q-meta">Question 136 (2024)</p>
+        <div class="poll-stem">A 52-year-old male presents with right knee pain after falling from his bicycle earlier today. The patient states that he fell to the right when his bicycle tires slid on wet pavement but is uncertain of the exact mechanism of injury. He says that he can bear weight on the right leg, but the knee has been swollen and tender since the injury. On examination you observe moderate joint effusion without redness of the knee joint, and a range of motion of 80°–180°. There is tenderness to palpation over the patella with no other bony tenderness noted. There is no ligamentous laxity. The patient is a...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_136_2024_9" data-choice="A">A) His age</button><button class="poll-opt" data-poll="q_136_2024_9" data-choice="B">B) His range of motion</button><button class="poll-opt" data-poll="q_136_2024_9" data-choice="C">C) A limping gait</button><button class="poll-opt" data-poll="q_136_2024_9" data-choice="D">D) Moderate joint effusion</button><button class="poll-opt" data-poll="q_136_2024_9" data-choice="E">E) Tenderness over the patella</button></div>
+        <button class="poll-reset" data-poll="q_136_2024_9" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Results — Question 136 (2024)</h3>
+        <div class="poll-results" id="results-q_136_2024_9">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Answer: E — Question 136 (2024)</h3>
+        <div class="critique-body">The Ottawa knee rule helps to determine if imaging is needed in patients with knee trauma and can decrease unnecessary imaging. The criteria are age ≥55, isolated tenderness of the patella, tenderness at the fibular head, inability to flex the knee to 90°, and inability to bear weight for 4 steps both immediately after the injury and in the office or emergency department. Tenderness over the patella is the most concerning symptom in this patient, and an x- ray is warranted to rule out fracture. Joint effusion is not a criterion of the Ottawa knee rule.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_160_2024_10">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <p class="q-meta">Question 160 (2024)</p>
+        <div class="poll-stem">A right hand–dominant 9-year-old male is brought to your office by his parents after falling from a piece of playground equipment and landing on his left hand. He is in significant pain and there is visible swelling of the distal left forearm. An examination reveals intact distal sensation and capillary refill. He is given oral NSAIDs. X-rays reveal a unicortical irregularity at the distal radial metaphysis without displacement. You diagnose a buckle fracture. Which one of the following would be most appropriate at this time?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_160_2024_10" data-choice="A">A) No treatment</button><button class="poll-opt" data-poll="q_160_2024_10" data-choice="B">B) Immobilization in a prefabricated removable splint for 2–3 weeks</button><button class="poll-opt" data-poll="q_160_2024_10" data-choice="C">C) Immobilization in a short arm cast for 6 weeks</button><button class="poll-opt" data-poll="q_160_2024_10" data-choice="D">D) Immobilization in a long arm cast for 6 weeks</button><button class="poll-opt" data-poll="q_160_2024_10" data-choice="E">E) Referral to an orthopedic surgeon</button></div>
+        <button class="poll-reset" data-poll="q_160_2024_10" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Results — Question 160 (2024)</h3>
+        <div class="poll-results" id="results-q_160_2024_10">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Answer: B — Question 160 (2024)</h3>
+        <div class="critique-body">This patient has a buckle fracture, or an incomplete compression fracture. These fractures are common in younger children due to the relative elasticity of their bones. Increasing evidence supports a shorter period of immobilization and follow-up is often not necessary if symptoms are improving. Removable splints are acceptable and may be better tolerated and more convenient in younger patients.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_3_2025_11">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <p class="q-meta">Question 3 (2025)</p>
+        <div class="poll-stem">An otherwise healthy 47-year-old male presents to the urgent care clinic with pain and swelling of his right foot after sustaining an injury during a game of ultimate frisbee. He jumped to catch the frisbee and landed on uneven ground. He is unsure of how he landed, but thinks he may have twisted his right foot, causing him to trip and fall. He has significant pain and swelling of his right foot but is weight-bearing. He rates the pain as 10 on a scale of 10. On examination, his vital signs are unremarkable. His right lateral foot shows significant bruising and swelling. The skin is intact. Ra...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_3_2025_11" data-choice="A">A) Weight-bearing with a walking boot for 3–6 weeks</button><button class="poll-opt" data-poll="q_3_2025_11" data-choice="B">B) Non–weight-bearing with a walking boot for 3–6 weeks</button><button class="poll-opt" data-poll="q_3_2025_11" data-choice="C">C) Non–weight-bearing with a short leg cast for 6 weeks</button><button class="poll-opt" data-poll="q_3_2025_11" data-choice="D">D) Referral to a physical therapist</button><button class="poll-opt" data-poll="q_3_2025_11" data-choice="E">E) Referral to an orthopedic surgeon</button></div>
+        <button class="poll-reset" data-poll="q_3_2025_11" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Results — Question 3 (2025)</h3>
+        <div class="poll-results" id="results-q_3_2025_11">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Answer: A — Question 3 (2025)</h3>
+        <div class="critique-body">This patient's imaging reveals a fifth metatarsal shaft fracture, which should be managed with a boot or hard-soled shoe for 3–6 weeks with weight-bearing. Foot fractures are typically caused by an axial or twisting force on the foot or a crush injury and account for about one-third of lower extremity fractures in adults. Patients present with swelling and bony point tenderness of the affected area, as seen in this patient. The ability to bear weight varies based on the patient's pain tolerance and the extent of the fracture. Complications of foot fractures include infection, arthritis, nonunion, malunion, and compartment syndrome. A short leg cast is not appropriate because it is used to treat proximal fifth metatarsal and tarsal bone fractures. Physical therapy is not first-line management for this patient's injury. If reduction is needed or if nonunion is present after 6 months, then referral to an orthopedic surgeon would be indicated.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_127_2025_12">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <p class="q-meta">Question 127 (2025)</p>
+        <div class="poll-stem">A 20-year-old male presents to the urgent care center for left ankle pain and swelling following an ankle inversion injury that occurred a few hours earlier. A physical examination reveals mild swelling of the left ankle joint. Using the Ottawa foot and ankle rules, which one of the following findings, if present, would be an indication for radiography for an acute ankle inversion injury?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_127_2025_12" data-choice="A">A) Bone tenderness at the anterior edge of the lateral malleolus</button><button class="poll-opt" data-poll="q_127_2025_12" data-choice="B">B) Bone tenderness at the anterior edge of the medial malleolus</button><button class="poll-opt" data-poll="q_127_2025_12" data-choice="C">C) Bone tenderness at the base of the fourth metatarsal</button><button class="poll-opt" data-poll="q_127_2025_12" data-choice="D">D) Bone tenderness of the navicular bone</button><button class="poll-opt" data-poll="q_127_2025_12" data-choice="E">E) Inability to bear weight on the left foot for at least 10 steps after the injury</button></div>
+        <button class="poll-reset" data-poll="q_127_2025_12" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Results — Question 127 (2025)</h3>
+        <div class="poll-results" id="results-q_127_2025_12">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Answer: D — Question 127 (2025)</h3>
+        <div class="critique-body">When a foot or ankle fracture is suspected, a weight-bearing foot and ankle x-ray should be obtained. The Ottawa foot and ankle rules are a useful tool for determining the need for an x-ray for an acute ankle inversion injury. According to the Ottawa foot and ankle rules, a foot x-ray should be obtained if any of the following requirements are met: bone tenderness at the posterior edge or the tip of the lateral or medial malleolus, bone tenderness at the base of the fifth metatarsal or navicular bone, or inability to bear weight on the affected leg or foot for at least 4 steps after the injury.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_167_2025_13">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <p class="q-meta">Question 167 (2025)</p>
+        <div class="poll-stem">A 4-year-old male is brought to the emergency department by his parents after tripping and falling on his hand in an outstretched position. An x-ray reveals a buckle (torus) fracture of the distal radial metaphysis. Which one of the following management strategies would be most appropriate?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_167_2025_13" data-choice="A">A) A short arm splint for 3 weeks with follow-up radiography</button><button class="poll-opt" data-poll="q_167_2025_13" data-choice="B">B) A short arm splint for 3 weeks with follow-up radiography only if pain or tenderness persists</button><button class="poll-opt" data-poll="q_167_2025_13" data-choice="C">C) A short arm cast for 6 weeks with follow-up radiography</button><button class="poll-opt" data-poll="q_167_2025_13" data-choice="D">D) A short arm cast for 6 weeks with follow-up radiography only if pain or tenderness persists</button></div>
+        <button class="poll-reset" data-poll="q_167_2025_13" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Results — Question 167 (2025)</h3>
+        <div class="poll-results" id="results-q_167_2025_13">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Osteoporosis</p>
+        <h3>Answer: B — Question 167 (2025)</h3>
+        <div class="critique-body">Buckle (torus) fractures are incomplete compression fractures that cause cortical bulging of the bone without cortical disruption. They are common in children because of the elasticity of their bones. Distal radius buckle fractures should be treated with short arm immobilization using a short arm splint, soft cast, or wrap for 3 weeks. Complete immobilization with a cast is unnecessary. According to the Choosing Wisely campaign, follow-up radiography is unnecessary unless the patient continues to experience pain or tenderness.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_166_2024_0">
+        <p class="grey-label">Musculoskeletal | Antibiotic Prophylaxis</p>
+        <p class="q-meta">Question 166 (2024)</p>
+        <div class="poll-stem">Bruising in which one of the following locations would most likely suggest a diagnosis of child abuse?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_166_2024_0" data-choice="A">A) Forehead</button><button class="poll-opt" data-poll="q_166_2024_0" data-choice="B">B) Neck</button><button class="poll-opt" data-poll="q_166_2024_0" data-choice="C">C) Elbows</button><button class="poll-opt" data-poll="q_166_2024_0" data-choice="D">D) Knees</button><button class="poll-opt" data-poll="q_166_2024_0" data-choice="E">E) Shins</button></div>
+        <button class="poll-reset" data-poll="q_166_2024_0" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Antibiotic Prophylaxis</p>
+        <h3>Results — Question 166 (2024)</h3>
+        <div class="poll-results" id="results-q_166_2024_0">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Antibiotic Prophylaxis</p>
+        <h3>Answer: B — Question 166 (2024)</h3>
+        <div class="critique-body">Bruises on the torso, ears, or neck in children ≤4 years of age are predictive of child abuse. “TEN 4” is a useful mnemonic for identifying child abuse: torso (T), ear (E), neck (N), and 4 (children ≤4 years of age and any infant &lt;4 months of age). Bruising is the most common injury of physical abuse and may be the only external indicator of an internal injury. Bruises vary by age, location, and pattern. Any bruises identified in a nonambulatory infant require careful medical evaluation for possible abuse. Bruising related to normal activity typically increases with age. The majority of preschool- and school-aged children have accidental bruises. The most common sites of bruising in nonabused, ambulatory children are the knees and shins, with the majority located over bony prominences, including the forehead.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_14_2025_1">
+        <p class="grey-label">Musculoskeletal | Antibiotic Prophylaxis</p>
+        <p class="q-meta">Question 14 (2025)</p>
+        <div class="poll-stem">A 50-year-old male sees you for follow-up of a pulmonary nodule. He recently presented to the emergency department (ED) after a motor vehicle accident in which he sustained a broken clavicle. A CT scan in the ED showed a 6-mm, incidental, solid pulmonary nodule and he was advised to follow up with his primary care physician. Today the patient is asymptomatic other than muscle soreness. He does not have any history of smoking. An examination does not reveal any enlarged lymph nodes. Which one of the following would be the most appropriate next step in management?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_14_2025_1" data-choice="A">A) No additional follow-up</button><button class="poll-opt" data-poll="q_14_2025_1" data-choice="B">B) A repeat CT scan in 6–12 months</button><button class="poll-opt" data-poll="q_14_2025_1" data-choice="C">C) A repeat CT scan in 18–24 months</button><button class="poll-opt" data-poll="q_14_2025_1" data-choice="D">D) Biopsy of the nodule to determine pathology</button><button class="poll-opt" data-poll="q_14_2025_1" data-choice="E">E) Referral to a pulmonologist</button></div>
+        <button class="poll-reset" data-poll="q_14_2025_1" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Antibiotic Prophylaxis</p>
+        <h3>Results — Question 14 (2025)</h3>
+        <div class="poll-results" id="results-q_14_2025_1">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Antibiotic Prophylaxis</p>
+        <h3>Answer: B — Question 14 (2025)</h3>
+        <div class="critique-body">Evaluation of a pulmonary nodule balances the benefits of minimal testing for benign nodules with the risks of malignant nodules. It requires knowledge of the factors associated with the probability that the nodule is malignant, the performance characteristics of additional testing, and the advantages and disadvantages of more or less intensive follow-up. The probability of malignancy and the effectiveness of diagnostic tests depend on the size and characteristics of the nodule, which can be classified into 3 categories: small solid nodules, larger solid nodules, and subsolid nodules. A solid nodule between 6 mm and 8 mm should be monitored with CT of the chest in 6–12 months. Flexibility in these time intervals (eg, 3–6 months, 6–12 months) is included in the guidelines to accommodate nodule features other than size, as well as clinician and patient preferences. A solid nodule that has remained unchanged in size on chest CT over a period of 2 years or longer is considered benign. Primary care physicians should consider referral to a pulmonologist for patients with a larger solid nodule (8–30 mm) or a subsolid nodule due to their higher risk of malignancy.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_142_2022_0">
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <p class="q-meta">Question 142 (2022)</p>
+        <div class="poll-stem">A 35-year-old female with rheumatoid arthritis currently being treated with adalimumab (Humira) injections sees you for evaluation after developing a red, swollen, warm, and painful right knee. Arthrocentesis is performed, and the synovial fluid analysis is concerning for septic arthritis. Which one of the following organisms is the most likely cause of her infection?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_142_2022_0" data-choice="A">A) Candida albicans</button><button class="poll-opt" data-poll="q_142_2022_0" data-choice="B">B) Escherichia coli</button><button class="poll-opt" data-poll="q_142_2022_0" data-choice="C">C) Mycobacterium tuberculosis</button><button class="poll-opt" data-poll="q_142_2022_0" data-choice="D">D) Staphylococcus aureus</button><button class="poll-opt" data-poll="q_142_2022_0" data-choice="E">E) Streptococcus pyogenes</button></div>
+        <button class="poll-reset" data-poll="q_142_2022_0" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <h3>Results — Question 142 (2022)</h3>
+        <div class="poll-results" id="results-q_142_2022_0">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <h3>Answer: D — Question 142 (2022)</h3>
+        <div class="critique-body">Patients with rheumatoid arthritis being treated with anti-tumor necrosis factor therapy are at increased risk for septic arthritis. The most common cause of septic arthritis in adults is Staphylococcus aureus, followed by Streptococcus species. Escherichia coli causes about a fourth of the cases in the elderly. Fungal and mycobacterial causes such as Candida albicans or Mycobacterium tuberculosis are less common but must be considered in immunocompromised patients. Ref: Earwood JS, Walker TR, Sue GJC: Septic arthritis: Diagnosis and treatment. Am Fam Physician 2021;104(6):589-597. 56</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_33_2023_1">
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <p class="q-meta">Question 33 (2023)</p>
+        <div class="poll-stem">Ina patient with new-onset polymyalgia rheumatica, which one of the following medications can be added to glucocorticoid therapy in order to reduce the risk of relapse?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_33_2023_1" data-choice="A">A) Ibuprofen</button><button class="poll-opt" data-poll="q_33_2023_1" data-choice="B">B) Icosapent ethyl (Vascepa)</button><button class="poll-opt" data-poll="q_33_2023_1" data-choice="C">C) Indomethacin</button><button class="poll-opt" data-poll="q_33_2023_1" data-choice="D">D) Mesalamine</button><button class="poll-opt" data-poll="q_33_2023_1" data-choice="E">E) Methotrexate 12</button></div>
+        <button class="poll-reset" data-poll="q_33_2023_1" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <h3>Results — Question 33 (2023)</h3>
+        <div class="poll-results" id="results-q_33_2023_1">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <h3>Answer: E — Question 33 (2023)</h3>
+        <div class="critique-body">Polymyalgia rheumatica (PMR) should be treated with glucocorticoids to induce remission. There is good evidence that adjunctive therapy with methotrexate reduces both the cumulative dose of corticosteroids needed and the risk of relapse (evidence rating A). NSAIDs such as ibuprofen and indomethacin reduce pain but do not modify the inflammatory process. Icosapent ethyl is a derivative of omega-3 fatty acids that reduces cardiovascular events and may improve rheumatoid arthritis, likely via anti-inflammatory properties. However, it has not been shown to be effective in PMR. Mesalamine is used to reduce inflammation in inflammatory bowel disease but is not effective against PMR. Ref: Buttgereit F, Dejaco C, Matteson EL, Dasgupta B. Polymyalgia rheumatica and giant cell arteritis: a systematic review. JAMA. 2016;315(22):2442-2458. 2) Matteson EL, Dejaco C. Polymyalgia rheumatica. Ann Intern Med. 2017; 166(9):ITC65-ITC80. 3) Kostoglou-Athanassiou I, Athanassiou L, Athanassiou P. The effect of omega-3 fatty acids on rheumatoid arthritis. Mediterr J Rheumatol. 2020;31(2):190-194. 4) Raleigh MF, Stoddard J, Darrow HJ. Polymyalgia rheumatica and giant cell arteritis: rapid evidence review. Am Fam Physician 2022; 106(4):420-426.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_51_2023_2">
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <p class="q-meta">Question 51 (2023)</p>
+        <div class="poll-stem">A 46-year-old female comes to your office because of left hip pain. After a thorough evaluation you make a diagnosis of osteoarthritis, likely associated with congenital hip dysplasia. In addition to nonpharmacologic therapies, including physical exercise, which one of the following medications has the best evidence of treating her pain effectively?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_51_2023_2" data-choice="A">A) Topical diclofenac</button><button class="poll-opt" data-poll="q_51_2023_2" data-choice="B">B) Topical lidocaine</button><button class="poll-opt" data-poll="q_51_2023_2" data-choice="C">C) Oral acetaminophen</button><button class="poll-opt" data-poll="q_51_2023_2" data-choice="D">D) Oral naproxen</button><button class="poll-opt" data-poll="q_51_2023_2" data-choice="E">E) Oral tramadol</button></div>
+        <button class="poll-reset" data-poll="q_51_2023_2" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <h3>Results — Question 51 (2023)</h3>
+        <div class="poll-results" id="results-q_51_2023_2">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <h3>Answer: D — Question 51 (2023)</h3>
+        <div class="critique-body">Symptomatic osteoarthritis of the hip is estimated to affect 10% of U.S. adults. Nonpharmacologic measures are the cornerstone of treatment and include physical activity, including strength training, aerobic exercise, tai chi, and yoga; weight loss for those who are overweight; and education in self-management. When these interventions are not adequate to manage pain, medications should be considered. In patients without contraindications, oral NSAIDs such as naproxen should be considered as first-line management. The hip joint is less amenable to topical therapies than the knee joint and topical NSAIDs such as diclofenac do not have evidence of benefit for hip osteoarthritis. Topical lidocaine is similarly without evidence of benefit at the hip joint. Those with risk factors for gastrointestinal toxicity should receive prophylaxis with proton pump inhibitors when treated with oral NSAIDs. Acetaminophen is less effective than NSAIDs but may be considered for use. Tramadol should not be used as a first-line treatment for pain due to osteoarthritis of the hip. Ref: Katz JN, Arant KR, Loeser RF. Diagnosis and treatment of hip and knee osteoarthritis: a review. JAMA. 2021;325(6):568-578. 2) Drugs for osteoarthritis. JAMA. 2021;325(6):581-582. 20</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_67_2023_3">
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <p class="q-meta">Question 67 (2023)</p>
+        <div class="poll-stem">A local corticosteroid injection is most likely to result in sustained improvement when offered early in the course of which one of the following conditions?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_67_2023_3" data-choice="A">A) Adhesive capsulitis</button><button class="poll-opt" data-poll="q_67_2023_3" data-choice="B">B) De Quervain tenosynovitis</button><button class="poll-opt" data-poll="q_67_2023_3" data-choice="C">C) Lateral epicondylitis</button><button class="poll-opt" data-poll="q_67_2023_3" data-choice="D">D) Osteoarthritis of the knee</button><button class="poll-opt" data-poll="q_67_2023_3" data-choice="E">E) Subacromial impingement syndrome 24</button></div>
+        <button class="poll-reset" data-poll="q_67_2023_3" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <h3>Results — Question 67 (2023)</h3>
+        <div class="poll-results" id="results-q_67_2023_3">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <h3>Answer: B — Question 67 (2023)</h3>
+        <div class="critique-body">Corticosteroid injections for musculoskeletal conditions are frequently effective for temporary pain relief, but these injections do not always modify the overall course of the underlying condition. In the case of de Quervain tenosynovitis, such an injection is frequently curative. In adhesive capsulitis, lateral epicondylitis, osteoarthritis of the knee, and subacromial impingement syndrome, only temporary pain relief is expected, and other treatments, such as physical therapy, are usually required for longer-term symptomatic and functional improvement. Ref: Foster ZJ, Voss TT, Hatch J, Frimodig A. Corticosteroid injections for common musculoskeletal conditions. Am Fam Physician. 2015;92(8):694-699.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_42_2024_4">
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <p class="q-meta">Question 42 (2024)</p>
+        <div class="poll-stem">A 45-year-old female presents for evaluation of a 3-month history of left knee pain. She commutes by bicycle and is now finding it painful to cycle or even walk. On examination she does not have any deformity, and there is normal range of motion of the hips and knees. She has bilateral knee crepitus, pain on flexion of the left knee, and point tenderness that is noted 2 cm proximal to the left lateral joint line while flexing the knee. Which one of the following is the most likely diagnosis?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_42_2024_4" data-choice="A">A) Iliotibial band syndrome</button><button class="poll-opt" data-poll="q_42_2024_4" data-choice="B">B) Lateral compartment osteoarthritis</button><button class="poll-opt" data-poll="q_42_2024_4" data-choice="C">C) Patellar tendinitis</button><button class="poll-opt" data-poll="q_42_2024_4" data-choice="D">D) Patellofemoral syndrome</button><button class="poll-opt" data-poll="q_42_2024_4" data-choice="E">E) Pes anserine bursitis</button></div>
+        <button class="poll-reset" data-poll="q_42_2024_4" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <h3>Results — Question 42 (2024)</h3>
+        <div class="poll-results" id="results-q_42_2024_4">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <h3>Answer: A — Question 42 (2024)</h3>
+        <div class="critique-body">This patient has iliotibial band syndrome, a common overuse injury in cyclists and runners. Pain occurs due to impingement of the iliotibial band over the lateral femoral epicondyle. The Noble compression test is diagnostic for iliotibial band syndrome and is considered positive if it evokes pain in the area of impingement, as in this patient. Crepitus occurs with osteoarthritis but is not specific, and this patient’s history and the examination are more suggestive of iliotibial band syndrome. Patellar tendinitis is more central, usually at the inferior pole of the patella. Patellofemoral syndrome causes diffuse pain without point tenderness. The pes anserine bursa is distal to the medial knee.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_174_2025_5">
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <p class="q-meta">Question 174 (2025)</p>
+        <div class="poll-stem">A 25-year-old male presents with shoulder pain after having fallen on his arm in an outstretched position. He reports a sensation of catching and popping in the shoulder. With the patient seated and hands placed on his hips, you apply force to the elbow and direct the humerus anteriorly and superiorly, while asking the patient to resist your motion, which produces pain in the affected shoulder. Which one of the following is the most likely diagnosis?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_174_2025_5" data-choice="A">A) Acromioclavicular joint arthritis</button><button class="poll-opt" data-poll="q_174_2025_5" data-choice="B">B) Adhesive capsulitis</button><button class="poll-opt" data-poll="q_174_2025_5" data-choice="C">C) Glenohumeral osteoarthritis</button><button class="poll-opt" data-poll="q_174_2025_5" data-choice="D">D) A glenoid labral tear</button><button class="poll-opt" data-poll="q_174_2025_5" data-choice="E">E) A rotator cuff tear</button></div>
+        <button class="poll-reset" data-poll="q_174_2025_5" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <h3>Results — Question 174 (2025)</h3>
+        <div class="poll-results" id="results-q_174_2025_5">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Musculoskeletal | Arthritis</p>
+        <h3>Answer: D — Question 174 (2025)</h3>
+        <div class="critique-body">This patient's history of a catching or popping sensation combined with a positive anterior slide test, as described in the physical examination, is highly suggestive of a glenoid labral tear. This combination of history and the positive anterior slide test has a positive likelihood ratio of 6.0 in diagnosing a glenoid labral tear. Acromioclavicular joint arthritis presents with superior shoulder pain and tenderness over the acromioclavicular joint, often with a positive cross-body adduction test. Adhesive capsulitis is characterized by diffuse shoulder pain and restricted passive range of motion. Glenohumeral osteoarthritis usually presents with a gradual onset of pain and loss of motion, particularly in older patients. A rotator cuff tear typically presents with pain and weakness, especially with overhead activities, and positive findings on the empty can and external rotation tests. Acromioclavicular joint arthritis, adhesive capsulitis, glenohumeral osteoarthritis, and rotator cuff tears are not associated with catching or popping sensations, and the crank and anterior slide tests are not specific for these conditions.</div>
+    </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({ hash: true, transition: 'slide' });
+        const wsUrl = (location.protocol === 'https:' ? 'wss:' : 'ws:') + '//' + location.host + '/ws';
+        let ws = null;
+        const pollResults = {};
+        let role = location.search.includes('audience') ? 'audience' : 'presenter';
+        document.getElementById('join-url').textContent = location.href.split('?')[0] + '?audience';
+        function connect() {
+            ws = new WebSocket(wsUrl);
+            ws.onopen = () => ws.send(JSON.stringify({ role, poll: null }));
+            ws.onmessage = (e) => {
+                const d = JSON.parse(e.data);
+                if (d.type === 'results') {
+                    pollResults[d.poll] = d.votes || {};
+                    showResults(d.poll, pollResults[d.poll]);
+                } else if (d.type === 'reset') {
+                    pollResults[d.poll] = {};
+                    const res = document.getElementById('results-' + d.poll);
+                    if (res) res.innerHTML = 'Votes appear here in real-time.';
+                }
+            };
+            ws.onclose = () => setTimeout(connect, 2000);
+        }
+        connect();
+
+        if (role === 'audience') {
+            document.querySelectorAll('.poll-reset').forEach(b => b.style.display = 'none');
+        } else {
+            document.querySelectorAll('.poll-reset').forEach(b => {
+                b.style.display = 'inline-block';
+                b.onclick = () => {
+                    const pid = b.dataset.poll;
+                    if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'reset', poll: pid }));
+                };
+            });
+        }
+
+        document.querySelectorAll('.poll-opt').forEach(btn => {
+            btn.onclick = () => {
+                if (role !== 'audience') return;
+                const pid = btn.dataset.poll;
+                const choice = btn.dataset.choice;
+                if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'vote', poll: pid, choice }));
+                btn.classList.add('voted');
+            };
+        });
+
+        function showResults(pollId, votes) {
+            const el = document.getElementById('results-' + pollId);
+            if (!el) return;
+            const max = Math.max(...Object.values(votes), 1);
+            el.innerHTML = '<div class="bar-chart">' + Object.entries(votes).sort((a,b)=>a[0].localeCompare(b[0])).map(([k,v]) =>
+                '<div class="bar-row"><span class="bar-label">'+k+')</span><div class="bar-fill" style="width:'+(v/max*100)+'%"></div><span>'+v+'</span></div>'
+            ).join('') + '</div>';
+        }
+
+        Reveal.on('slidechanged', e => {
+            const resDiv = e.currentSlide?.querySelector?.('.poll-results[id^="results-"]');
+            if (resDiv) {
+                const pollId = resDiv.id.replace('results-', '');
+                if (pollResults[pollId] && Object.keys(pollResults[pollId]).length) {
+                    showResults(pollId, pollResults[pollId]);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

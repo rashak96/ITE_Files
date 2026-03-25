@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pulmonology - ITE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/simple.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .reveal .slides { text-align: left; font-family: 'Segoe UI', sans-serif; }
+        .reveal h1, .reveal h2, .reveal h3 { font-family: 'Montserrat', sans-serif; }
+        .grey-label { color:#767676; font-size:0.75rem; text-transform:uppercase; margin-bottom:0.3em; }
+        .q-meta { color:#767676; font-size:0.9rem; margin-bottom:0.5em; }
+        .poll-stem { font-size:1.1rem; margin:0.8em 0; line-height:1.5; }
+        .poll-options { display:flex; flex-direction:column; gap:0.4em; }
+        .poll-opt {
+            padding:0.5em 0.8em; text-align:left; font-size:0.95rem;
+            background:#f5f5f5; border:2px solid #ddd; border-radius:6px;
+            cursor:pointer; transition:all 0.2s;
+            font-family: inherit;
+        }
+        .poll-opt:hover { background:#eaeaea; border-color:#999; }
+        .poll-opt.voted { background:#d4edda; border-color:#28a745; }
+        .poll-results { margin-top:1em; min-height:120px; }
+        .poll-reset { margin-top:0.5em; padding:0.3em 0.8em; font-size:0.85rem; cursor:pointer; }
+        .critique-body { font-size:0.95rem; line-height:1.6; color:#555; }
+        .bar-chart { display:flex; flex-direction:column; gap:0.3em; }
+        .bar-row { display:flex; align-items:center; gap:0.5em; }
+        .bar-label { width:2em; }
+        .bar-fill { height:1.5em; background:#4a90d9; border-radius:4px; min-width:2em; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+    <section>
+        <h1 style="font-family:Montserrat,sans-serif;">Pulmonology</h1>
+        <p style="color:#767676;font-size:1.2rem;">ITE Questions — Interactive Polls</p>
+    </section>
+
+    <section>
+        <h2>Join the Poll</h2>
+        <p>Open this page on your phone:</p>
+        <p><strong id="join-url">Loading...</strong></p>
+        <p style="font-size:0.9rem;color:#767676;">Use ?audience to vote.</p>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_25_2022_0">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 25 (2022)</p>
+        <div class="poll-stem">A 43-year-old female with lifelong asthma asks if she would be a candidate for treatment with a biologic agent such as omalizumab (Xolair). A CBC reveals mild eosinophilia, indicating type 2 inflammatory asthma. In which one of the following patient scenarios should biologic treatment for asthma be considered?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_25_2022_0" data-choice="A">A) Any patient with poorly controlled, severe asthma</button><button class="poll-opt" data-poll="q_25_2022_0" data-choice="B">B) A patient with severe non–type 2 asthma that is poorly controlled despite adherence to optimal therapy with long-term co...</button><button class="poll-opt" data-poll="q_25_2022_0" data-choice="C">C) A patient with type 2 inflammatory asthma that is poorly controlled despite therapy with as-needed inhaled albuterol (Pr...</button><button class="poll-opt" data-poll="q_25_2022_0" data-choice="D">D) A patient with severe type 2 inflammatory asthma that is poorly controlled despite adherence to optimal therapy with lon...</button></div>
+        <button class="poll-reset" data-poll="q_25_2022_0" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 25 (2022)</h3>
+        <div class="poll-results" id="results-q_25_2022_0">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: D — Question 25 (2022)</h3>
+        <div class="critique-body">Biologic therapy for asthma targets type 2 inflammation pathways. According to the 2019 Global Initiative for Asthma (GINA) guidelines, diagnosis and management of severe asthma includes determination of the asthma phenotype to assess for type 2 inflammation. Type 2 asthma includes allergic and eosinophilic asthma. Non–type 2 asthma is driven by neutrophils and is associated with smoking and obesity. Type 2 inflammation is diagnosed by elevated eosinophils in the blood or sputum, elevated fractional exhaled nitric oxide, or a need for oral corticosteroid maintenance therapy. Biologic therapy may be considered in patients with severe type 2 inflammatory asthma who continue to have significant symptoms despite adherence to optimal therapy, including high-dose inhaled corticosteroids and a long-acting -agonist. Ref: Narasimhan K: Difficult to treat and severe asthma: Management strategies. Am Fam Physician 2021;103(5):286-290.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_41_2022_1">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 41 (2022)</p>
+        <div class="poll-stem">A 4-year-old female is brought to your office by her father for a well child check. The father reports that the child is having difficulty using her albuterol (Proventil, Ventolin) metered-dose inhaler for asthma exacerbations and he is not sure whether it is improving her symptoms. On demonstration in the office, the child is unable to time her breathing with inhaler actuation. Which one of the following would you recommend?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_41_2022_1" data-choice="A">A) Montelukast (Singulair)</button><button class="poll-opt" data-poll="q_41_2022_1" data-choice="B">B) Albuterol via oral liquid</button><button class="poll-opt" data-poll="q_41_2022_1" data-choice="C">C) Albuterol metered-dose inhaler via a spacer device</button><button class="poll-opt" data-poll="q_41_2022_1" data-choice="D">D) Albuterol via nebulizer</button><button class="poll-opt" data-poll="q_41_2022_1" data-choice="E">E) Salmeterol inhaled (Serevent Diskus)</button></div>
+        <button class="poll-reset" data-poll="q_41_2022_1" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 41 (2022)</h3>
+        <div class="poll-results" id="results-q_41_2022_1">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: C — Question 41 (2022)</h3>
+        <div class="critique-body">Young children often have difficulty coordinating inhaler use, which can reduce the effectiveness of asthma medications. The use of spacer devices eliminates the need for coordination and increases medication delivery to the lungs. Oral albuterol is no longer recommended. Montelukast, nebulized albuterol, and inhaled salmeterol are not indicated as first-line treatment for asthma exacerbations. Ref: Okpapi A, Friend AJ, Turner SW: Acute asthma and other recurrent wheezing disorders in children. Am Fam Physician 2013;88(2):130-131. 2) Patel SJ, Teach SJ: Asthma. Pediatr Rev 2019;40(11):549-567.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_60_2022_2">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 60 (2022)</p>
+        <div class="poll-stem">Chronic cough in an adult is defined as a cough that has been present for longer than 8 weeks. Which one of the following is the most common cause of chronic cough in an adult?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_60_2022_2" data-choice="A">A) Asthma</button><button class="poll-opt" data-poll="q_60_2022_2" data-choice="B">B) Laryngopharyngeal reflux disease</button><button class="poll-opt" data-poll="q_60_2022_2" data-choice="C">C) Nonasthmatic eosinophilic bronchitis</button><button class="poll-opt" data-poll="q_60_2022_2" data-choice="D">D) Protracted bacterial bronchitis</button><button class="poll-opt" data-poll="q_60_2022_2" data-choice="E">E) Upper airway cough syndrome</button></div>
+        <button class="poll-reset" data-poll="q_60_2022_2" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 60 (2022)</h3>
+        <div class="poll-results" id="results-q_60_2022_2">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: E — Question 60 (2022)</h3>
+        <div class="critique-body">Chronic cough in adults is a common presenting symptom for primary care visits. The four most common causes of chronic cough in adults include upper airway cough syndrome (UACS), asthma, nonasthmatic eosinophilic bronchitis, and reflux-related disorders. UACS, previously referred to as postnasal drip syndrome, is the most common cause of chronic cough in adults. This syndrome can have multiple etiologies, including chronic rhinosinusitis, allergic rhinitis, and nonallergic rhinitis. The diagnosis may be suggested by symptoms of rhinorrhea such as nasal stuffiness, sneezing, and postnasal drainage, but the absence of these symptoms does not rule out the diagnosis. The most common causes of chronic cough in children 6–14 years of age are asthma, protracted bacterial bronchitis, and UACS. Ref: Michaudet C, Malaty J: Chronic cough: Evaluation and management. Am Fam Physician 2017:96(9):575-580. 23</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_70_2022_3">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 70 (2022)</p>
+        <div class="poll-stem">A 17-year-old cross country runner sees you to discuss the results of pulmonary function tests to evaluate his episodic shortness of breath and chest tightness. He had previously been diagnosed with exercise-induced asthma and prescribed albuterol (Proventil, Ventolin), which provided minimal relief. You tell him that the pulmonary function tests revealed normal expiratory findings including normal FEV1 and FVC and a flattened inspiratory flow loop. The test most likely to confirm a diagnosis for this patient’s shortness of breath is</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_70_2022_3" data-choice="A">A) a sleep study</button><button class="poll-opt" data-poll="q_70_2022_3" data-choice="B">B) chest radiography</button><button class="poll-opt" data-poll="q_70_2022_3" data-choice="C">C) chest CT</button><button class="poll-opt" data-poll="q_70_2022_3" data-choice="D">D) esophagogastroduodenoscopy</button><button class="poll-opt" data-poll="q_70_2022_3" data-choice="E">E) nasolaryngoscopy</button></div>
+        <button class="poll-reset" data-poll="q_70_2022_3" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 70 (2022)</h3>
+        <div class="poll-results" id="results-q_70_2022_3">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: E — Question 70 (2022)</h3>
+        <div class="critique-body">This patient has vocal cord dysfunction, sometimes called paradoxical vocal fold motion, a condition in which the vocal cords close during inspiration when they should be open. It is not entirely understood why this occurs but it is associated with other conditions including asthma, GERD, and anxiety disorders. It typically causes sudden, severe shortness of breath and often has a trigger such as exercise, gastroesophageal reflux, inhalation of an irritant, or stress. Symptoms may include chest or throat tightness, inspiratory stridor, and wheezing predominantly over the upper airway. In less severe situations the voice may be impacted, and patients sometimes also describe a chronic cough that occurs separately from more acute symptoms. Vocal cord dysfunction is confirmed by direct visualization of the vocal cords during inspiration via nasolaryngoscopy. Pulmonary function tests are often performed as part of the assessment for shortness of breath and, if performed while the patient is experiencing symptoms, will show a flattened inspiratory flow loop. Treatment is primarily focused on therapeutic breathing maneuvers and vocal cord relaxation techniques. A speech therapist may assist in instructing patients in these techniques. Associated conditions should also be treated to help prevent vocal cord dysfunction. A sleep study, chest radiography, chest CT, and esophagogastroduodenoscopy would not confirm a diagnosis of vocal cord dysfunction. Ref: Malaty J, Wu V: Vocal cord dys...</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_87_2022_4">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 87 (2022)</p>
+        <div class="poll-stem">Increasing greenhouse gas concentrations are resulting in multiple climate changes that can adversely affect the health of patients. Which one of the following examples describes a direct effect of climate change?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_87_2022_4" data-choice="A">A) Weather-related disasters have lessened, leading to an improvement in overall mental health</button><button class="poll-opt" data-poll="q_87_2022_4" data-choice="B">B) Shorter and warmer winters allow insect vectors to spread into new areas, increasing the rate of multiple infectious dis...</button><button class="poll-opt" data-poll="q_87_2022_4" data-choice="C">C) Increasing global temperatures have decreased the production of highly allergenic pollens such as ragweed</button><button class="poll-opt" data-poll="q_87_2022_4" data-choice="D">D) Increasing consumption of plant-based foods has resulted in increased air pollution, further exacerbating many cardiopul...</button></div>
+        <button class="poll-reset" data-poll="q_87_2022_4" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 87 (2022)</h3>
+        <div class="poll-results" id="results-q_87_2022_4">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: B — Question 87 (2022)</h3>
+        <div class="critique-body">Climate change is responsible for multiple negative impacts on patient health, including furthering the spread of multiple infectious diseases, a decline in mental health due to weather-related natural disasters, an increased risk of allergies, and increased exacerbation of cardiopulmonary conditions. Following a plant-based diet, transitioning to more active modes of transportation, and working within the health care system to help decrease greenhouse emissions can positively impact climate change. Ref: Parker CL, Wellbery CE, Mueller M: The changing climate: Managing health impacts. Am Fam Physician 2019;100(10):618-626.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_173_2022_5">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 173 (2022)</p>
+        <div class="poll-stem">A 57-year-old male who uses tobacco presents with cough and dyspnea. His symptoms were previously controlled with an albuterol (Proventil, Ventolin) inhaler once or twice a month. After a 3-week trial of a tiotropium (Spiriva) inhaler his symptoms are better, but he is still having frequent episodes of coughing and dyspnea. He has been smoking 1–2 packs of cigarettes a day since age 13 and is not interested in quitting. On examination he is afebrile, his vital signs are stable, and his oxygen saturation is 95% on room air. His lung sounds are diminished, and the remainder of the examination is...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_173_2022_5" data-choice="A">A) An oral antibiotic</button><button class="poll-opt" data-poll="q_173_2022_5" data-choice="B">B) An oral corticosteroid</button><button class="poll-opt" data-poll="q_173_2022_5" data-choice="C">C) An inhaled corticosteroid</button><button class="poll-opt" data-poll="q_173_2022_5" data-choice="D">D) An inhaled long-acting β-agonist</button><button class="poll-opt" data-poll="q_173_2022_5" data-choice="E">E) A nebulized short-acting β-agonist</button></div>
+        <button class="poll-reset" data-poll="q_173_2022_5" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 173 (2022)</h3>
+        <div class="poll-results" id="results-q_173_2022_5">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: D — Question 173 (2022)</h3>
+        <div class="critique-body">Guidelines from the Global Initiative for Chronic Obstructive Lung Disease (GOLD), the National Initiative for Health and Care Excellence, and the American College of Chest Physicians all recommend that in addition to smoking cessation, COPD should be treated initially with either a long-acting -agonist (LABA) or a long-acting muscarinic antagonist (LAMA). If symptoms persist with either of those inhaled medications then combination therapy should be initiated. An inhaled corticosteroid (ICS) can be added to the LABA/LAMA regimen for triple therapy if symptoms continue. Long-term use of an ICS as monotherapy is not recommended due to a slight increase in the incidence of pneumonia. Ref: Gentry S, Gentry B: Chronic obstructive pulmonary disease: Diagnosis and management. Am Fam Physician 2017;95(7):433-441. 2) Drugs for COPD. Med Lett Drugs Ther 2020;62(1606):137-144. 3) Global Strategy for the Diagnosis, Management, and Prevention of Chronic Obstructive Pulmonary Disease. Global Initiative for Chronic Obstructive Lung Disease, 2022.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_180_2022_6">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 180 (2022)</p>
+        <div class="poll-stem">A 60-year-old male with moderate COPD presents to your office with shortness of breath and a cough with increased sputum volume. After appropriate evaluation, you diagnose an acute COPD exacerbation. According to Global Initiative for Chronic Obstructive Lung Disease (GOLD) guidelines, which one of the following additional factors would provide the strongest indication for treatment with antibiotics?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_180_2022_6" data-choice="A">A) A decline in oxygen saturation from baseline</button><button class="poll-opt" data-poll="q_180_2022_6" data-choice="B">B) Diffuse wheezing on lung auscultation</button><button class="poll-opt" data-poll="q_180_2022_6" data-choice="C">C) A fever</button><button class="poll-opt" data-poll="q_180_2022_6" data-choice="D">D) Increased sputum purulence</button><button class="poll-opt" data-poll="q_180_2022_6" data-choice="E">E) Leukocytosis 63</button></div>
+        <button class="poll-reset" data-poll="q_180_2022_6" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 180 (2022)</h3>
+        <div class="poll-results" id="results-q_180_2022_6">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: D — Question 180 (2022)</h3>
+        <div class="critique-body">COPD exacerbations, when caused by an infectious agent, may be bacterial or viral. The Global Initiative for Chronic Obstructive Lung Disease (GOLD) guidelines support the use of antibiotics in patients with an acute COPD exacerbation with the three cardinal symptoms of increased dyspnea, increased sputum volume, and increased sputum purulence; in patients with increased sputum purulence and one of the other cardinal symptoms; and in patients who require invasive or noninvasive mechanical ventilation. Hypoxemia and fever, although often seen in the setting of COPD exacerbations, do not provide as strong an indication for treatment with antibiotics. Diffuse wheezing is a hallmark examination finding that is present in most COPD exacerbations, regardless of the underlying cause. Leukocytosis is a relatively nonspecific marker for acute inflammation and may be seen with either viral or bacterial etiologies. Serum biomarkers such as C-reactive protein and procalcitonin have yielded controversial and conflicting evidence in guiding antibiotic therapy. Ref: Global Strategy for Prevention, Diagnosis, and Management of COPD: 2022 Report. Global Initiative for Chronic Obstructive Lung Disease, 2022. 71</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_2_2023_7">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 2 (2023)</p>
+        <div class="poll-stem">A 22-year-old male presents for follow-up of moderate persistent asthma. After discussing his treatment options, you decide to use a single maintenance and reliever therapy (SMART) approach. Which one of the following daily inhaled therapies is appropriate to prescribe in this setting?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_2_2023_7" data-choice="A">A) Budesonide (Pulmicort)</button><button class="poll-opt" data-poll="q_2_2023_7" data-choice="B">B) Budesonide/formoterol (Symbicort)</button><button class="poll-opt" data-poll="q_2_2023_7" data-choice="C">C) Fluticasone/salmeterol (Advair Diskus)</button><button class="poll-opt" data-poll="q_2_2023_7" data-choice="D">D) _ Fluticasone/vilanterol (Breo Ellipta)</button><button class="poll-opt" data-poll="q_2_2023_7" data-choice="E">E) Tiotropium/olodaterol (Stiolto Respimat)</button></div>
+        <button class="poll-reset" data-poll="q_2_2023_7" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 2 (2023)</h3>
+        <div class="poll-results" id="results-q_2_2023_7">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: B — Question 2 (2023)</h3>
+        <div class="critique-body">In the single maintenance and reliever therapy (SMART) approach for asthma control, combination therapy with an inhaled corticosteroid and a long-acting bronchodilator is used as both controller and rescue medication. SMART is recommended as the preferred therapeutic approach in steps 3 and 4 in the 2020 National Asthma Education and Prevention Program guidelines. Formoterol is the only medication available in the United States recommended for use in SMART therapy due to its rapid onset of action. Budesonide monotherapy, fluticasone/salmeterol, fluticasone/vilanterol, and tiotropium/olodaterol are not appropriate options for SMART in asthma control. Ref: Cloutier MM, Dixon AE, Krishnan JA, Lemanske RF Jr, Pace W, Schatz M. Managing asthma in adolescents and adults: 2020 asthma guideline update from the National Asthma Education and Prevention Program. JAMA. 2020;324(22):2301-2317.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_25_2023_8">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 25 (2023)</p>
+        <div class="poll-stem">You are playing in a community league soccer tournament and are asked to evaluate a 30-year-old female. She was in her usual state of health when she suddenly began having difficulty breathing while playing soccer. She tells you that she has had similar episodes in the past. Treatment with an albuterol (Proventil, Ventolin) inhaler does not improve her symptoms. On examination you note dyspnea with audible inspiratory wheezing but no increased work of breathing, and she has an oxygen saturation of 98%. Which one of the following is the most likely diagnosis?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_25_2023_8" data-choice="A">A) Anaphylaxis</button><button class="poll-opt" data-poll="q_25_2023_8" data-choice="B">B) Exercise-induced asthma</button><button class="poll-opt" data-poll="q_25_2023_8" data-choice="C">C) Foreign body aspiration</button><button class="poll-opt" data-poll="q_25_2023_8" data-choice="D">D) Laryngeal edema</button><button class="poll-opt" data-poll="q_25_2023_8" data-choice="E">E) Vocal cord dysfunction</button></div>
+        <button class="poll-reset" data-poll="q_25_2023_8" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 25 (2023)</h3>
+        <div class="poll-results" id="results-q_25_2023_8">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: E — Question 25 (2023)</h3>
+        <div class="critique-body">Vocal cord dysfunction occurs when the vocal cords close when they should be open, particularly during inspiration. It should be suspected in patients who develop sudden, severe dyspnea that presents with inspiratory stridor or wheezing and is not associated with hypoxia, tachypnea, or increased work of breathing. It is most common in women ages 30-40. Anaphylaxis and foreign body aspiration would be unlikely without an antecedent trigger. Exercise-induced asthma usually presents with expiratory wheezing and responds to the use of an albuterol inhaler. Laryngeal edema is usually preceded by signs of illness. Ref: Malaty J, Wu V. Vocal cord dysfunction: rapid evidence review. Am Fam Physician. 2021;104(5):471-475.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_101_2023_9">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 101 (2023)</p>
+        <div class="poll-stem">A 6-year-old female is brought to your office because of a 3-day history of productive cough, fever, and chills. She has not had any shortness of breath, wheezing, sore throat, or rash. Her past medical history is significant for mild intermittent asthma and seasonal allergies, treated with albuterol (Proventil, Ventolin), fluticasone furoate (Flonase Sensimist), and cetirizine (Children’s Zyrtec Allergy). She is up to date on recommended vaccinations. Her vital signs include a temperature of 39.0°C (102.2°F), a pulse rate of 98 beats/min, a respiratory rate of 25/min, and an oxygen saturation...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_101_2023_9" data-choice="A">A) Amoxicillin</button><button class="poll-opt" data-poll="q_101_2023_9" data-choice="B">B) Azithromycin (Zithromax)</button><button class="poll-opt" data-poll="q_101_2023_9" data-choice="C">C) Doxycycline</button><button class="poll-opt" data-poll="q_101_2023_9" data-choice="D">D) Levofloxacin</button><button class="poll-opt" data-poll="q_101_2023_9" data-choice="E">E) Oseltamivir (Tamiflu)</button></div>
+        <button class="poll-reset" data-poll="q_101_2023_9" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 101 (2023)</h3>
+        <div class="poll-results" id="results-q_101_2023_9">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: A — Question 101 (2023)</h3>
+        <div class="critique-body">The examination and chest radiograph indicate the presence of a focal bacterial pneumonia, commonly caused by Streptococcus pneumoniae. Amoxicillin provides effective coverage against this infection. Local resistance of S. pneumoniae to azithromycin may be high, so it would not be the best choice. Doxycycline should not be used in children younger than 9 years. There is no evidence of atypical pneumonia (nonproductive cough, sore throat, rash, myalgia, fatigue) requiring levofloxacin. Oseltamivir is not indicated as there is no evidence of influenza or lobar pneumonia seen on chest radiography. Ref: Bradley JS, Byington CL, Shah SS, et al. Executive summary: the management of community acquired pneumonia in infants and children older than 3 months of age: clinical practice guidelines by the Pediatric Infectious Diseases Society and the Infectious Diseases Society of America. Clin Infect Dis. 2011;53(7):617-630. 2) Smith DK, Kuckel DP, Recidoro AM. Community-acquired pneumonia in children: rapid evidence review. Am Fam Physician. 2021;104(6):618-625. 40</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_108_2023_10">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 108 (2023)</p>
+        <div class="poll-stem">A 55-year-old male presents to your clinic for evaluation of COPD. He has a history of tobacco use and quit smoking 2 years ago. He reports occasional symptoms that limit his activities but has not had any exacerbations or hospitalizations. Pulmonary function tests indicate an FEV,/FVC ratio &lt;0.7 and an FEV, of 75%. His vital signs are normal. Which one of the following would be the most appropriate initial pharmacotherapy?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_108_2023_10" data-choice="A">A) Budesonide/formoterol (Symbicort)</button><button class="poll-opt" data-poll="q_108_2023_10" data-choice="B">B) Ipratropium (Atrovent)</button><button class="poll-opt" data-poll="q_108_2023_10" data-choice="C">C) Levalbuterol</button><button class="poll-opt" data-poll="q_108_2023_10" data-choice="D">D) Tiotropium (Spiriva)</button><button class="poll-opt" data-poll="q_108_2023_10" data-choice="E">E) Umeclidinium/vilanterol (Anoro Ellipta) 41</button></div>
+        <button class="poll-reset" data-poll="q_108_2023_10" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 108 (2023)</h3>
+        <div class="poll-results" id="results-q_108_2023_10">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: D — Question 108 (2023)</h3>
+        <div class="critique-body">COPD is acommon condition, which led to 3.23 million deaths worldwide in 2019. A variety of treatments are available to alleviate symptoms, and family physicians are well suited to manage this condition through lifestyle modifications and pharmacotherapy. Guidelines suggest that patients with mild disease, as in this patient’s case per the Global Initiative for Chronic Obstructive Lung Disease (GOLD) class 2 findings on pulmonary function tests and no exacerbations, are best managed through once-daily inhalation of a long-acting muscarinic antagonist (LAMA) such as tiotropium. Short-acting medications such as ipratropium and levalbuterol require frequent dosing and lack the mortality benefit seen with LAMAs. The combination of LAMAs and long-acting B-agonists (LABAs) can be initiated in those with persistent symptoms but would not be used as initial therapy. Inhaled corticosteroids may be beneficial in those with significant asthma and COPD overlap, but in general corticosteroids should be reserved for those with persistent symptoms despite LAMA and LABA therapy. 42 Ref: Gentry S, Gentry B. Chronic obstructive pulmonary disease: diagnosis and management. Am Fam Physician. 2017;95(7):433-441. 2) Celli BR, Wedzicha JA. Update on clinical aspects of chronic obstructive pulmonary disease. N Engl J Med. 2019;381(13):1257-1266. 3) Global Initiative for Chronic Obstructive Lung Disease. 2023 Report: global strategy for the diagnosis, management, and prevention of chronic obstructive...</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_141_2023_11">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 141 (2023)</p>
+        <div class="poll-stem">A 55-year-old male with oxygen-dependent COPD plans to visit family 2000 miles away. For the last year, his COPD has been well controlled on medications and oxygen at 2 L/min. He wants to travel by commercial airline. Which one of the following would be the most appropriate advice for this patient regarding air travel?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_141_2023_11" data-choice="A">A) Choosing another mode of transit</button><button class="poll-opt" data-poll="q_141_2023_11" data-choice="B">B) Flying first class only</button><button class="poll-opt" data-poll="q_141_2023_11" data-choice="C">C) Continuing his oxygen flow rate at 2 L/min during the flight</button><button class="poll-opt" data-poll="q_141_2023_11" data-choice="D">D) Lowering his oxygen flow rate to 1 L/min during the flight</button><button class="poll-opt" data-poll="q_141_2023_11" data-choice="E">E) Doubling his oxygen flow rate to 4 L/min during the flight</button></div>
+        <button class="poll-reset" data-poll="q_141_2023_11" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 141 (2023)</h3>
+        <div class="poll-results" id="results-q_141_2023_11">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: E — Question 141 (2023)</h3>
+        <div class="critique-body">Commercial airline carriers typically permit Federal Aviation Administration—approved portable oxygen compressors. Patients whose usual oxygen requirements are &lt; 4 L/min are advised to double the flow rate during the flight. Conditions such as bullous lung disease, cystic fibrosis, and severe COPD may require the Hypoxia Altitude Simulation Test to determine in-flight oxygen requirements prior to air travel. It would not be appropriate to recommend this patient choose another mode of transit, fly first class only, continue his current oxygen flow rate, or lower his oxygen flow rate. Ref: Powell-Dunford N, Adams JR, Grace C. Medical advice for commercial air travel. Am Fam Physician. 2021; 104(4):403-410.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_143_2023_12">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 143 (2023)</p>
+        <div class="poll-stem">A 51-year-old male presents to your office with right arm weakness. He has a history of multiple sclerosis (MS) with infrequent flares only. His MS is managed with interferon as the long-term disease-modifying therapy. After a thorough history and examination, you diagnose a flare of MS. In addition to notifying his neurologist, which one of the following would be the most appropriate next step?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_143_2023_12" data-choice="A">A) Doubling his dosage of interferon for 5 days</button><button class="poll-opt" data-poll="q_143_2023_12" data-choice="B">B) Initiating high-dose aspirin</button><button class="poll-opt" data-poll="q_143_2023_12" data-choice="C">C) Initiating corticosteroids</button><button class="poll-opt" data-poll="q_143_2023_12" data-choice="D">D) Ordering plasmapheresis</button><button class="poll-opt" data-poll="q_143_2023_12" data-choice="E">E) Referral to physical therapy 53</button></div>
+        <button class="poll-reset" data-poll="q_143_2023_12" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 143 (2023)</h3>
+        <div class="poll-results" id="results-q_143_2023_12">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: C — Question 143 (2023)</h3>
+        <div class="critique-body">Although multiple sclerosis (MS) is often managed by a neurologist and a multidisciplinary team, family physicians sometimes see these patients for symptoms that could be related to their disease process. If an MS flare is thought to be the etiology, corticosteroids are the treatment of choice, most often oral methylprednisolone with recommendations of 500 mg daily for 5 days or 1000 mg daily for 3 days. Intravenous administration has not been found to be more efficacious than oral administration. Corticosteroids speed the recovery process but do not generally alter the long-term outcomes. Patients without an adequate response to the corticosteroid burst may potentially benefit from plasmapheresis. High-dose interferon, high-dose aspirin, and physical therapy are not used to treat acute exacerbations. Ref: Saguil A, Farnell EA IV, Jordan TS. Multiple sclerosis: a primary care perspective. Am Fam Physician. 2022; 106(2): 173-183. 55</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_111_2024_13">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 111 (2024)</p>
+        <div class="poll-stem">A 6-year-old female is brought to the urgent care clinic for evaluation of a cough that has persisted for more than 2 months. The cough is dry and nonproductive and seems worse when she goes outside in the cold weather. She has not had any recent illnesses. She does not have any wheezing or shortness of breath. Her vital signs and an examination are normal. A chest x-ray is unremarkable. Which one of the following next steps in evaluation should be recommended to determine the most likely underlying cause?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_111_2024_13" data-choice="A">A) Reassurance that no further testing is needed at this time</button><button class="poll-opt" data-poll="q_111_2024_13" data-choice="B">B) Polymerase chain reaction testing for pertussis</button><button class="poll-opt" data-poll="q_111_2024_13" data-choice="C">C) Spirometry</button><button class="poll-opt" data-poll="q_111_2024_13" data-choice="D">D) Bronchoscopy</button><button class="poll-opt" data-poll="q_111_2024_13" data-choice="E">E) 24-hour esophageal pH monitoring</button></div>
+        <button class="poll-reset" data-poll="q_111_2024_13" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 111 (2024)</h3>
+        <div class="poll-results" id="results-q_111_2024_13">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: C — Question 111 (2024)</h3>
+        <div class="critique-body">This patient most likely has cough variant asthma, a common cause of chronic (lasting &gt;8 weeks) cough in children. The minimum appropriate testing for all children with chronic cough is chest x-ray and spirometry. Polymerase chain reaction testing for pertussis is indicated in children who have had a recent upper respiratory tract illness that develops into a classic whooping cough. Bronchoscopy should be considered if there is a history of cough that started and persisted after a choking episode, suggestive of foreign body aspiration. GERD is another common cause of chronic cough but can usually be diagnosed by response to an empiric trial of an antacid medication and does not require 24-hour esophageal pH monitoring.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_139_2024_14">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 139 (2024)</p>
+        <div class="poll-stem">A 45-year-old female sees you for a refill of her asthma medication. She takes 1 puff of her albuterol inhaler (Proventil, Ventolin) daily prior to exercising. She wakes up at night a couple of times per week with dyspnea, which is relieved with another puff from her albuterol inhaler. Her most recent asthma exacerbation requiring oral corticosteroids was 4 months ago. She has not been hospitalized for an asthma exacerbation since she was a child. Which one of the following should be prescribed for this patient to reduce severe asthma exacerbations?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_139_2024_14" data-choice="A">A) An interleukin-5 antagonist</button><button class="poll-opt" data-poll="q_139_2024_14" data-choice="B">B) A leukotriene receptor antagonist</button><button class="poll-opt" data-poll="q_139_2024_14" data-choice="C">C) A long-acting β-agonist (LABA)</button><button class="poll-opt" data-poll="q_139_2024_14" data-choice="D">D) A long-acting muscarinic antagonist</button><button class="poll-opt" data-poll="q_139_2024_14" data-choice="E">E) An inhaled corticosteroid/LABA combination</button></div>
+        <button class="poll-reset" data-poll="q_139_2024_14" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 139 (2024)</h3>
+        <div class="poll-results" id="results-q_139_2024_14">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: E — Question 139 (2024)</h3>
+        <div class="critique-body">This patient has moderate persistent asthma, based on the history of symptoms that occur daily and more than once per week at night. Single maintenance and reliever therapy (SMART) with an inhaled corticosteroid and long-acting β-agonist (LABA) is recommended for management of moderate asthma in adults and adolescents (SOR A). LABAs have a boxed warning against monotherapy due to an increase in death related to asthma secondary to the risk for paradoxical bronchospasm. Long-acting muscarinic antagonists may also cause paradoxical bronchospasm and are not recommended for first-line therapy in asthma. Interleukin-5 antagonists may be considered in severe asthma as add-on maintenance but not as a reliever treatment. Leukotriene receptor antagonists are considered second-line controller therapy and not considered for reliever treatment.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_185_2024_15">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 185 (2024)</p>
+        <div class="poll-stem">A 65-year-old male sees you for follow-up after he was hospitalized for pneumonia a few months ago. He has smoked 1 pack of cigarettes per day for 40 years. Pulmonary function testing today shows an FEV1 of 60% of predicted and an FEV1/FVC ratio of 0.65. Physical examination findings include a BMI of 24 kg/m2 and scattered rhonchi in the chest. Which one of the following inhalers is the recommended initial treatment to decrease this patient’s number of exacerbations?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_185_2024_15" data-choice="A">A) Budesonide/formoterol (Symbicort)</button><button class="poll-opt" data-poll="q_185_2024_15" data-choice="B">B) Fluticasone propionate</button><button class="poll-opt" data-poll="q_185_2024_15" data-choice="C">C) Ipratropium bromide/albuterol (Combivent Respimat)</button><button class="poll-opt" data-poll="q_185_2024_15" data-choice="D">D) Salmeterol (Serevent Diskus)</button><button class="poll-opt" data-poll="q_185_2024_15" data-choice="E">E) Tiotropium (Spiriva)</button></div>
+        <button class="poll-reset" data-poll="q_185_2024_15" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 185 (2024)</h3>
+        <div class="poll-results" id="results-q_185_2024_15">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: E — Question 185 (2024)</h3>
+        <div class="critique-body">According to the GOLD Spirometry Classification, an FEV1/FVC ratio &lt;0.70 and an FEV1 ≥50% and &lt;80% of predicted is stage 2 COPD. Initial inhaler pharmacotherapy can be guided by the GOLD ABCD assessment that integrates symptoms and exacerbations. Moderate exacerbations require either an oral antibiotic, an oral corticosteroid, or both, while a severe exacerbation results in an emergency department visit or hospitalization. Patients with 2 or more moderate exacerbations or 1 or more hospitalizations, such as this patient, should be prescribed a long-acting muscarinic antagonist (LAMA) as first- line therapy. Monotherapy with this group of medications reduces symptoms, decreases exacerbations, and decreases hospitalizations. Inhaled corticosteroids (ICS) such as fluticasone propionate are not recommended as monotherapy for COPD, particularly for those who have had pneumonia. Using a long- acting β-agonist (LABA) with an ICS is less effective at reducing exacerbations and increases the risk for pneumonia. Monotherapy with a LABA such as salmeterol reduces exacerbations requiring hospitalization, but symptoms are better controlled when a LABA is used in combination with a LAMA. Short-acting β-adrenergic agonists and short- acting muscarinic antagonists are appropriate for acute exacerbations rather than prevention.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_53_2025_16">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 53 (2025)</p>
+        <div class="poll-stem">A 14-year-old male sees you to establish care. He has a past medical history of asthma and uses an albuterol inhaler (Proventil, Ventolin) as needed. He normally has symptoms about 3–4 days per week. Recent pulmonary function tests showed mildly reduced lung function. Based on the Global Initiative for Asthma (GINA) guidelines, which one of the following would be the preferred treatment strategy for this patient?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_53_2025_16" data-choice="A">A) Continuing as-needed albuterol</button><button class="poll-opt" data-poll="q_53_2025_16" data-choice="B">B) Switching to as-needed formoterol</button><button class="poll-opt" data-poll="q_53_2025_16" data-choice="C">C) Switching to an as-needed low-dose inhaled corticosteroid (ICS) plus formoterol</button><button class="poll-opt" data-poll="q_53_2025_16" data-choice="D">D) Continuing as-needed albuterol, and adding a low-dose ICS for maintenance</button><button class="poll-opt" data-poll="q_53_2025_16" data-choice="E">E) Continuing as-needed albuterol, and adding a low-dose ICS plus salmeterol for maintenance</button></div>
+        <button class="poll-reset" data-poll="q_53_2025_16" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 53 (2025)</h3>
+        <div class="poll-results" id="results-q_53_2025_16">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: C — Question 53 (2025)</h3>
+        <div class="critique-body">Based on the Global Initiative for Asthma (GINA) guideline, patients who have symptoms &lt;3–5 days per week with normal or mildly reduced lung function are classified as having mild asthma. For patients 12 years and older with mild asthma, the guidelines recommend treatment with as-needed low-dose inhaled corticosteroid plus formoterol (ICS/formoterol). As-needed low-dose ICS/formoterol reduces the risk of severe asthma exacerbations by 60%–64% compared to as-needed short-acting β-agonists (SABAs) such as albuterol. ICS/formoterol also reduces the risk of severe exacerbations compared to other regimens that include a SABA reliever. Formoterol should not be used without an ICS.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_91_2025_17">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <p class="q-meta">Question 91 (2025)</p>
+        <div class="poll-stem">Which one of the following medications is the recommended initial management of COPD in patients who are classified as GOLD group A?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_91_2025_17" data-choice="A">A) Inhaled umeclidinium (Incruse Ellipta)</button><button class="poll-opt" data-poll="q_91_2025_17" data-choice="B">B) Inhaled aclidinium bromide/formoterol (Duaklir Pressair)</button><button class="poll-opt" data-poll="q_91_2025_17" data-choice="C">C) Inhaled budesonide/formoterol (Symbicort)</button><button class="poll-opt" data-poll="q_91_2025_17" data-choice="D">D) Inhaled fluticasone furoate/umeclidinium/vilanterol (Trelegy Ellipta)</button><button class="poll-opt" data-poll="q_91_2025_17" data-choice="E">E) Nebulized formoterol (Perforomist)</button></div>
+        <button class="poll-reset" data-poll="q_91_2025_17" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Results — Question 91 (2025)</h3>
+        <div class="poll-results" id="results-q_91_2025_17">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | COPD/Asthma</p>
+        <h3>Answer: A — Question 91 (2025)</h3>
+        <div class="critique-body">Long-acting muscarinic antagonists (LAMAs) such as umeclidinium are recommended as the preferred initial management of COPD that is classified as GOLD group A. Long-acting β-agonists (LABAs) such as formoterol may be used as an alternative for these patients. LAMA/LABA combinations such as aclidinium bromide/formoterol are recommended as initial management of COPD that is classified as GOLD group B. LAMA/LABA combinations are also recommended for management of COPD that is classified as GOLD group E. Inhaled corticosteroid (ICS)/LAMA/LABA combinations such as fluticasone furoate/umeclidinium/vilanterol can also be considered for initial management of COPD that is classified as GOLD group E, especially if blood eosinophil levels are ≥300 cells/μL.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_101_2022_0">
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <p class="q-meta">Question 101 (2022)</p>
+        <div class="poll-stem">A 45-year-old female presents to your clinic with a 2-day history of worsening sinus pain and pressure that is worse on the right cheek and radiating into a maxillary molar. She recently recovered from a week-long cold and was getting better when she suddenly relapsed. Her symptoms have progressed over the last 12 days, culminating in a fever of 102°F last night. The patient reports a foul taste in the back of her throat. She has been drinking plenty of fluids, performing sterile saline sinus rinses twice daily, and using acetaminophen and ibuprofen for pain relief. She has not had a cough exc...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_101_2022_0" data-choice="A">A) Supportive care for up to 2 additional days</button><button class="poll-opt" data-poll="q_101_2022_0" data-choice="B">B) Continued saline nasal rinses plus inhaled fluticasone (Flonase Allergy Relief) until symptoms resolve, and follow-up if...</button><button class="poll-opt" data-poll="q_101_2022_0" data-choice="C">C) Amoxicillin/clavulanate (Augmentin) for 5–7 days</button><button class="poll-opt" data-poll="q_101_2022_0" data-choice="D">D) Azithromycin (Zithromax) for 5 days, and follow-up if symptoms worsen or the fever increases</button><button class="poll-opt" data-poll="q_101_2022_0" data-choice="E">E) Levofloxacin for 28 days</button></div>
+        <button class="poll-reset" data-poll="q_101_2022_0" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <h3>Results — Question 101 (2022)</h3>
+        <div class="poll-results" id="results-q_101_2022_0">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <h3>Answer: C — Question 101 (2022)</h3>
+        <div class="critique-body">Most sinus infections are viral in origin, although there are specific circumstances in which antibiotics are appropriate. This patient exhibits all of the diagnostic clues that are most reliable for determining a bacterial etiology for the sinus infection: worsening symptoms with a new fever of 38.9°C (102°F), duration &gt;10 days, signs of double sickening, unilateral facial and tooth pain, and cacosmia (perception of a foul odor). Since 2012, the Infectious Diseases Society of America, the CDC, and Sanford have all changed their recommendations to amoxicillin/clavulanate as the first-line antibiotic of choice due to emerging antibiotic resistance. However, in practice, azithromycin is commonly prescribed despite significant Streptococcus pneumoniae resistance of approximately 40% or higher. One-third of bacterial sinus infections are caused by S. pneumoniae, another one-third by Haemophilus influenzae, and the remainder by Moraxella catarrhalis, group A Streptococcus, Staphylococcus aureus, and anaerobes. Previous guidelines recommended treatment with antibiotics after 14 days of symptoms. While it is true that most sinus infections, even those that are bacterial in origin, will resolve after 14 days with or without treatment, characteristics such as a long duration, worsening illness, and new fever indicate the need for antibiotics. Nasal rinses may be of some benefit to patients, but evidence is mixed. Fluticasone is recommended as adjunctive treatment in acute sinusitis to...</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_134_2022_1">
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <p class="q-meta">Question 134 (2022)</p>
+        <div class="poll-stem">In adolescents and adults, what proportion of cases of uncomplicated, acute bronchitis are caused by atypical organisms such as Mycoplasma pneumoniae and Chlamydia pneumoniae?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_134_2022_1" data-choice="A">A) 1%</button><button class="poll-opt" data-poll="q_134_2022_1" data-choice="B">B) 15%</button><button class="poll-opt" data-poll="q_134_2022_1" data-choice="C">C) 30%</button><button class="poll-opt" data-poll="q_134_2022_1" data-choice="D">D) 65%</button><button class="poll-opt" data-poll="q_134_2022_1" data-choice="E">E) 90%</button></div>
+        <button class="poll-reset" data-poll="q_134_2022_1" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <h3>Results — Question 134 (2022)</h3>
+        <div class="poll-results" id="results-q_134_2022_1">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <h3>Answer: A — Question 134 (2022)</h3>
+        <div class="critique-body">Acute bronchitis is caused by a viral infection in 90%–99% of cases. Atypical organisms such as Mycoplasma pneumoniae and Chlamydia pneumoniae are rare causes and have been found in less than 1% of cases of acute bronchitis. Ref: Kinkade S, Long NA: Acute bronchitis. Am Fam Physician 2016;94(7):560-565.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_35_2023_2">
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <p class="q-meta">Question 35 (2023)</p>
+        <div class="poll-stem">The daughter of an 82-year-old bedbound female with Alzheimer dementia requests a home visit to discuss transitions of care due to continued deterioration of her mother’s condition. The daughter has been the caregiver for the past 5 years since her mother began to struggle with independently managing her activities of daily living (ADLs). Recently, the patient’s appetite has significantly diminished, and her daughter is concerned that she has lost 15 Ib in the last 6 months. She asks about feeding tube placement, medications to help her appetite, or ways to improve her dementia. The patient no...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_35_2023_2" data-choice="A">A) Assisted oral feeding</button><button class="poll-opt" data-poll="q_35_2023_2" data-choice="B">B) Initiation of a high-calorie supplement</button><button class="poll-opt" data-poll="q_35_2023_2" data-choice="C">C) Initiation of a cholinesterase inhibitor</button><button class="poll-opt" data-poll="q_35_2023_2" data-choice="D">D) Initiation of an appetite stimulant</button><button class="poll-opt" data-poll="q_35_2023_2" data-choice="E">E) Percutaneous feeding tube placement 13</button></div>
+        <button class="poll-reset" data-poll="q_35_2023_2" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <h3>Results — Question 35 (2023)</h3>
+        <div class="poll-results" id="results-q_35_2023_2">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <h3>Answer: A — Question 35 (2023)</h3>
+        <div class="critique-body">According to the American Geriatrics Society’s Choosing Wisely recommendations, oral handfeeding is no worse for outcomes such as aspiration pneumonia, patient comfort, and death compared to percutaneous feeding tube placement. Agitation and pressure ulcers may worsen with tube feeding. High-calorie shakes or supplements and appetite stimulants are not recommended as they may increase weight but do not improve patient-oriented outcomes such as functional status, quality of life, or survival. Furthermore, appetite stimulants such as megestrol acetate may increase the risk of thrombosis and edema, and hasten death. According to randomized, controlled trials, cholinesterase inhibitors may statistically improve cognitive testing results, but they do not produce meaningful improvement. This patient is approaching end-stage Alzheimer dementia and initiating a cholinesterase inhibitor will not improve functioning and may even worsen appetite, as a common side effect is gastrointestinal disturbance. Ref: American Geriatrics Society. Tip sheet: ten things clinicians and patients should question. ABIM Foundation Choosing Wisely campaign. Updated June 2017 2) Unwin BK, Bedsaul NB, Stubbs S. The physician's role in transitioning older adults into long-term care facilities. Am Fam Physician. 2022;106(6):714-717.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_148_2023_3">
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <p class="q-meta">Question 148 (2023)</p>
+        <div class="poll-stem">A 55-year-old male with a 10-pack-year history of smoking as a young adult sees you for follow-up after a recent hospitalization for community-acquired right lower lobe pneumonia. His symptoms resolved after standard antibiotic treatment. Which one of the following should you recommend regarding follow-up radiography?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_148_2023_3" data-choice="A">A) No follow-up chest imaging</button><button class="poll-opt" data-poll="q_148_2023_3" data-choice="B">B) A standard chest radiograph 2 weeks after treatment</button><button class="poll-opt" data-poll="q_148_2023_3" data-choice="C">C) A standard chest radiograph 6 weeks after treatment</button><button class="poll-opt" data-poll="q_148_2023_3" data-choice="D">D) Standard chest CT 6 weeks after treatment</button><button class="poll-opt" data-poll="q_148_2023_3" data-choice="E">E) Low-dose chest CT 12 weeks after treatment and again in 1 year</button></div>
+        <button class="poll-reset" data-poll="q_148_2023_3" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <h3>Results — Question 148 (2023)</h3>
+        <div class="poll-results" id="results-q_148_2023_3">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <h3>Answer: A — Question 148 (2023)</h3>
+        <div class="critique-body">For most patients with community-acquired pneumonia and resolution in 7 days, a follow-up chest radiograph is not recommended. Exceptions would include suspicion of a possible mass or lymphadenopathy. Although this patient is over 50 years of age, he does not meet the criteria for low-dose CT screening for lung cancer, which is recommended in adults ages 50-80 who have a &gt;20-pack-year smoking history, and who currently smoke or have quit within the past 15 years. 57 Ref: Metlay JP, Waterer GW, Long AC, et al. Diagnosis and treatment of adults with community-acquired pneumonia. An official clinical practice guideline of the American Thoracic Society and Infectious Diseases Society of America. Am J Respir Crit Care Med. 2019;200(7):e45-e67. 2) AMDA - The Society for Post-Acute and Long-Term Care Medicine. Don’t order routine follow-up chest imaging for post-acute and long-term care residents with CAP whose symptoms have resolved within five to seven days. ABIM Foundation Choosing Wisely campaign, 2020.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_171_2024_4">
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <p class="q-meta">Question 171 (2024)</p>
+        <div class="poll-stem">A generally healthy 13-month-old female is brought to the urgent care clinic by her parent because of concerns that she might have pneumonia. The parent says that the toddler has been coughing for the last week and has low energy and decreased appetite. She does not have a history of wheezing or breathing problems. Which one of the following history or physical examination findings, if present, would be the most concerning for community-acquired pneumonia as a cause of this toddler’s cough?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_171_2024_4" data-choice="A">A) A 3-day history of fevers up to 100.2 °F</button><button class="poll-opt" data-poll="q_171_2024_4" data-choice="B">B) Cloudy nasal drainage</button><button class="poll-opt" data-poll="q_171_2024_4" data-choice="C">C) Coughing that wakes the child</button><button class="poll-opt" data-poll="q_171_2024_4" data-choice="D">D) Grunting and retractions</button><button class="poll-opt" data-poll="q_171_2024_4" data-choice="E">E) Recent pneumococcal vaccination</button></div>
+        <button class="poll-reset" data-poll="q_171_2024_4" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <h3>Results — Question 171 (2024)</h3>
+        <div class="poll-results" id="results-q_171_2024_4">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <h3>Answer: D — Question 171 (2024)</h3>
+        <div class="critique-body">An abnormal chest examination, including grunting and retractions, is one of the physical examination findings most predictive of community-acquired pneumonia in pediatric patients and one of the criteria used in the Pediatric Acute Febrile Respiratory Illness rule. Nasal drainage and the absence of significant fever are negative predictors in this rule. Cough that disrupts sleep is a common reason for children to be seen by a physician for medical care, but it is not necessarily suggestive of pneumonia. Pneumococcal vaccination decreases a child’s risk for significant bacterial community- acquired pneumonia.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_88_2025_5">
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <p class="q-meta">Question 88 (2025)</p>
+        <div class="poll-stem">A 10-month-old male is brought to your office with a 1-day history of fussiness and tugging at his ear. The child's mother says that he has had a fever this morning. He is up to date on all immunizations, and he does not have a history of previous ear infections or recent illness. He has a history of hives after being given amoxicillin. On examination the child has a temperature of 39.2 °C (102.6 °F) but seems to be only slightly uncomfortable. When you examine his ears you note moderate bulging of the left tympanic membrane and normal findings in the right ear. All other findings are normal. ...</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_88_2025_5" data-choice="A">A) Amoxicillin</button><button class="poll-opt" data-poll="q_88_2025_5" data-choice="B">B) Amoxicillin/clavulanate (Augmentin)</button><button class="poll-opt" data-poll="q_88_2025_5" data-choice="C">C) Cefdinir</button><button class="poll-opt" data-poll="q_88_2025_5" data-choice="D">D) Ciprofloxacin (Cipro)</button><button class="poll-opt" data-poll="q_88_2025_5" data-choice="E">E) Sulfamethoxazole/trimethoprim</button></div>
+        <button class="poll-reset" data-poll="q_88_2025_5" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <h3>Results — Question 88 (2025)</h3>
+        <div class="poll-results" id="results-q_88_2025_5">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <h3>Answer: C — Question 88 (2025)</h3>
+        <div class="critique-body">The American Academy of Pediatrics recommends antibiotic therapy for children ≥6 months of age with severe signs and symptoms of acute otitis media (AOM), including moderate or severe otalgia, otalgia lasting longer than 48 hours, or a temperature ≥39 °C (102 °F), whether the AOM is unilateral or bilateral (SOR B). Children younger than 24 months without severe symptoms should receive antibiotic therapy for bilateral AOM, whereas older children or those with unilateral AOM can be offered the option of observation and follow-up. The usual treatment for AOM is amoxicillin, but an antibiotic with additional β-lactamase coverage, such as amoxicillin/clavulanate, should be given if the child has received amoxicillin within the past 30 days, has concurrent purulent conjunctivitis, or has a history of AOM unresponsive to amoxicillin (SOR C). Penicillin-allergic patients should be treated with an alternative antibiotic such as cefdinir, cefuroxime, cefpodoxime, or ceftriaxone. Ciprofloxacin should not be used in children. Sulfamethoxazole/trimethoprim is no longer effective for the treatment of acute otitis media due to evidence of Streptococcus pneumoniae resistance.</div>
+    </section>
+
+    <section class="poll-slide" data-poll-id="q_146_2025_6">
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <p class="q-meta">Question 146 (2025)</p>
+        <div class="poll-stem">A 3-year-old female is brought to your office by her parents with fever, cough, and decreased appetite. On examination you hear crackles in the left upper lobe and a chest x-ray confirms a left upper lobe consolidation. She appears well hydrated and her vital signs are normal. On examination she is drinking water and interacting normally. Which one of the following would be the most appropriate antibiotic for this patient's condition?</div>
+        <div class="poll-options"><button class="poll-opt" data-poll="q_146_2025_6" data-choice="A">A) Amoxicillin</button><button class="poll-opt" data-poll="q_146_2025_6" data-choice="B">B) Azithromycin (Zithromax)</button><button class="poll-opt" data-poll="q_146_2025_6" data-choice="C">C) Cefdinir</button><button class="poll-opt" data-poll="q_146_2025_6" data-choice="D">D) Doxycycline</button><button class="poll-opt" data-poll="q_146_2025_6" data-choice="E">E) Sulfamethoxazole/trimethoprim</button></div>
+        <button class="poll-reset" data-poll="q_146_2025_6" style="display:none;">Reset</button>
+    </section>
+
+    <section class="results-slide">
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <h3>Results — Question 146 (2025)</h3>
+        <div class="poll-results" id="results-q_146_2025_6">Votes appear here in real-time.</div>
+    </section>
+
+    <section>
+        <p class="grey-label">Pulmonology | Pneumonia</p>
+        <h3>Answer: A — Question 146 (2025)</h3>
+        <div class="critique-body">The majority of cases of community-acquired pneumonia (CAP) in children are caused by viruses. If bacterial pneumonia were suspected, then antibiotics would be warranted. Given this patient's focal lung examination and x-ray findings, the most likely causative bacteria would be a typical pathogen such as Streptococcus pneumoniae or Haemophilus influenzae. The first-line choice of antibiotics would be amoxicillin for 7 days. Azithromycin is appropriate for treatment of atypical pneumonia. While cefdinir does treat the typical pathogens seen in CAP, it would not be recommended for first-line treatment due to its broader spectrum. Doxycycline is used to treat CAP but should not be used in a 3-year-old. Sulfamethoxazole/trimethoprim is not indicated for CAP treatment.</div>
+    </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({ hash: true, transition: 'slide' });
+        const wsUrl = (location.protocol === 'https:' ? 'wss:' : 'ws:') + '//' + location.host + '/ws';
+        let ws = null;
+        const pollResults = {};
+        let role = location.search.includes('audience') ? 'audience' : 'presenter';
+        document.getElementById('join-url').textContent = location.href.split('?')[0] + '?audience';
+        function connect() {
+            ws = new WebSocket(wsUrl);
+            ws.onopen = () => ws.send(JSON.stringify({ role, poll: null }));
+            ws.onmessage = (e) => {
+                const d = JSON.parse(e.data);
+                if (d.type === 'results') {
+                    pollResults[d.poll] = d.votes || {};
+                    showResults(d.poll, pollResults[d.poll]);
+                } else if (d.type === 'reset') {
+                    pollResults[d.poll] = {};
+                    const res = document.getElementById('results-' + d.poll);
+                    if (res) res.innerHTML = 'Votes appear here in real-time.';
+                }
+            };
+            ws.onclose = () => setTimeout(connect, 2000);
+        }
+        connect();
+
+        if (role === 'audience') {
+            document.querySelectorAll('.poll-reset').forEach(b => b.style.display = 'none');
+        } else {
+            document.querySelectorAll('.poll-reset').forEach(b => {
+                b.style.display = 'inline-block';
+                b.onclick = () => {
+                    const pid = b.dataset.poll;
+                    if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'reset', poll: pid }));
+                };
+            });
+        }
+
+        document.querySelectorAll('.poll-opt').forEach(btn => {
+            btn.onclick = () => {
+                if (role !== 'audience') return;
+                const pid = btn.dataset.poll;
+                const choice = btn.dataset.choice;
+                if (ws && ws.readyState === 1) ws.send(JSON.stringify({ type: 'vote', poll: pid, choice }));
+                btn.classList.add('voted');
+            };
+        });
+
+        function showResults(pollId, votes) {
+            const el = document.getElementById('results-' + pollId);
+            if (!el) return;
+            const max = Math.max(...Object.values(votes), 1);
+            el.innerHTML = '<div class="bar-chart">' + Object.entries(votes).sort((a,b)=>a[0].localeCompare(b[0])).map(([k,v]) =>
+                '<div class="bar-row"><span class="bar-label">'+k+')</span><div class="bar-fill" style="width:'+(v/max*100)+'%"></div><span>'+v+'</span></div>'
+            ).join('') + '</div>';
+        }
+
+        Reveal.on('slidechanged', e => {
+            const resDiv = e.currentSlide?.querySelector?.('.poll-results[id^="results-"]');
+            if (resDiv) {
+                const pollId = resDiv.id.replace('results-', '');
+                if (pollResults[pollId] && Object.keys(pollResults[pollId]).length) {
+                    showResults(pollId, pollResults[pollId]);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
