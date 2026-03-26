@@ -306,13 +306,25 @@
         }
         fillSlideQrs(voteUrl);
       }
-      fetch('/api/state')
-        .then(function (r) { return r.json(); })
+      /* Render free tier can take 30–60s to wake; /api/state may hang. Show this page’s /vote URL now. */
+      apply(window.location.origin);
+
+      var ctrl = new AbortController();
+      var tid = setTimeout(function () {
+        ctrl.abort();
+      }, 12000);
+      fetch('/api/state', { signal: ctrl.signal })
+        .then(function (r) {
+          clearTimeout(tid);
+          if (!r.ok) throw new Error('bad state');
+          return r.json();
+        })
         .then(function (st) {
           var base = (st.public_url && st.public_url.replace(/\/$/, '')) || window.location.origin;
           apply(base);
         })
         .catch(function () {
+          clearTimeout(tid);
           apply(window.location.origin);
         });
     }

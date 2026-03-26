@@ -470,12 +470,22 @@
       var voteUrl = (base || window.location.origin).replace(/\/$/, '') + '/vote';
       setupQr(voteUrl);
     }
-    fetch('/api/state')
-      .then(function (r) { return r.json(); })
+    apply(window.location.origin);
+    var ctrl = new AbortController();
+    var tid = setTimeout(function () { ctrl.abort(); }, 12000);
+    fetch('/api/state', { signal: ctrl.signal })
+      .then(function (r) {
+        clearTimeout(tid);
+        if (!r.ok) throw new Error('state');
+        return r.json();
+      })
       .then(function (st) {
         apply((st.public_url && st.public_url.replace(/\/$/, '')) || window.location.origin);
       })
-      .catch(function () { apply(window.location.origin); });
+      .catch(function () {
+        clearTimeout(tid);
+        apply(window.location.origin);
+      });
   }
 
   function connectWs() {
