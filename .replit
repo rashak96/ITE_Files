@@ -1,17 +1,18 @@
-# Replit: https://replit.com — see LINK_WITHOUT_YOUR_PC.txt
 entrypoint = "main.py"
 modules = ["python-3.11"]
 
 [nix]
 channel = "stable-23_11"
 
-run = ["bash", "-lc", "pip install -q -r requirements_web.txt && python build_live.py && exec uvicorn main:app --host 0.0.0.0 --port 8080"]
-
-[deployment]
-build = ["bash", "-lc", "pip install -q -r requirements_web.txt && python build_live.py"]
-run = ["bash", "-lc", "exec uvicorn main:app --host 0.0.0.0 --port 8080"]
-deploymentTarget = "cloudrun"
+# Simple string run — works more reliably than bash -lc arrays on some Replit versions
+run = "bash replit.sh"
 
 [[ports]]
 localPort = 8080
 externalPort = 80
+
+# If you use Replit "Deploy" later:
+[deployment]
+build = "pip install -q -r requirements_web.txt && python build_live.py"
+run = "python -m uvicorn main:app --host 0.0.0.0 --port 8080"
+deploymentTarget = "cloudrun"
