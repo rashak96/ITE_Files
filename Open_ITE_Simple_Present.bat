@@ -11,6 +11,6 @@ if errorlevel 1 (
 
 echo Simple presenter: big buttons, polls built into the flow (same /vote for phones).
 echo.
-python run_live.py --simple
+python run_live.py
 
 if errorlevel 1 pause

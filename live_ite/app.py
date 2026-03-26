@@ -9,7 +9,7 @@ import os
 from pathlib import Path
 
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
-from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
 
 STATIC = Path(__file__).parent / "static"
 
@@ -25,7 +25,7 @@ def _missing_static(name: str) -> HTMLResponse:
             f"<h1>Missing file: live_ite/static/{name}</h1>"
             "<p>The server is running, but this file was not deployed. "
             "Push the whole <code>live_ite/static/</code> folder to GitHub "
-            "(presenter.html, vote.html, data.json) and redeploy on Render.</p>"
+            "(simple.html, vote.html, data.json) and redeploy on Render.</p>"
         ),
         status_code=503,
     )
@@ -33,7 +33,7 @@ def _missing_static(name: str) -> HTMLResponse:
 
 @app.get("/health")
 async def health():
-    return {"ok": True, "static_dir": str(STATIC), "presenter": (STATIC / "presenter.html").is_file()}
+    return {"ok": True, "static_dir": str(STATIC), "presenter": (STATIC / "simple.html").is_file()}
 votes: dict[str, dict[str, int]] = {}
 active_poll: str | None = None
 voting_open: bool = False
@@ -54,10 +54,11 @@ async def broadcast(payload: dict) -> None:
 
 
 @app.get("/")
-async def presenter():
-    p = STATIC / "presenter.html"
+async def presenter_home():
+    """Main presenter (one place to open). Phones use /vote on the same host."""
+    p = STATIC / "simple.html"
     if not p.is_file():
-        return _missing_static("presenter.html")
+        return _missing_static("simple.html")
     return FileResponse(p, headers=_NO_CACHE)
 
 
@@ -70,11 +71,17 @@ async def vote_page():
 
 
 @app.get("/present")
-async def present_simple():
-    """Button-driven presenter (no slide deck); same /vote + WebSocket as /."""
-    p = STATIC / "simple.html"
+async def present_legacy():
+    """Old path; same app as /."""
+    return RedirectResponse(url="/", status_code=307)
+
+
+@app.get("/slides")
+async def presenter_slides():
+    """Optional Reveal.js deck (only if you need slide mode)."""
+    p = STATIC / "presenter.html"
     if not p.is_file():
-        return _missing_static("simple.html")
+        return _missing_static("presenter.html")
     return FileResponse(p, headers=_NO_CACHE)
 
 

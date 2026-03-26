@@ -5,5 +5,5 @@ where python >nul 2>nul || (echo Install Python and add it to PATH. & pause & ex
 
 echo One step: server + simple presenter in browser (phones use /vote from the URL it prints).
 echo.
-python run_live.py --simple
+python run_live.py
 if errorlevel 1 pause

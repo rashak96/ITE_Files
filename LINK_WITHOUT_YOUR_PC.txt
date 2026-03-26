@@ -17,8 +17,8 @@ Pick ONE of these:
   3. Click Run. Wait for install + build.
   4. Use the Webview URL Replit shows (or Deploy from Replit for a stable link;
      free tier may sleep when idle, like Render).
-  5. Optional: in Replit "Secrets", set PUBLIC_BASE_URL to that same https URL
-     (no trailing slash) so QR/links on /present point to the right host.
+  5. Open YOUR-SITE/ for presenter and YOUR-SITE/vote for phones (see USE_THIS_URL.txt).
+     Optional Secret PUBLIC_BASE_URL = that https origin (no trail slash) for QR links.
 
 --------------------------------------------------------------------------------
   B) RENDER — you already have render.yaml (uses GitHub)

@@ -1,0 +1,16 @@
+================================================================================
+  TWO LINKS (ONE WEBSITE — same domain on Render / tunnel / Replit)
+================================================================================
+
+  YOU (laptop / projector):     https://YOUR-SITE/
+  AUDIENCE (phones):              https://YOUR-SITE/vote
+
+Example on Render:
+  Presenter:  https://ite-live-quiz.onrender.com/
+  Phones:     https://ite-live-quiz.onrender.com/vote
+
+Old bookmark /present now redirects to /  (same screen).
+
+Slide deck mode (optional):     https://YOUR-SITE/slides
+
+================================================================================

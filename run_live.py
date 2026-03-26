@@ -2,17 +2,17 @@
 One-command live session: build data (optional filters), start server, public HTTPS URL — no GitHub, no Render.
 
 With **cloudflared** installed, this prints a **https://….trycloudflare.com** link anyone on the internet can use
-for presenter + /vote + /present. No accounts, no deploy step. This PC must stay on while you teach.
+for presenter at **/** and phones at **/vote** on the same host. No accounts, no deploy step.
+This PC must stay on while you teach.
 
 Install cloudflared: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/
 
 Usage:
   python run_live.py
-  Double-click START_ITE.bat  →  same as: python run_live.py --simple
+  Double-click START_ITE.bat
   python run_live.py --topic Cardiology --limit 10
   python run_live.py --port 8800 --lan-only
   python run_live.py --skip-build --lan-only   # fastest local start (no rebuild, no tunnel)
-  python run_live.py --simple                  # open /present (simple flow) instead of slide deck
 """
 
 from __future__ import annotations
@@ -206,11 +206,6 @@ def main() -> None:
         action="store_true",
         help="Never run build_live.py (use existing live_ite/static/data.json)",
     )
-    ap.add_argument(
-        "--simple",
-        action="store_true",
-        help="Open /present (button-driven presenter) in browser instead of the slide deck",
-    )
     args = ap.parse_args()
 
     data_json = ROOT / "live_ite" / "static" / "data.json"
@@ -295,45 +290,37 @@ def main() -> None:
         print("LAN-only mode (no internet-wide URL).")
 
     base = os.environ.get("PUBLIC_BASE_URL", public).rstrip("/")
-    deck_url = base + "/"
-    simple_url = base + "/present"
+    presenter_url = base + "/"
     vote_url = base + "/vote"
-    local_deck = f"http://127.0.0.1:{port}/"
-    local_simple = f"http://127.0.0.1:{port}/present"
+    local_presenter = f"http://127.0.0.1:{port}/"
 
     print()
     if tunnel_base is not None:
-        print("  " + "=" * 62)
-        print("  PUBLIC HTTPS (no GitHub, no Render, no signup): use these links")
-        print("  " + "=" * 62)
+        print("  " + "=" * 60)
+        print("  SHARE THESE (same host — presenter is /, phones add /vote)")
+        print("  " + "=" * 60)
     print()
-    print("  Presenter — slide deck:")
-    print("  ", deck_url)
-    print("  Presenter — simple controls:")
-    print("  ", simple_url)
+    print("  YOU (presenter / big screen):", presenter_url)
+    print("  PHONES (voting):             ", vote_url)
     print()
-    print("  Audience phones (/vote):")
-    print("  ", vote_url)
-    print()
+    print("  Optional slide deck (Reveal):", base + "/slides")
     if tunnel_base is None:
-        print("  Wi‑Fi / LAN only right now. For a public https URL from this folder only:")
-        print("  → Install cloudflared (see docstring link), then run again WITHOUT --lan-only.")
+        print("  (LAN/Wi‑Fi only. For public https: install cloudflared, run without --lan-only.)")
     else:
-        print("  Keep THIS window open while presenting. URL changes next time you restart")
-        print("  (copy the new https://….trycloudflare.com link from the console).")
+        print("  Keep this window open. New trycloudflare URL each time you restart.")
     print()
-    print("  Same-machine: deck", local_deck, "| simple", local_simple)
+    print("  This computer only:", local_presenter)
     print("Stop: Ctrl+C")
 
     if not args.no_browser:
-        open_local = local_simple if args.simple else local_deck
-        open_remote = simple_url if args.simple else deck_url
+        open_here = local_presenter
+        open_there = presenter_url
         if args.open_local and tunnel_base is not None:
-            webbrowser.open(open_local)
+            webbrowser.open(open_here)
         elif tunnel_base is not None:
-            webbrowser.open(open_remote)
+            webbrowser.open(open_there)
         else:
-            webbrowser.open(open_local)
+            webbrowser.open(open_here)
 
     try:
         while True:
