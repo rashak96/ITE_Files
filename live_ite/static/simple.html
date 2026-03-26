@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ITE Live — Present</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    :root {
+      --ink: #37474f;
+      --muted: #78909c;
+      --accent: #1565c0;
+      --ok: #2e7d32;
+      --bar: #78909c;
+      --bar-ok: #2e7d32;
+      --bg: #f5f5f5;
+      --card: #fff;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+    header {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.5rem 1rem;
+      background: var(--ink);
+      color: #fff;
+      font-size: 0.9rem;
+    }
+    header .tag { opacity: 0.85; font-weight: 600; }
+    header .phase {
+      background: rgba(255,255,255,.15);
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    main {
+      flex: 1;
+      min-height: 0;
+      overflow: auto;
+      padding: 1rem 1.25rem 5rem;
+      max-width: 42rem;
+      margin: 0 auto;
+      width: 100%;
+    }
+    h1.title { font-size: 1.05rem; margin: 0 0 0.35rem; color: var(--ink); }
+    .meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.75rem; }
+    .stem {
+      font-size: 0.98rem;
+      line-height: 1.45;
+      margin-bottom: 1rem;
+      white-space: pre-wrap;
+    }
+    .opts { margin: 0; padding: 0; list-style: none; }
+    .opts li {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 0.92rem;
+      line-height: 1.35;
+    }
+    .opts .L { font-weight: 700; color: var(--ink); margin-right: 0.35rem; }
+    .crit {
+      font-size: 0.92rem;
+      line-height: 1.45;
+      white-space: pre-wrap;
+      color: #333;
+    }
+    .bars { margin-top: 0.5rem; }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0.4rem 0;
+      font-size: 0.88rem;
+    }
+    .bar-row .lab { width: 1.25rem; font-weight: 700; }
+    .bar-row .track {
+      flex: 1;
+      height: 14px;
+      background: #e0e0e0;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .bar-row .fill {
+      height: 100%;
+      width: 0%;
+      background: var(--bar);
+      transition: width 0.3s ease;
+    }
+    .bar-row.correct .fill { background: var(--bar-ok); }
+    .bar-row .num { min-width: 3.5rem; text-align: right; color: #555; font-size: 0.82rem; }
+    .live-vote-wrap {
+      margin-top: 1rem;
+      padding: 0.75rem 0.85rem;
+      background: #fff;
+      border: 1px solid #b0bec5;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .live-vote-wrap .live-label {
+      margin: 0 0 0.4rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ok);
+    }
+    .live-vote-wrap .live-total {
+      margin: 0.35rem 0 0;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .actions {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0.6rem 1rem;
+      background: rgba(255,255,255,.97);
+      border-top: 1px solid #ddd;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      justify-content: center;
+      align-items: center;
+      z-index: 20;
+    }
+    .actions button {
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.55rem 0.9rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background: var(--accent);
+      color: #fff;
+    }
+    .actions button.secondary { background: #607d8b; }
+    .actions button.success { background: var(--ok); }
+    .actions button:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+    .actions .hint { width: 100%; text-align: center; font-size: 0.72rem; color: var(--muted); margin: 0; }
+    .qr-foot {
+      position: fixed;
+      right: 10px;
+      bottom: 4.25rem;
+      z-index: 15;
+      line-height: 0;
+      opacity: 0.92;
+    }
+    .qr-foot .cap { font-size: 10px; color: var(--muted); text-align: center; margin: 2px 0 0; line-height: 1.2; }
+    #load-err { color: #b71c1c; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="tag" id="hdr-progress">Loading…</span>
+    <span class="phase" id="hdr-phase">—</span>
+  </header>
+  <main id="main">
+    <p id="load-err" style="display:none"></p>
+    <div id="panel" style="display:none">
+      <h1 class="title" id="q-title"></h1>
+      <div class="meta" id="q-meta"></div>
+      <div id="body-question">
+        <div class="stem" id="q-stem"></div>
+        <ul class="opts" id="q-opts"></ul>
+        <div id="live-vote-wrap" class="live-vote-wrap" style="display:none">
+          <p class="live-label">Live votes</p>
+          <div class="bars" id="q-live-bars"></div>
+          <p class="live-total" id="live-total"></p>
+        </div>
+      </div>
+      <div id="body-results" style="display:none">
+        <div class="bars" id="q-bars"></div>
+      </div>
+      <div id="body-critique" style="display:none">
+        <p class="crit" id="q-crit"></p>
+      </div>
+    </div>
+  </main>
+  <div class="qr-foot" id="qr-foot" aria-hidden="true">
+    <div id="qr-host"></div>
+    <p class="cap">Vote</p>
+  </div>
+  <div class="actions" id="actions" style="display:none">
+    <button type="button" id="btn-open" class="success">Open voting</button>
+    <button type="button" id="btn-close" class="secondary">Close voting · show results</button>
+    <button type="button" id="btn-crit">Show critique</button>
+    <button type="button" id="btn-next">Next question</button>
+    <p class="hint">Keyboard: <strong>1</strong> open vote · <strong>2</strong> results · <strong>3</strong> critique · <strong>N</strong> next · <strong>P</strong> prev</p>
+  </div>
+  <script>
+(function () {
+  var deck = null;
+  var qs = [];
+  var idx = 0;
+  var phase = 'question';
+  var ws = null;
+  var voteCounts = {};
+  var voteLaunched = false;
+
+  function wsUrl() {
+    var p = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    return p + '//' + window.location.host + '/ws';
+  }
+
+  function q() { return qs[idx]; }
+
+  function questionPayload(qu) {
+    if (!qu) return null;
+    var letters = qu.option_letters || Object.keys(qu.options || {}).sort();
+    return {
+      poll_id: qu.poll_id,
+      stem: qu.stem,
+      options: qu.options,
+      option_letters: letters,
+      year: qu.year,
+      number: qu.number,
+    };
+  }
+
+  function sendActive(pollId, voting, question) {
+    if (ws && ws.readyState === WebSocket.OPEN) {
+      ws.send(JSON.stringify({
+        type: 'active_poll',
+        poll_id: pollId,
+        voting: voting,
+        question: question || null,
+      }));
+    }
+  }
+
+  function syncPresenterState() {
+    var qu = q();
+    if (!qu) return;
+    if (phase === 'question') {
+      if (voteLaunched) sendActive(qu.poll_id, true, questionPayload(qu));
+      else sendActive(null, false, null);
+    } else if (phase === 'results') {
+      sendActive(qu.poll_id, false, null);
+    } else {
+      sendActive(null, false, null);
+    }
+  }
+
+  function applyResults(pid, votes) {
+    voteCounts[pid] = votes || {};
+    var qu = q();
+    if (!qu || qu.poll_id !== pid) return;
+    if (phase === 'results') renderBars();
+    if (phase === 'question' && voteLaunched) renderLiveBars();
+  }
+
+  function sumVotes(v) {
+    var t = 0;
+    Object.keys(v || {}).forEach(function (k) { t += v[k]; });
+    return t;
+  }
+
+  function fillBarHost(hostId, highlightCorrect) {
+    var qu = q();
+    if (!qu) return;
+    var pid = qu.poll_id;
+    var letters = qu.option_letters || Object.keys(qu.options || {}).sort();
+    var v = voteCounts[pid] || {};
+    var total = sumVotes(v);
+    var denom = total > 0 ? total : 1;
+    var host = document.getElementById(hostId);
+    if (!host) return;
+    host.innerHTML = '';
+    letters.forEach(function (L) {
+      var n = v[L] || 0;
+      var pct = Math.round(100 * n / denom);
+      var row = document.createElement('div');
+      var cor = highlightCorrect && L === qu.answer;
+      row.className = 'bar-row' + (cor ? ' correct' : '');
+      row.innerHTML =
+        '<span class="lab">' + L + '</span>' +
+        '<div class="track"><div class="fill" style="width:' + pct + '%"></div></div>' +
+        '<span class="num">' + n + ' (' + pct + '%)</span>';
+      host.appendChild(row);
+    });
+    var lt = document.getElementById('live-total');
+    if (lt && hostId === 'q-live-bars') {
+      lt.textContent = total === 0 ? 'No votes yet' : 'Total votes: ' + total;
+    }
+  }
+
+  function renderLiveBars() {
+    fillBarHost('q-live-bars', false);
+  }
+
+  function renderBars() {
+    fillBarHost('q-bars', true);
+  }
+
+  function setPhase(p) {
+    phase = p;
+    document.getElementById('hdr-phase').textContent =
+      p === 'question' ? 'Question' : p === 'results' ? 'Results' : 'Critique';
+    document.getElementById('body-question').style.display = p === 'question' ? 'block' : 'none';
+    document.getElementById('body-results').style.display = p === 'results' ? 'block' : 'none';
+    document.getElementById('body-critique').style.display = p === 'critique' ? 'block' : 'none';
+    document.getElementById('btn-open').disabled = p !== 'question';
+    document.getElementById('btn-close').disabled = p !== 'question';
+    document.getElementById('btn-crit').disabled = p !== 'results';
+    document.getElementById('btn-next').disabled = p !== 'critique';
+    var live = document.getElementById('live-vote-wrap');
+    if (live) live.style.display = p === 'question' && voteLaunched ? 'block' : 'none';
+    if (p === 'results') renderBars();
+    if (p === 'question' && voteLaunched) renderLiveBars();
+    syncPresenterState();
+  }
+
+  function showQuestion() {
+    var qu = q();
+    if (!qu) return;
+    voteLaunched = false;
+    document.getElementById('q-title').textContent = 'Question ' + qu.number + ' (' + qu.year + ')';
+    document.getElementById('q-meta').textContent =
+      (qu.topic || '') + (qu.subtopic ? ' · ' + qu.subtopic : '');
+    document.getElementById('q-stem').textContent = qu.stem || '';
+    var ul = document.getElementById('q-opts');
+    ul.innerHTML = '';
+    var letters = qu.option_letters || Object.keys(qu.options || {}).sort();
+    letters.forEach(function (L) {
+      var li = document.createElement('li');
+      var lab = document.createElement('span');
+      lab.className = 'L';
+      lab.textContent = L + '.';
+      li.appendChild(lab);
+      li.appendChild(document.createTextNode(qu.options[L] || ''));
+      ul.appendChild(li);
+    });
+    document.getElementById('q-crit').textContent = qu.critique || '(No critique)';
+    setPhase('question');
+  }
+
+  function updateHdr() {
+    document.getElementById('hdr-progress').textContent =
+      qs.length ? 'Question ' + (idx + 1) + ' / ' + qs.length : 'No questions';
+  }
+
+  function goNextQuestion() {
+    if (idx >= qs.length - 1) return;
+    idx++;
+    updateHdr();
+    showQuestion();
+    sendActive(null, false, null);
+  }
+
+  function goPrevQuestion() {
+    if (idx <= 0) return;
+    idx--;
+    updateHdr();
+    showQuestion();
+    sendActive(null, false, null);
+  }
+
+  function setupQr(voteUrl) {
+    var el = document.getElementById('qr-host');
+    if (!el || typeof QRCode === 'undefined') return;
+    el.innerHTML = '';
+    try {
+      new QRCode(el, { text: voteUrl, width: 76, height: 76, correctLevel: QRCode.CorrectLevel.L });
+    } catch (e) {}
+  }
+
+  function setupVoteUrl() {
+    function apply(base) {
+      var voteUrl = (base || window.location.origin).replace(/\/$/, '') + '/vote';
+      setupQr(voteUrl);
+    }
+    fetch('/api/state')
+      .then(function (r) { return r.json(); })
+      .then(function (st) {
+        apply((st.public_url && st.public_url.replace(/\/$/, '')) || window.location.origin);
+      })
+      .catch(function () { apply(window.location.origin); });
+  }
+
+  function connectWs() {
+    ws = new WebSocket(wsUrl());
+    ws.onopen = function () { syncPresenterState(); };
+    ws.onmessage = function (ev) {
+      var msg = JSON.parse(ev.data);
+      if (msg.type === 'sync') {
+        Object.keys(msg.votes || {}).forEach(function (pid) {
+          voteCounts[pid] = msg.votes[pid];
+        });
+        if (phase === 'results') renderBars();
+        if (phase === 'question' && voteLaunched && q()) renderLiveBars();
+      } else if (msg.type === 'results') {
+        applyResults(msg.poll_id, msg.votes);
+      } else if (msg.type === 'reset_poll') {
+        voteCounts[msg.poll_id] = {};
+        if (phase === 'results' && q() && q().poll_id === msg.poll_id) renderBars();
+        if (phase === 'question' && voteLaunched && q() && q().poll_id === msg.poll_id) renderLiveBars();
+      }
+    };
+    ws.onclose = function () { setTimeout(connectWs, 1500); };
+  }
+
+  document.getElementById('btn-open').addEventListener('click', function () {
+    var qu = q();
+    if (!qu || phase !== 'question') return;
+    voteLaunched = true;
+    var live = document.getElementById('live-vote-wrap');
+    if (live) live.style.display = 'block';
+    renderLiveBars();
+    sendActive(qu.poll_id, true, questionPayload(qu));
+  });
+
+  document.getElementById('btn-close').addEventListener('click', function () {
+    var qu = q();
+    if (!qu || phase !== 'question') return;
+    setPhase('results');
+  });
+
+  document.getElementById('btn-crit').addEventListener('click', function () {
+    if (phase !== 'results') return;
+    setPhase('critique');
+  });
+
+  document.getElementById('btn-next').addEventListener('click', function () {
+    if (phase !== 'critique') return;
+    goNextQuestion();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.target.matches('input, textarea')) return;
+    var k = e.key;
+    if (k === '1') document.getElementById('btn-open').click();
+    else if (k === '2') document.getElementById('btn-close').click();
+    else if (k === '3') document.getElementById('btn-crit').click();
+    else if (k === 'n' || k === 'N') document.getElementById('btn-next').click();
+    else if (k === 'p' || k === 'P') goPrevQuestion();
+  });
+
+  fetch('/data.json')
+    .then(function (r) {
+      if (!r.ok) throw new Error('data.json');
+      return r.json();
+    })
+    .then(function (d) {
+      deck = d;
+      qs = d.questions || [];
+      if (!qs.length) throw new Error('empty');
+      document.getElementById('load-err').style.display = 'none';
+      document.getElementById('panel').style.display = 'block';
+      document.getElementById('actions').style.display = 'flex';
+      idx = 0;
+      updateHdr();
+      showQuestion();
+      setupVoteUrl();
+      connectWs();
+    })
+    .catch(function () {
+      var el = document.getElementById('load-err');
+      el.style.display = 'block';
+      el.textContent = 'Could not load questions. Run: python build_live.py';
+    });
+})();
+  </script>
+</body>
+</html>

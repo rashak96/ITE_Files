@@ -106,6 +106,12 @@
     .reveal .controls { color: #333; transform: scale(0.82); transform-origin: bottom right; }
     .reveal .progress { display: none !important; }
     .reveal .slide-number { font-size: 12px; }
+    /* Reveal scales the deck to the window; after dynamic HTML + fonts, force a relayout or tall slides clip */
+    .reveal .slides > section {
+      overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+    }
   </style>
 </head>
 <body>
@@ -222,7 +228,7 @@
       html += '<section class="intro">';
       html += '<h1>' + esc(payload.title || 'ITE Live') + '</h1>';
       html += '<p class="slide-meta">Audience joins at:</p>';
-      html += '<p class="intro-links" id="url-line-wrap"><a id="url-line" href="#" target="_blank" rel="noopener"></a></p>';
+      html += '<p class="intro-links" id="url-line-wrap"><a id="url-line" href="#" target="_blank" rel="noopener">Loading join link…</a></p>';
       html += '<p class="vote-hint">Navigate: <strong>← →</strong> · click left/right edge of slide · <strong>F</strong> fullscreen</p>';
       html += '<div class="slide-qr-host" aria-hidden="true"></div>';
       html += '</section>';
@@ -276,6 +282,16 @@
             height: QR_SIZE,
             correctLevel: level,
           });
+        } catch (e) {}
+      });
+      relayoutReveal();
+    }
+
+    function relayoutReveal() {
+      if (typeof Reveal === 'undefined' || typeof Reveal.layout !== 'function') return;
+      requestAnimationFrame(function () {
+        try {
+          Reveal.layout();
         } catch (e) {}
       });
     }
@@ -333,18 +349,39 @@
           margin: 0.03,
           keyboard: true,
           progress: false,
+          minScale: 0.12,
+          maxScale: 1.6,
         });
         setupVoteLink();
-        setTimeout(setupVoteLink, 3500);
-        setTimeout(setupVoteLink, 9000);
+        setTimeout(function () {
+          setupVoteLink();
+          relayoutReveal();
+        }, 3500);
+        setTimeout(function () {
+          setupVoteLink();
+          relayoutReveal();
+        }, 9000);
         setupClickNav();
         connectWs();
         Reveal.on('slidechanged', function () {
           pushSlideStateToServer();
+          relayoutReveal();
         });
         Reveal.on('ready', function () {
+          relayoutReveal();
           pushSlideStateToServer();
         });
+        window.addEventListener('resize', function () {
+          relayoutReveal();
+        });
+        window.addEventListener('load', function () {
+          relayoutReveal();
+        });
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(function () {
+            relayoutReveal();
+          });
+        }
       })
       .catch(() => {
         document.getElementById('slides-root').innerHTML =

@@ -66,6 +66,15 @@ async def vote_page():
     return FileResponse(p)
 
 
+@app.get("/present")
+async def present_simple():
+    """Button-driven presenter (no slide deck); same /vote + WebSocket as /."""
+    p = STATIC / "simple.html"
+    if not p.is_file():
+        return _missing_static("simple.html")
+    return FileResponse(p)
+
+
 @app.get("/data.json")
 async def data_json():
     p = STATIC / "data.json"

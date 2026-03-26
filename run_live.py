@@ -10,6 +10,8 @@ Usage:
   python run_live.py
   python run_live.py --topic Cardiology --limit 10
   python run_live.py --port 8800 --lan-only
+  python run_live.py --skip-build --lan-only   # fastest local start (no rebuild, no tunnel)
+  python run_live.py --simple                  # open button-driven /present instead of slide deck
 """
 
 from __future__ import annotations
@@ -35,6 +37,7 @@ if str(ROOT) not in sys.path:
 def _lan_ip() -> str:
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
+        s.settimeout(1.2)
         s.connect(("8.8.8.8", 80))
         return s.getsockname()[0]
     except OSError:
@@ -192,18 +195,53 @@ def main() -> None:
         action="store_true",
         help="With a tunnel, still open 127.0.0.1 in the browser on this PC (audience can use the public URL)",
     )
+    ap.add_argument(
+        "--rebuild",
+        action="store_true",
+        help="Always run build_live.py (default skips if data.json is newer than ite_data.json and no filters)",
+    )
+    ap.add_argument(
+        "--skip-build",
+        action="store_true",
+        help="Never run build_live.py (use existing live_ite/static/data.json)",
+    )
+    ap.add_argument(
+        "--simple",
+        action="store_true",
+        help="Open /present (button-driven presenter) in browser instead of the slide deck",
+    )
     args = ap.parse_args()
 
-    build_cmd = [sys.executable, str(ROOT / "build_live.py")]
-    if args.topic:
-        build_cmd.extend(["--topic", args.topic])
-    if args.year is not None:
-        build_cmd.extend(["--year", str(args.year)])
-    if args.limit is not None:
-        build_cmd.extend(["--limit", str(args.limit)])
-    r = subprocess.run(build_cmd, cwd=str(ROOT))
-    if r.returncode != 0:
-        sys.exit(r.returncode)
+    data_json = ROOT / "live_ite" / "static" / "data.json"
+    ite_json = ROOT / "ite_data.json"
+    has_filters = bool(args.topic or args.year is not None or args.limit is not None)
+
+    if args.skip_build:
+        if not data_json.is_file():
+            print("ERROR: --skip-build but data.json missing. Run: python build_live.py", file=sys.stderr)
+            sys.exit(1)
+        print("Skipping build (--skip-build).")
+    else:
+        stale = (
+            ite_json.is_file()
+            and data_json.is_file()
+            and data_json.stat().st_mtime < ite_json.stat().st_mtime
+        )
+        run_build = args.rebuild or has_filters or not data_json.is_file() or stale
+        if run_build:
+            build_cmd = [sys.executable, str(ROOT / "build_live.py")]
+            if args.topic:
+                build_cmd.extend(["--topic", args.topic])
+            if args.year is not None:
+                build_cmd.extend(["--year", str(args.year)])
+            if args.limit is not None:
+                build_cmd.extend(["--limit", str(args.limit)])
+            print("Running build_live.py…")
+            r = subprocess.run(build_cmd, cwd=str(ROOT))
+            if r.returncode != 0:
+                sys.exit(r.returncode)
+        else:
+            print("Skipping build_live.py (data.json is up to date). Use --rebuild to force.")
 
     preferred = 8765 if args.port is None else args.port
     user_fixed = args.port is not None
@@ -231,7 +269,10 @@ def main() -> None:
     tunnel_proc: subprocess.Popen | None = None
     tunnel_base: str | None = None
     if not args.lan_only:
-        print("Starting cloudflared for a public URL (present from any PC on the internet)…")
+        print(
+            "Starting cloudflared for a public URL… "
+            "(first URL can take 15–40s; use --lan-only to skip and start faster on Wi‑Fi only)"
+        )
         turl, tunnel_proc = _try_cloudflared(port)
         if turl:
             tunnel_base = turl.rstrip("/")
@@ -252,14 +293,18 @@ def main() -> None:
     else:
         print("LAN-only mode (no internet-wide URL).")
 
-    local_presenter = f"http://127.0.0.1:{port}/"
     base = os.environ.get("PUBLIC_BASE_URL", public).rstrip("/")
-    present_url = base + "/"
+    deck_url = base + "/"
+    simple_url = base + "/present"
     vote_url = base + "/vote"
+    local_deck = f"http://127.0.0.1:{port}/"
+    local_simple = f"http://127.0.0.1:{port}/present"
 
     print()
-    print("  Presenter — open in Chrome/Edge on ANY PC:")
-    print("  ", present_url)
+    print("  Presenter (slide deck) — any PC:")
+    print("  ", deck_url)
+    print("  Presenter (simple — big buttons, built-in flow) — any PC:")
+    print("  ", simple_url)
     print()
     print("  Audience phones — scan QR or open:")
     print("  ", vote_url)
@@ -270,16 +315,18 @@ def main() -> None:
     else:
         print("  Keep THIS computer running: the app and cloudflared forward traffic here.")
     print()
-    print("  Same-machine shortcut:", local_presenter)
+    print("  Same-machine: deck", local_deck, "| simple", local_simple)
     print("Stop: Ctrl+C")
 
     if not args.no_browser:
+        open_local = local_simple if args.simple else local_deck
+        open_remote = simple_url if args.simple else deck_url
         if args.open_local and tunnel_base is not None:
-            webbrowser.open(local_presenter)
+            webbrowser.open(open_local)
         elif tunnel_base is not None:
-            webbrowser.open(present_url)
+            webbrowser.open(open_remote)
         else:
-            webbrowser.open(local_presenter)
+            webbrowser.open(open_local)
 
     try:
         while True:
