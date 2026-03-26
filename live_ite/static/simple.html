@@ -101,6 +101,24 @@
     }
     .bar-row.correct .fill { background: var(--bar-ok); }
     .bar-row .num { min-width: 3.5rem; text-align: right; color: #555; font-size: 0.82rem; }
+    .answer-banner {
+      margin: 0 0 0.85rem;
+      padding: 0.65rem 0.85rem;
+      background: #e8f5e9;
+      border: 1px solid #a5d6a7;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #1b5e20;
+    }
+    .answer-banner .ans-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #2e7d32;
+      margin-bottom: 0.25rem;
+    }
     .live-vote-wrap {
       margin-top: 1rem;
       padding: 0.75rem 0.85rem;
@@ -148,6 +166,11 @@
       background: var(--accent);
       color: #fff;
     }
+    .actions button.btn-continue {
+      font-size: 1rem;
+      padding: 0.75rem 1.35rem;
+      min-width: 12rem;
+    }
     .actions button.secondary { background: #607d8b; }
     .actions button.success { background: var(--ok); }
     .actions button:disabled {
@@ -187,6 +210,7 @@
         </div>
       </div>
       <div id="body-results" style="display:none">
+        <div id="q-answer-banner" class="answer-banner" style="display:none"></div>
         <div class="bars" id="q-bars"></div>
       </div>
       <div id="body-critique" style="display:none">
@@ -199,11 +223,9 @@
     <p class="cap">Vote</p>
   </div>
   <div class="actions" id="actions" style="display:none">
-    <button type="button" id="btn-open" class="success">Open voting</button>
-    <button type="button" id="btn-close" class="secondary">Close voting · show results</button>
-    <button type="button" id="btn-crit">Show critique</button>
-    <button type="button" id="btn-next">Next question</button>
-    <p class="hint">Keyboard: <strong>1</strong> open vote · <strong>2</strong> results · <strong>3</strong> critique · <strong>N</strong> next · <strong>P</strong> prev</p>
+    <button type="button" id="btn-continue" class="btn-continue success">Continue</button>
+    <button type="button" id="btn-prev" class="secondary">← Previous</button>
+    <p class="hint">Voting starts automatically on each question. Press <strong>Enter</strong> or <strong>Space</strong> for the same as Continue.</p>
   </div>
   <script>
 (function () {
@@ -310,28 +332,83 @@
     fillBarHost('q-bars', true);
   }
 
-  function setPhase(p) {
-    phase = p;
-    document.getElementById('hdr-phase').textContent =
-      p === 'question' ? 'Question' : p === 'results' ? 'Results' : 'Critique';
-    document.getElementById('body-question').style.display = p === 'question' ? 'block' : 'none';
-    document.getElementById('body-results').style.display = p === 'results' ? 'block' : 'none';
-    document.getElementById('body-critique').style.display = p === 'critique' ? 'block' : 'none';
-    document.getElementById('btn-open').disabled = p !== 'question';
-    document.getElementById('btn-close').disabled = p !== 'question';
-    document.getElementById('btn-crit').disabled = p !== 'results';
-    document.getElementById('btn-next').disabled = p !== 'critique';
-    var live = document.getElementById('live-vote-wrap');
-    if (live) live.style.display = p === 'question' && voteLaunched ? 'block' : 'none';
-    if (p === 'results') renderBars();
-    if (p === 'question' && voteLaunched) renderLiveBars();
+  function refreshContinueBtn() {
+    var b = document.getElementById('btn-continue');
+    if (!b) return;
+    if (phase === 'question') {
+      b.textContent = 'Show results';
+      b.disabled = false;
+    } else if (phase === 'results') {
+      b.textContent = 'Show critique';
+      b.disabled = false;
+    } else {
+      if (idx >= qs.length - 1) {
+        b.textContent = 'End of deck';
+        b.disabled = true;
+      } else {
+        b.textContent = 'Next question';
+        b.disabled = false;
+      }
+    }
+  }
+
+  function goResults() {
+    phase = 'results';
+    document.getElementById('hdr-phase').textContent = 'Results';
+    document.getElementById('body-question').style.display = 'none';
+    document.getElementById('body-results').style.display = 'block';
+    document.getElementById('body-critique').style.display = 'none';
+    var qu = q();
+    var ban = document.getElementById('q-answer-banner');
+    if (ban && qu) {
+      var letter = (qu.answer || '').trim().toUpperCase().charAt(0);
+      var optText = letter && qu.options ? (qu.options[letter] || '') : '';
+      ban.textContent = '';
+      if (letter >= 'A' && letter <= 'E') {
+        ban.style.display = 'block';
+        var lab = document.createElement('div');
+        lab.className = 'ans-label';
+        lab.textContent = 'Correct answer';
+        ban.appendChild(lab);
+        var line = document.createElement('div');
+        var strong = document.createElement('strong');
+        strong.textContent = letter + '.';
+        line.appendChild(strong);
+        if (optText) line.appendChild(document.createTextNode(' ' + optText));
+        ban.appendChild(line);
+      } else {
+        ban.style.display = 'none';
+      }
+    }
+    renderBars();
+    refreshContinueBtn();
     syncPresenterState();
+  }
+
+  function goCritique() {
+    phase = 'critique';
+    document.getElementById('hdr-phase').textContent = 'Critique';
+    document.getElementById('body-question').style.display = 'none';
+    document.getElementById('body-results').style.display = 'none';
+    document.getElementById('body-critique').style.display = 'block';
+    refreshContinueBtn();
+    syncPresenterState();
+  }
+
+  function onContinue() {
+    if (phase === 'question') goResults();
+    else if (phase === 'results') goCritique();
+    else if (phase === 'critique') {
+      if (idx >= qs.length - 1) return;
+      goNextQuestion();
+    }
   }
 
   function showQuestion() {
     var qu = q();
     if (!qu) return;
-    voteLaunched = false;
+    phase = 'question';
+    voteLaunched = true;
     document.getElementById('q-title').textContent = 'Question ' + qu.number + ' (' + qu.year + ')';
     document.getElementById('q-meta').textContent =
       (qu.topic || '') + (qu.subtopic ? ' · ' + qu.subtopic : '');
@@ -349,7 +426,15 @@
       ul.appendChild(li);
     });
     document.getElementById('q-crit').textContent = qu.critique || '(No critique)';
-    setPhase('question');
+    document.getElementById('hdr-phase').textContent = 'Live voting';
+    document.getElementById('body-question').style.display = 'block';
+    document.getElementById('body-results').style.display = 'none';
+    document.getElementById('body-critique').style.display = 'none';
+    var live = document.getElementById('live-vote-wrap');
+    if (live) live.style.display = 'block';
+    renderLiveBars();
+    refreshContinueBtn();
+    syncPresenterState();
   }
 
   function updateHdr() {
@@ -362,7 +447,6 @@
     idx++;
     updateHdr();
     showQuestion();
-    sendActive(null, false, null);
   }
 
   function goPrevQuestion() {
@@ -370,7 +454,6 @@
     idx--;
     updateHdr();
     showQuestion();
-    sendActive(null, false, null);
   }
 
   function setupQr(voteUrl) {
@@ -417,40 +500,27 @@
     ws.onclose = function () { setTimeout(connectWs, 1500); };
   }
 
-  document.getElementById('btn-open').addEventListener('click', function () {
-    var qu = q();
-    if (!qu || phase !== 'question') return;
-    voteLaunched = true;
-    var live = document.getElementById('live-vote-wrap');
-    if (live) live.style.display = 'block';
-    renderLiveBars();
-    sendActive(qu.poll_id, true, questionPayload(qu));
+  document.getElementById('btn-continue').addEventListener('click', function () {
+    onContinue();
   });
 
-  document.getElementById('btn-close').addEventListener('click', function () {
-    var qu = q();
-    if (!qu || phase !== 'question') return;
-    setPhase('results');
-  });
-
-  document.getElementById('btn-crit').addEventListener('click', function () {
-    if (phase !== 'results') return;
-    setPhase('critique');
-  });
-
-  document.getElementById('btn-next').addEventListener('click', function () {
-    if (phase !== 'critique') return;
-    goNextQuestion();
+  document.getElementById('btn-prev').addEventListener('click', function () {
+    goPrevQuestion();
   });
 
   document.addEventListener('keydown', function (e) {
     if (e.target.matches('input, textarea')) return;
     var k = e.key;
-    if (k === '1') document.getElementById('btn-open').click();
-    else if (k === '2') document.getElementById('btn-close').click();
-    else if (k === '3') document.getElementById('btn-crit').click();
-    else if (k === 'n' || k === 'N') document.getElementById('btn-next').click();
-    else if (k === 'p' || k === 'P') goPrevQuestion();
+    if (k === 'Enter' || k === ' ') {
+      var b = document.getElementById('btn-continue');
+      if (b && !b.disabled) {
+        e.preventDefault();
+        onContinue();
+      }
+    } else if (k === 'p' || k === 'P') {
+      e.preventDefault();
+      goPrevQuestion();
+    }
   });
 
   fetch('/data.json')

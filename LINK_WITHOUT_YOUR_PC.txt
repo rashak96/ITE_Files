@@ -1,0 +1,41 @@
+================================================================================
+  A link that works when YOUR computer is OFF
+================================================================================
+
+That always means: the app runs on SOMEONE ELSE'S computer (a host in the cloud).
+There is no way around that for live phone voting + WebSockets.
+
+Pick ONE of these:
+
+--------------------------------------------------------------------------------
+  A) REPLIT — no GitHub required (good if Render feels like too much)
+--------------------------------------------------------------------------------
+  1. Make a free account at https://replit.com
+  2. Create Repl → Import from ZIP (or drag your ITE_Files folder after zipping it).
+     Must include: live_ite/, main.py, build_live.py, requirements_web.txt,
+     ite_data.json, .replit, replit.nix
+  3. Click Run. Wait for install + build.
+  4. Use the Webview URL Replit shows (or Deploy from Replit for a stable link;
+     free tier may sleep when idle, like Render).
+  5. Optional: in Replit "Secrets", set PUBLIC_BASE_URL to that same https URL
+     (no trailing slash) so QR/links on /present point to the right host.
+
+--------------------------------------------------------------------------------
+  B) RENDER — you already have render.yaml (uses GitHub)
+--------------------------------------------------------------------------------
+  Connect repo once; you get https://your-service.onrender.com forever-ish.
+  Free tier sleeps when idle.
+
+--------------------------------------------------------------------------------
+  C) NO HOSTING AT ALL — study only, not live class polls
+--------------------------------------------------------------------------------
+  Run once on any PC:  python export_study_pack.py
+  Email people ONLY the file:  ITE_Study_Pack.html
+  They open it like a document — no URL, no account, no Python for them.
+
+--------------------------------------------------------------------------------
+  D) VEVOX / SLIDO / MENTI — live polls, their link, not this custom app
+--------------------------------------------------------------------------------
+  You get a simple join link; use export_vevox_import.py or manual entry for Qs.
+
+================================================================================

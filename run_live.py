@@ -1,17 +1,18 @@
 """
-One-command live session: build data (optional filters), start server, public join URL by default.
+One-command live session: build data (optional filters), start server, public HTTPS URL — no GitHub, no Render.
 
-With **cloudflared** installed, you get one **https://…trycloudflare.com** base URL: open **/** on any PC
-to present, and **/vote** on phones. The PC that runs ``python run_live.py`` must stay on and keep cloudflared running.
+With **cloudflared** installed, this prints a **https://….trycloudflare.com** link anyone on the internet can use
+for presenter + /vote + /present. No accounts, no deploy step. This PC must stay on while you teach.
 
 Install cloudflared: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/
 
 Usage:
   python run_live.py
+  Double-click START_ITE.bat  →  same as: python run_live.py --simple
   python run_live.py --topic Cardiology --limit 10
   python run_live.py --port 8800 --lan-only
   python run_live.py --skip-build --lan-only   # fastest local start (no rebuild, no tunnel)
-  python run_live.py --simple                  # open button-driven /present instead of slide deck
+  python run_live.py --simple                  # open /present (simple flow) instead of slide deck
 """
 
 from __future__ import annotations
@@ -301,19 +302,25 @@ def main() -> None:
     local_simple = f"http://127.0.0.1:{port}/present"
 
     print()
-    print("  Presenter (slide deck) — any PC:")
+    if tunnel_base is not None:
+        print("  " + "=" * 62)
+        print("  PUBLIC HTTPS (no GitHub, no Render, no signup): use these links")
+        print("  " + "=" * 62)
+    print()
+    print("  Presenter — slide deck:")
     print("  ", deck_url)
-    print("  Presenter (simple — big buttons, built-in flow) — any PC:")
+    print("  Presenter — simple controls:")
     print("  ", simple_url)
     print()
-    print("  Audience phones — scan QR or open:")
+    print("  Audience phones (/vote):")
     print("  ", vote_url)
     print()
     if tunnel_base is None:
-        print("  (Those URLs work on your Wi‑Fi / LAN only. For any PC anywhere: install cloudflared,")
-        print("   run from this folder without --lan-only, and use the https://…trycloudflare.com link above.)")
+        print("  Wi‑Fi / LAN only right now. For a public https URL from this folder only:")
+        print("  → Install cloudflared (see docstring link), then run again WITHOUT --lan-only.")
     else:
-        print("  Keep THIS computer running: the app and cloudflared forward traffic here.")
+        print("  Keep THIS window open while presenting. URL changes next time you restart")
+        print("  (copy the new https://….trycloudflare.com link from the console).")
     print()
     print("  Same-machine: deck", local_deck, "| simple", local_simple)
     print("Stop: Ctrl+C")

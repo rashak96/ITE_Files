@@ -13,6 +13,9 @@ from fastapi.responses import FileResponse, HTMLResponse
 
 STATIC = Path(__file__).parent / "static"
 
+# Browsers (and some proxies) cache static files aggressively — without this, deploys look "stuck" on old UI.
+_NO_CACHE = {"Cache-Control": "no-store, no-cache, must-revalidate, max-age=0"}
+
 app = FastAPI()
 
 
@@ -55,7 +58,7 @@ async def presenter():
     p = STATIC / "presenter.html"
     if not p.is_file():
         return _missing_static("presenter.html")
-    return FileResponse(p)
+    return FileResponse(p, headers=_NO_CACHE)
 
 
 @app.get("/vote")
@@ -63,7 +66,7 @@ async def vote_page():
     p = STATIC / "vote.html"
     if not p.is_file():
         return _missing_static("vote.html")
-    return FileResponse(p)
+    return FileResponse(p, headers=_NO_CACHE)
 
 
 @app.get("/present")
@@ -72,7 +75,7 @@ async def present_simple():
     p = STATIC / "simple.html"
     if not p.is_file():
         return _missing_static("simple.html")
-    return FileResponse(p)
+    return FileResponse(p, headers=_NO_CACHE)
 
 
 @app.get("/data.json")
@@ -80,7 +83,7 @@ async def data_json():
     p = STATIC / "data.json"
     if not p.is_file():
         return _missing_static("data.json")
-    return FileResponse(p)
+    return FileResponse(p, headers=_NO_CACHE)
 
 
 @app.get("/api/state")
